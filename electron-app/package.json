@@ -1,5 +1,5 @@
 {
-  "name": "nombre-app",
+  "name": "simulacros-app",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -27,13 +27,7 @@
       "target": [
         "nsis"
       ]
-    },
-    "extraResources": [
-      {
-        "from": "nombre-app/browser",
-        "to": "nombre-app/browser"
-      }
-    ]
+    }
   },
   "dependencies": {
     "express": "^5.1.0"

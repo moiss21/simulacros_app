@@ -17,7 +17,9 @@ function createWindow() {
     },
   });
 
-  mainWindow.webContents.openDevTools();
+
+  
+
 
   mainWindow.loadURL('http://localhost:3000');
 }
@@ -47,7 +49,7 @@ ipcMain.handle('select-folder', async () => {
 
 app.whenReady().then(() => {
   const serverApp = express();
-  const appName = 'nombre-app'; // RECUERDA: Ajusta esto al nombre de tu carpeta dist
+  const appName = 'simulacros-app'; // RECUERDA: Ajusta esto al nombre de tu carpeta dist
 
   serverApp.use(express.static(path.join(__dirname, appName, 'browser')));
 
