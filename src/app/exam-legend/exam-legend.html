@@ -1,0 +1,119 @@
+<div class="legend-container">
+  <header class="legend-header">
+    <button class="btn-back" (click)="goBack()">← Volver</button>
+    <h1>📖 Guía de Creación de Exámenes</h1>
+  </header>
+
+  <div class="content">
+    <section class="info-section highlight">
+      <h2>0. ¿Cómo añadir nuevos exámenes?</h2>
+      <p>Para que el sistema reconozca tus exámenes, sigue estos pasos:</p>
+      <ol>
+        <li><strong>Carpeta local:</strong> Crea una carpeta en tu ordenador (ej: <code>Mis Tests</code>).</li>
+        <li><strong>Archivos JSON:</strong> Dentro, crea archivos con extensión <code>.json</code>.</li>
+        <li><strong>Carga:</strong> Selecciona esa carpeta en el menú principal para importar todo el contenido.</li>
+      </ol>
+    </section>
+
+    <section class="info-section">
+      <h2>1. Diccionario de variables (Configuración)</h2>
+      <p>Aquí tienes una explicación sencilla de qué hace cada ajuste en el examen:</p>
+      
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>¿Para qué sirve?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>subjectColor</strong></td>
+            <td>(Opcional) Define el color de la asignatura en el menú y cabeceras. Usa códigos Hexadecimales (ej: <code>#4169e1</code>). Si no se pone, se usará el azul por defecto.</td>
+          </tr>
+          <tr>
+            <td><strong>penaltyRate</strong></td>
+            <td>Es el "castigo" por fallar. Si pones 0.33, cada 3 fallos te quitan 1 acierto. Si pones 0, fallar no resta puntos.</td>
+          </tr>
+          <tr>
+            <td><strong>examDurationMinutes</strong></td>
+            <td>El tiempo máximo del examen. Si pones 0, el reloj será infinito.</td>
+          </tr>
+          <tr>
+            <td><strong>canChangeResponse</strong></td>
+            <td>Si es "true", puedes cambiar de opinión tras marcar. Si es "false", la primera que toques se queda bloqueada.</td>
+          </tr>
+          <tr>
+            <td><strong>passingPercentage</strong></td>
+            <td>La nota para aprobar. Poner 50 significa que necesitas la mitad de los puntos para el "APTO".</td>
+          </tr>
+          <tr>
+            <td><strong>totalQuestionsToDisplay</strong></td>
+            <td>Cuántas preguntas quieres que salgan de golpe. Útil si tienes 100 en el archivo pero solo quieres hacer 20 cada vez.</td>
+          </tr>
+          <tr>
+            <td><strong>emptyAnswersCount</strong></td>
+            <td>Si es "true", dejar una pregunta en blanco también te restará puntos como si hubieras fallado.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info-section highlight">
+      <div class="prompt-box">
+        <h3>🤖 Prompt Maestro para generar exámenes con IA</h3>
+        <p>Copia y pega este texto íntegro en tu IA (ChatGPT, Claude...) para obtener el archivo listo:</p>
+        
+        <div class="code-block prompt-text">
+          <code>
+            Genera un archivo JSON para un examen basado en el siguiente temario: [PEGA AQUÍ TU TEMARIO o PREGUNTAS].<br><br>
+            
+            REGLAS CRÍTICAS:<br>
+            1. 'generalExplanation' debe razonar la respuesta correcta usando las palabras clave de la misma de forma técnica.<br>
+            2. 'subjectColor' es un campo opcional dentro de 'examProperties' para definir el color visual (ej: #8e24aa).<br>
+            3. Es VITAL que el JSON final siga exactamente esta estructura de metadatos y nombrado:<br><br>
+
+            &#123;<br>
+            &nbsp;&nbsp;"examProperties": &#123;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"id": "nombre-asignatura-simulacro-1.json",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"subjectName": "Nombre Asignatura",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"subjectColor": "#4169e1",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examTitle": "Simulacro Examen de [Asignatura] - UD 1, 2 y 3",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examSummary": "Cubre sistemas de control, lógica y componentes...",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examConfig": &#123;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"penaltyRate": 0.33,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"examDurationMinutes": 40,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"canChangeResponse": true,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"passingPercentage": 50,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"totalQuestionsToDisplay": 40,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"emptyAnswersCount": false<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
+            &nbsp;&nbsp;&#125;,<br>
+            &nbsp;&nbsp;"questions": [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#123;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"text": "¿Enunciado de la pregunta?",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "single",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"generalExplanation": "Explicación detallada...",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"options": [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Opción Correcta", "isCorrect": true, "explanation": "Incorrecto. ..." &#125;,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Opción Incorrecta", "isCorrect": false, "explanation": "Correcto. ..." &#125;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
+            &nbsp;&nbsp;]<br>
+            &#125;
+          </code>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>2. Notas importantes</h2>
+      <ul>
+        <li><strong>ID y Archivo:</strong> El nombre que pongas en el campo <code>"id"</code> debe ser igual al nombre con el que guardes el archivo en Windows/Mac.</li>
+        <li><strong>Colores:</strong> Si quieres usar los colores estándar del sistema, usa estos códigos: Sistemas de Potencia (#fbc02d), Documentación Técnica (#4169e1), Informática Industrial (#4db6ac), Sistemas de Medida (#8e24aa).</li>
+        <li><strong>UTF-8:</strong> Al guardar el archivo, asegúrate de que la codificación sea UTF-8 para evitar errores con las tildes.</li>
+      </ul>
+    </section>
+  </div>
+</div>

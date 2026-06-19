@@ -1,0 +1,499 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-4.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 4: Instalación y configuración de redes locales",
+    "examSummary": "Evaluación técnica sobre infraestructuras de red local (LAN), topologías físico-lógicas, medios de transmisión, arquitectura de protocolos y direccionamiento IP.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué definen las siglas LAN en el contexto de las redes informáticas?",
+      "type": "single",
+      "generalExplanation": "LAN significa Local Area Network (Red de Área Local), y se refiere a redes de extensión limitada como una oficina o una planta industrial.",
+      "options": [
+        { "text": "Long Access Node.", "isCorrect": false },
+        { "text": "Local Area Network.", "isCorrect": true },
+        { "text": "Logic Automation Network.", "isCorrect": false },
+        { "text": "Large Area Node.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué topología de red se caracteriza por conectar todos los dispositivos a un único canal común de comunicación?",
+      "type": "single",
+      "generalExplanation": "En la topología de Bus, todos los nodos comparten el mismo medio de transmisión de forma lineal.",
+      "options": [
+        { "text": "Anillo.", "isCorrect": false },
+        { "text": "Estrella.", "isCorrect": false },
+        { "text": "Bus.", "isCorrect": true },
+        { "text": "Malla.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "En una red con topología de Estrella, ¿cuál es el componente central que gestiona la comunicación?",
+      "type": "single",
+      "generalExplanation": "Las redes en estrella utilizan un concentrador (Hub) o conmutador (Switch) como nodo central.",
+      "options": [
+        { "text": "Un terminador de red.", "isCorrect": false },
+        { "text": "Un Switch o un Hub.", "isCorrect": true },
+        { "text": "Una tarjeta de sonido.", "isCorrect": false },
+        { "text": "Un cable coaxial grueso.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Qué ventaja principal ofrece el cable de par trenzado apantallado (STP) frente al no apantallado (UTP)?",
+      "type": "single",
+      "generalExplanation": "El STP incluye una malla metálica que protege las señales frente a interferencias electromagnéticas externas, críticas en la industria.",
+      "options": [
+        { "text": "Es más barato y flexible.", "isCorrect": false },
+        { "text": "Ofrece mayor protección contra ruidos y campos electromagnéticos.", "isCorrect": true },
+        { "text": "Permite mayor distancia sin repetidores.", "isCorrect": false },
+        { "text": "Es más fácil de crimpar que el UTP.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Qué dispositivo se utiliza para interconectar dos redes distintas que utilizan protocolos diferentes?",
+      "type": "single",
+      "generalExplanation": "El Gateway o Puerta de Enlace actúa como traductor entre redes con diferentes arquitecturas.",
+      "options": [
+        { "text": "Repetidor.", "isCorrect": false },
+        { "text": "Puente (Bridge).", "isCorrect": false },
+        { "text": "Gateway.", "isCorrect": true },
+        { "text": "Punto de acceso (AP).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Cuál es la función de la máscara de subred en una configuración IP?",
+      "type": "single",
+      "generalExplanation": "La máscara de subred diferencia qué parte de la dirección IP identifica a la red y qué parte identifica al equipo (host).",
+      "options": [
+        { "text": "Ocultar la dirección física MAC.", "isCorrect": false },
+        { "text": "Identificar la porción de red y la de host de una dirección IP.", "isCorrect": true },
+        { "text": "Aumentar la velocidad de transferencia.", "isCorrect": false },
+        { "text": "Encriptar los paquetes de datos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué conector es el estándar para el cableado de red Ethernet mediante par trenzado?",
+      "type": "single",
+      "generalExplanation": "El conector RJ45 es el estándar universal para las redes LAN sobre cable de cobre.",
+      "options": [
+        { "text": "RJ11.", "isCorrect": false },
+        { "text": "BNC.", "isCorrect": false },
+        { "text": "RJ45.", "isCorrect": true },
+        { "text": "DB9.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Cuál es la principal ventaja de la fibra óptica en una instalación industrial?",
+      "type": "single",
+      "generalExplanation": "Al transmitir luz en lugar de señales eléctricas, es totalmente inmune a interferencias electromagnéticas (EMI).",
+      "options": [
+        { "text": "Es la opción más barata del mercado.", "isCorrect": false },
+        { "text": "Es inmune a interferencias electromagnéticas.", "isCorrect": true },
+        { "text": "Es muy resistente a la torsión y rotura física.", "isCorrect": false },
+        { "text": "No requiere conectores especiales.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué protocolo se encarga de asignar direcciones IP de forma automática a los dispositivos de una red?",
+      "type": "single",
+      "generalExplanation": "El protocolo DHCP (Dynamic Host Configuration Protocol) automatiza la configuración IP de los equipos.",
+      "options": [
+        { "text": "DNS.", "isCorrect": false },
+        { "text": "HTTP.", "isCorrect": false },
+        { "text": "DHCP.", "isCorrect": true },
+        { "text": "FTP.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué dirección IP se utiliza habitualmente para referirse a la propia máquina (localhost)?",
+      "type": "single",
+      "generalExplanation": "La dirección 127.0.0.1 es la dirección de bucle de retorno o loopback estándar.",
+      "options": [
+        { "text": "192.168.1.1.", "isCorrect": false },
+        { "text": "127.0.0.1.", "isCorrect": true },
+        { "text": "255.255.255.0.", "isCorrect": false },
+        { "text": "0.0.0.0.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿A qué capa del modelo OSI corresponde el direccionamiento IP?",
+      "type": "single",
+      "generalExplanation": "El protocolo IP opera en la Capa 3 o Capa de Red del modelo OSI.",
+      "options": [
+        { "text": "Capa Física.", "isCorrect": false },
+        { "text": "Capa de Enlace.", "isCorrect": false },
+        { "text": "Capa de Red.", "isCorrect": true },
+        { "text": "Capa de Transporte.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Qué comando se utiliza en sistemas Windows y Linux para comprobar la conectividad básica con otro equipo de la red?",
+      "type": "single",
+      "generalExplanation": "El comando 'ping' envía paquetes ICMP para verificar si un host remoto responde.",
+      "options": [
+        { "text": "ipconfig.", "isCorrect": false },
+        { "text": "ping.", "isCorrect": true },
+        { "text": "netstat.", "isCorrect": false },
+        { "text": "tracert.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué es la dirección MAC de una tarjeta de red?",
+      "type": "single",
+      "generalExplanation": "Es el identificador físico único asignado por el fabricante a cada interfaz de red.",
+      "options": [
+        { "text": "Una dirección lógica asignada por el router.", "isCorrect": false },
+        { "text": "Identificador físico único y permanente de la tarjeta de red.", "isCorrect": true },
+        { "text": "El nombre del ordenador en la red.", "isCorrect": false },
+        { "text": "La contraseña de acceso a la red inalámbrica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Cuál es la función de un Servidor DNS?",
+      "type": "single",
+      "generalExplanation": "El DNS traduce nombres de dominio (como google.es) en direcciones IP entendibles por las máquinas.",
+      "options": [
+        { "text": "Almacenar archivos compartidos.", "isCorrect": false },
+        { "text": "Traducir nombres de dominio a direcciones IP.", "isCorrect": true },
+        { "text": "Protección contra virus externos.", "isCorrect": false },
+        { "text": "Gestionar las colas de impresión.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "En una red Ethernet, ¿qué significa el término Full-Duplex?",
+      "type": "single",
+      "generalExplanation": "Permite enviar y recibir datos de forma simultánea, duplicando teóricamente la capacidad de la línea.",
+      "options": [
+        { "text": "Que los datos solo viajan en un sentido.", "isCorrect": false },
+        { "text": "Capacidad de enviar y recibir datos simultáneamente.", "isCorrect": true },
+        { "text": "Que la velocidad es de 100 Mbps exactamente.", "isCorrect": false },
+        { "text": "Que utiliza dos cables de fibra óptica diferentes.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué dispositivo trabaja principalmente en la Capa 2 (Enlace de datos) analizando direcciones MAC?",
+      "type": "single",
+      "generalExplanation": "El Switch (conmutador) utiliza las direcciones MAC para enviar los datos solo al puerto del destinatario.",
+      "options": [
+        { "text": "Hub.", "isCorrect": false },
+        { "text": "Switch.", "isCorrect": true },
+        { "text": "Router.", "isCorrect": false },
+        { "text": "Repetidor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué caracteriza a una red de topología en Anillo?",
+      "type": "single",
+      "generalExplanation": "Cada nodo se conecta exactamente con otros dos, formando una ruta continua para las señales.",
+      "options": [
+        { "text": "Todos los cables salen de un punto central.", "isCorrect": false },
+        { "text": "Los nodos forman un circuito cerrado donde la información circula en un sentido.", "isCorrect": true },
+        { "text": "Utiliza un único cable central con terminadores en los extremos.", "isCorrect": false },
+        { "text": "Es una red que no requiere cables físicos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Cuál es el propósito de un Router en una instalación de red local?",
+      "type": "single",
+      "generalExplanation": "El router se encarga de interconectar diferentes redes y decidir la mejor ruta para los paquetes (Capa 3).",
+      "options": [
+        { "text": "Amplificar la señal eléctrica del cable.", "isCorrect": false },
+        { "text": "Interconectar redes y encaminar paquetes de datos entre ellas.", "isCorrect": true },
+        { "text": "Convertir señales analógicas en digitales.", "isCorrect": false },
+        { "text": "Funcionar como batería de respaldo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué clase de dirección IP es la 192.168.1.50?",
+      "type": "single",
+      "generalExplanation": "Las direcciones que empiezan en el rango 192-223 pertenecen a la Clase C.",
+      "options": [
+        { "text": "Clase A.", "isCorrect": false },
+        { "text": "Clase B.", "isCorrect": false },
+        { "text": "Clase C.", "isCorrect": true },
+        { "text": "Clase D.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué significa el término 'Latencia' en una red local?",
+      "type": "single",
+      "generalExplanation": "Es el tiempo exacto que tarda un paquete de datos en viajar desde el origen al destino.",
+      "options": [
+        { "text": "La cantidad de datos por segundo.", "isCorrect": false },
+        { "text": "El retardo o tiempo de respuesta en la transmisión.", "isCorrect": true },
+        { "text": "El grosor del cable de red.", "isCorrect": false },
+        { "text": "El número de equipos conectados simultáneamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Qué es el estándar IEEE 802.3?",
+      "type": "single",
+      "generalExplanation": "Es el estándar que define las redes de área local basadas en Ethernet (cableadas).",
+      "options": [
+        { "text": "Redes WiFi inalámbricas.", "isCorrect": false },
+        { "text": "Redes Ethernet por cable.", "isCorrect": true },
+        { "text": "Comunicaciones por Bluetooth.", "isCorrect": false },
+        { "text": "Protocolos de correo electrónico.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Para qué sirve el comando 'ipconfig' (en Windows)?",
+      "type": "single",
+      "generalExplanation": "Permite visualizar la configuración de red actual del equipo (IP, máscara, puerta de enlace).",
+      "options": [
+        { "text": "Para borrar el historial de internet.", "isCorrect": false },
+        { "text": "Para mostrar los parámetros de configuración de red del equipo.", "isCorrect": true },
+        { "text": "Para cambiar la contraseña del usuario.", "isCorrect": false },
+        { "text": "Para apagar el router remotamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Qué cable de par trenzado soporta velocidades de hasta 10 Gbps en distancias cortas?",
+      "type": "single",
+      "generalExplanation": "La Categoría 6a (Cat6a) está diseñada para soportar 10GBASE-T.",
+      "options": [
+        { "text": "Categoría 3.", "isCorrect": false },
+        { "text": "Categoría 5.", "isCorrect": false },
+        { "text": "Categoría 6a.", "isCorrect": true },
+        { "text": "Cable coaxial RG-58.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Qué es una VLAN?",
+      "type": "single",
+      "generalExplanation": "Virtual LAN: permite segmentar una red física en varias redes lógicas independientes por seguridad o rendimiento.",
+      "options": [
+        { "text": "Una red que usa cables de colores.", "isCorrect": false },
+        { "text": "Red de área local virtual creada sobre una infraestructura física común.", "isCorrect": true },
+        { "text": "Un tipo de antena de gran alcance.", "isCorrect": false },
+        { "text": "Un sistema de videollamadas industriales.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué sucede si dos equipos en la misma red local tienen configurada la misma dirección IP?",
+      "type": "single",
+      "generalExplanation": "Se produce un conflicto de IP y uno o ambos equipos perderán la conectividad de red.",
+      "options": [
+        { "text": "La velocidad se duplica.", "isCorrect": false },
+        { "text": "Ocurre un conflicto de IP y falla la comunicación.", "isCorrect": true },
+        { "text": "El router explota por sobrecarga.", "isCorrect": false },
+        { "text": "Los datos se mezclan automáticamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué protocolo de la capa de transporte garantiza que los datos lleguen sin errores y en orden?",
+      "type": "single",
+      "generalExplanation": "TCP (Transmission Control Protocol) es un protocolo orientado a conexión que asegura la entrega fiable.",
+      "options": [
+        { "text": "UDP.", "isCorrect": false },
+        { "text": "TCP.", "isCorrect": true },
+        { "text": "IP.", "isCorrect": false },
+        { "text": "ARP.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Cuál es la función del protocolo ARP?",
+      "type": "single",
+      "generalExplanation": "Address Resolution Protocol: se encarga de obtener la dirección MAC a partir de una dirección IP conocida.",
+      "options": [
+        { "text": "Asignar nombres de usuario.", "isCorrect": false },
+        { "text": "Asociar direcciones IP con direcciones físicas MAC.", "isCorrect": true },
+        { "text": "Encriptar el tráfico WiFi.", "isCorrect": false },
+        { "text": "Controlar el flujo de datos del monitor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Qué es un 'Panel de Parcheo' (Patch Panel)?",
+      "type": "single",
+      "generalExplanation": "Elemento pasivo donde terminan los cables horizontales de la red para facilitar su organización y conexión al switch.",
+      "options": [
+        { "text": "Un tipo de router inalámbrico.", "isCorrect": false },
+        { "text": "Dispositivo para organizar y centralizar las conexiones de cableado estructurado.", "isCorrect": true },
+        { "text": "Un software para reparar discos duros.", "isCorrect": false },
+        { "text": "Una pantalla táctil de configuración.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Cuál es la distancia máxima recomendada para un tramo de cable Ethernet UTP de categoría 6?",
+      "type": "single",
+      "generalExplanation": "El estándar establece un límite de 100 metros (90m de cable sólido y 10m de latiguillos).",
+      "options": [
+        { "text": "50 metros.", "isCorrect": false },
+        { "text": "100 metros.", "isCorrect": true },
+        { "text": "500 metros.", "isCorrect": false },
+        { "text": "1 kilómetro.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué tipo de cable se debe usar para conectar dos switches entre sí si no soportan Auto-MDIX?",
+      "type": "single",
+      "generalExplanation": "Se requiere un cable cruzado (Crossover) para conectar dispositivos del mismo nivel.",
+      "options": [
+        { "text": "Cable directo (Straight-through).", "isCorrect": false },
+        { "text": "Cable cruzado (Crossover).", "isCorrect": true },
+        { "text": "Cable de alimentación.", "isCorrect": false },
+        { "text": "Cable de fibra monomodo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué es el direccionamiento IPv6?",
+      "type": "single",
+      "generalExplanation": "Es el nuevo estándar de direcciones de 128 bits diseñado para sustituir a IPv4 ante el agotamiento de direcciones.",
+      "options": [
+        { "text": "Un sistema de 32 bits más rápido.", "isCorrect": false },
+        { "text": "Nuevo protocolo de direccionamiento que utiliza 128 bits.", "isCorrect": true },
+        { "text": "Un protocolo exclusivo para cámaras de seguridad.", "isCorrect": false },
+        { "text": "La versión 6 del sistema operativo Windows.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué es un Switch gestionable (Managed Switch)?",
+      "type": "single",
+      "generalExplanation": "Un switch que permite configurar parámetros avanzados como VLANs, seguridad de puertos y monitorización.",
+      "options": [
+        { "text": "Aquel que tiene un mando a distancia.", "isCorrect": false },
+        { "text": "Un switch que permite configuración y monitorización por parte del administrador.", "isCorrect": true },
+        { "text": "Aquel que solo tiene dos puertos.", "isCorrect": false },
+        { "text": "Un switch que funciona sin electricidad.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué es la topología lógica frente a la topología física?",
+      "type": "single",
+      "generalExplanation": "La física es cómo están tirados los cables; la lógica es cómo fluyen realmente los datos por el medio.",
+      "options": [
+        { "text": "Son siempre idénticas en todas las redes.", "isCorrect": false },
+        { "text": "La física es la disposición del cableado; la lógica es el flujo de los datos.", "isCorrect": true },
+        { "text": "La lógica solo existe en redes inalámbricas.", "isCorrect": false },
+        { "text": "La física se refiere al software instalado.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué función cumple el protocolo ICMP?",
+      "type": "single",
+      "generalExplanation": "Internet Control Message Protocol: se usa para enviar mensajes de error y operaciones de diagnóstico (como ping).",
+      "options": [
+        { "text": "Transferir archivos pesados.", "isCorrect": false },
+        { "text": "Gestión de mensajes de control y error en la red.", "isCorrect": true },
+        { "text": "Navegar por páginas web.", "isCorrect": false },
+        { "text": "Imprimir documentos en red.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué es un 'Gateway' por defecto (Default Gateway)?",
+      "type": "single",
+      "generalExplanation": "Es la dirección IP del router que permite a los equipos de la LAN salir hacia otras redes (como Internet).",
+      "options": [
+        { "text": "La dirección del servidor de archivos.", "isCorrect": false },
+        { "text": "La dirección del dispositivo que conecta la red local con el exterior.", "isCorrect": true },
+        { "text": "La dirección MAC de la tarjeta de red propia.", "isCorrect": false },
+        { "text": "Un sistema de protección contra incendios.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué ventaja tiene el uso de subredes?",
+      "type": "single",
+      "generalExplanation": "Mejora el rendimiento reduciendo el tráfico de difusión (broadcast) y aumenta la seguridad.",
+      "options": [
+        { "text": "Permite que los cables sean más largos.", "isCorrect": false },
+        { "text": "Mejora la seguridad y reduce el tráfico innecesario en la red.", "isCorrect": true },
+        { "text": "Hace que el router sea más pequeño físicamente.", "isCorrect": false },
+        { "text": "No tiene ninguna ventaja técnica real.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Qué es PoE (Power over Ethernet)?",
+      "type": "single",
+      "generalExplanation": "Tecnología que permite suministrar alimentación eléctrica a través del cable de datos Ethernet a dispositivos como cámaras o APs.",
+      "options": [
+        { "text": "Un tipo de cable de red más grueso.", "isCorrect": false },
+        { "text": "Suministro de energía eléctrica a través del propio cable de red.", "isCorrect": true },
+        { "text": "Un protocolo para ahorrar batería en los portátiles.", "isCorrect": false },
+        { "text": "Un sistema de refrigeración por líquido.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Qué es un firewall (cortafuegos) en una red industrial?",
+      "type": "single",
+      "generalExplanation": "Sistema de seguridad que filtra el tráfico entrante y saliente basándose en reglas para proteger la red.",
+      "options": [
+        { "text": "Una pared de ladrillo ignífugo.", "isCorrect": false },
+        { "text": "Software o hardware que protege la red de accesos no autorizados.", "isCorrect": true },
+        { "text": "Un programa que acelera la conexión a internet.", "isCorrect": false },
+        { "text": "Un tipo de cable que no se quema.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Cuál es la velocidad estándar de una red Gigabit Ethernet?",
+      "type": "single",
+      "generalExplanation": "Gigabit Ethernet opera a una velocidad de 1.000 Mbps.",
+      "options": [
+        { "text": "10 Mbps.", "isCorrect": false },
+        { "text": "100 Mbps.", "isCorrect": false },
+        { "text": "1.000 Mbps (1 Gbps).", "isCorrect": true },
+        { "text": "10.000 Mbps.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "¿Qué significa que un switch soporte 'Auto-MDIX'?",
+      "type": "single",
+      "generalExplanation": "Permite detectar automáticamente si el cable conectado es directo o cruzado y ajustarse para que funcione correctamente.",
+      "options": [
+        { "text": "Que se apaga solo por la noche.", "isCorrect": false },
+        { "text": "Detección automática del tipo de cable y ajuste de la conexión.", "isCorrect": true },
+        { "text": "Que tiene una batería interna.", "isCorrect": false },
+        { "text": "Que solo funciona con equipos de la misma marca.", "isCorrect": false }
+      ]
+    }
+  ]
+}

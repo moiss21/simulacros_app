@@ -1,0 +1,1291 @@
+{
+  "examProperties": {
+    "id": "documentacion-tecnica-simulacro-1-trimestre.json",
+    "subjectName": "Documentación Técnica",
+    "examTitle": "Simulacro Examen de Documentación Técnica - 1 TRIMESTRE - UD1 y UD2",
+    "examSummary": "Evaluación del 1 TRIMESTRE de Documentación Técnica",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#4169e1"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué define un proyecto de titularidad pública?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Es solicitado por las administraciones y está sujeto a una estructura rígida.",
+      "options": [
+        { "text": "No está regulado por normas.", "isCorrect": false, "explanation": "Incorrecto. Los proyectos públicos están altamente regulados por normativas legales y administrativas." },
+        { "text": "Es flexible y tiene poca documentación obligatoria.", "isCorrect": false, "explanation": "Incorrecto. Por el contrario, requieren una documentación exhaustiva y rígida." },
+        { "text": "Es solicitado por las administraciones y está sujeto a una estructura rígida.", "isCorrect": true, "explanation": "Correcto. Son proyectos promovidos por el Estado o administraciones locales y deben cumplir pliegos estrictos." },
+        { "text": "Pertenece exclusivamente a multinacionales.", "isCorrect": false, "explanation": "Incorrecto. Eso definiría a un gran proyecto de titularidad privada." }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Las verificaciones de las instalaciones una vez finalizada la ejecución de un proyecto pueden realizarse:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Todas las afirmaciones son correctas.",
+      "options": [
+        { "text": "Por una empresa ajena.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Es una opción válida, pero no la única." },
+        { "text": "Por una OCA en proyectos de gran envergadura.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Las Organismos de Control Autorizado participan, pero no son los únicos." },
+        { "text": "Todas las afirmaciones son correctas.", "isCorrect": true, "explanation": "Correcto. Las verificaciones pueden recaer en la instaladora, un tercero o una OCA dependiendo del tipo de instalación." },
+        { "text": "Por la propia empresa instaladora.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Aunque es habitual, también intervienen otros agentes." }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Qué criterio se utiliza para clasificar proyectos como \"internacionales\"?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Que se ejecuten en varios países.",
+      "options": [
+        { "text": "Que sean promovidos por gobiernos nacionales.", "isCorrect": false, "explanation": "Incorrecto. Eso define la titularidad pública, no su ámbito geográfico." },
+        { "text": "Que incluyan únicamente IoT.", "isCorrect": false, "explanation": "Incorrecto. La tecnología utilizada no determina el alcance territorial." },
+        { "text": "Que se ejecuten en varios países.", "isCorrect": true, "explanation": "Correcto. El alcance geográfico que abarca más de una nación define su carácter internacional." },
+        { "text": "Que abarquen varias regiones de un mismo país.", "isCorrect": false, "explanation": "Incorrecto. Eso lo clasificaría como un proyecto de ámbito nacional." }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Los proyectos de titularidad pública son:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: proyectos promovidos por Administraciones.",
+      "options": [
+        { "text": "proyectos promovidos por empresas privadas.", "isCorrect": false, "explanation": "Incorrecto. Eso define un proyecto de titularidad privada." },
+        { "text": "proyectos promovidos por Administraciones.", "isCorrect": true, "explanation": "Correcto. La entidad promotora (Estado, CCAA, Ayuntamientos) determina que sea público." },
+        { "text": "proyectos promovidos por empresas o Administraciones para interés público.", "isCorrect": false, "explanation": "Incorrecto. Una empresa privada puede hacer algo de interés público, pero su titularidad sigue siendo privada." },
+        { "text": "proyectos para el uso del público en general.", "isCorrect": false, "explanation": "Incorrecto. El uso no define la titularidad del capital promotor." }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Según el área de influencia de los proyectos, estos pueden ser:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: proyectos locales, regionales, nacionales o internacionales.",
+      "options": [
+        { "text": "proyectos locales, comarcales y regionales.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Deja fuera ámbitos mayores." },
+        { "text": "proyectos nacionales o europeos.", "isCorrect": false, "explanation": "Incorrecto por incompleta y demasiado específica (europeos en lugar de internacionales)." },
+        { "text": "proyectos locales, regionales, nacionales o internacionales.", "isCorrect": true, "explanation": "Correcto. Engloba toda la clasificación estándar según el alcance territorial." },
+        { "text": "proyectos regionales, nacionales e internacionales.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Faltan los de ámbito local." }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "El documento que contiene la justificación del proyecto, las soluciones adoptadas, la descripción del proceso y los objetivos del proyecto es:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La Memoria Descriptiva.",
+      "options": [
+        { "text": "El Pliego de Condiciones.", "isCorrect": false, "explanation": "Incorrecto. El pliego regula cómo se ejecuta y con qué calidades, no justifica el proyecto." },
+        { "text": "El Contrato.", "isCorrect": false, "explanation": "Incorrecto. El contrato establece vínculos legales y económicos, no descripciones técnicas detalladas." },
+        { "text": "Los Anexos de Cálculo.", "isCorrect": false, "explanation": "Incorrecto. Los anexos contienen el respaldo matemático, no la descripción general." },
+        { "text": "La Memoria Descriptiva.", "isCorrect": true, "explanation": "Correcto. Es el documento base que explica el 'por qué' y el 'qué' del proyecto." }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué significa \"PEC\" en el contexto de un proyecto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Presupuesto de ejecución por contrata.",
+      "options": [
+        { "text": "Plan económico conjunto.", "isCorrect": false, "explanation": "Incorrecto. Es un término inventado en este contexto." },
+        { "text": "Proyecto en curso.", "isCorrect": false, "explanation": "Incorrecto. No corresponde a unas siglas de presupuesto." },
+        { "text": "Presupuesto de ejecución por contrata.", "isCorrect": true, "explanation": "Correcto. Es el PEM más los Gastos Generales y el Beneficio Industrial." },
+        { "text": "Precio estimado del cliente.", "isCorrect": false, "explanation": "Incorrecto. No es una terminología técnica de proyectos." }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Cuál es la función principal del pliego de condiciones?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Detallar características de materiales y métodos de ejecución.",
+      "options": [
+        { "text": "Representar gráficamente los sistemas.", "isCorrect": false, "explanation": "Incorrecto. Esa es la función de los Planos." },
+        { "text": "Detallar características de materiales y métodos de ejecución.", "isCorrect": true, "explanation": "Correcto. Establece las reglas del juego técnicas, materiales y normativas de la obra." },
+        { "text": "Estimar costos de cada partida.", "isCorrect": false, "explanation": "Incorrecto. Esa es la función del Presupuesto." },
+        { "text": "Describir los objetivos del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Esa es la función de la Memoria." }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué es el presupuesto de ejecución material (PEM)?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La suma de las unidades de obra multiplicadas por su precio unitario.",
+      "options": [
+        { "text": "El gasto total del promotor durante la construcción.", "isCorrect": false, "explanation": "Incorrecto. Al PEM le faltan gastos generales, beneficio industrial e impuestos." },
+        { "text": "El coste total del proyecto incluyendo IVA.", "isCorrect": false, "explanation": "Incorrecto. El IVA se aplica sobre el PEC para obtener el Presupuesto Total." },
+        { "text": "El precio de cada unidad de obra.", "isCorrect": false, "explanation": "Incorrecto. Ese es el Precio Unitario, no el presupuesto en sí." },
+        { "text": "La suma de las unidades de obra multiplicadas por su precio unitario.", "isCorrect": true, "explanation": "Correcto. Refleja estrictamente el coste de materiales y mano de obra a pie de obra." }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "El documento Pliego de Condiciones contiene la siguiente información:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Condiciones generales, condiciones de materiales y equipos, condiciones de ejecución, condiciones económicas y normativa de seguridad y salud.",
+      "options": [
+        { "text": "Condiciones generales, condiciones de materiales y equipos, condiciones de ejecución, condiciones económicas y normativa de seguridad y salud.", "isCorrect": true, "explanation": "Correcto. Abarca todas las facetas normativas, técnicas y económicas de la ejecución." },
+        { "text": "Planos, contrato, condiciones generales y condiciones particulares.", "isCorrect": false, "explanation": "Incorrecto. Mezcla documentos distintos del proyecto (Planos) dentro del Pliego." },
+        { "text": "Condiciones particulares, condiciones de ejecución, condiciones económicas y normativa.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Omite las condiciones de materiales, que son clave." },
+        { "text": "Condiciones generales, condiciones particulares y condiciones económicas.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Faltan apartados técnicos fundamentales." }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Qué documento del proyecto describe los objetivos y justifica las soluciones técnicas adoptadas?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La memoria descriptiva.",
+      "options": [
+        { "text": "El manual de usuario.", "isCorrect": false, "explanation": "Incorrecto. Es un documento de entrega final para el uso, no de diseño." },
+        { "text": "La memoria descriptiva.", "isCorrect": true, "explanation": "Correcto. Es el documento narrativo que da contexto y justifica las decisiones del proyecto." },
+        { "text": "El pliego de condiciones.", "isCorrect": false, "explanation": "Incorrecto. Da las pautas de ejecución, no las justificaciones de diseño." },
+        { "text": "El presupuesto.", "isCorrect": false, "explanation": "Incorrecto. Solo cuantifica económicamente el proyecto." }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Los principales documentos que componen un proyecto son:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Memoria, Planos, Pliego de Condiciones, Mediciones y Presupuestos.",
+      "options": [
+        { "text": "Memoria, Planos y Presupuesto.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Falta el Pliego de Condiciones, que es esencial." },
+        { "text": "Pliego de Condiciones, Planos, Contrato y Presupuesto.", "isCorrect": false, "explanation": "Incorrecto. El contrato no suele ser parte técnica del proyecto original, y falta la Memoria." },
+        { "text": "Memoria, Contrato, Presupuesto y Planos.", "isCorrect": false, "explanation": "Incorrecto. Sustituye el vital Pliego de Condiciones por el Contrato." },
+        { "text": "Memoria, Planos, Pliego de Condiciones, Mediciones y Presupuestos.", "isCorrect": true, "explanation": "Correcto. Son los documentos básicos y obligatorios establecidos por normativa." }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué parte de la memoria del proyecto describe soluciones técnicas frente a otras alternativas?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Justificación.",
+      "options": [
+        { "text": "Objetivos.", "isCorrect": false, "explanation": "Incorrecto. Define lo que se quiere lograr, no por qué se eligió una solución frente a otra." },
+        { "text": "Conclusiones.", "isCorrect": false, "explanation": "Incorrecto. Resumen el final del documento, no el debate técnico de alternativas." },
+        { "text": "Justificación.", "isCorrect": true, "explanation": "Correcto. Es el apartado donde se argumenta por qué la solución elegida es la óptima." },
+        { "text": "Antecedentes.", "isCorrect": false, "explanation": "Incorrecto. Detallan la situación previa al proyecto, no las soluciones." }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Qué documento tiene carácter vinculante y contractual en un proyecto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El pliego de condiciones técnicas y facultativas.",
+      "options": [
+        { "text": "Los esquemas eléctricos preliminares.", "isCorrect": false, "explanation": "Incorrecto. Al ser preliminares, no son definitivos ni contractuales." },
+        { "text": "El pliego de condiciones técnicas y facultativas.", "isCorrect": true, "explanation": "Correcto. En caso de discrepancia, es el documento que manda legalmente en obra." },
+        { "text": "El presupuesto.", "isCorrect": false, "explanation": "Incorrecto. Valora la obra, pero las especificaciones de cumplimiento están en el Pliego." },
+        { "text": "La planificación inicial.", "isCorrect": false, "explanation": "Incorrecto. Es un cronograma estimado, no un contrato de calidad o ejecución." }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué se considera en el presupuesto de un proyecto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Materiales, mano de obra, equipos y maquinaria.",
+      "options": [
+        { "text": "Materiales, mano de obra, equipos y maquinaria.", "isCorrect": true, "explanation": "Correcto. Son los componentes básicos para calcular los costes directos de una partida." },
+        { "text": "Solo costos de materiales.", "isCorrect": false, "explanation": "Incorrecto. Omitir la mano de obra invalidaría el presupuesto." },
+        { "text": "Los honorarios del técnico.", "isCorrect": false, "explanation": "Incorrecto. Suelen ir en capítulos independientes y no forman parte de la ejecución material de la obra." },
+        { "text": "Exclusivamente los gastos del promotor.", "isCorrect": false, "explanation": "Incorrecto. El presupuesto detalla el coste de la obra en sí." }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Cuál de los siguientes es un ejemplo de proyecto de titularidad privada?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Automatización de una fábrica.",
+      "options": [
+        { "text": "Automatización de una fábrica.", "isCorrect": true, "explanation": "Correcto. Las fábricas suelen ser propiedad de empresas privadas con fines de lucro." },
+        { "text": "Construcción de un polideportivo.", "isCorrect": false, "explanation": "Incorrecto. Generalmente son de titularidad pública (municipal)." },
+        { "text": "Gestión de un parque nacional.", "isCorrect": false, "explanation": "Incorrecto. Es competencia directa del Estado o Comunidades Autónomas." },
+        { "text": "Iluminación de una localidad.", "isCorrect": false, "explanation": "Incorrecto. Es un servicio promovido por el Ayuntamiento (público)." }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "El Anteproyecto está compuesto por:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Memoria, Presupuesto y Planos.",
+      "options": [
+        { "text": "Memoria, Pliego de Condiciones y Presupuesto.", "isCorrect": false, "explanation": "Incorrecto. El pliego es un documento complejo que suele omitirse en fases de anteproyecto." },
+        { "text": "Memoria, Contrato y Planos.", "isCorrect": false, "explanation": "Incorrecto. No hay contrato de ejecución en fase de anteproyecto." },
+        { "text": "Memoria y Presupuesto.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Faltan los planos básicos para entender la idea." },
+        { "text": "Memoria, Presupuesto y Planos.", "isCorrect": true, "explanation": "Correcto. Son los tres documentos mínimos para que el cliente evalúe viabilidad técnica y económica." }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué es un proyecto académico según el documento?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Un trabajo realizado por estudiantes para obtener un título.",
+      "options": [
+        { "text": "Un trabajo realizado por estudiantes para obtener un título.", "isCorrect": true, "explanation": "Correcto. Ejemplos de esto son el TFG, TFM o Proyectos de Fin de Ciclo." },
+        { "text": "Un proyecto exclusivamente de investigación.", "isCorrect": false, "explanation": "Incorrecto. Un proyecto académico puede ser aplicativo o de diseño, no solo de investigación." },
+        { "text": "Un tipo de proyecto nacional regulado por el Ministerio de Educación.", "isCorrect": false, "explanation": "Incorrecto. Es regulado por el centro educativo en base a su currículo." },
+        { "text": "Un proyecto gestionado por universidades públicas.", "isCorrect": false, "explanation": "Incorrecto. También existen en FP, institutos y universidades privadas." }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué porcentaje aproximado se añade al PEM para obtener el PEC?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: 12-20%.",
+      "options": [
+        { "text": "30%.", "isCorrect": false, "explanation": "Incorrecto. Es un valor demasiado alto para los márgenes estipulados por ley de contratos." },
+        { "text": "12-20%.", "isCorrect": true, "explanation": "Correcto. Suele corresponder al 13-19% de Gastos Generales y el 6% de Beneficio Industrial." },
+        { "text": "5%.", "isCorrect": false, "explanation": "Incorrecto. Es un porcentaje insuficiente para cubrir gastos y beneficios del contratista." },
+        { "text": "10%.", "isCorrect": false, "explanation": "Incorrecto. Normalmente los Gastos Generales por sí solos ya superan este porcentaje." }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué organismo regula el Reglamento Electrotécnico de Baja Tensión?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: AENOR.",
+      "options": [
+        { "text": "ISO.", "isCorrect": false, "explanation": "Incorrecto. ISO es internacional y de estandarización general, no específico del REBT en España." },
+        { "text": "CTN-116.", "isCorrect": false, "explanation": "Incorrecto. Aunque los comités técnicos elaboran normas, el paraguas institucional es distinto." },
+        { "text": "AENOR.", "isCorrect": true, "explanation": "Correcto. (Nota: Según el contexto del examen, AENOR emite las normas UNE y Guías Técnicas en las que se apoya el REBT)." },
+        { "text": "CENELEC.", "isCorrect": false, "explanation": "Incorrecto. Es el comité europeo, no el regulador nacional directo del REBT." }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Cuál es el elemento de acotación que delimita la longitud de la línea de cota?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Líneas auxiliares de cota",
+      "options": [
+        { "text": "Símbolos finales de cota", "isCorrect": false, "explanation": "Incorrecto. Las flechas o trazos indican los extremos, pero se apoyan en las auxiliares." },
+        { "text": "Líneas de referencia", "isCorrect": false, "explanation": "Incorrecto. Sirven para indicar un valor o nota alfanumérica, no delimitan longitudes." },
+        { "text": "Cifras de cota", "isCorrect": false, "explanation": "Incorrecto. Es el número que indica la magnitud real." },
+        { "text": "Líneas auxiliares de cota", "isCorrect": true, "explanation": "Correcto. Son las líneas que parten de la arista del objeto y limitan hasta dónde llega la línea de cota." }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué trazo se utiliza para las líneas auxiliares de cota en un croquis?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Fino y continuo",
+      "options": [
+        { "text": "Fino y discontinuo", "isCorrect": false, "explanation": "Incorrecto. Las líneas discontinuas se usan para aristas ocultas." },
+        { "text": "Fino y continuo", "isCorrect": true, "explanation": "Correcto. Deben ser finas para no confundirse con las aristas principales del objeto." },
+        { "text": "Grueso y punteado", "isCorrect": false, "explanation": "Incorrecto. No se utilizan trazos gruesos en la acotación general." },
+        { "text": "Grueso y continuo", "isCorrect": false, "explanation": "Incorrecto. Este trazo se reserva para las aristas visibles y contornos de la pieza." }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Las líneas de referencia de cota pueden terminar en:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Todas las afirmaciones son correctas.",
+      "options": [
+        { "text": "Flecha.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Terminan en flecha si señalan un contorno." },
+        { "text": "Todas las afirmaciones son correctas.", "isCorrect": true, "explanation": "Correcto. Según normativa, terminan en flecha (contorno), punto (superficie) o sin nada (línea de cota)." },
+        { "text": "Punto.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Se usa punto si señalan el interior de una pieza." },
+        { "text": "En otra línea.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Si apuntan a otra línea de cota, no llevan símbolo." }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "Las cotas imprescindibles para la interpretación de una pieza se llaman:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Cotas funcionales.",
+      "options": [
+        { "text": "Cotas específicas.", "isCorrect": false, "explanation": "Incorrecto. No es una terminología normalizada en Dibujo Técnico." },
+        { "text": "Cotas auxiliares.", "isCorrect": false, "explanation": "Incorrecto. Estas son informativas y no son imprescindibles para fabricar." },
+        { "text": "Cotas no funcionales.", "isCorrect": false, "explanation": "Incorrecto. Son necesarias para fabricar, pero no afectan al funcionamiento principal." },
+        { "text": "Cotas funcionales.", "isCorrect": true, "explanation": "Correcto. Son vitales para el funcionamiento y acoplamiento de la pieza con otras." }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué define una cota auxiliar?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Complementa las cotas no funcionales",
+      "options": [
+        { "text": "Representa dimensiones en paralelo", "isCorrect": false, "explanation": "Incorrecto. Eso es un método de acotación, no un tipo de cota." },
+        { "text": "Complementa las cotas no funcionales", "isCorrect": true, "explanation": "Correcto. Se dan solo a título informativo y suelen ponerse entre paréntesis." },
+        { "text": "Sirve para definir magnitudes principales", "isCorrect": false, "explanation": "Incorrecto. Eso lo hacen las cotas funcionales." },
+        { "text": "Esencial para la interpretación de la pieza", "isCorrect": false, "explanation": "Incorrecto. Las auxiliares son redundantes y no esenciales." }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué trazo se recomienda para las aristas principales en un croquis?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Más grueso que el resto",
+      "options": [
+        { "text": "Uniforme con las auxiliares", "isCorrect": false, "explanation": "Incorrecto. Confundiría el dibujo del objeto con las líneas de medida." },
+        { "text": "Más grueso que el resto", "isCorrect": true, "explanation": "Correcto. El contorno visible de la pieza debe destacar visualmente." },
+        { "text": "Más fino que las cotas", "isCorrect": false, "explanation": "Incorrecto. Es justo al revés." },
+        { "text": "Continuo y punteado", "isCorrect": false, "explanation": "Incorrecto. No existe un trazo mixto de este tipo para aristas visibles principales." }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué representa la letra \"R\" en la norma EN 81346?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Resistencias",
+      "options": [
+        { "text": "Transformadores", "isCorrect": false, "explanation": "Incorrecto. En los estándares eléctricos suele ser la T." },
+        { "text": "Contactores auxiliares y relés", "isCorrect": false, "explanation": "Incorrecto. Ese grupo corresponde a la letra K." },
+        { "text": "Resistencias", "isCorrect": true, "explanation": "Correcto. La R es el código estándar para componentes resistivos." },
+        { "text": "Motores", "isCorrect": false, "explanation": "Incorrecto. Los motores utilizan la letra M." }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Qué representa la letra \"K\" en la norma EN 81346?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Contactores auxiliares y relés",
+      "options": [
+        { "text": "Contactores auxiliares y relés", "isCorrect": true, "explanation": "Correcto. K es el designador común para elementos de mando como relés y contactores." },
+        { "text": "Transformadores", "isCorrect": false, "explanation": "Incorrecto. Suelen usar la letra T." },
+        { "text": "Motores", "isCorrect": false, "explanation": "Incorrecto. Los motores usan la letra M." },
+        { "text": "Resistencias", "isCorrect": false, "explanation": "Incorrecto. Las resistencias usan la letra R." }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué es un croquis?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Una representación gráfica a mano alzada sin medidas precisas.",
+      "options": [
+        { "text": "Un plano técnico escalado.", "isCorrect": false, "explanation": "Incorrecto. Los croquis por definición no tienen escala exacta." },
+        { "text": "Un dibujo técnico con cotas y especificaciones detalladas hecho en sofware.", "isCorrect": false, "explanation": "Incorrecto. Si está hecho con software, es un plano, no un croquis." },
+        { "text": "Una representación gráfica a mano alzada sin medidas precisas.", "isCorrect": true, "explanation": "Correcto. Es un boceto a mano alzada pero proporcionado, que incluye cotas numéricas." },
+        { "text": "Un diagrama eléctrico automatizado.", "isCorrect": false, "explanation": "Incorrecto. Es un concepto ajeno a la definición de croquis mecánico/técnico." }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "Los elementos que componen un croquis son:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Aristas, ejes de simetría, cotas, líneas auxiliares de cota, líneas de cota, especificaciones, vistas y leyenda.",
+      "options": [
+        { "text": "Aristas, ejes y cotas.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Faltan muchos elementos básicos." },
+        { "text": "Aristas, ejes de simetría, cotas, líneas auxiliares de cota, líneas de cota, especificaciones, vistas y leyenda.", "isCorrect": true, "explanation": "Correcto. Enumera de forma exhaustiva todos los elementos formales del dibujo." },
+        { "text": "Alzado, planta, perfil y especificaciones.", "isCorrect": false, "explanation": "Incorrecto. Esas son las vistas, no todos los elementos gráficos del documento." },
+        { "text": "Aristas vistas, aristas ocultas, especificaciones y leyenda.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Faltan todas las líneas referentes a la acotación." }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué tipo de vistas son comunes en un croquis técnico?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Alzado, planta y perfil",
+      "options": [
+        { "text": "Vista superior y lateral", "isCorrect": false, "explanation": "Incorrecto por incompleta. Falta la vista frontal o alzado." },
+        { "text": "Alzado, planta y perfil", "isCorrect": true, "explanation": "Correcto. Son las proyecciones diédricas estándar necesarias para definir 3D en 2D." },
+        { "text": "Detalle ampliado y sección", "isCorrect": false, "explanation": "Incorrecto. Son vistas específicas auxiliares, no las fundamentales." },
+        { "text": "Perspectiva axonométrica y oblicua", "isCorrect": false, "explanation": "Incorrecto. Son tipos de perspectiva, no vistas diédricas." }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "Los elementos de una acotación son:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Cifras de cota, líneas de cota, líneas auxiliares de cota, símbolo final de cota, líneas de referencia y símbolos especiales.",
+      "options": [
+        { "text": "Cotas funcionales y cotas no funcionales.", "isCorrect": false, "explanation": "Incorrecto. Eso es la clasificación geométrica, no los elementos del dibujo." },
+        { "text": "Alzado, planta y perfil.", "isCorrect": false, "explanation": "Incorrecto. Esas son las vistas ortogonales, no las cotas." },
+        { "text": "Flechas, cifras y líneas de cota.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Faltan líneas auxiliares y símbolos." },
+        { "text": "Cifras de cota, líneas de cota, líneas auxiliares de cota, símbolo final de cota, líneas de referencia y símbolos especiales.", "isCorrect": true, "explanation": "Correcto. Engloba el estándar completo de elementos que forman una medida técnica." }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué es un croquis y para que se utiliza?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Una representación gráfica a mano alzada de una pieza.",
+      "options": [
+        { "text": "Una herramienta para medir piezas.", "isCorrect": false, "explanation": "Incorrecto. Es un documento gráfico, no un instrumento de medición." },
+        { "text": "Un dibujo artístico.", "isCorrect": false, "explanation": "Incorrecto. El croquis tiene carácter técnico e informativo, no estético." },
+        { "text": "Una representación gráfica a mano alzada de una pieza.", "isCorrect": true, "explanation": "Correcto. Permite capturar la geometría y medidas a pie de máquina rápidamente." },
+        { "text": "Una representación gráfica exacta de una pieza.", "isCorrect": false, "explanation": "Incorrecto. Al ser a mano alzada, no es exacto escalarmente (aunque sus cotas sí lo sean)." }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué material es imprescindible para realizar un croquis?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Lápiz, papel y goma",
+      "options": [
+        { "text": "Software de diseño técnico", "isCorrect": false, "explanation": "Incorrecto. Eso sería para dibujo asistido por ordenador (CAD)." },
+        { "text": "Escalímetro", "isCorrect": false, "explanation": "Incorrecto. El croquis no usa escala estricta, por lo que no se mide." },
+        { "text": "Compás y regla", "isCorrect": false, "explanation": "Incorrecto. El croquis por definición es a mano alzada, no usa reglas." },
+        { "text": "Lápiz, papel y goma", "isCorrect": true, "explanation": "Correcto. Al ser un dibujo a mano alzada, es lo único estrictamente necesario." }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué representa la letra \"M\" en la norma EN 81346?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Motores",
+      "options": [
+        { "text": "Motores", "isCorrect": true, "explanation": "Correcto. La M es la denominación estandarizada internacional para motores eléctricos." },
+        { "text": "Contactores auxiliares y relés", "isCorrect": false, "explanation": "Incorrecto. Estos emplean la letra K." },
+        { "text": "Transformadores", "isCorrect": false, "explanation": "Incorrecto. Se designan con la letra T." },
+        { "text": "Resistencias", "isCorrect": false, "explanation": "Incorrecto. Emplean la letra R." }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué representa la letra \"G\" en la norma EN 81346?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Generadores",
+      "options": [
+        { "text": "Generadores", "isCorrect": true, "explanation": "Correcto. La letra G identifica fuentes de alimentación o generación de energía eléctrica." },
+        { "text": "Contactores auxiliares y relés", "isCorrect": false, "explanation": "Incorrecto. Usan la letra K." },
+        { "text": "Motores", "isCorrect": false, "explanation": "Incorrecto. Usan la letra M." },
+        { "text": "Transformadores", "isCorrect": false, "explanation": "Incorrecto. Usan la letra T." }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Qué debe hacer un operario con una pieza correctamente acotada?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Fabricarla sin necesidad de realizar cálculos adicionales.",
+      "options": [
+        { "text": "Usar herramientas avanzadas para acotación adicional.", "isCorrect": false, "explanation": "Incorrecto. El plano debe bastarse por sí solo." },
+        { "text": "Interpretar el plano sin especificaciones claras.", "isCorrect": false, "explanation": "Incorrecto. Si está bien acotado, las especificaciones son totalmente claras." },
+        { "text": "Realizar medidas adicionales para verificar la pieza.", "isCorrect": false, "explanation": "Incorrecto. La acotación debe estar completa para no tener que deducir medidas." },
+        { "text": "Fabricarla sin necesidad de realizar cálculos adicionales.", "isCorrect": true, "explanation": "Correcto. El principio básico de la acotación es que el operario no tenga que sumar/restar cotas para poder mecanizar." }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Cuál es el principio general de la acotación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Utilizar las cotas mínimas necesarias para definir la pieza",
+      "options": [
+        { "text": "Añadir unidades de medida junto a cada cota", "isCorrect": false, "explanation": "Incorrecto. La norma dice que no se añade la unidad (generalmente en milímetros) salvo indicación contraria." },
+        { "text": "Duplicar cotas esenciales", "isCorrect": false, "explanation": "Incorrecto. Una cota no debe repetirse nunca." },
+        { "text": "Utilizar las cotas mínimas necesarias para definir la pieza", "isCorrect": true, "explanation": "Correcto. Sin duplicidades y sin dejar ningún elemento geométrico sin acotar." },
+        { "text": "Colocar cotas únicamente en el interior de la pieza", "isCorrect": false, "explanation": "Incorrecto. Se recomienda, siempre que sea posible, colocarlas fuera de la vista de la pieza." }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué representa la letra \"C\" en la norma EN 81346?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Condensadores",
+      "options": [
+        { "text": "Transformadores", "isCorrect": false, "explanation": "Incorrecto. Usan la letra T." },
+        { "text": "Contactores auxiliares y relés", "isCorrect": false, "explanation": "Incorrecto. Usan la letra K." },
+        { "text": "Condensadores", "isCorrect": true, "explanation": "Correcto. La C es el indicativo internacional para los condensadores (Capacitors)." },
+        { "text": "Resistencias", "isCorrect": false, "explanation": "Incorrecto. Usan la letra R." }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Para la correcta acotación de una pieza:",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Todas las afirmaciones son correctas.",
+      "options": [
+        { "text": "Las cotas debes representarse todas en la misma unidad.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Es cierto que deben usar la misma unidad, pero hay más normas." },
+        { "text": "Se colocarán las cotas en la vista que mejor represente la magnitud acotada.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Es un principio válido, pero no el único." },
+        { "text": "Deberán colocarse las cotas necesarias, sin repetir ninguna.", "isCorrect": false, "explanation": "Incorrecto por incompleta. Es una regla fundamental, pero el resto también lo son." },
+        { "text": "Todas las afirmaciones son correctas.", "isCorrect": true, "explanation": "Correcto. Las tres sentencias recogen principios básicos de la norma UNE sobre acotación." }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "¿Qué componente debe incluir obligatoriamente un anteproyecto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Memoria, presupuesto y esquemas eléctricos.",
+      "options": [
+        { "text": "Memoria, presupuesto y esquemas eléctricos.", "isCorrect": true, "explanation": "Correcto. Al menos debe contener descripción básica, coste estimado y diagramas principales." },
+        { "text": "Planos detallados y firmados.", "isCorrect": false, "explanation": "Incorrecto. Los planos detallados se reservan para el Proyecto Ejecutivo Final." },
+        { "text": "Certificados de control y evaluación.", "isCorrect": false, "explanation": "Incorrecto. Eso es para la fase de liquidación y fin de obra." },
+        { "text": "Manuales de usuario y libro de dirección de obra.", "isCorrect": false, "explanation": "Incorrecto. El libro de obra se usa durante la ejecución, y los manuales al finalizar." }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "¿Qué fases incluye un proyecto técnico según el documento?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Planificación, ejecución y entrega.",
+      "options": [
+        { "text": "Evaluación, ajuste y presentación.", "isCorrect": false, "explanation": "Incorrecto. No son las fases macro estandarizadas de la vida de un proyecto." },
+        { "text": "Planificación, ejecución y entrega.", "isCorrect": true, "explanation": "Correcto. Refleja el ciclo de vida natural: diseñar, construir y entregar." },
+        { "text": "Diseño, aprobación y seguimiento.", "isCorrect": false, "explanation": "Incorrecto. Omite la fase clave de ejecución final." },
+        { "text": "Idea, diseño y resultados.", "isCorrect": false, "explanation": "Incorrecto. Es un planteamiento más cercano a un proyecto científico que a un proyecto técnico o de ingeniería." }
+      ]
+    },
+    {
+    "id": 43,
+    "text": "¿Cuál es el margen de desviación presupuestaria máximo aceptable en la ejecución de un proyecto técnico según el documento?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 5%.",
+    "options": [
+      { "text": "2%", "isCorrect": false, "explanation": "Incorrecto. Es un margen demasiado estricto para la realidad de una obra técnica." },
+      { "text": "5%", "isCorrect": true, "explanation": "Correcto. El texto indica que la ejecución debe ajustarse al presupuesto con una desviación que no supere el 5%." },
+      { "text": "10%", "isCorrect": false, "explanation": "Incorrecto. Aunque es común en la práctica, el documento establece el límite en el 5%." },
+      { "text": "15%", "isCorrect": false, "explanation": "Incorrecto. Se considera una desviación excesiva para una planificación rigurosa." }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "En el contexto de la Industria 4.0, ¿qué herramienta permite crear una réplica virtual de un proceso físico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Gemelo digital.",
+    "options": [
+      { "text": "IoT", "isCorrect": false, "explanation": "Incorrecto. El IoT se refiere a la interconexión de objetos, no a la réplica virtual completa." },
+      { "text": "Cloud computing", "isCorrect": false, "explanation": "Incorrecto. Es la tecnología de almacenamiento, no el modelo de simulación." },
+      { "text": "Gemelo digital", "isCorrect": true, "explanation": "Correcto. Los gemelos digitales son representaciones virtuales de sistemas físicos mencionadas como parte de la industria 4.0." },
+      { "text": "Red PERT", "isCorrect": false, "explanation": "Incorrecto. Es una técnica de planificación de tiempos, no de simulación de procesos." }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "¿Qué caracteriza a un proyecto 'complejo' según el texto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Que presenta muchos ámbitos tecnológicos como Big Data y Visión Artificial.",
+    "options": [
+      { "text": "Que solo involucra un PLC y un variador.", "isCorrect": false, "explanation": "Incorrecto. Eso definiría a un proyecto sencillo." },
+      { "text": "Que se ejecuta en menos de un mes.", "isCorrect": false, "explanation": "Incorrecto. La brevedad suele asociarse a proyectos simples, no complejos." },
+      { "text": "Que presenta muchos ámbitos tecnológicos como Big Data y Visión Artificial.", "isCorrect": true, "explanation": "Correcto. Los proyectos complejos se definen por la convergencia de múltiples tecnologías y actividades coordinadas." },
+      { "text": "Que no requiere planificación ni organización.", "isCorrect": false, "explanation": "Incorrecto. Todo proyecto la requiere, y el complejo de forma más rigurosa." }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "¿Qué requisito formal debe cumplir un proyecto técnico antes de comenzar su tramitación legal?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Estar firmado por un técnico competente y visado por un colegio profesional.",
+    "options": [
+      { "text": "Estar escrito en varios idiomas.", "isCorrect": false, "explanation": "Incorrecto. No es un requisito administrativo para la legalización nacional." },
+      { "text": "No superar las 50 páginas.", "isCorrect": false, "explanation": "Incorrecto. La extensión no es un criterio legal de validez." },
+      { "text": "Estar firmado por un técnico competente y visado por un colegio profesional.", "isCorrect": true, "explanation": "Correcto. La firma técnica y el visado colegial son requisitos esenciales para dar fe de la responsabilidad del autor." },
+      { "text": "Ser publicado en redes sociales.", "isCorrect": false, "explanation": "Incorrecto. No tiene ninguna relevancia en el proceso administrativo." }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Dentro de la Memoria Descriptiva, ¿en qué apartado se indica la ubicación física de la instalación?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Emplazamiento.",
+    "options": [
+      { "text": "Objetivos", "isCorrect": false, "explanation": "Incorrecto. Los objetivos definen el 'qué', no el 'dónde'." },
+      { "text": "Emplazamiento", "isCorrect": true, "explanation": "Correcto. El apartado de Emplazamiento describe específicamente la ubicación geográfica del proyecto." },
+      { "text": "Antecedentes", "isCorrect": false, "explanation": "Incorrecto. Detalla estudios previos, no la ubicación actual." },
+      { "text": "Anexos", "isCorrect": false, "explanation": "Incorrecto. Los anexos amplían información técnica, pero el emplazamiento es un apartado propio de la memoria." }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "¿Qué documento se utiliza para definir el orden de las fases y emplear técnicas como la red PERT?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Planificación y programación.",
+    "options": [
+      { "text": "Planificación y programación", "isCorrect": true, "explanation": "Correcto. Este documento específico gestiona los tiempos y métodos de control como PERT." },
+      { "text": "Pliego de condiciones", "isCorrect": false, "explanation": "Incorrecto. Regula calidades y normas, no la cronología detallada." },
+      { "text": "Presupuesto de ejecución material", "isCorrect": false, "explanation": "Incorrecto. Se centra en el coste, no en el tiempo." },
+      { "text": "Planos de detalle", "isCorrect": false, "explanation": "Incorrecto. Representan geometría, no secuencias temporales." }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "¿Cuál es el orden jerárquico correcto de los grupos de planos en un proyecto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 1. Situación, 2. Obra civil, 3. Maquinaria, 4. Instalaciones.",
+    "options": [
+      { "text": "1. Maquinaria, 2. Obra civil, 3. Situación.", "isCorrect": false, "explanation": "Incorrecto. El orden normativo siempre empieza por el contexto general (situación)." },
+      { "text": "1. Situación, 2. Obra civil, 3. Maquinaria, 4. Instalaciones.", "isCorrect": true, "explanation": "Correcto. El texto establece una clasificación numérica estricta que va de lo macro (ubicación) a lo micro (instalaciones)." },
+      { "text": "1. Instalaciones, 2. Urbanización, 3. Maquinaria.", "isCorrect": false, "explanation": "Incorrecto. Las instalaciones no encabezan el orden de planos." },
+      { "text": "1. Detalles, 2. Alzados, 3. Plantas.", "isCorrect": false, "explanation": "Incorrecto. Eso es una jerarquía interna de cada grupo de planos, no de los grupos entre sí." }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "¿Qué información NO es obligatorio que aparezca en el cajetín de un plano?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El coste total de la obra.",
+    "options": [
+      { "text": "Título del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Es obligatorio para identificar a qué proyecto pertenece el plano." },
+      { "text": "Número de colegiado del autor.", "isCorrect": false, "explanation": "Incorrecto. Es necesario para acreditar la competencia del técnico." },
+      { "text": "El coste total de la obra.", "isCorrect": true, "explanation": "Correcto. El cajetín contiene datos identificativos y técnicos; la información económica reside en el Presupuesto." },
+      { "text": "Escala y número de plano.", "isCorrect": false, "explanation": "Incorrecto. Son datos técnicos básicos para la lectura del plano." }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "¿Qué documento del pliego regula el modo de actuación frente a imprevistos, penalizaciones y fianzas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Condiciones económicas.",
+    "options": [
+      { "text": "Condiciones de materiales.", "isCorrect": false, "explanation": "Incorrecto. Este apartado solo trata las calidades físicas de los suministros." },
+      { "text": "Condiciones económicas", "isCorrect": true, "explanation": "Correcto. Este documento gestiona fianzas, penalizaciones por demora y formas de pago." },
+      { "text": "Normativa de seguridad.", "isCorrect": false, "explanation": "Incorrecto. Trata sobre prevención de riesgos, no sobre gestión de contratos." },
+      { "text": "Memoria descriptiva.", "isCorrect": false, "explanation": "Incorrecto. No forma parte del Pliego de Condiciones." }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "¿Dónde se establecen los métodos y procedimientos para el montaje de instalaciones eléctricas o neumáticas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Condiciones de ejecución.",
+    "options": [
+      { "text": "Condiciones de ejecución", "isCorrect": true, "explanation": "Correcto. Las condiciones de ejecución marcan el 'cómo' deben instalarse y montarse los equipos paso a paso." },
+      { "text": "Condiciones generales", "isCorrect": false, "explanation": "Incorrecto. Trata sobre aspectos legales y normativos globales." },
+      { "text": "Anexos de cálculo", "isCorrect": false, "explanation": "Incorrecto. Contienen fórmulas y resultados, no procedimientos de montaje." },
+      { "text": "Presupuesto de ejecución por contrata", "isCorrect": false, "explanation": "Incorrecto. Valora la instalación pero no dice cómo ejecutarla físicamente." }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "¿Qué se incluye en el apartado de 'Condiciones de materiales y equipos'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Las especificaciones técnicas y la normativa de los componentes.",
+    "options": [
+      { "text": "El currículum de los operarios.", "isCorrect": false, "explanation": "Incorrecto. Eso no forma parte de la documentación técnica del proyecto." },
+      { "text": "Las especificaciones técnicas y la normativa de los componentes.", "isCorrect": true, "explanation": "Correcto. Define las calidades mínimas y normas que deben cumplir todos los materiales empleados." },
+      { "text": "El plano de situación de la fábrica.", "isCorrect": false, "explanation": "Incorrecto. Eso pertenece al documento de Planos." },
+      { "text": "El calendario de vacaciones del proyectista.", "isCorrect": false, "explanation": "Incorrecto. Es información irrelevante para el proyecto técnico." }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "¿Cuál es considerado el documento más importante desde el punto de vista formal y contractual?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El Pliego de Condiciones.",
+    "options": [
+      { "text": "Los Anexos.", "isCorrect": false, "explanation": "Incorrecto. Son complementarios, no la base del contrato." },
+      { "text": "El Pliego de Condiciones.", "isCorrect": true, "explanation": "Correcto. Es el documento central que regula la ejecución, responsabilidades y penalizaciones ante la ley." },
+      { "text": "La Memoria Descriptiva.", "isCorrect": false, "explanation": "Incorrecto. Es informativa y justificativa, pero el Pliego tiene mayor peso legal." },
+      { "text": "El Presupuesto.", "isCorrect": false, "explanation": "Incorrecto. Aunque es vital, el Pliego manda sobre el cumplimiento técnico de lo contratado." }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "¿Qué concepto se obtiene al sumar el PEM, los Gastos Generales (12-20%) y el Beneficio Industrial (6%)?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Coste del proyecto.",
+    "options": [
+      { "text": "Presupuesto de ejecución material.", "isCorrect": false, "explanation": "Incorrecto. Ese es el PEM inicial antes de sumar gastos y beneficios." },
+      { "text": "Coste del proyecto", "isCorrect": true, "explanation": "Correcto. La suma de PEM, Gastos Generales y Beneficio Industrial da como resultado el coste del proyecto antes de impuestos." },
+      { "text": "Presupuesto de ejecución por contrata (PEC).", "isCorrect": false, "explanation": "Incorrecto. Al PEC habría que añadirle el IVA sobre el coste del proyecto." },
+      { "text": "Presupuesto final ante la administración.", "isCorrect": false, "explanation": "Incorrecto. Este incluye además tasas de licencias y gastos de redacción." }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "¿Qué porcentaje del PEM se estima normalmente para los gastos derivados de la elaboración del proyecto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 10%.",
+    "options": [
+      { "text": "5%", "isCorrect": false, "explanation": "Incorrecto. Es un porcentaje inferior al estipulado para la redacción técnica." },
+      { "text": "6%", "isCorrect": false, "explanation": "Incorrecto. El 6% suele ser el Beneficio Industrial." },
+      { "text": "10%", "isCorrect": true, "explanation": "Correcto. El documento indica que los gastos de elaboración/redacción del proyecto se calculan como un 10% del PEM." },
+      { "text": "21%", "isCorrect": false, "explanation": "Incorrecto. El 21% corresponde al IVA." }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "¿Cuál es la diferencia entre precios unitarios y precios descompuestos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Los descompuestos desglosan materiales, maquinaria y mano de obra.",
+    "options": [
+      { "text": "Los unitarios incluyen IVA y los descompuestos no.", "isCorrect": false, "explanation": "Incorrecto. El IVA se aplica al final de todo el presupuesto." },
+      { "text": "Los descompuestos desglosan materiales, maquinaria y mano de obra.", "isCorrect": true, "explanation": "Correcto. Los precios descompuestos entran al detalle de cada recurso individual usado en la unidad de obra." },
+      { "text": "Los unitarios solo se usan en proyectos públicos.", "isCorrect": false, "explanation": "Incorrecto. Se usan en ambos tipos de titularidad." },
+      { "text": "No hay diferencia, son sinónimos.", "isCorrect": false, "explanation": "Incorrecto. Uno es el precio final de la partida y el otro su desglose interno." }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "¿Qué elementos componen el precio de la mano de obra en un presupuesto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Salario, seguros sociales, dietas y desplazamientos.",
+    "options": [
+      { "text": "Solo el sueldo base.", "isCorrect": false, "explanation": "Incorrecto. El coste real incluye las cargas sociales y gastos asociados." },
+      { "text": "Salario, seguros sociales, dietas y desplazamientos.", "isCorrect": true, "explanation": "Correcto. El presupuesto debe recoger todos los costes directos e indirectos vinculados al personal." },
+      { "text": "El coste del alquiler de la grúa.", "isCorrect": false, "explanation": "Incorrecto. Eso pertenece a costes de maquinaria." },
+      { "text": "Únicamente los seguros de accidentes.", "isCorrect": false, "explanation": "Incorrecto. Es solo una pequeña parte de la carga social del trabajador." }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "¿Cuál es el objetivo principal de elaborar un anteproyecto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Justificar la mejor solución técnica y determinar la viabilidad.",
+    "options": [
+      { "text": "Finalizar la obra antes de tiempo.", "isCorrect": false, "explanation": "Incorrecto. Es una fase de diseño, no de reducción de plazos de ejecución." },
+      { "text": "Justificar la mejor solución técnica y determinar la viabilidad.", "isCorrect": true, "explanation": "Correcto. Sirve para plantear la idea y comprobar si es realizable técnica y económicamente." },
+      { "text": "Evitar pagar las tasas del colegio profesional.", "isCorrect": false, "explanation": "Incorrecto. No exime de ninguna obligación legal posterior." },
+      { "text": "Sustituir al proyecto definitivo.", "isCorrect": false, "explanation": "Incorrecto. Es una fase previa, no un sustituto." }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "¿Qué puede ocurrir tras la fase de anteproyecto si se considera inviable?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Se puede abandonar la idea inicial.",
+    "options": [
+      { "text": "El proyectista es sancionado.", "isCorrect": false, "explanation": "Incorrecto. Es lícito concluir que una idea no es viable." },
+      { "text": "Se debe ejecutar obligatoriamente.", "isCorrect": false, "explanation": "Incorrecto. Precisamente se hace para evitar ejecutar algo que no funcionará." },
+      { "text": "Se puede abandonar la idea inicial.", "isCorrect": true, "explanation": "Correcto. El anteproyecto permite replantear o desechar la idea si el estudio previo es negativo." },
+      { "text": "Se convierte automáticamente en proyecto público.", "isCorrect": false, "explanation": "Incorrecto. La viabilidad no cambia la titularidad del promotor." }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "¿Qué documento del anteproyecto incluye esquemas unifilares y programación básica de PLC o robots?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Planos.",
+    "options": [
+      { "text": "Memoria", "isCorrect": false, "explanation": "Incorrecto. La memoria lo describe narrativamente, pero los esquemas son gráficos." },
+      { "text": "Presupuesto", "isCorrect": false, "explanation": "Incorrecto. El presupuesto solo cuantifica el coste de esos equipos." },
+      { "text": "Planos", "isCorrect": true, "explanation": "Correcto. En el anteproyecto, los esquemas y programas básicos forman parte de la representación técnica (documento de planos)." },
+      { "text": "Pliego de condiciones", "isCorrect": false, "explanation": "Incorrecto. El anteproyecto a menudo ni siquiera incluye un pliego detallado." }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "¿Qué actividad inicia normalmente la relación entre el promotor y el técnico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una entrevista para buscar soluciones a la idea inicial.",
+    "options": [
+      { "text": "La firma del visado.", "isCorrect": false, "explanation": "Incorrecto. El visado ocurre cuando el proyecto ya está redactado." },
+      { "text": "Una entrevista para buscar soluciones a la idea inicial.", "isCorrect": true, "explanation": "Correcto. El ciclo de vida comienza con la toma de contacto y la definición de las necesidades del cliente." },
+      { "text": "El pago del IVA.", "isCorrect": false, "explanation": "Incorrecto. Los impuestos se gestionan durante y al final de la ejecución." },
+      { "text": "La compra de los robots.", "isCorrect": false, "explanation": "Incorrecto. No se compra material sin tener un diseño y presupuesto previo." }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "¿Quién se encarga de elaborar las normas UNE en España?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Los Comités Técnicos de Normalización (CTN) de AENOR.",
+    "options": [
+      { "text": "ISO", "isCorrect": false, "explanation": "Incorrecto. ISO elabora normas internacionales, no las UNE nacionales." },
+      { "text": "Los Comités Técnicos de Normalización (CTN) de AENOR.", "isCorrect": true, "explanation": "Correcto. AENOR, a través de sus comités técnicos, es el organismo responsable de la normativa técnica nacional." },
+      { "text": "El ayuntamiento local.", "isCorrect": false, "explanation": "Incorrecto. Los ayuntamientos dictan ordenanzas, no normas técnicas industriales." },
+      { "text": "La Unión Europea directamente.", "isCorrect": false, "explanation": "Incorrecto. La UE emite directivas que luego se traducen en normas nacionales (como las UNE)." }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "¿Qué comité técnico específico se encarga de la normativa sobre robótica a nivel internacional?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: ISO/TC 299.",
+    "options": [
+      { "text": "CTN-116", "isCorrect": false, "explanation": "Incorrecto. Es el comité español de automatización, no el internacional de robótica." },
+      { "text": "ISO/TC 299", "isCorrect": true, "explanation": "Correcto. Es el comité técnico de la Organización Internacional de Normalización específico para robótica." },
+      { "text": "2006/42/CE", "isCorrect": false, "explanation": "Incorrecto. Es una directiva europea de máquinas, no un comité de normalización." },
+      { "text": "ISO/TC 184", "isCorrect": false, "explanation": "Incorrecto. Este se encarga de sistemas de automatización en general, no específicamente de robótica." }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "¿Qué reglamento debe cumplirse obligatoriamente en el diseño de instalaciones neumáticas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Reglamento de Equipos a Presión.",
+    "options": [
+      { "text": "Reglamento Electrotécnico de Baja Tensión.", "isCorrect": false, "explanation": "Incorrecto. Se aplica a la parte eléctrica, no a la neumática." },
+      { "text": "Reglamento de Equipos a Presión.", "isCorrect": true, "explanation": "Correcto. Las instalaciones de aire comprimido se rigen por este reglamento por seguridad." },
+      { "text": "Ley de Contratos del Sector Público.", "isCorrect": false, "explanation": "Incorrecto. Es una ley administrativa, no técnica." },
+      { "text": "Normas ISO de dibujo artístico.", "isCorrect": false, "explanation": "Incorrecto. El dibujo técnico industrial no es artístico." }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "¿Cuál es el beneficio de implantar las normas UNE para una empresa?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Garantizar niveles de seguridad y calidad para mejorar su posición en el mercado.",
+    "options": [
+      { "text": "Eliminar la necesidad de hacer planos.", "isCorrect": false, "explanation": "Incorrecto. Las normas UNE precisamente obligan a hacer planos estandarizados." },
+      { "text": "Garantizar niveles de seguridad y calidad para mejorar su posición en el mercado.", "isCorrect": true, "explanation": "Correcto. La normalización asegura estándares que generan confianza en clientes y competidores." },
+      { "text": "Poder trabajar sin técnico competente.", "isCorrect": false, "explanation": "Incorrecto. La normativa exige siempre un responsable técnico." },
+      { "text": "No tener que pagar el beneficio industrial.", "isCorrect": false, "explanation": "Incorrecto. La normalización no afecta a los márgenes comerciales del proyectista." }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "¿Quién tiene la autoridad para ordenar las verificaciones de una instalación al finalizar la ejecución?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El jefe del proyecto.",
+    "options": [
+      { "text": "El cliente (promotor).", "isCorrect": false, "explanation": "Incorrecto. El cliente recibe el resultado, pero la orden técnica es del responsable del proyecto." },
+      { "text": "El jefe del proyecto.", "isCorrect": true, "explanation": "Correcto. El texto indica que el jefe de proyecto es quien coordina y ordena las pruebas finales." },
+      { "text": "El operario de montaje.", "isCorrect": false, "explanation": "Incorrecto. No tiene rango de decisión para iniciar el proceso de legalización." },
+      { "text": "El presidente del colegio profesional.", "isCorrect": false, "explanation": "Incorrecto. El colegio visa, pero no gestiona la obra física." }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "¿Qué significan las siglas OCA?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Organismo de Control Autorizado.",
+    "options": [
+      { "text": "Organización de Cálculo Automático.", "isCorrect": false, "explanation": "Incorrecto. Siglas inventadas en este contexto." },
+      { "text": "Organismo de Control Autorizado.", "isCorrect": true, "explanation": "Correcto. Son entidades externas con permiso de la Administración para inspeccionar instalaciones." },
+      { "text": "Orden de Contratación Administrativa.", "isCorrect": false, "explanation": "Incorrecto. No corresponde a la definición de inspección técnica." },
+      { "text": "Oficina de Calidad de AENOR.", "isCorrect": false, "explanation": "Incorrecto. Aunque relacionadas con calidad, una OCA es una figura administrativa independiente." }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "¿Qué documento es imprescindible presentar para solicitar permisos de puesta en marcha?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El certificado de dirección de obra y el certificado de inspección favorable.",
+    "options": [
+      { "text": "El anteproyecto original.", "isCorrect": false, "explanation": "Incorrecto. El anteproyecto es papel mojado una vez se tiene el proyecto ejecutivo y la obra terminada." },
+      { "text": "El certificado de dirección de obra y el certificado de inspección favorable.", "isCorrect": true, "explanation": "Correcto. Son los documentos que prueban que la obra terminó bien y es segura." },
+      { "text": "La red PERT del inicio del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Es un control interno de tiempos, no un requisito legal de seguridad." },
+      { "text": "El contrato de alquiler de la maquinaria.", "isCorrect": false, "explanation": "Incorrecto. Es un documento comercial privado sin relevancia administrativa para la puesta en marcha." }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "¿Qué sucede una vez que se han realizado las verificaciones con éxito?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La empresa certificadora emite un certificado favorable y lo registra ante la Administración.",
+    "options": [
+      { "text": "Se destruyen los planos.", "isCorrect": false, "explanation": "Incorrecto. Deben conservarse como planos 'As-Built' para el mantenimiento." },
+      { "text": "La empresa certificadora emite un certificado favorable y lo registra ante la Administración.", "isCorrect": true, "explanation": "Correcto. Es el paso final necesario para legalizar la instalación." },
+      { "text": "Se devuelve el dinero del visado.", "isCorrect": false, "explanation": "Incorrecto. El visado es una tasa por el servicio prestado, no una fianza." },
+      { "text": "El proyecto se vuelve de titularidad pública automáticamente.", "isCorrect": false, "explanation": "Incorrecto. La legalización no altera la propiedad del bien." }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "¿Qué directiva europea deben cumplir los fabricantes de maquinaria para garantizar la seguridad en la UE?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 2006/42/CE.",
+    "options": [
+      { "text": "1997/23/CE", "isCorrect": false, "explanation": "Incorrecto. Esta se refiere específicamente a equipos a presión." },
+      { "text": "2006/42/CE (Directiva de Máquinas)", "isCorrect": true, "explanation": "Correcto. Es la directiva marco para la seguridad de todas las máquinas en territorio europeo." },
+      { "text": "Ley de Contratos 4.0", "isCorrect": false, "explanation": "Incorrecto. No existe tal directiva técnica con ese nombre." },
+      { "text": "UNE 116", "isCorrect": false, "explanation": "Incorrecto. Es una norma técnica, no una Directiva legal de obligado cumplimiento directo." }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "¿Qué sucede con los precios en los proyectos de titularidad pública?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La Administración puede revisarlos y suelen estar estipulados en bases de concurso.",
+    "options": [
+      { "text": "El proyectista los cambia a su voluntad.", "isCorrect": false, "explanation": "Incorrecto. En los públicos, el margen de maniobra es muy limitado por los pliegos administrativos." },
+      { "text": "La Administración puede revisarlos y suelen estar estipulados en bases de concurso.", "isCorrect": true, "explanation": "Correcto. La titularidad pública implica un control estricto del gasto y revisión de precios por la administración." },
+      { "text": "Son siempre un 21% más baratos.", "isCorrect": false, "explanation": "Incorrecto. Los impuestos se pagan igual (aunque a veces los recupere la administración)." },
+      { "text": "No existe presupuesto en la titularidad pública.", "isCorrect": false, "explanation": "Incorrecto. Es precisamente donde el presupuesto es más rígido y detallado." }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "En un proyecto de automatización, ¿dónde se ubica el 'Layout' o distribución de componentes?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Dentro del grupo 4 de Planos (Instalaciones).",
+    "options": [
+      { "text": "En la Memoria Descriptiva.", "isCorrect": false, "explanation": "Incorrecto. La memoria explica el diseño, pero la distribución física es un plano." },
+      { "text": "Dentro del grupo 4 de Planos (Instalaciones).", "isCorrect": true, "explanation": "Correcto. Según la clasificación del texto, el layout de armarios es el punto 4.6 de la lista de planos." },
+      { "text": "En el Pliego de Condiciones Económicas.", "isCorrect": false, "explanation": "Incorrecto. No tiene relación con las condiciones de pago." },
+      { "text": "En el Presupuesto de Ejecución Material.", "isCorrect": false, "explanation": "Incorrecto. El presupuesto lista los componentes pero no los ubica en el espacio." }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "¿Qué técnica se menciona para la evaluación y revisión de programas de tiempo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Red PERT.",
+    "options": [
+      { "text": "Big Data", "isCorrect": false, "explanation": "Incorrecto. Es una tecnología de análisis masivo de datos, no de gestión de tiempos de proyecto." },
+      { "text": "SCADA", "isCorrect": false, "explanation": "Incorrecto. Es un sistema de supervisión de procesos en tiempo real." },
+      { "text": "Red PERT", "isCorrect": true, "explanation": "Correcto. Es la técnica clásica citada en el texto para la planificación y control de los tiempos de ejecución." },
+      { "text": "Visado Colegial", "isCorrect": false, "explanation": "Incorrecto. Es un acto administrativo, no una técnica de programación de tareas." }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Según la norma EN 81346, ¿qué signo precede obligatoriamente a la identificación de un componente?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El signo menos (-).",
+    "options": [
+      { "text": "El signo más (+).", "isCorrect": false, "explanation": "Incorrecto. El signo (+) identifica la ubicación, que es opcional." },
+      { "text": "El signo igual (=).", "isCorrect": false, "explanation": "Incorrecto. El signo (=) identifica la función, que es opcional." },
+      { "text": "El signo menos (-).", "isCorrect": true, "explanation": "Correcto. El signo (-) es el prefijo obligatorio para designar el tipo de componente." },
+      { "text": "El signo asterisco (*).", "isCorrect": false, "explanation": "Incorrecto. No se utiliza este signo en la norma EN 81346 para componentes." }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Si un componente se identifica como +A1-KM1, ¿qué información nos aporta el campo '+A1'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Que el componente se encuentra situado en el armario A1.",
+    "options": [
+      { "text": "Que la función del componente es de tipo A1.", "isCorrect": false, "explanation": "Incorrecto. La función se marcaría con el signo (=)." },
+      { "text": "Que el componente se encuentra situado en el armario A1.", "isCorrect": true, "explanation": "Correcto. El prefijo (+) indica la ubicación o lugar del dispositivo." },
+      { "text": "Que es un contactor auxiliar.", "isCorrect": false, "explanation": "Incorrecto. El tipo de componente lo indica '-KM1'." },
+      { "text": "Que es un dispositivo de protección.", "isCorrect": false, "explanation": "Incorrecto. Eso vendría indicado por la letra F." }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "¿Qué letra identifica a los Motores tanto en la norma IEC750 como en la EN 81346?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La letra M.",
+    "options": [
+      { "text": "La letra K.", "isCorrect": false, "explanation": "Incorrecto. La K se usa para relés y contactores." },
+      { "text": "La letra M.", "isCorrect": true, "explanation": "Correcto. La letra M es la designación unificada para motores en ambas normativas." },
+      { "text": "La letra Q.", "isCorrect": false, "explanation": "Incorrecto. La Q se usa para dispositivos de maniobra de potencia." },
+      { "text": "La letra G.", "isCorrect": false, "explanation": "Incorrecto. La G identifica generadores o fuentes de alimentación." }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "¿Cómo se identifica a un contactor con funciones auxiliares según la nomenclatura estándar?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: -KA.",
+    "options": [
+      { "text": "-KM", "isCorrect": false, "explanation": "Incorrecto. -KM se reserva para contactores principales de potencia." },
+      { "text": "-KT", "isCorrect": false, "explanation": "Incorrecto. -KT identifica contactores temporizados." },
+      { "text": "-KA", "isCorrect": true, "explanation": "Correcto. La 'A' indica función auxiliar, por lo que -KA es la identificación correcta." },
+      { "text": "-KF", "isCorrect": false, "explanation": "Incorrecto. La 'F' se asocia a protección, no a funciones auxiliares de contactores." }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "¿Qué norma específica regula la simbología eléctrica en España y Europa?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: UNE-EN 60617.",
+    "options": [
+      { "text": "UNE-EN ISO 1026", "isCorrect": false, "explanation": "Incorrecto. Esta regula formatos de papel y escalas." },
+      { "text": "UNE-EN 60617", "isCorrect": true, "explanation": "Correcto. Es la norma que define todos los símbolos gráficos para esquemas eléctricos." },
+      { "text": "UNE-EN ISO 1032", "isCorrect": false, "explanation": "Incorrecto. Esta define los tipos de líneas y trazos." },
+      { "text": "EN 81346", "isCorrect": false, "explanation": "Incorrecto. Esta norma regula la identificación (nombres) de componentes, no su dibujo (símbolo)." }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "¿Cuál de las siguientes partes de la norma UNE-EN 60617 se refiere a los instrumentos de medida y señalización?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: UNE-EN 60617-8.",
+    "options": [
+      { "text": "UNE-EN 60617-2", "isCorrect": false, "explanation": "Incorrecto. Trata sobre símbolos generales." },
+      { "text": "UNE-EN 60617-7", "isCorrect": false, "explanation": "Incorrecto. Trata sobre dispositivos de control y protección." },
+      { "text": "UNE-EN 60617-8", "isCorrect": true, "explanation": "Correcto. Esta parte específica regula los símbolos de medida y señalización." },
+      { "text": "UNE-EN 60617-12", "isCorrect": false, "explanation": "Incorrecto. Trata sobre operadores lógicos binarios." }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "¿Cuál es la característica principal de un croquis?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Es una representación gráfica a mano alzada sin escala.",
+    "options": [
+      { "text": "Que debe realizarse obligatoriamente con software CAD.", "isCorrect": false, "explanation": "Incorrecto. Si es CAD, es un plano, no un croquis." },
+      { "text": "Es una representación gráfica a mano alzada sin escala.", "isCorrect": true, "explanation": "Correcto. Se define por ser a mano alzada, aunque guardando la proporción." },
+      { "text": "Que no necesita incluir cotas.", "isCorrect": false, "explanation": "Incorrecto. Un croquis sin cotas no permite interpretar ni fabricar la pieza." },
+      { "text": "Que solo puede hacerse en perspectiva caballera.", "isCorrect": false, "explanation": "Incorrecto. Se puede usar cualquier sistema de representación." }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "En un croquis, ¿qué tipo de trazo deben tener las aristas principales?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Un trazo más grueso que el resto.",
+    "options": [
+      { "text": "Un trazo fino y discontinuo.", "isCorrect": false, "explanation": "Incorrecto. Ese se usa para aristas ocultas." },
+      { "text": "El mismo grosor que las líneas de cota.", "isCorrect": false, "explanation": "Incorrecto. Las líneas de cota deben ser más finas para no confundir." },
+      { "text": "Un trazo más grueso que el resto.", "isCorrect": true, "explanation": "Correcto. Las aristas que definen el objeto deben destacar visualmente." },
+      { "text": "Deben ser siempre de color rojo.", "isCorrect": false, "explanation": "Incorrecto. El color no es un estándar de trazo en croquizado básico." }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "¿Cuál es el primer paso en el procedimiento para realizar un croquis correctamente?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Análisis del elemento a croquizar.",
+    "options": [
+      { "text": "Acotación de las partes.", "isCorrect": false, "explanation": "Incorrecto. No se puede acotar antes de tener el dibujo." },
+      { "text": "Replanteo sobre el papel.", "isCorrect": false, "explanation": "Incorrecto. Este es el paso previo al dibujo, pero después del análisis." },
+      { "text": "Análisis del elemento a croquizar.", "isCorrect": true, "explanation": "Correcto. Primero se debe examinar la pieza para determinar las vistas necesarias." },
+      { "text": "Anotación de especificaciones técnicas.", "isCorrect": false, "explanation": "Incorrecto. Es de los últimos pasos." }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "¿Qué se debe hacer si una pieza es de dimensiones muy reducidas al realizar su croquis?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Dibujarla a mayor tamaño para ver con claridad los detalles.",
+    "options": [
+      { "text": "No acotarla para no ensuciar el dibujo.", "isCorrect": false, "explanation": "Incorrecto. Todas las piezas deben quedar definidas." },
+      { "text": "Dibujarla a mayor tamaño para ver con claridad los detalles.", "isCorrect": true, "explanation": "Correcto. En el replanteo se decide el tamaño para asegurar la legibilidad del croquis." },
+      { "text": "Utilizar obligatoriamente un microscopio.", "isCorrect": false, "explanation": "Incorrecto. Se soluciona aumentando la escala visual del dibujo a mano alzada." },
+      { "text": "Representarla solo mediante un punto.", "isCorrect": false, "explanation": "Incorrecto. No permitiría ver la geometría de la pieza." }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "¿Cuál es el principio básico que indica que una pieza está correctamente acotada?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Cuando el operario puede fabricarla sin necesidad de realizar medidas adicionales o cálculos.",
+    "options": [
+      { "text": "Cuando tiene el mayor número de cotas posible.", "isCorrect": false, "explanation": "Incorrecto. No se deben duplicar cotas." },
+      { "text": "Cuando todas las cotas están en el interior de la pieza.", "isCorrect": false, "explanation": "Incorrecto. Deben estar en el exterior siempre que sea posible." },
+      { "text": "Cuando el operario puede fabricarla sin necesidad de realizar medidas adicionales o cálculos.", "isCorrect": true, "explanation": "Correcto. El plano debe ser autosuficiente para la fabricación." },
+      { "text": "Cuando las cotas están escritas en varios idiomas.", "isCorrect": false, "explanation": "Incorrecto. La unidad de medida y el número son universales." }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "¿Cómo deben leerse las cifras de cota en las líneas verticales?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Desde la derecha.",
+    "options": [
+      { "text": "Desde la izquierda.", "isCorrect": false, "explanation": "Incorrecto. La norma establece la lectura desde la derecha para cotas verticales." },
+      { "text": "Desde la derecha.", "isCorrect": true, "explanation": "Correcto. Es el estándar de orientación para la lectura de planos técnicos." },
+      { "text": "Siempre de arriba hacia abajo.", "isCorrect": false, "explanation": "Incorrecto. Se orientan según la línea de cota." },
+      { "text": "No importa la orientación.", "isCorrect": false, "explanation": "Incorrecto. La uniformidad es clave para evitar errores." }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "¿Qué altura aproximada deben tener las cifras de cota en un dibujo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Entre 2 y 5 mm.",
+    "options": [
+      { "text": "Menos de 1 mm.", "isCorrect": false, "explanation": "Incorrecto. Sería ilegible." },
+      { "text": "Entre 2 y 5 mm.", "isCorrect": true, "explanation": "Correcto. Es el tamaño normalizado para que la cota sea legible pero no tape el dibujo." },
+      { "text": "Más de 1 cm.", "isCorrect": false, "explanation": "Incorrecto. Sería desproporcionado respecto a la figura." },
+      { "text": "Exactamente 10 mm.", "isCorrect": false, "explanation": "Incorrecto. Es demasiado grande para la mayoría de planos." }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "¿Qué trazo se utiliza para las líneas de cota y las líneas auxiliares?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Trazo fino y continuo.",
+    "options": [
+      { "text": "Trazo grueso y continuo.", "isCorrect": false, "explanation": "Incorrecto. El trazo grueso se reserva para las aristas visibles." },
+      { "text": "Trazo fino y continuo.", "isCorrect": true, "explanation": "Correcto. Deben ser nítidas pero más delgadas que las líneas del objeto." },
+      { "text": "Trazo fino y discontinuo.", "isCorrect": false, "explanation": "Incorrecto. Ese trazo es para partes ocultas." },
+      { "text": "Trazo de puntos y rayas.", "isCorrect": false, "explanation": "Incorrecto. Ese se usa para ejes de simetría." }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "Si una línea de referencia de cota termina en el interior de una pieza, ¿qué símbolo debe llevar en su extremo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Un punto.",
+    "options": [
+      { "text": "Una flecha.", "isCorrect": false, "explanation": "Incorrecto. La flecha se usa si termina en el contorno." },
+      { "text": "Un punto.", "isCorrect": true, "explanation": "Correcto. El punto indica que la referencia señala una superficie interna." },
+      { "text": "Un cuadrado.", "isCorrect": false, "explanation": "Incorrecto. No es un símbolo normalizado para finales de referencia." },
+      { "text": "Nada.", "isCorrect": false, "explanation": "Incorrecto. No llevar nada se reserva para cuando termina en otra línea." }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "¿Qué símbolo acompaña a la cifra de cota para indicar que se trata de un diámetro?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Ø.",
+    "options": [
+      { "text": "R", "isCorrect": false, "explanation": "Incorrecto. R indica Radio." },
+      { "text": "Ø", "isCorrect": true, "explanation": "Correcto. Es el símbolo universal de diámetro en acotación." },
+      { "text": "SR", "isCorrect": false, "explanation": "Incorrecto. SR indica esfera (Radio de esfera)." },
+      { "text": "□", "isCorrect": false, "explanation": "Incorrecto. Indica una forma cuadrada." }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "En la simbología de contactores, ¿qué letra identifica a los contactos principales de potencia?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: -KM.",
+    "options": [
+      { "text": "-KA", "isCorrect": false, "explanation": "Incorrecto. Son contactos auxiliares o relés." },
+      { "text": "-KM", "isCorrect": true, "explanation": "Correcto. -KM designa al contactor principal de potencia (motor)." },
+      { "text": "-KT", "isCorrect": false, "explanation": "Incorrecto. Indica temporización." },
+      { "text": "-KS", "isCorrect": false, "explanation": "Incorrecto. No es una nomenclatura estándar para contactores." }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "¿Qué símbolo representa la 'Puesta a masa' en un esquema eléctrico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Un triángulo (normalmente con el vértice hacia abajo o una línea horizontal).",
+    "options": [
+      { "text": "Tres líneas paralelas de distinto tamaño en forma de pirámide.", "isCorrect": false, "explanation": "Incorrecto. Ese es el símbolo de Tierra general." },
+      { "text": "Un triángulo.", "isCorrect": true, "explanation": "Correcto. El triángulo identifica la masa de un equipo o chasis." },
+      { "text": "Un círculo con una cruz.", "isCorrect": false, "explanation": "Incorrecto. Suele representar una lámpara." },
+      { "text": "Una línea en zigzag.", "isCorrect": false, "explanation": "Incorrecto. Representa una resistencia." }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "Un contacto identificado con los números 13-14 en un esquema, ¿qué tipo de contacto es?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Un contacto normalmente abierto (NO).",
+    "options": [
+      { "text": "Un contacto normalmente cerrado (NC).", "isCorrect": false, "explanation": "Incorrecto. Los cerrados terminan en 1-2 (ej. 11-12)." },
+      { "text": "Un contacto normalmente abierto (NO).", "isCorrect": true, "explanation": "Correcto. Los contactos abiertos de relés y contactores se numeran terminando en 3-4." },
+      { "text": "Un contacto de temporización.", "isCorrect": false, "explanation": "Incorrecto. Estos tienen una numeración y simbología específica (ej. 55-56)." },
+      { "text": "Un contacto de protección térmica.", "isCorrect": false, "explanation": "Incorrecto. Suelen numerarse como 95-96 o 97-98." }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "¿Qué función cumple un presostato en una instalación?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Detectar cambios de presión.",
+    "options": [
+      { "text": "Medir la temperatura.", "isCorrect": false, "explanation": "Incorrecto. Eso lo hace un termostato." },
+      { "text": "Detectar cambios de presión.", "isCorrect": true, "explanation": "Correcto. El presostato actúa sobre los contactos eléctricos en función de la presión de un fluido." },
+      { "text": "Proteger contra cortocircuitos.", "isCorrect": false, "explanation": "Incorrecto. Eso lo hace un fusible o magnetotérmico." },
+      { "text": "Contar el número de piezas.", "isCorrect": false, "explanation": "Incorrecto. Eso lo haría un detector de proximidad o contador." }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "¿Qué organismo español se encarga de certificar que un producto o servicio cumple las normas UNE?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: AENOR.",
+    "options": [
+      { "text": "CENELEC", "isCorrect": false, "explanation": "Incorrecto. Es un comité de normalización europeo, no una certificadora nacional." },
+      { "text": "AENOR", "isCorrect": true, "explanation": "Correcto. La Asociación Española de Normalización y Certificación es la entidad líder en certificación en España." },
+      { "text": "ISO", "isCorrect": false, "explanation": "Incorrecto. Es un organismo internacional de normalización." },
+      { "text": "CTN-116", "isCorrect": false, "explanation": "Incorrecto. Es el comité que redacta la norma, no quien emite el certificado de cumplimiento a empresas." }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "Una vez finalizada la instalación, ¿quién emite el 'certificado favorable de la instalación' tras las verificaciones?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La empresa certificadora o el organismo de control.",
+    "options": [
+      { "text": "El ayuntamiento.", "isCorrect": false, "explanation": "Incorrecto. El ayuntamiento recibe el certificado para dar la licencia, pero no lo emite." },
+      { "text": "La empresa certificadora o el organismo de control.", "isCorrect": true, "explanation": "Correcto. Son los encargados de verificar y dar fe de que la instalación cumple la normativa." },
+      { "text": "El suministrador eléctrico.", "isCorrect": false, "explanation": "Incorrecto. La compañía eléctrica solo pide el certificado para dar el suministro." },
+      { "text": "El fabricante de los motores.", "isCorrect": false, "explanation": "Incorrecto. El fabricante certifica el motor, no la instalación completa." }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "En el caso de instalaciones hidráulicas, ¿qué directiva europea específica deben cumplir?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 1997/23/CE sobre equipos a presión.",
+    "options": [
+      { "text": "2006/42/CE", "isCorrect": false, "explanation": "Incorrecto. Es la de máquinas en general." },
+      { "text": "1997/23/CE", "isCorrect": true, "explanation": "Correcto. Es la directiva específica para equipos que trabajan bajo presión." },
+      { "text": "ISO 9001", "isCorrect": false, "explanation": "Incorrecto. Es una norma de gestión de calidad, no una directiva técnica de presión." },
+      { "text": "REBT", "isCorrect": false, "explanation": "Incorrecto. Es el reglamento para instalaciones eléctricas." }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "Qué tipo de inspección es obligatoria por una OCA en proyectos de gran envergadura?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una inspección de las instalaciones por un organismo externo autorizado.",
+    "options": [
+      { "text": "Una revisión del presupuesto.", "isCorrect": false, "explanation": "Incorrecto. La OCA se centra en la seguridad técnica, no en el coste económico." },
+      { "text": "Una inspección de las instalaciones por un organismo externo autorizado.", "isCorrect": true, "explanation": "Correcto. Las OCAs actúan como verificadores imparciales de la seguridad de la instalación." },
+      { "text": "Una auditoría de las vacaciones de los operarios.", "isCorrect": false, "explanation": "Incorrecto. No forma parte de sus competencias." },
+      { "text": "Un control de calidad de las pinturas de la fábrica.", "isCorrect": false, "explanation": "Incorrecto. Salvo que afecte a la seguridad técnica o normativa específica." }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "En un esquema eléctrico, ¿qué representa una línea de trazo fino y discontinuo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Partes ocultas o conexiones de control/señal según el contexto.",
+    "options": [
+      { "text": "Conductores de potencia.", "isCorrect": false, "explanation": "Incorrecto. Estos se dibujan con trazo continuo y más grueso." },
+      { "text": "Partes ocultas o contornos no visibles.", "isCorrect": true, "explanation": "Correcto. Es el uso estándar en dibujo técnico para elementos que no se ven a simple vista." },
+      { "text": "Ejes de revolución.", "isCorrect": false, "explanation": "Incorrecto. Estos usan trazo de punto y raya." },
+      { "text": "Líneas de cota.", "isCorrect": false, "explanation": "Incorrecto. Estas son continuas y finas." }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "Al acotar un diámetro, si la cifra de cota es 50, ¿qué debería aparecer en el plano?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Ø50.",
+    "options": [
+      { "text": "50mm", "isCorrect": false, "explanation": "Incorrecto. La unidad (mm) no se pone al lado de la cifra." },
+      { "text": "Ø50", "isCorrect": true, "explanation": "Correcto. El símbolo de diámetro debe preceder al número." },
+      { "text": "R50", "isCorrect": false, "explanation": "Incorrecto. R50 indicaría un radio de 50 (diámetro 100)." },
+      { "text": "D-50", "isCorrect": false, "explanation": "Incorrecto. La 'D' no es el símbolo normalizado; se usa Ø." }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "¿Cuál es la función de la leyenda en un croquis complejo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Identificar los distintos elementos que componen el dibujo mediante una lista.",
+    "options": [
+      { "text": "Contar la historia de la pieza.", "isCorrect": false, "explanation": "Incorrecto. No tiene un fin narrativo." },
+      { "text": "Identificar los distintos elementos que componen el dibujo mediante una lista.", "isCorrect": true, "explanation": "Correcto. Sirve para relacionar marcas numéricas o letras en el dibujo con el nombre del componente." },
+      { "text": "Poner la firma del autor.", "isCorrect": false, "explanation": "Incorrecto. Eso va en el cajetín o cuadro de rotulación." },
+      { "text": "Indicar el precio de cada parte.", "isCorrect": false, "explanation": "Incorrecto. Eso pertenece al presupuesto." }
+    ]
+  },
+  {
+    "id": 102,
+    "text": "En el replanteo de un croquis, ¿qué criterio se usa para decidir el tamaño del dibujo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El tamaño del papel y la claridad necesaria para ver los detalles.",
+    "options": [
+      { "text": "Siempre debe ser tamaño real (1:1).", "isCorrect": false, "explanation": "Incorrecto. El croquis no tiene escala fija." },
+      { "text": "El tamaño del papel y la claridad necesaria para ver los detalles.", "isCorrect": true, "explanation": "Correcto. Se busca que el dibujo sea lo bastante grande para poder acotarlo cómodamente." },
+      { "text": "Debe ser lo más pequeño posible para ahorrar papel.", "isCorrect": false, "explanation": "Incorrecto. Un croquis pequeño es difícil de leer y acotar." },
+      { "text": "Depende del color del lápiz.", "isCorrect": false, "explanation": "Incorrecto. No tiene relación técnica." }
+    ]
+  },
+  {
+    "id": 103,
+    "text": "¿A qué se refiere la norma UNE-EN ISO 1035?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Cuadros de rotulación, márgenes y cajetín.",
+    "options": [
+      { "text": "Escalas normalizadas.", "isCorrect": false, "explanation": "Incorrecto. Eso es la ISO 1026." },
+      { "text": "Cuadros de rotulación, márgenes y cajetín.", "isCorrect": true, "explanation": "Correcto. Esta norma define dónde y cómo se pone la información administrativa del plano." },
+      { "text": "Simbología de telecomunicaciones.", "isCorrect": false, "explanation": "Incorrecto. Eso es la serie 60617." },
+      { "text": "Tipos de trazos.", "isCorrect": false, "explanation": "Incorrecto. Eso es la ISO 1032." }
+    ]
+  },
+  {
+    "id": 104,
+    "text": "En simbología eléctrica, ¿qué representa una línea con un pequeño círculo vacío en un extremo y uno lleno en el otro en una unión?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una conexión desmontable (clavija/borne) y una fija.",
+    "options": [
+      { "text": "Un cortocircuito.", "isCorrect": false, "explanation": "Incorrecto. No se simboliza así." },
+      { "text": "Una conexión desmontable y una fija.", "isCorrect": true, "explanation": "Correcto. El círculo lleno suele indicar conexión permanente (soldada/unión) y el vacío o forma de 'U' una clavija o borne." },
+      { "text": "Una lámpara fundida.", "isCorrect": false, "explanation": "Incorrecto." },
+      { "text": "Un cable de fibra óptica.", "isCorrect": false, "explanation": "Incorrecto." }
+    ]
+  },
+  {
+    "id": 105,
+    "text": "¿Qué indica el prefijo '=' en un identificador de componente complejo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La función del componente.",
+    "options": [
+      { "text": "El tipo de material.", "isCorrect": false, "explanation": "Incorrecto." },
+      { "text": "La función del componente.", "isCorrect": true, "explanation": "Correcto. El signo '=' designa la función dentro de la estructura de la norma EN 81346." },
+      { "text": "El precio.", "isCorrect": false, "explanation": "Incorrecto." },
+      { "text": "La ubicación.", "isCorrect": false, "explanation": "Incorrecto. Eso es el signo '+'." }
+    ]
+  },
+  {
+    "id": 106,
+    "text": "¿Cuál es la norma internacional que sirve de base para la simbología eléctrica (CENELEC)?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: IEC 61082.",
+    "options": [
+      { "text": "ISO 9001", "isCorrect": false, "explanation": "Incorrecto." },
+      { "text": "IEC 61082", "isCorrect": true, "explanation": "Correcto. Es la norma base internacional para la preparación de documentos usados en electrotecnia." },
+      { "text": "ISO 14001", "isCorrect": false, "explanation": "Incorrecto." },
+      { "text": "UNE 20460", "isCorrect": false, "explanation": "Incorrecto." }
+    ]
+  }
+  ]
+}

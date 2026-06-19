@@ -1,0 +1,499 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-3.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 3: Instalación y configuración del software de un sistema informático",
+    "examSummary": "Evaluación técnica completa sobre sistemas operativos, gestión de procesos, seguridad industrial, algoritmos y mantenimiento de sistemas.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cuál es la función principal de un gestor de procesos en un sistema operativo multiusuario?",
+      "type": "single",
+      "generalExplanation": "El gestor de procesos se encarga de asignar el tiempo de CPU y los recursos necesarios a los distintos programas en ejecución.",
+      "options": [
+        { "text": "Planificar la ejecución de las tareas y asignar tiempos de CPU.", "isCorrect": true },
+        { "text": "Traducir el código de alto nivel a instrucciones de código máquina.", "isCorrect": false },
+        { "text": "Controlar el flujo de datos entre la memoria caché y los registros.", "isCorrect": false },
+        { "text": "Gestionar el direccionamiento físico de los periféricos de entrada.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué caracteriza técnicamente al ámbito o 'scope' de una variable local?",
+      "type": "single",
+      "generalExplanation": "Las variables locales tienen un ámbito restringido al bloque de código o función donde se declaran.",
+      "options": [
+        { "text": "Su persistencia en memoria durante todo el ciclo de vida del proceso.", "isCorrect": false },
+        { "text": "Su accesibilidad restringida al bloque de código donde fue declarada.", "isCorrect": true },
+        { "text": "Su capacidad de ser invocada mediante punteros desde otras funciones.", "isCorrect": false },
+        { "text": "Su almacenamiento obligatorio en el sector de arranque del disco duro.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Qué diferencia técnica existe entre un lenguaje compilado y uno interpretado?",
+      "type": "single",
+      "generalExplanation": "La compilación genera un ejecutable previo; la interpretación traduce en tiempo real.",
+      "options": [
+        { "text": "El lenguaje compilado requiere de una máquina virtual para ejecutarse.", "isCorrect": false },
+        { "text": "El lenguaje interpretado se traduce a código máquina en tiempo real.", "isCorrect": true },
+        { "text": "El lenguaje compilado no permite el uso de estructuras de selección.", "isCorrect": false },
+        { "text": "El lenguaje interpretado genera ejecutables binarios de menor tamaño.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Qué tipo de ataque de red se mitiga eficazmente mediante el uso de una VPN?",
+      "type": "single",
+      "generalExplanation": "Una VPN cifra el tráfico, evitando que herramientas de sniffing puedan leer información confidencial.",
+      "options": [
+        { "text": "Ataques de denegación de servicio distribuido (DDoS).", "isCorrect": false },
+        { "text": "Ataques de interceptación y análisis de tráfico (Sniffing).", "isCorrect": true },
+        { "text": "Vulnerabilidades de desbordamiento de búfer en el sistema.", "isCorrect": false },
+        { "text": "Ataques de ingeniería social dirigidos a empleados físicos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cuál es la utilidad del registro de activación (pila) en la ejecución de funciones?",
+      "type": "single",
+      "generalExplanation": "La pila o stack gestiona los parámetros y variables locales de cada llamada activa.",
+      "options": [
+        { "text": "Almacenar de forma estática los resultados previos de la función.", "isCorrect": false },
+        { "text": "Gestionar los contextos y variables de cada llamada a la función.", "isCorrect": true },
+        { "text": "Acelerar el acceso a los datos almacenados en el almacenamiento masivo.", "isCorrect": false },
+        { "text": "Sustituir la necesidad de utilizar estructuras de control iterativas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "En el contexto de servicios web, ¿qué significa que una petición sea 'Idempotente'?",
+      "type": "single",
+      "generalExplanation": "La idempotencia asegura que el resultado final sea el mismo sin importar cuántas veces se ejecute.",
+      "options": [
+        { "text": "Que la operación requiere privilegios de administrador del sistema.", "isCorrect": false },
+        { "text": "Que el resultado final no varía tras múltiples ejecuciones de la acción.", "isCorrect": true },
+        { "text": "Que la función puede devolver diferentes tipos de datos según la entrada.", "isCorrect": false },
+        { "text": "Que el proceso se ejecuta de forma asíncrona en un núcleo secundario.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué función cumple el núcleo (kernel) dentro de un sistema operativo?",
+      "type": "single",
+      "generalExplanation": "El kernel gestiona el hardware y los recursos básicos del sistema.",
+      "options": [
+        { "text": "Proporcionar la interfaz gráfica de usuario para la monitorización.", "isCorrect": false },
+        { "text": "Gestionar el acceso directo al hardware y los recursos del sistema.", "isCorrect": true },
+        { "text": "Compilar el código fuente de las aplicaciones en tiempo de diseño.", "isCorrect": false },
+        { "text": "Servir como base de datos para el almacenamiento de registros históricos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Cuál es el propósito técnico de la 'indentación' o sangrado en el código fuente?",
+      "type": "single",
+      "generalExplanation": "Permite visualizar visualmente la jerarquía y pertenencia de bloques de código.",
+      "options": [
+        { "text": "Optimizar el tiempo de compilación del código de alto nivel.", "isCorrect": false },
+        { "text": "Visualizar la jerarquía y pertenencia de los bloques lógicos.", "isCorrect": true },
+        { "text": "Asignar prioridades de ejecución dentro del gestor de procesos.", "isCorrect": false },
+        { "text": "Reducir el espacio físico ocupado por el archivo en el disco duro.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué caracteriza a una estructura de control de 'selección' (IF-THEN-ELSE)?",
+      "type": "single",
+      "generalExplanation": "Permite ejecutar un bloque u otro dependiendo de una condición lógica.",
+      "options": [
+        { "text": "La ejecución incondicional de un conjunto de sentencias secuenciales.", "isCorrect": false },
+        { "text": "La bifurcación del flujo del programa basada en una condición lógica.", "isCorrect": true },
+        { "text": "La repetición de instrucciones hasta que se produzca una interrupción.", "isCorrect": false },
+        { "text": "La definición de una dirección de memoria para una variable global.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué información contiene un informe de incidencias técnico de calidad?",
+      "type": "single",
+      "generalExplanation": "Debe ser preciso sobre el fallo, sistemas afectados y pasos realizados.",
+      "options": [
+        { "text": "Descripción del fallo, sistemas afectados y medidas de mitigación.", "isCorrect": true },
+        { "text": "Costo detallado de la licencia del software de mantenimiento usado.", "isCorrect": false },
+        { "text": "Lista de todos los usuarios registrados en el dominio de la empresa.", "isCorrect": false },
+        { "text": "Historial completo de actualizaciones de hardware desde la instalación.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Qué define a un algoritmo en el ámbito de la informática industrial?",
+      "type": "single",
+      "generalExplanation": "Es una secuencia finita y ordenada para resolver un problema determinado.",
+      "options": [
+        { "text": "El conjunto de componentes físicos que integran el PLC central.", "isCorrect": false },
+        { "text": "Una secuencia finita y ordenada de pasos para resolver un problema.", "isCorrect": true },
+        { "text": "El protocolo de comunicación serie utilizado entre sensores y actuadores.", "isCorrect": false },
+        { "text": "La capacidad de almacenamiento total de la memoria RAM del servidor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿En qué se diferencia una constante de una variable durante la ejecución?",
+      "type": "single",
+      "generalExplanation": "Las constantes no pueden cambiar su valor tras su inicialización.",
+      "options": [
+        { "text": "La constante se almacena en caché y la variable en la memoria RAM.", "isCorrect": false },
+        { "text": "El valor de la constante permanece inalterable durante la ejecución.", "isCorrect": true },
+        { "text": "La variable solo puede almacenar tipos de datos numéricos enteros.", "isCorrect": false },
+        { "text": "La constante requiere una declaración de tipo de dato más compleja.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué es la recursividad en la programación de sistemas?",
+      "type": "single",
+      "generalExplanation": "Es la capacidad de una función para llamarse a sí misma de forma controlada.",
+      "options": [
+        { "text": "La ejecución de múltiples procesos de forma simultánea en la CPU.", "isCorrect": false },
+        { "text": "La capacidad de una función de invocarse a sí misma.", "isCorrect": true },
+        { "text": "El proceso de recuperar datos borrados accidentalmente del disco.", "isCorrect": false },
+        { "text": "La actualización automática de los controladores del sistema operativo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Cuál es el propósito de la depuración o 'debugging'?",
+      "type": "single",
+      "generalExplanation": "Identificar y corregir errores lógicos o sintácticos en el código.",
+      "options": [
+        { "text": "Optimizar el consumo de energía de la unidad de procesamiento central.", "isCorrect": false },
+        { "text": "Identificar y corregir errores o fallos en el código del programa.", "isCorrect": true },
+        { "text": "Traducir un programa de un lenguaje de alto nivel a otro similar.", "isCorrect": false },
+        { "text": "Encriptar el código fuente para evitar el acceso no autorizado al mismo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué caracteriza a un ataque de 'Ransomware' en un entorno industrial?",
+      "type": "single",
+      "generalExplanation": "El cifrado de archivos para exigir un rescate económico.",
+      "options": [
+        { "text": "El robo de credenciales mediante el uso de correos electrónicos falsos.", "isCorrect": false },
+        { "text": "El cifrado de archivos del sistema para exigir un pago por su rescate.", "isCorrect": true },
+        { "text": "La inundación de la red con solicitudes para sobrecargar los servidores.", "isCorrect": false },
+        { "text": "La interceptación de paquetes de datos no cifrados en la red local.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué función cumple el 'shell' o interfaz de usuario en un sistema operativo?",
+      "type": "single",
+      "generalExplanation": "Permite la interacción del usuario con los servicios del núcleo.",
+      "options": [
+        { "text": "Gestionar el acceso a los registros internos de la unidad aritmética.", "isCorrect": false },
+        { "text": "Actuar como puente de comunicación entre el usuario y el núcleo.", "isCorrect": true },
+        { "text": "Controlar los ciclos de lectura y escritura en la memoria secundaria.", "isCorrect": false },
+        { "text": "Establecer la conexión física entre la placa base y el disco duro.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué es un 'Arreglo' o 'Array' en estructuras de datos?",
+      "type": "single",
+      "generalExplanation": "Colección indexada de elementos del mismo tipo de dato.",
+      "options": [
+        { "text": "Un conjunto de funciones que se ejecutan de forma secuencial.", "isCorrect": false },
+        { "text": "Una colección indexada de elementos del mismo tipo de dato.", "isCorrect": true },
+        { "text": "Un sistema de respaldo automático para archivos críticos de sistema.", "isCorrect": false },
+        { "text": "La dirección de memoria donde se inicia el sistema operativo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué permite el uso de pseudocódigo en el diseño de software?",
+      "type": "single",
+      "generalExplanation": "Describe la lógica del programa sin depender de una sintaxis estricta de lenguaje.",
+      "options": [
+        { "text": "Compilar el código directamente para ser ejecutado por el procesador.", "isCorrect": false },
+        { "text": "Representar la lógica del programa de forma independiente al lenguaje.", "isCorrect": true },
+        { "text": "Definir las direcciones físicas de las tarjetas de adquisición de datos.", "isCorrect": false },
+        { "text": "Aumentar la velocidad de ejecución de las instrucciones aritméticas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué define a una variable de tipo 'global'?",
+      "type": "single",
+      "generalExplanation": "Es visible y accesible desde cualquier punto del código fuente.",
+      "options": [
+        { "text": "Una variable que solo puede almacenar valores de coma flotante.", "isCorrect": false },
+        { "text": "Una variable accesible desde cualquier función o bloque del programa.", "isCorrect": true },
+        { "text": "Aquella que se almacena exclusivamente en servidores remotos de red.", "isCorrect": false },
+        { "text": "Una variable cuyo valor se sincroniza automáticamente vía Internet.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿En qué consiste la programación modular?",
+      "type": "single",
+      "generalExplanation": "Dividir un problema en partes más pequeñas y manejables (módulos).",
+      "options": [
+        { "text": "En el uso de hardware modular para la expansión de la memoria RAM.", "isCorrect": false },
+        { "text": "En dividir un programa en partes pequeñas, independientes y reutilizables.", "isCorrect": true },
+        { "text": "En la ejecución de instrucciones siguiendo un orden estrictamente lineal.", "isCorrect": false },
+        { "text": "En la instalación del software desde diferentes unidades de disco.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Qué es un puntero o apuntador en lenguajes como C?",
+      "type": "single",
+      "generalExplanation": "Variable que almacena la dirección de memoria de otro dato.",
+      "options": [
+        { "text": "Un icono gráfico que indica la posición del ratón en pantalla.", "isCorrect": false },
+        { "text": "Una variable que almacena la dirección de memoria de otra variable.", "isCorrect": true },
+        { "text": "Un dispositivo periférico para la entrada de datos en tiempo real.", "isCorrect": false },
+        { "text": "Una instrucción que detiene la ejecución del programa inmediatamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué diferencia a un sistema operativo monousuario de uno multiusuario?",
+      "type": "single",
+      "generalExplanation": "La capacidad de gestionar múltiples sesiones de usuario simultáneas.",
+      "options": [
+        { "text": "La cantidad de procesadores físicos que el sistema puede gestionar.", "isCorrect": false },
+        { "text": "La capacidad de gestionar varios usuarios ejecutando procesos a la vez.", "isCorrect": true },
+        { "text": "El tipo de interfaz gráfica utilizada para la configuración del sistema.", "isCorrect": false },
+        { "text": "La compatibilidad con sistemas de archivos distribuidos en red.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Cuál es el propósito del mantenimiento preventivo del software?",
+      "type": "single",
+      "generalExplanation": "Acciones periódicas para evitar fallos futuros y asegurar la disponibilidad.",
+      "options": [
+        { "text": "Reparar el código una vez que el sistema ha dejado de funcionar.", "isCorrect": false },
+        { "text": "Realizar acciones periódicas para evitar la aparición de fallos futuros.", "isCorrect": true },
+        { "text": "Aumentar el precio de venta del producto final al cliente industrial.", "isCorrect": false },
+        { "text": "Sustituir físicamente los componentes internos de la unidad central.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Qué caracteriza a una estructura de datos de tipo 'Conjunto' (Set)?",
+      "type": "single",
+      "generalExplanation": "Colección de elementos donde no existen duplicados.",
+      "options": [
+        { "text": "Una lista donde los elementos están ordenados por fecha de creación.", "isCorrect": false },
+        { "text": "Una colección de elementos únicos donde no se permiten duplicados.", "isCorrect": true },
+        { "text": "Un grupo de variables que siempre comparten la misma dirección de memoria.", "isCorrect": false },
+        { "text": "Una estructura que solo permite el almacenamiento de datos booleanos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué es la lógica booleana?",
+      "type": "single",
+      "generalExplanation": "Sistema matemático basado en dos valores: verdadero y falso.",
+      "options": [
+        { "text": "Un sistema de codificación de caracteres basado en el estándar Unicode.", "isCorrect": false },
+        { "text": "Un sistema matemático basado en los valores de VERDADERO y FALSO.", "isCorrect": true },
+        { "text": "La forma en que se estructuran físicamente los cables en una LAN.", "isCorrect": false },
+        { "text": "Una metodología para el diseño de interfaces de usuario táctiles.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué función cumple un operador relacional (ej. ==, !=)?",
+      "type": "single",
+      "generalExplanation": "Permite comparar dos valores y devolver un resultado booleano.",
+      "options": [
+        { "text": "Realizar cálculos aritméticos complejos como raíces o potencias.", "isCorrect": false },
+        { "text": "Comparar dos valores para establecer una condición lógica.", "isCorrect": true },
+        { "text": "Asignar una dirección IP estática a un dispositivo de la red.", "isCorrect": false },
+        { "text": "Conectar dos módulos de software escritos en diferentes lenguajes.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Cuál es el objetivo principal de realizar copias de seguridad (backups)?",
+      "type": "single",
+      "generalExplanation": "Asegurar la recuperación de datos ante fallos o pérdida de información.",
+      "options": [
+        { "text": "Mejorar la velocidad de lectura del disco duro principal del servidor.", "isCorrect": false },
+        { "text": "Garantizar la disponibilidad y recuperación de datos ante incidencias.", "isCorrect": true },
+        { "text": "Evitar la entrada de malware en el sistema operativo industrial.", "isCorrect": false },
+        { "text": "Reducir la fragmentación de los archivos en el almacenamiento masivo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "En programación industrial, ¿qué es una 'función'?",
+      "type": "single",
+      "generalExplanation": "Bloque de código reutilizable que realiza una tarea específica y puede retornar un valor.",
+      "options": [
+        { "text": "La capacidad del sistema de responder a eventos de hardware externos.", "isCorrect": false },
+        { "text": "Un bloque de código reutilizable que realiza una operación concreta.", "isCorrect": true },
+        { "text": "El conjunto de permisos que se le asignan a un usuario multiusuario.", "isCorrect": false },
+        { "text": "Una variable que cambia su valor automáticamente cada segundo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué sucede realmente al borrar un archivo de forma 'rápida' en el SO?",
+      "type": "single",
+      "generalExplanation": "Se marca el espacio como libre pero los datos permanecen hasta ser sobrescritos.",
+      "options": [
+        { "text": "Se eliminan físicamente todos los electrones almacenados en el sector.", "isCorrect": false },
+        { "text": "Se elimina la referencia al archivo, dejando el espacio como disponible.", "isCorrect": true },
+        { "text": "El archivo se comprime y se oculta en una partición oculta del disco.", "isCorrect": false },
+        { "text": "Se envía una copia cifrada del archivo a un servidor de seguridad externo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué es un 'IDE' (Entorno de Desarrollo Integrado)?",
+      "type": "single",
+      "generalExplanation": "Software que agrupa herramientas para escribir, compilar y depurar código.",
+      "options": [
+        { "text": "Un componente de hardware que permite la conexión de discos SATA.", "isCorrect": false },
+        { "text": "Un conjunto de herramientas para escribir, probar y depurar software.", "isCorrect": true },
+        { "text": "El sistema de refrigeración líquida utilizado en servidores de rack.", "isCorrect": false },
+        { "text": "Un protocolo de comunicación inalámbrica de corto alcance.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué determina el 'tipado de datos' en una variable?",
+      "type": "single",
+      "generalExplanation": "Define la naturaleza de los datos y las operaciones permitidas sobre ellos.",
+      "options": [
+        { "text": "La velocidad de entrada de datos desde el teclado industrial.", "isCorrect": false },
+        { "text": "La naturaleza de los datos y el rango de valores permitidos.", "isCorrect": true },
+        { "text": "El tipo de fuente y tamaño de letra utilizado en el editor de código.", "isCorrect": false },
+        { "text": "La ubicación física de la variable dentro de los registros de la ALU.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué caracteriza a un bucle 'FOR' frente a un 'WHILE'?",
+      "type": "single",
+      "generalExplanation": "El bucle FOR se usa cuando se conoce el número de iteraciones de antemano.",
+      "options": [
+        { "text": "El bucle FOR solo puede ejecutarse en procesadores de múltiples núcleos.", "isCorrect": false },
+        { "text": "Se utiliza generalmente cuando se conoce el número de iteraciones.", "isCorrect": true },
+        { "text": "El bucle WHILE no permite el uso de variables locales en su interior.", "isCorrect": false },
+        { "text": "FOR es una estructura de selección y WHILE es una de iteración.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Cuál es la función del comando 'ping' en el diagnóstico de redes?",
+      "type": "single",
+      "generalExplanation": "Verifica la conectividad básica enviando paquetes ICMP.",
+      "options": [
+        { "text": "Mostrar la ruta detallada salto a salto hasta llegar al destino.", "isCorrect": false },
+        { "text": "Verificar la conectividad básica entre dos nodos de la red.", "isCorrect": true },
+        { "text": "Asignar de forma dinámica una dirección IP a un equipo nuevo.", "isCorrect": false },
+        { "text": "Cifrar el tráfico de datos para evitar ataques de sniffing.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué es un 'comentario' en el código fuente de un programa?",
+      "type": "single",
+      "generalExplanation": "Texto ignorado por el compilador que sirve para documentar el código.",
+      "options": [
+        { "text": "Una instrucción que el procesador ejecuta con prioridad baja.", "isCorrect": false },
+        { "text": "Anotaciones en el código destinadas a facilitar su comprensión humana.", "isCorrect": true },
+        { "text": "Un mensaje de error que aparece en pantalla durante la ejecución.", "isCorrect": false },
+        { "text": "Una etiqueta que identifica el inicio de una partición extendida.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué función cumple un operador lógico (AND, OR, NOT)?",
+      "type": "single",
+      "generalExplanation": "Realiza operaciones sobre valores booleanos.",
+      "options": [
+        { "text": "Asignar un valor numérico a una variable de tipo constante.", "isCorrect": false },
+        { "text": "Realizar operaciones lógicas entre valores booleanos.", "isCorrect": true },
+        { "text": "Controlar el encendido y apagado físico del equipo informático.", "isCorrect": false },
+        { "text": "Definir la prioridad de los hilos de ejecución en el kernel.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué es el 'índice' en un array?",
+      "type": "single",
+      "generalExplanation": "Posición numérica que identifica a un elemento dentro de la colección.",
+      "options": [
+        { "text": "El nombre descriptivo de la variable global asociada al array.", "isCorrect": false },
+        { "text": "El valor numérico que identifica la posición de un elemento.", "isCorrect": true },
+        { "text": "La suma total de todos los valores almacenados en la estructura.", "isCorrect": false },
+        { "text": "El tamaño en bytes que ocupa el array en la memoria principal.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿En qué consiste un ataque de 'Phishing'?",
+      "type": "single",
+      "generalExplanation": "Suplantación de identidad para obtener información sensible del usuario.",
+      "options": [
+        { "text": "Inundar un servidor con solicitudes para dejarlo fuera de servicio.", "isCorrect": false },
+        { "text": "Suplantar sitios o correos legítimos para obtener datos personales.", "isCorrect": true },
+        { "text": "Cifrar los archivos del disco duro para pedir un rescate económico.", "isCorrect": false },
+        { "text": "Aprovechar una vulnerabilidad de software para ejecutar código.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Qué define a una excepción en programación?",
+      "type": "single",
+      "generalExplanation": "Situación anómala o error que ocurre durante la ejecución y debe ser gestionada.",
+      "options": [
+        { "text": "Una variable que no ha sido inicializada antes de ser usada.", "isCorrect": false },
+        { "text": "Una situación de error o anomalía que el programa debe gestionar.", "isCorrect": true },
+        { "text": "Un bloque de código que se ejecuta con éxito sin producir fallos.", "isCorrect": false },
+        { "text": "Una instrucción que solo es válida para sistemas operativos Linux.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué es un diagrama de flujo en el desarrollo de software industrial?",
+      "type": "single",
+      "generalExplanation": "Representación gráfica de los pasos de un proceso.",
+      "options": [
+        { "text": "El esquema de conexión de los cables de red en el armario rack.", "isCorrect": false },
+        { "text": "La representación gráfica de la secuencia de pasos de un proceso.", "isCorrect": true },
+        { "text": "Un mapa que indica la ubicación física de los servidores en la planta.", "isCorrect": false },
+        { "text": "El gráfico que muestra el consumo eléctrico de la CPU en tiempo real.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "En pseudocódigo, ¿qué suele representar la instrucción 'LEER' o 'INGRESAR'?",
+      "type": "single",
+      "generalExplanation": "La captura de datos desde un dispositivo de entrada hacia el programa.",
+      "options": [
+        { "text": "La salida de información formateada hacia el monitor del usuario.", "isCorrect": false },
+        { "text": "La captura de información desde el exterior hacia el programa.", "isCorrect": true },
+        { "text": "La apertura de un archivo de texto almacenado en el disco duro.", "isCorrect": false },
+        { "text": "La traducción de una línea de código a lenguaje ensamblador.", "isCorrect": false }
+      ]
+    }
+  ]
+}

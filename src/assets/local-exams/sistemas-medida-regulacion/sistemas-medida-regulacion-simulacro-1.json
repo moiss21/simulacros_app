@@ -1,0 +1,2986 @@
+{
+  "examProperties": {
+    "id": "sistemas-medida-regulacion/sistemas-medida-regulacion-simulacro-1.json",
+    "subjectName": "Sistemas de Medida y Regulación",
+    "examTitle": "Simulacro Examen de Sistemas de Medida y Regulación - UD 1, 2 y 3",
+    "examSummary": "Cubre sistemas de control, modelado matemático mediante Transformada de Laplace, componentes de lazos de regulación (sensores, actuadores, controladores) y técnicas de sintonización PID.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 120,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 129,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#bf53db"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué herramienta se utiliza para simplificar el cálculo de ecuaciones diferenciales en sistemas de regulación?",
+      "type": "single",
+      "generalExplanation": "La Transformada de Laplace es la herramienta matemática fundamental que permite convertir ecuaciones diferenciales complejas en ecuaciones algebraicas más sencillas de resolver en el dominio complejo.",
+      "options": [
+        {
+          "text": "Transformada de Laplace.",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite trabajar en el dominio de la frecuencia compleja 's'."
+        },
+        {
+          "text": "Software de simulación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El software es una herramienta de ejecución, no un método matemático de simplificación."
+        },
+        {
+          "text": "Algoritmos de retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Estos forman parte de la estructura del lazo, no del cálculo de las ecuaciones de la planta."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué técnica de sintonización de controladores considera la respuesta de la planta a una perturbación en forma de escalón?",
+      "type": "single",
+      "generalExplanation": "El Método de Cohen-Coon es una técnica de sintonización basada en la curva de reacción del sistema tras aplicar una perturbación en forma de escalón unitario.",
+      "options": [
+        {
+          "text": "Método de mapas de sintonización",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No es una técnica estandarizada basada en la curva de reacción al escalón."
+        },
+        {
+          "text": "Método de Ziegler-Nichols",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque usa escalones en su primer método, Cohen-Coon se diseñó específicamente para mejorar modelos con retardo significativo."
+        },
+        {
+          "text": "Método de Cohen-Coon",
+          "isCorrect": true,
+          "explanation": "Correcto. Utiliza los parámetros de la curva de reacción para determinar las constantes del PID."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál es la función principal del bloque de adquisición de datos en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La función principal de este bloque es captar información del entorno a través de sensores para convertir las variables físicas en señales procesables por el sistema.",
+      "options": [
+        {
+          "text": "Procesar señales digitales",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El procesamiento es tarea de la CPU o el controlador, no de la adquisición pura."
+        },
+        {
+          "text": "Captar información del entorno",
+          "isCorrect": true,
+          "explanation": "Correcto. Transforma magnitudes físicas en señales eléctricas normalizadas."
+        },
+        {
+          "text": "Emitir señales de salida",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esta es la función de las etapas de salida o actuadores."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Qué describe el tiempo de respuesta en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "El tiempo de respuesta se define como el tiempo que tarda el sistema en estabilizarse tras un cambio en la entrada o una perturbación en el proceso.",
+      "options": [
+        {
+          "text": "El tiempo total de operación del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso se refiere a la vida útil o tiempo de ejecución del proceso."
+        },
+        {
+          "text": "El tiempo que tarda el sistema en estabilizarse tras un cambio.",
+          "isCorrect": true,
+          "explanation": "Correcto. Indica la rapidez con la que el sistema alcanza el nuevo estado estacionario."
+        },
+        {
+          "text": "La velocidad de oscilación de la salida.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La velocidad de oscilación se relaciona con la frecuencia de resonancia."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Qué ocurre si la ganancia del controlador es excesiva?",
+      "type": "single",
+      "generalExplanation": "Un valor de ganancia demasiado alto en el controlador puede generar oscilaciones no deseadas en la variable controlada, comprometiendo la estabilidad del lazo de regulación.",
+      "options": [
+        {
+          "text": "Mejora el tiempo de respuesta.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque puede hacerlo inicialmente, el exceso de sobreoscilación anula esta ventaja."
+        },
+        {
+          "text": "Puede generar oscilaciones no deseadas.",
+          "isCorrect": true,
+          "explanation": "Correcto. El sistema se vuelve demasiado sensible y puede volverse inestable."
+        },
+        {
+          "text": "El sistema se estabiliza más rápido.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Una ganancia crítica suele aumentar el tiempo de asentamiento debido a las oscilaciones."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Qué define el tiempo de estabilización en un sistema controlado?",
+      "type": "single",
+      "generalExplanation": "El tiempo de estabilización representa el tiempo necesario para que el sistema alcance un estado estacionario y la salida se mantenga dentro de un rango de error tolerado tras un transitorio.",
+      "options": [
+        {
+          "text": "El tiempo que tarda el controlador en procesar las señales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso es el tiempo de ciclo o scan-time del controlador."
+        },
+        {
+          "text": "El tiempo necesario para que el sistema alcance un estado estacionario tras un cambio.",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el tiempo transcurrido hasta que la respuesta entra en la banda del 2% o 5% de error."
+        },
+        {
+          "text": "El tiempo que el sistema opera antes de una perturbación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No tiene relación con la dinámica de recuperación del lazo."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué tipo de señal genera un termopar?",
+      "type": "single",
+      "generalExplanation": "Un termopar funciona bajo el efecto Seebeck, generando una pequeña diferencia de potencial proporcional a la temperatura detectada en la unión de dos metales distintos.",
+      "options": [
+        {
+          "text": "Una señal de corriente constante.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Los sensores de corriente suelen ser transmisores activos de 4-20mA."
+        },
+        {
+          "text": "Una señal digital directamente utilizable por un controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Requiere un convertidor A/D y una etapa de amplificación (mV)."
+        },
+        {
+          "text": "Una pequeña diferencia de potencial proporcional a la temperatura.",
+          "isCorrect": true,
+          "explanation": "Correcto. Genera una tensión en el rango de los milivoltios."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Qué representa el valor de consigna en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "El valor de consigna o setpoint es la referencia o valor deseado para la variable controlada que el sistema debe tratar de mantener.",
+      "options": [
+        {
+          "text": "El rango de tolerancia permitido",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso se denomina banda muerta o histéresis."
+        },
+        {
+          "text": "La referencia o valor deseado para la variable controlada",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el objetivo que el operador fija en el sistema."
+        },
+        {
+          "text": "El tiempo de respuesta del sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El tiempo de respuesta es una característica dinámica, no una referencia."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué ocurre si un sistema no tiene retroalimentación?",
+      "type": "single",
+      "generalExplanation": "En un sistema de lazo abierto, al no existir un canal de retorno, el controlador no puede corregir desviaciones automáticamente frente a perturbaciones externas.",
+      "options": [
+        {
+          "text": "No puede corregir desviaciones automáticamente.",
+          "isCorrect": true,
+          "explanation": "Correcto. El sistema ignora si el resultado real coincide con el esperado."
+        },
+        {
+          "text": "Opera con mayor estabilidad.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque no oscila, es extremadamente sensible a cambios en el entorno."
+        },
+        {
+          "text": "Compensa automáticamente todas las perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Solo el lazo cerrado puede compensar perturbaciones no medidas."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué tipo de controlador es el más utilizado en sistemas con perturbaciones impredecibles y cambios dinámicos?",
+      "type": "single",
+      "generalExplanation": "El control adaptativo es el más eficaz en entornos dinámicos, ya que permite modificar sus parámetros en tiempo real para ajustarse a los cambios en la planta.",
+      "options": [
+        {
+          "text": "Control proporcional",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es muy limitado y siempre presenta error en estado estacionario."
+        },
+        {
+          "text": "Control PID",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque es robusto, sus parámetros son fijos y no se adapta solo a cambios bruscos de la planta."
+        },
+        {
+          "text": "Control adaptativo",
+          "isCorrect": true,
+          "explanation": "Correcto. Posee un mecanismo de auto-ajuste para optimizar la respuesta continuamente."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Qué método se utiliza para verificar si un sistema se mantiene estable con una variación de parámetros de control?",
+      "type": "single",
+      "generalExplanation": "El Criterio de Routh-Hurwitz es un método algebraico que permite determinar la estabilidad de un sistema analizando los coeficientes de su ecuación característica sin necesidad de resolverla.",
+      "options": [
+        {
+          "text": "Criterio de Nyquist",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Nyquist es un método gráfico basado en la respuesta en frecuencia."
+        },
+        {
+          "text": "Criterio de Routh-Hurwitz",
+          "isCorrect": true,
+          "explanation": "Correcto. Analiza el número de raíces en el semiplano derecho del plano complejo s."
+        },
+        {
+          "text": "Análisis en el dominio de Laplace",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Laplace es el dominio de trabajo, pero no es el método de verificación en sí mismo."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Qué diferencia un sistema estable de uno inestable?",
+      "type": "single",
+      "generalExplanation": "Un sistema se considera estable cuando, tras ser excitado, la variable controlada permanece en límites definidos y no crece indefinidamente hacia el infinito.",
+      "options": [
+        {
+          "text": "Los sistemas inestables no tienen variables de proceso.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Todos los sistemas tienen variables, la diferencia es cómo evolucionan."
+        },
+        {
+          "text": "La variable controlada en un sistema estable permanece en límites definidos.",
+          "isCorrect": true,
+          "explanation": "Correcto. La respuesta ante una entrada acotada produce una salida acotada (BIBO)."
+        },
+        {
+          "text": "Los sistemas estables tienen menos componentes.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La complejidad no determina la estabilidad, sino el diseño del lazo."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué caracteriza un sistema de control integral?",
+      "type": "single",
+      "generalExplanation": "El control integral tiene la propiedad de que ajusta la señal de control en función del error acumulado en el tiempo, lo que permite eliminar el error en estado estacionario.",
+      "options": [
+        {
+          "text": "No elimina el error en estado estacionario.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eliminar el error estacionario es precisamente su mayor ventaja."
+        },
+        {
+          "text": "Ajusta la señal de control en función del error acumulado.",
+          "isCorrect": true,
+          "explanation": "Correcto. La acción de control es proporcional al área bajo la curva del error."
+        },
+        {
+          "text": "Actúa únicamente sobre el error instantáneo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es la definición de la acción proporcional (P)."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Qué limita la precisión de un sistema de lazo abierto?",
+      "type": "single",
+      "generalExplanation": "La precisión en sistemas de lazo abierto se ve limitada drásticamente por la falta de retroalimentación, impidiendo conocer si la salida coincide realmente con lo esperado.",
+      "options": [
+        {
+          "text": "La falta de retroalimentación.",
+          "isCorrect": true,
+          "explanation": "Correcto. No hay medición de la variable de salida para corregir el error."
+        },
+        {
+          "text": "Las perturbaciones compensadas automáticamente.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. En lazo abierto las perturbaciones NO se compensan automáticamente."
+        },
+        {
+          "text": "El exceso de sensores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Al contrario, el lazo abierto suele carecer de sensores en la salida."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué se utiliza para ajustar las variables de entrada en función del error?",
+      "type": "single",
+      "generalExplanation": "El controlador es el cerebro del sistema que recibe la señal de error y determina qué ajustes realizar sobre las variables de entrada para corregir el proceso.",
+      "options": [
+        {
+          "text": "El controlador.",
+          "isCorrect": true,
+          "explanation": "Correcto. Procesa la lógica de control para minimizar la señal de error."
+        },
+        {
+          "text": "El actuador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El actuador ejecuta la orden, pero no decide el ajuste basado en el error."
+        },
+        {
+          "text": "El sensor.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El sensor solo mide la variable, no realiza ajustes lógicos."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué parámetro clave afecta la precisión de un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La ganancia del controlador es fundamental, ya que determina la intensidad de la respuesta frente al error, afectando directamente a la precisión y estabilidad del sistema.",
+      "options": [
+        {
+          "text": "La ganancia del controlador.",
+          "isCorrect": true,
+          "explanation": "Correcto. Una ganancia adecuada reduce el error, pero una excesiva causa inestabilidad."
+        },
+        {
+          "text": "La amplitud de la perturbación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es un factor externo, no un parámetro de ajuste de la precisión del lazo."
+        },
+        {
+          "text": "El valor del setpoint.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es el valor objetivo, pero no define por sí mismo la precisión de la respuesta."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué es el \"tracking time\" en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "El tracking time se refiere al tiempo que tarda el sistema en alcanzar el setpoint (valor deseado) después de que se produzca un cambio en la consigna.",
+      "options": [
+        {
+          "text": "El tiempo que tarda el controlador en procesar las señales de entrada",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso es latencia de procesamiento o tiempo de escaneo."
+        },
+        {
+          "text": "El tiempo que tarda el sistema en alcanzar el setpoint después de un cambio",
+          "isCorrect": true,
+          "explanation": "Correcto. Mide la capacidad de seguimiento del sistema ante cambios en la referencia."
+        },
+        {
+          "text": "El tiempo que tarda el sistema en estabilizarse",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El tiempo de estabilización (settling time) incluye la amortiguación de las oscilaciones finales."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué tipo de controlador se utiliza comúnmente para sistemas con múltiples variables de control y restricciones?",
+      "type": "single",
+      "generalExplanation": "El control predictivo es la técnica avanzada idónea para manejar sistemas complejos con restricciones y múltiples variables de entrada/salida (MIMO).",
+      "options": [
+        {
+          "text": "Control proporcional",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No puede manejar restricciones dinámicas ni múltiples variables de forma integrada."
+        },
+        {
+          "text": "Control PID",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es difícil de aplicar de forma óptima en sistemas multivariables acoplados."
+        },
+        {
+          "text": "Control predictivo",
+          "isCorrect": true,
+          "explanation": "Correcto. Utiliza un modelo de la planta para anticipar y optimizar las salidas futuras."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿En qué consiste la técnica de sintonización \"Cohen-Coon\"?",
+      "type": "single",
+      "generalExplanation": "La técnica Cohen-Coon consiste en el ajuste de parámetros PID basándose en la respuesta al escalón del sistema, utilizando datos como el retardo y la constante de tiempo.",
+      "options": [
+        {
+          "text": "Comparación de la respuesta del sistema con un modelo ideal",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Ese concepto se asocia más al control por modelo de referencia (MRAC)."
+        },
+        {
+          "text": "Estudio de la frecuencia de oscilación del sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El estudio de oscilación sostenida es típico de Ziegler-Nichols (segundo método)."
+        },
+        {
+          "text": "Ajuste de parámetros PID basándose en la respuesta al escalón del sistema",
+          "isCorrect": true,
+          "explanation": "Correcto. Es un método de curva de reacción que compensa mejor el tiempo muerto."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué parámetro calcula un controlador proporcional?",
+      "type": "single",
+      "generalExplanation": "Un controlador de tipo proporcional calcula su salida mediante el producto entre el error y una constante de ganancia (Kp).",
+      "options": [
+        {
+          "text": "La acumulación histórica del error.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es la función de la acción Integral (I)."
+        },
+        {
+          "text": "La velocidad de cambio del error.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es la función de la acción Derivativa (D)."
+        },
+        {
+          "text": "El producto entre el error y una constante de ganancia.",
+          "isCorrect": true,
+          "explanation": "Correcto. La respuesta es directamente proporcional a la magnitud del error actual."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Qué representa el dominio s en la Transformada de Laplace?",
+      "type": "single",
+      "generalExplanation": "En el análisis de sistemas, el dominio s representa un dominio en el espacio complejo ($s = \\sigma + j\\omega$) que facilita el estudio de la estabilidad y respuesta frecuencial.",
+      "options": [
+        {
+          "text": "Una representación de tiempo discreto.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El tiempo discreto se analiza habitualmente con la Transformada Z."
+        },
+        {
+          "text": "Un dominio en el espacio complejo.",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite analizar polos y ceros para determinar la estabilidad."
+        },
+        {
+          "text": "Un conjunto de frecuencias reales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El dominio s incluye una parte real (atenuación) y una imaginaria (frecuencia)."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Cuál es el objetivo principal del control predictivo?",
+      "type": "single",
+      "generalExplanation": "El objetivo principal es predecir el comportamiento futuro del sistema para ajustar los controles de manera anticipada, optimizando la respuesta ante cambios futuros conocidos.",
+      "options": [
+        {
+          "text": "Reducir el tiempo de respuesta al cambio de entrada",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Ese es un beneficio secundario, no el objetivo de diseño principal."
+        },
+        {
+          "text": "Predecir el comportamiento futuro del sistema para ajustar los controles",
+          "isCorrect": true,
+          "explanation": "Correcto. Minimiza una función de costo en un horizonte temporal futuro."
+        },
+        {
+          "text": "Mejorar la precisión a largo plazo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La precisión a largo plazo se logra con acción integral, no necesariamente con predicción."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Qué invento del siglo XIX introdujo George Boole?",
+      "type": "single",
+      "generalExplanation": "George Boole introdujo la lógica booleana, que es la base matemática sobre la que se asienta el control digital y la arquitectura de los procesadores actuales.",
+      "options": [
+        {
+          "text": "La lógica booleana.",
+          "isCorrect": true,
+          "explanation": "Correcto. Fundamenta las operaciones lógicas Y, O, NO (AND, OR, NOT)."
+        },
+        {
+          "text": "La teoría de estabilidad.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La teoría de estabilidad moderna fue desarrollada posteriormente por autores como Lyapunov."
+        },
+        {
+          "text": "El regulador centrífugo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Fue perfeccionado por James Watt mucho antes de los trabajos de Boole."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Qué dispositivo detecta objetos sin contacto directo?",
+      "type": "single",
+      "generalExplanation": "El sensor óptico es un dispositivo de detección por proximidad que detecta objetos sin contacto directo utilizando la emisión y recepción de luz.",
+      "options": [
+        {
+          "text": "Sensor óptico.",
+          "isCorrect": true,
+          "explanation": "Correcto. Utiliza la reflexión o interrupción de un haz luminoso."
+        },
+        {
+          "text": "Final de carrera.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es un sensor electromecánico que requiere contacto físico para actuar."
+        },
+        {
+          "text": "Actuador mecánico.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es un elemento de salida que genera movimiento, no un dispositivo de detección."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué significa SISO en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "SISO es el acrónimo de Single-Input, Single-Output, refiriéndose a sistemas que poseen una única variable de entrada y una única variable de salida.",
+      "options": [
+        {
+          "text": "System-Independent Stable Output",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es un término inventado sin significado técnico en control."
+        },
+        {
+          "text": "Single-Input, Single-Output",
+          "isCorrect": true,
+          "explanation": "Correcto. Define la estructura más simple de un lazo de control."
+        },
+        {
+          "text": "Signal Integrated System Output",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Acrónimo incorrecto para la clasificación de sistemas."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué función tiene un sistema de retroalimentación?",
+      "type": "single",
+      "generalExplanation": "En un sistema cerrado, la retroalimentación tiene la función de comparar el valor medido por el sensor con el valor de consigna para determinar el error de proceso.",
+      "options": [
+        {
+          "text": "Aplicar la acción de control.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es la función específica del elemento final de control (actuador)."
+        },
+        {
+          "text": "Mantener la estabilidad del controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La estabilidad depende del diseño, la retroalimentación solo proporciona información."
+        },
+        {
+          "text": "Comparar el valor medido con el valor de consigna.",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite al controlador conocer la desviación real del proceso."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué ocurre si una variable controlada se desvía fuera de la banda de tolerancia?",
+      "type": "single",
+      "generalExplanation": "Cuando se detecta un error, el lazo de regulación se activa y se activa una acción de control para corregir la desviación y retornar la variable al valor deseado.",
+      "options": [
+        {
+          "text": "Se activa una acción de control para corregir la desviación.",
+          "isCorrect": true,
+          "explanation": "Correcto. El controlador reacciona al error modificando la variable manipulada."
+        },
+        {
+          "text": "El sistema continúa operando sin ajustes.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso solo sucedería en lazo abierto o si el error está en la banda muerta."
+        },
+        {
+          "text": "La variable de entrada deja de influir en el sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La entrada siempre influye, el controlador simplemente ajusta su efecto."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Qué hace un controlador?",
+      "type": "single",
+      "generalExplanation": "Un controlador genera una señal de control basada en el error calculado, aplicando algoritmos como PID para estabilizar la planta.",
+      "options": [
+        {
+          "text": "Ajusta las perturbaciones del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las perturbaciones son externas; el controlador compensa su efecto en la salida."
+        },
+        {
+          "text": "Genera una señal de control basada en el error.",
+          "isCorrect": true,
+          "explanation": "Correcto. Procesa la diferencia entre el setpoint y el valor medido."
+        },
+        {
+          "text": "Reemplaza las acciones de los actuadores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El controlador manda, el actuador obedece; son componentes distintos."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Cuál es la principal ventaja de utilizar un controlador adaptativo en sistemas con dinámicas cambiantes?",
+      "type": "single",
+      "generalExplanation": "La ventaja reside en que el controlador ajusta automáticamente los parámetros del controlador según las perturbaciones, compensando cambios en el comportamiento de la planta.",
+      "options": [
+        {
+          "text": "Mejora la precisión del sistema sin necesidad de recalibrar",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Se refiere a la adaptabilidad del algoritmo, no solo a la precisión estática."
+        },
+        {
+          "text": "Ofrece mayor estabilidad frente a oscilaciones",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No garantiza mayor estabilidad por sí mismo, sino mayor flexibilidad ante cambios."
+        },
+        {
+          "text": "Ajusta automáticamente los parámetros del controlador según las perturbaciones",
+          "isCorrect": true,
+          "explanation": "Correcto. El controlador 'aprende' o se reconfigura según el estado de la planta."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué significa que un sistema sea lineal?",
+      "type": "single",
+      "generalExplanation": "La linealidad implica que se cumple el principio de superposición, es decir, que sus salidas son directamente proporcionales a sus entradas.",
+      "options": [
+        {
+          "text": "Que sus salidas son directamente proporcionales a sus entradas.",
+          "isCorrect": true,
+          "explanation": "Correcto. Cumple las propiedades de aditividad y homogeneidad."
+        },
+        {
+          "text": "Que no depende de retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La linealidad es una propiedad física, no de la estructura del lazo."
+        },
+        {
+          "text": "Que opera solo en tiempo continuo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Existen sistemas lineales tanto en tiempo continuo como discreto."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué representa la estabilidad en un sistema dinámico?",
+      "type": "single",
+      "generalExplanation": "La estabilidad representa el mantenimiento de la variable controlada dentro de límites definidos incluso tras la aparición de perturbaciones.",
+      "options": [
+        {
+          "text": "La capacidad de responder instantáneamente a un cambio.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso es rapidez o velocidad de respuesta, no estabilidad."
+        },
+        {
+          "text": "La reducción total de perturbaciones externas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La reducción total es imposible; la estabilidad garantiza que no crezcan sin control."
+        },
+        {
+          "text": "El mantenimiento de la variable controlada dentro de límites definidos.",
+          "isCorrect": true,
+          "explanation": "Correcto. El sistema vuelve al equilibrio o a un estado acotado."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué componente recibe señales del controlador y actúa sobre la planta?",
+      "type": "single",
+      "generalExplanation": "El actuador es el elemento final de control que recibe la señal del controlador (ej. 4-20mA) y modifica físicamente la variable manipulada.",
+      "options": [
+        {
+          "text": "La retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es la señal de vuelta del sensor, no el ejecutor."
+        },
+        {
+          "text": "El sensor.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El sensor envía información, no actúa sobre el proceso."
+        },
+        {
+          "text": "El actuador.",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el motor, válvula o resistencia que ejecuta la acción física."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué diferencia existe entre un sensor y un transductor?",
+      "type": "single",
+      "generalExplanation": "Técnicamente, los sensores miden variables físicas, y los transductores las convierten en señales eléctricas equivalentes para que el controlador pueda entenderlas.",
+      "options": [
+        {
+          "text": "Los sensores miden variables físicas, y los transductores las convierten en señales eléctricas.",
+          "isCorrect": true,
+          "explanation": "Correcto. El transductor realiza un cambio de forma de energía."
+        },
+        {
+          "text": "Los transductores miden variables físicas y las amplifican.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La amplificación es una etapa de acondicionamiento de señal posterior."
+        },
+        {
+          "text": "No hay diferencia, son equivalentes.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque a menudo se usan como sinónimos, funcionalmente son etapas distintas."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué se requiere para convertir ecuaciones diferenciales al dominio de Laplace?",
+      "type": "single",
+      "generalExplanation": "Para realizar el cambio de dominio, es necesario transformar las funciones con la tabla de equivalencias de Laplace aplicando las propiedades de linealidad y derivación.",
+      "options": [
+        {
+          "text": "Resolverlas algebraicamente.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Primero hay que transformarlas para poder usar el álgebra en el dominio 's'."
+        },
+        {
+          "text": "Transformar las funciones con la tabla de equivalencias.",
+          "isCorrect": true,
+          "explanation": "Correcto. Se utilizan pares de transformadas estándar para pasar del tiempo 't' a 's'."
+        },
+        {
+          "text": "Usar métodos numéricos iterativos.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso se usa para resolverlas en el tiempo, no para cambiar de dominio."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Cómo afecta una perturbación no modelada en un sistema estable?",
+      "type": "single",
+      "generalExplanation": "Aunque el sistema sea robusto, una perturbación imprevista puede provocar inestabilidad temporal o un error transitorio hasta que el controlador logre compensarla.",
+      "options": [
+        {
+          "text": "Aumenta la tolerancia del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las perturbaciones siempre consumen margen de estabilidad, no lo aumentan."
+        },
+        {
+          "text": "Puede provocar inestabilidad temporal.",
+          "isCorrect": true,
+          "explanation": "Correcto. Genera una desviación que el lazo debe detectar y corregir."
+        },
+        {
+          "text": "Es automáticamente ignorada por el controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El controlador ve el error resultante en la salida y reacciona a él."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Cuál de los siguientes parámetros pertenece a los controladores PID?",
+      "type": "single",
+      "generalExplanation": "En sistemas digitales, el tiempo de muestreo es un parámetro crítico de los controladores PID que determina cada cuánto tiempo se calcula la nueva acción de control.",
+      "options": [
+        {
+          "text": "Factor de aceleración",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No es un parámetro estándar de la sintonización PID clásica."
+        },
+        {
+          "text": "Coeficiente de fricción",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es un parámetro físico del modelo de la planta, no del controlador."
+        },
+        {
+          "text": "Tiempo de muestreo",
+          "isCorrect": true,
+          "explanation": "Correcto. Es vital en implementaciones discretas (digitales) del algoritmo."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Qué representa el error estacionario en un sistema?",
+      "type": "single",
+      "generalExplanation": "El error estacionario es la diferencia entre referencia y salida en estado estacionario una vez que ha finalizado el periodo transitorio.",
+      "options": [
+        {
+          "text": "Tiempo de respuesta del sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es una magnitud de diferencia de valor, no una medida de tiempo."
+        },
+        {
+          "text": "Diferencia entre referencia y salida en estado estacionario",
+          "isCorrect": true,
+          "explanation": "Correcto. Indica qué tan bien el sistema mantiene el objetivo a largo plazo."
+        },
+        {
+          "text": "Velocidad del cambio en la señal de salida",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La velocidad de cambio es la derivada de la señal, no el error."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Qué es una variable manipulada?",
+      "type": "single",
+      "generalExplanation": "La variable manipulada es una variable controlada directamente por el sistema (ej. apertura de una válvula) para influir en la variable de salida.",
+      "options": [
+        {
+          "text": "Una perturbación no controlable.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las perturbaciones son variables que NO podemos manipular."
+        },
+        {
+          "text": "Una variable controlada directamente por el sistema.",
+          "isCorrect": true,
+          "explanation": "Correcto. Es la salida del actuador que compensa el error del proceso."
+        },
+        {
+          "text": "Un valor de referencia fijo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La referencia es el setpoint, no la variable que se mueve para corregir."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué se considera cuando un sistema tiene un \"error en régimen permanente\"?",
+      "type": "single",
+      "generalExplanation": "Este error implica que la salida nunca llega al valor de referencia debido a limitaciones de la planta o una ganancia insuficiente en el controlador.",
+      "options": [
+        {
+          "text": "La salida se mantiene constante en valor cero",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La salida puede estar en cualquier valor, pero distinto al deseado."
+        },
+        {
+          "text": "La salida sigue una oscilación continua",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La oscilación continua es inestabilidad marginal, no error permanente constante."
+        },
+        {
+          "text": "La salida nunca llega al valor de referencia",
+          "isCorrect": true,
+          "explanation": "Correcto. Existe un 'offset' residual entre el setpoint y la variable real."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "¿Qué ocurre cuando se realiza un análisis de respuesta en frecuencia en un sistema?",
+      "type": "single",
+      "generalExplanation": "En este análisis se evalúa cómo responde el sistema a diferentes frecuencias de entrada para determinar su ancho de banda y márgenes de estabilidad.",
+      "options": [
+        {
+          "text": "Se ajusta el controlador basado en la frecuencia de corte",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Ese es el paso posterior; el análisis es la evaluación previa."
+        },
+        {
+          "text": "Se evalúa cómo responde el sistema a diferentes frecuencias de entrada",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite construir diagramas como los de Bode o Nyquist."
+        },
+        {
+          "text": "Se determina la relación entre las perturbaciones y la salida",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Se mide la ganancia y desfase de la relación entrada/salida."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "¿Qué sucede si un sistema tiene un tiempo de respuesta demasiado lento?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Responde tarde a las perturbaciones y puede ser ineficiente.",
+      "options": [
+        {
+          "text": "Responde tarde a las perturbaciones y puede ser ineficiente.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Mejora la precisión del setpoint.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Se vuelve inestable.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "¿Qué es el error en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La diferencia entre el valor deseado y el valor medido.",
+      "options": [
+        {
+          "text": "La diferencia entre el valor deseado y el valor medido",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Una perturbación externa",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un fallo en el controlador",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "¿Cuál es la principal diferencia entre un sistema de control continuo y uno discreto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El uso de señales analógicas versus digitales.",
+      "options": [
+        {
+          "text": "El uso de señales analógicas versus digitales.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La cantidad de sensores involucrados.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La capacidad de operar con retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "¿Qué diferencia hay entre una variable de entrada y una de salida en un sistema de regulación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La variable de entrada es manipulada, mientras que la de salida representa la respuesta del sistema.",
+      "options": [
+        {
+          "text": "La variable de entrada es manipulada, mientras que la de salida representa la respuesta del sistema.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "No hay diferencia significativa.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La variable de entrada es una perturbación, y la de salida es un error.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "¿Qué tipo de análisis determina si un sistema experimenta oscilaciones incontroladas?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Análisis de estabilidad.",
+      "options": [
+        {
+          "text": "Análisis de estabilidad",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Análisis de respuesta en frecuencia",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Análisis de error en estado estacionario",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": "¿Qué representa un bloque de control en un diagrama P&I?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Relaciones funcionales entre entrada y salida.",
+      "options": [
+        {
+          "text": "Relaciones funcionales entre entrada y salida",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Ubicación de los sensores",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Visualización de datos",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "¿Qué proceso se utiliza para transformar una señal analógica en una señal digital?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Conversión ADC.",
+      "options": [
+        {
+          "text": "Conversión ADC",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Filtrado",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Atenuación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": "¿Qué operación reduce el ruido en señales analógicas?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Filtrado.",
+      "options": [
+        {
+          "text": "Filtrado",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Modulación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Atenuación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": "¿Qué es una banda de tolerancia en un sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El rango aceptable de fluctuación de la variable controlada alrededor del setpoint.",
+      "options": [
+        {
+          "text": "El rango aceptable de fluctuación de la variable controlada alrededor del setpoint.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La diferencia entre variables manipuladas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un margen para ajustar perturbaciones externas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": "¿Qué norma regula los diagramas P&ID en procesos industriales?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: ISA-S5.",
+      "options": [
+        {
+          "text": "ISA-S5",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "ANSI-P9",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "ISO-500",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": "¿Qué ocurre si un sistema de control proporcional tiene un coeficiente de ganancia muy alto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Aumenta la sobreoscilación y puede ser inestable.",
+      "options": [
+        {
+          "text": "Aumenta la sobreoscilación y puede ser inestable.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El sistema se vuelve más estable.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Reduce la precisión del setpoint.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": "¿Qué propiedad tienen los sistemas de control en lazo abierto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: No tienen retroalimentación.",
+      "options": [
+        {
+          "text": "No tienen retroalimentación.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Corrigen automáticamente las perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Requieren constantes ajustes manuales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": "¿Qué caracteriza un sistema de lazo abierto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: No tiene retroalimentación.",
+      "options": [
+        {
+          "text": "No tiene retroalimentación.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Compensa automáticamente las perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Requiere un controlador PID.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": "¿Qué ventaja tienen los transductores ultrasónicos de nivel?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Calculan el nivel del líquido mediante tiempos de reflexión.",
+      "options": [
+        {
+          "text": "Calculan el nivel del líquido mediante tiempos de reflexión.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Detectan objetos metálicos a larga distancia.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Generan señales digitales para cualquier tipo de material.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": "¿Qué herramienta facilita analizar la estabilidad de un sistema dinámico?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La función de transferencia.",
+      "options": [
+        {
+          "text": "La función de transferencia.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La tolerancia del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El tiempo de respuesta.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": "¿Qué se necesita para fijar un valor concreto de una variable de proceso?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Un valor de consigna.",
+      "options": [
+        {
+          "text": "Un valor de consigna.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Una retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una perturbación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": "¿Qué característica tiene una variable manipulada?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Es ajustada activamente por el controlador para influir en la salida.",
+      "options": [
+        {
+          "text": "Es ajustada activamente por el controlador para influir en la salida.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Es el valor deseado de la salida.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Es una perturbación que afecta el sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": "¿Qué elemento mide continuamente la variable controlada?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El sensor.",
+      "options": [
+        {
+          "text": "El sensor.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El actuador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El comparador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "text": "¿Qué factor afecta la precisión de un sensor?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Ambas respuestas son correctas.",
+      "options": [
+        {
+          "text": "Ambas respuestas son correctas.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Longitud del cable.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Temperatura ambiental.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": "¿Qué significa el término error en un sistema de regulación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La diferencia entre el valor deseado y el valor medido de la variable controlada.",
+      "options": [
+        {
+          "text": "La diferencia entre el valor deseado y el valor medido de la variable controlada.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Una falla en el actuador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una acción incorrecta del controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": "¿Qué característica tiene un sistema MIMO?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Múltiples variables de entrada y salida.",
+      "options": [
+        {
+          "text": "Múltiples variables de entrada y salida.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Una salida con varias manipulaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una única entrada y salida.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": "¿Qué tipo de variable es el setpoint?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La referencia deseada para la variable de salida.",
+      "options": [
+        {
+          "text": "La referencia deseada para la variable de salida.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Una perturbación externa que influye en el sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una variable de entrada ajustable por el controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": "¿Qué mide la variable de salida en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El resultado del sistema según las variables de entrada.",
+      "options": [
+        {
+          "text": "El resultado del sistema según las variables de entrada",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Las acciones de control del operador",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El valor deseado para el sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": "¿En qué tipo de sistema se aplica la técnica de control selectivo?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Sistemas donde se selecciona la variable más sensible a perturbaciones.",
+      "options": [
+        {
+          "text": "Sistemas donde se selecciona la variable más sensible a perturbaciones",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Sistemas con múltiples bucles de control",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Sistemas con sensores digitales",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": "¿Qué tipo de análisis se utiliza para determinar la capacidad de un sistema para mantener la variable de salida dentro de los límites establecidos?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Análisis de tiempo de asentamiento.",
+      "options": [
+        {
+          "text": "Análisis de tiempo de asentamiento",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Análisis de rechazo a perturbaciones",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Análisis de estabilidad",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "text": "¿Qué dispositivo puede medir la presión de un fluido y actuar como interruptor?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Presostato.",
+      "options": [
+        {
+          "text": "Presostato.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Galga extensiométrica.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Termopar.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": "¿Qué es una perturbación en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Una variable que afecta al proceso y no puede ser manipulada.",
+      "options": [
+        {
+          "text": "Una variable que afecta al proceso y no puede ser manipulada",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Un sistema que mantiene el equilibrio",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una acción del controlador",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": "¿Qué estrategia de control se adelanta a las perturbaciones antes de que afecten al proceso?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control en adelanto.",
+      "options": [
+        {
+          "text": "Control en adelanto",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control predictivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control en cascada",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": "¿Qué implica que un sistema sea invariante en el tiempo?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Sus características no cambian con el tiempo.",
+      "options": [
+        {
+          "text": "Sus características no cambian con el tiempo.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Opera exclusivamente en lazo abierto.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "No tiene retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": "¿Qué característica se refiere al intervalo de valores máximos y mínimos que puede medir un sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Rango de medición.",
+      "options": [
+        {
+          "text": "Rango de medición",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Precisión",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Resolución",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": "¿Qué tecnología permite medir la posición de un objeto en distancias cortas y con alta precisión?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Encoder óptico.",
+      "options": [
+        {
+          "text": "Encoder óptico.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Transductor piezoeléctrico.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Sensor capacitivo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": "¿Qué se utiliza para medir la variable de un proceso en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Instrumento de medida.",
+      "options": [
+        {
+          "text": "Instrumento de medida",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Controlador",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Transductor",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": "¿Qué estrategia de control se usa para corregir perturbaciones conocidas antes de que afecten al sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control en adelanto.",
+      "options": [
+        {
+          "text": "Control en adelanto",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control en cascada",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control predictivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": "¿Qué tipo de control requiere que el controlador secundario sea más rápido que el controlador primario?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control en cascada.",
+      "options": [
+        {
+          "text": "Control en cascada",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control predictivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control en adelanto",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": "¿Cuál es una de las principales ventajas del control en lazo cerrado?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Permite realizar ajustes constantes para mantener la estabilidad.",
+      "options": [
+        {
+          "text": "Permite realizar ajustes constantes para mantener la estabilidad.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "No requiere sensores en el sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Solo funciona en sistemas digitales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": "¿Qué elemento mide directamente la variable de salida?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El sensor.",
+      "options": [
+        {
+          "text": "El sensor.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El actuador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El comparador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": "¿Qué determina el tiempo de estabilización en un sistema con retroalimentación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La capacidad del sistema para rechazar perturbaciones.",
+      "options": [
+        {
+          "text": "La capacidad del sistema para rechazar perturbaciones.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La relación entre el error y el setpoint.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La velocidad del controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": "¿Qué parámetro del controlador evita la acumulación de error en el término integral?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Anti-windup.",
+      "options": [
+        {
+          "text": "Anti-windup",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Tiempo integral",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Ganancia proporcional",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": "¿Qué ventaja tiene usar un sistema con retroalimentación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Detecta y corrige errores automáticamente.",
+      "options": [
+        {
+          "text": "Detecta y corrige errores automáticamente.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Reduce el número de perturbaciones externas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Elimina la necesidad de sensores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": "¿Qué es el setpoint en un sistema de regulación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El valor de referencia deseado.",
+      "options": [
+        {
+          "text": "El valor de referencia deseado.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El valor de la perturbación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La variable manipulada.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "text": "¿Qué ventaja tiene un sistema de control PI frente a un sistema P?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Elimina el error en estado estacionario.",
+      "options": [
+        {
+          "text": "Reduce la sensibilidad a perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Elimina el error en estado estacionario.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Minimiza las oscilaciones iniciales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "text": "¿Qué significa el término 'Automática' en el contexto de ingeniería?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El diseño y control de sistemas para que funcionen de manera autónoma.",
+      "options": [
+        {
+          "text": "Un proceso manual de regulación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un sistema que requiere intervención humana constante",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El diseño y control de sistemas para que funcionen de manera autónoma",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "text": "¿Cuál es un ejemplo de una variable manipulada?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La corriente aplicada a un motor eléctrico.",
+      "options": [
+        {
+          "text": "La temperatura deseada en un termostato.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La corriente aplicada a un motor eléctrico.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El error entre la temperatura real y la deseada.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "text": "¿Qué representa la fórmula de la Transformada de Laplace $F(s)=\\int_{0}^{\\infty}e^{-st}f(t)dt$?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La representación en el dominio complejo de una función temporal.",
+      "options": [
+        {
+          "text": "La relación entre el error y la perturbación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La representación en el dominio complejo de una función temporal.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Una ecuación diferencial sin retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "text": "¿Qué mide un sensor de caudal por ultrasonidos?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La velocidad del flujo y su tiempo de tránsito.",
+      "options": [
+        {
+          "text": "La velocidad del flujo y su tiempo de tránsito.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La presión generada en un tubo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La cantidad de partículas en un líquido.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "text": "¿Qué es un diagrama P&ID?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Un diagrama de procesos e instrumentación que muestra la conexión de equipos y sensores.",
+      "options": [
+        {
+          "text": "Un diagrama de flujo de energía",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un diagrama de procesos e instrumentación que muestra la conexión de equipos y sensores",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Un diagrama para la programación de controladores",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "text": "¿Qué efecto tiene una banda de tolerancia demasiado estrecha?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Aumenta la frecuencia de correcciones, lo que puede generar oscilaciones.",
+      "options": [
+        {
+          "text": "Reduce el tiempo de respuesta.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Aumenta la frecuencia de correcciones, lo que puede generar oscilaciones.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Mejora la estabilidad del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "text": "¿Qué ocurre en un sistema inestable?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Las variables oscilan sin control.",
+      "options": [
+        {
+          "text": "Las variables se mantienen constantes.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Las variables oscilan sin control.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "No se detectan errores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "text": "¿Qué estrategia de control emplea varios bucles en serie?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control en cascada.",
+      "options": [
+        {
+          "text": "Control de relación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control adaptativo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control en cascada",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": "¿Qué técnica de calibración compara el sensor con un sensor de referencia de alta precisión?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Calibración comparativa.",
+      "options": [
+        {
+          "text": "Calibración estática",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Calibración dinámica",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Calibración comparativa",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "text": "¿Qué tipo de controlador es más adecuado para corregir el error en estado estacionario?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control proporcional integral (PI).",
+      "options": [
+        {
+          "text": "Control proporcional",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control derivativo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control proporcional integral (PI)",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": "¿Cómo afecta una banda de tolerancia más amplia a un sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Disminuye la frecuencia de ajustes de control.",
+      "options": [
+        {
+          "text": "Incrementa la precisión del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Disminuye la frecuencia de ajustes de control.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Aumenta la sensibilidad a las perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": "¿Qué describe la función de transferencia G(s)?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La relación entre entrada y salida en el dominio de Laplace.",
+      "options": [
+        {
+          "text": "La comparación entre errores y perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La relación entre entrada y salida en el dominio de Laplace.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La relación entre entrada y salida en el dominio del tiempo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "text": "¿Qué acción realiza un controlador PID al corregir el error de un sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Corrige el error actual, el acumulado y la tasa de cambio del error.",
+      "options": [
+        {
+          "text": "Calcula la media de los errores pasados",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Solo ajusta la salida proporcionalmente al error",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Corrige el error actual, el acumulado y la tasa de cambio del error",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "text": "¿Qué permite analizar un sistema en el dominio s usando la Transformada de Laplace?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Simplificar el análisis y diseño de controladores para sistemas lineales.",
+      "options": [
+        {
+          "text": "Aumentar la velocidad de procesamiento de datos.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Simplificar el análisis y diseño de controladores para sistemas lineales.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Ver la evolución temporal exacta del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "text": "¿Qué criterio de estabilidad utiliza un diagrama de Nyquist para evaluar un sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La relación entre ganancia y fase en función de la frecuencia.",
+      "options": [
+        {
+          "text": "El comportamiento de las raíces del sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El análisis del polinomio característico",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La relación entre ganancia y fase en función de la frecuencia",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": "¿Qué instrumento se utiliza para medir la temperatura en un sistema de regulación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Un termómetro.",
+      "options": [
+        {
+          "text": "Un termómetro.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Un actuador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un regulador PID",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": "¿Qué tipo de controlador es el más simple de implementar?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Proporcional (P).",
+      "options": [
+        {
+          "text": "Integral (I)",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Proporcional (P)",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "PID",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "text": "¿Qué ocurre si un sistema de lazo cerrado tiene una tolerancia muy pequeña?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Aumenta la sensibilidad a perturbaciones y puede oscilar.",
+      "options": [
+        {
+          "text": "Aumenta la sensibilidad a perturbaciones y puede oscilar.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Se vuelve menos preciso en su operación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Se reduce el consumo energético del controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "text": "¿Cuál de los siguientes métodos se utiliza para analizar la estabilidad de sistemas no lineales?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Métodos de simulación numérica.",
+      "options": [
+        {
+          "text": "Métodos de simulación numérica",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Método de Routh-Hurwitz",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Método de Nyquist",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "text": "¿Qué se necesita para ajustar automáticamente una variable controlada?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Un sistema de retroalimentación.",
+      "options": [
+        {
+          "text": "Un aumento en las perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una acción de control manual.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un sistema de retroalimentación.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "text": "¿Qué determina el rango de medición en un sensor?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Las especificaciones del fabricante.",
+      "options": [
+        {
+          "text": "La variable medida",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Las especificaciones del fabricante",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La sensibilidad del sensor",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "text": "¿Qué tipo de control se utiliza en sistemas de procesos donde una variable secundaria ajusta la variable primaria?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control en cascada.",
+      "options": [
+        {
+          "text": "Control predictivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control en cascada",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control de relación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "text": "¿Qué tipo de análisis se utiliza para entender cómo un sistema responde a las perturbaciones externas?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Análisis de rechazo a perturbaciones.",
+      "options": [
+        {
+          "text": "Análisis de tiempo de asentamiento",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Análisis de estabilidad",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Análisis de rechazo a perturbaciones",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "text": "¿Qué técnica de calibración es útil para un sensor que no sigue una respuesta lineal?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Calibración por puntos de referencia.",
+      "options": [
+        {
+          "text": "Calibración comparativa",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Calibración estática",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Calibración por puntos de referencia",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "text": "¿Cuál de los siguientes es un ejemplo de un sistema de control de relación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control de la tasa de flujo de sustancias químicas.",
+      "options": [
+        {
+          "text": "Control de temperatura en un horno",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control de la tasa de flujo de sustancias químicas",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control de la velocidad de un motor eléctrico",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "text": "¿Cuál de estas aplicaciones corresponde al control automático?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Sistemas de calefacción.",
+      "options": [
+        {
+          "text": "Control de encendido de luces manual",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Sistemas de calefacción",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Supervisión de procesos manuales",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "text": "¿Qué es una variable de proceso?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La variable que se controla para alcanzar un objetivo deseado.",
+      "options": [
+        {
+          "text": "La acción que regula un sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La perturbación externa que afecta al sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La variable que se controla para alcanzar un objetivo deseado.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "text": "¿Qué es un actuador en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Un dispositivo que convierte señales eléctricas en acciones físicas.",
+      "options": [
+        {
+          "text": "Un controlador que ajusta las entradas del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un sensor que mide señales de retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Un dispositivo que convierte señales eléctricas en acciones físicas.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "text": "¿Qué característica tienen los sistemas industriales complejos que los diferencia de sistemas SISO?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Son multivariables y requieren controladores avanzados.",
+      "options": [
+        {
+          "text": "Son multivariables y requieren controladores avanzados.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Son sistemas de lazo abierto.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Solo operan en tiempo discreto.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "text": "¿Qué matemático desarrolló la teoría de la estabilidad?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Andrey Nikolaevich.",
+      "options": [
+        {
+          "text": "Andrey Nikolaevich",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Norbert Wiener",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "George Boole",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "text": "¿Qué acción del controlador PID compensa perturbaciones rápidas?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control derivativo.",
+      "options": [
+        {
+          "text": "Control derivativo.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control proporcional.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control integral.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "text": "¿Qué parámetro se ajusta en la entrada de la planta para minimizar el error?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La variable manipulada.",
+      "options": [
+        {
+          "text": "La variable de proceso.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La perturbación externa.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La variable manipulada.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "text": "¿Qué diferencia un sistema de control en lazo abierto de uno en lazo cerrado?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Uso de retroalimentación.",
+      "options": [
+        {
+          "text": "Complejidad del diseño",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Necesidad de un sensor",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Uso de retroalimentación",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "text": "¿Cuál es un ejemplo de control en lazo abierto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Una lavadora automática.",
+      "options": [
+        {
+          "text": "Un sistema de climatización",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Una lavadora automática",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Un regulador PID",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "text": "¿Qué operación amplifica señales débiles en sistemas analógicos?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Amplificación.",
+      "options": [
+        {
+          "text": "Modulación",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Filtrado",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Amplificación",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "text": "¿Cómo afecta un control derivativo al sistema?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Reduce la sobreoscilación y mejora la estabilidad.",
+      "options": [
+        {
+          "text": "Reduce la sobreoscilación y mejora la estabilidad.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Incrementa la acumulación de errores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Aumenta el tiempo de respuesta del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "text": "¿Cómo se elimina el error en estado estacionario?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Añadiendo una acción integral en el controlador.",
+      "options": [
+        {
+          "text": "Utilizando un controlador proporcional.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Añadiendo una acción integral en el controlador.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Incrementando la retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "text": "¿Qué función realiza un amplificador en el tratamiento de señales?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Aumentar la magnitud de la señal sin distorsionarla.",
+      "options": [
+        {
+          "text": "Convertir una señal digital a analógica",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Generar ruido para probar el sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Aumentar la magnitud de la señal sin distorsionarla",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "text": "¿Qué tipo de respuesta de un sistema se evalúa en el análisis de estabilidad?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La tendencia del sistema a mantenerse dentro de los límites.",
+      "options": [
+        {
+          "text": "La velocidad de respuesta al cambio de referencia",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El comportamiento a perturbaciones externas",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La tendencia del sistema a mantenerse dentro de los límites",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "text": "¿Qué permite un controlador integral en un sistema PID?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Eliminar el error en estado estacionario.",
+      "options": [
+        {
+          "text": "Reducir sobreoscilaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Incrementar la sensibilidad a perturbaciones.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Eliminar el error en estado estacionario.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "text": "¿Qué significa el error en estado estacionario?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El error que persiste cuando el sistema ha alcanzado estabilidad.",
+      "options": [
+        {
+          "text": "Una perturbación constante en el sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La diferencia temporal entre entrada y salida.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El error que persiste cuando el sistema ha alcanzado estabilidad.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "text": "¿Qué elemento convierte una magnitud física en una señal eléctrica?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Transductor.",
+      "options": [
+        {
+          "text": "Transductor",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Sensor",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Transmisor",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "text": "¿Quién diseñó el regulador centrífugo en el siglo XVIII?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: James Watt.",
+      "options": [
+        {
+          "text": "Norbert Wiener",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "George Boole",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "James Watt",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "text": "¿Qué indica la estabilidad de un sistema de regulación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Que la variable controlada no oscile de manera descontrolada.",
+      "options": [
+        {
+          "text": "Que el sistema puede operar sin retroalimentación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Que la variable controlada no oscile de manera descontrolada.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Que el error se incrementa gradualmente con el tiempo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "text": "¿Qué método de sintonización es más común para controladores PID?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Método de Ziegler-Nichols.",
+      "options": [
+        {
+          "text": "Método de Routh-Hurwitz",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Método de Ziegler-Nichols",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Método de Fourier",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "text": "¿Qué tipo de sistema se emplea en un motor de velocidad constante?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Lazo cerrado.",
+      "options": [
+        {
+          "text": "Lazo abierto.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Lazo cerrado.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Sistema multivariable.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "text": "¿Qué representa la ganancia proporcional (Kp) en un controlador?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El ajuste según el error actual.",
+      "options": [
+        {
+          "text": "El ajuste según el error actual",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La acumulación de errores pasados",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La velocidad del cambio del error",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "text": "¿Qué representa una variable de salida en un sistema de control?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La respuesta del sistema en función de las entradas y perturbaciones.",
+      "options": [
+        {
+          "text": "El error calculado en tiempo real.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La acción tomada por el controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La respuesta del sistema en función de las entradas y perturbaciones.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    }
+  ]
+}

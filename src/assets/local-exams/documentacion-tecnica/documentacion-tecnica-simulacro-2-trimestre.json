@@ -1,0 +1,1449 @@
+{
+  "examProperties": {
+    "id": "documentacion-tecnica-simulacro-2-trimestre.json",
+    "subjectName": "Documentación Técnica",
+    "examTitle": "Simulacro Examen de Documentación Técnica - 2 TRIMESTRE - UD3 y UD4",
+    "examSummary": "Evaluación del 2 TRIMESTRE de Documentación Técnica",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#4169e1"
+  },
+  "questions": [
+  {
+    "id": 1,
+    "text": "¿Qué es un documento técnico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Un documento utilizado en el soporte de un proyecto",
+    "options": [
+      { "text": "Una hoja de cálculo financiera", "isCorrect": false, "explanation": "Incorrecto. Este es un documento económico/contable, no puramente técnico y descriptivo del diseño o ingeniería." },
+      { "text": "Una novela de ficción", "isCorrect": false, "explanation": "Incorrecto. Es un texto literario que carece del rigor, formato y finalidad propios de la ingeniería." },
+      { "text": "Un documento utilizado en el soporte de un proyecto", "isCorrect": true, "explanation": "Correcto. Los documentos técnicos (memorias, planos, pliegos) son la base documental que soporta el diseño, cálculo y ejecución de un proyecto." }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "¿Cuál es una de las ventajas del PDF mencionadas en relación a su uso en distintos dispositivos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Es compatible con cualquier sistema operativo.",
+    "options": [
+      { "text": "Tiene una calidad inferior en dispositivos móviles.", "isCorrect": false, "explanation": "Incorrecto. Una de sus ventajas es que mantiene el formato y calidad visual independientemente de dónde se abra." },
+      { "text": "Es compatible con cualquier sistema operativo.", "isCorrect": true, "explanation": "Correcto. El PDF es un formato universal que puede abrirse en Windows, macOS, Linux, iOS o Android sin perder la maquetación." },
+      { "text": "Solo es compatible con Windows.", "isCorrect": false, "explanation": "Incorrecto. Su principal cualidad es la plataforma cruzada (cross-platform)." }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "¿Cuál de las siguientes características es importante al seleccionar un software CAD?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Compatibilidad de formatos",
+    "options": [
+      { "text": "Compatibilidad de formatos", "isCorrect": true, "explanation": "Correcto. Es vital poder exportar e importar archivos estándar (como DWG, DXF o STEP) para colaborar con otras empresas y disciplinas." },
+      { "text": "Velocidad de Internet", "isCorrect": false, "explanation": "Incorrecto. Aunque útil para CAD en la nube, la mayoría de los programas potentes se ejecutan en local." },
+      { "text": "Estilo de fuente", "isCorrect": false, "explanation": "Incorrecto. La tipografía es un detalle menor frente a las capacidades técnicas o de formato." }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "¿Cuál es el propósito de representar diferentes instalaciones en distintos planos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Evitar confusiones.",
+    "options": [
+      { "text": "Reducir el tiempo de diseño.", "isCorrect": false, "explanation": "Incorrecto. Separarlas requiere más tiempo de maquetación de planos, pero facilita la ejecución." },
+      { "text": "Evitar confusiones.", "isCorrect": true, "explanation": "Correcto. Superponer electricidad, fontanería y climatización en un mismo plano lo haría ilegible e induciría a errores en obra." },
+      { "text": "Ahorrar papel.", "isCorrect": false, "explanation": "Incorrecto. Al separar la información se generan más planos físicos, por lo que se gasta más papel." }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "¿Qué herramienta se menciona como necesaria para la impresión de documentos gráficos de gran tamaño?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Plotters",
+    "options": [
+      { "text": "Plotters", "isCorrect": true, "explanation": "Correcto. También conocidos como trazadores gráficos, permiten imprimir en formatos anchos (A1, A0) usando rollos de papel." },
+      { "text": "Fotocopiadoras", "isCorrect": false, "explanation": "Incorrecto. Las de oficina convencionales suelen estar limitadas a formatos hasta A3." },
+      { "text": "Impresoras convencionales", "isCorrect": false, "explanation": "Incorrecto. Estas impresoras suelen aceptar papel hasta tamaño A4." }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "¿Por qué se utiliza un escalímetro graduado?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para medir la longitud real directamente a partir de un plano a escala",
+    "options": [
+      { "text": "Para medir la longitud real directamente a partir de un plano a escala", "isCorrect": true, "explanation": "Correcto. Dispone de reglas con factores de escala precalculados (ej. 1:50, 1:100) para no tener que hacer multiplicaciones manuales." },
+      { "text": "Para estimar el peso de un objeto", "isCorrect": false, "explanation": "Incorrecto. Es una herramienta geométrica geométrica, no una báscula." },
+      { "text": "Para determinar la temperatura de un lugar", "isCorrect": false, "explanation": "Incorrecto. Para ello se utilizaría un termómetro." }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "¿Qué ventaja tiene el formato PDF respecto a la seguridad de los documentos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Garantiza la no modificación y permite firma digital y protección por contraseña.",
+    "options": [
+      { "text": "Garantiza la no modificación y permite firma digital y protección por contraseña.", "isCorrect": true, "explanation": "Correcto. Estas características lo hacen el estándar legal para el visado y entrega de proyectos oficiales." },
+      { "text": "Ofrece mejor calidad visual que otros formatos.", "isCorrect": false, "explanation": "Incorrecto. La calidad gráfica dependerá de cómo fue exportado, y esto no es un rasgo de 'seguridad'." },
+      { "text": "Permite cambios ilimitados en cualquier dispositivo.", "isCorrect": false, "explanation": "Incorrecto. Su objetivo, a nivel de proyecto, es precisamente bloquear los cambios (formato de solo lectura)." }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "¿Qué indica el número '6' en la nomenclatura 'CA1-C-6'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Sector 6",
+    "options": [
+      { "text": "Sector 6", "isCorrect": true, "explanation": "Correcto. En este tipo de codificación normalizada, el dígito final especifica la subdivisión, zona o sector final del equipo." },
+      { "text": "Cuadro alumbrado 6", "isCorrect": false, "explanation": "Incorrecto. El cuadro de alumbrado está representado por 'CA1'." },
+      { "text": "Zona C", "isCorrect": false, "explanation": "Incorrecto. La Zona está representada por la letra 'C'." }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "¿Cuándo deberían evitarse los formatos especiales en el diseño de planos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Siempre que sea posible para facilitar su manejo y archivado",
+    "options": [
+      { "text": "Siempre que sea posible para facilitar su manejo y archivado", "isCorrect": true, "explanation": "Correcto. Los planos largos o irregulares son difíciles de doblar a formato A4 para introducirlos en la encuadernación del proyecto." },
+      { "text": "Cuando se utilizan para planos de construcción civil", "isCorrect": false, "explanation": "Incorrecto. Se deben evitar en todo tipo de disciplinas técnicas." },
+      { "text": "Solo si el tamaño excede los límites del formato A0", "isCorrect": false, "explanation": "Incorrecto. Incluso tamaños menores que A0 pero no normalizados causan problemas de reprografía." }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Una empresa de ingeniería desea diseño de esquemas eléctricos. ¿Qué programa CAD sería recomendado?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Elcad",
+    "options": [
+      { "text": "Photoshop", "isCorrect": false, "explanation": "Incorrecto. Es software de mapa de bits para diseño gráfico o fotografía, no ingeniería." },
+      { "text": "LibreCAD", "isCorrect": false, "explanation": "Incorrecto. Aunque es CAD, es un programa genérico, sin librerías ni lógicas específicas de esquemas eléctricos automáticos." },
+      { "text": "Elcad", "isCorrect": true, "explanation": "Correcto. Es un software de tipo CAE especializado en la documentación y diseño de esquemática eléctrica." }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "En relación con los proyectos técnicos, ¿qué factor hace que los planos sean documentos de obligado cumplimiento?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Su carácter vinculante y contractual",
+    "options": [
+      { "text": "Su carácter estético", "isCorrect": false, "explanation": "Incorrecto. La presentación gráfica no tiene validez legal." },
+      { "text": "Su carácter vinculante y contractual", "isCorrect": true, "explanation": "Correcto. Una vez firmado el contrato de obra, las dimensiones y especificaciones de los planos deben ser acatadas legalmente por el constructor." },
+      { "text": "La necesidad de su impresión", "isCorrect": false, "explanation": "Incorrecto. Estén impresos o en digital, su valor emana del marco legal del proyecto." }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Cuando una empresa tiene certificación de calidad, ¿qué debemos hacer respecto a la organización de información en proyectos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Seguir las normas establecidas por el certificado de calidad.",
+    "options": [
+      { "text": "Crear un sistema único sin seguir las normas de calidad.", "isCorrect": false, "explanation": "Incorrecto. Esto provocaría la retirada o suspensión del certificado al auditarse la empresa." },
+      { "text": "Seguir las normas establecidas por el certificado de calidad.", "isCorrect": true, "explanation": "Correcto. Las ISO (ej. 9001) exigen seguir estrictamente los procedimientos documentados de la empresa." },
+      { "text": "Evitar cambios en los procedimientos establecidos.", "isCorrect": false, "explanation": "Incorrecto. Las normas de calidad fomentan la 'mejora continua', por lo que los procedimientos sí deben evolucionar controladamente." }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "¿Cuál es una ventaja de una correcta clasificación de documentos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Facilita el proceso de recuperación de información",
+    "options": [
+      { "text": "Aumenta el tiempo de búsqueda de documentos", "isCorrect": false, "explanation": "Incorrecto. El objetivo de ordenar archivos es exactamente el opuesto." },
+      { "text": "Facilita el proceso de recuperación de información", "isCorrect": true, "explanation": "Correcto. Una jerarquía y nomenclatura ordenadas permiten encontrar rápido históricos y datos vitales." },
+      { "text": "Reduce la productividad", "isCorrect": false, "explanation": "Incorrecto. Al tardar menos en buscar información, los ingenieros aumentan su productividad técnica." }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "¿Cuál es una característica de LibreCAD que lo hace adecuado para principiantes en diseño 2D?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Es sencillo de utilizar",
+    "options": [
+      { "text": "Es sencillo de utilizar", "isCorrect": true, "explanation": "Correcto. Tiene una interfaz más despejada y menos saturada que AutoCAD, facilitando la curva de aprendizaje inicial." },
+      { "text": "Es muy complejo", "isCorrect": false, "explanation": "Incorrecto. Se caracteriza justo por lo contrario, comparado con el software comercial de alta gama." },
+      { "text": "Requiere suscripción", "isCorrect": false, "explanation": "Incorrecto. Es un software de código abierto (Open Source) y gratuito." }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Para que un software de diseño asistido por ordenador cumpla con las normas, ¿qué debe integrar según UNE-EN ISO 128-21:2002?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Preparación de líneas específicas para DAO.",
+    "options": [
+      { "text": "Compatibilidad con formatos de texto enriquecido.", "isCorrect": false, "explanation": "Incorrecto. La norma trata sobre representación técnica geométrica, no procesadores de texto." },
+      { "text": "Preparación de líneas específicas para DAO.", "isCorrect": true, "explanation": "Correcto. DAO significa Diseño Asistido por Ordenador. Esta norma regula cómo se gestionan tipos, grosores y trazos de líneas de forma digital." },
+      { "text": "Capacidad de manejo de múltiples pestañas.", "isCorrect": false, "explanation": "Incorrecto. Es una funcionalidad de la interfaz de usuario, no un requisito normativo de representación técnica." }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "¿Cuál es uno de los beneficios específicos de usar un sistema DAO según la norma UNE-EN ISO 128-21:2002 en la preparación de la documentación?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Permite la preparación de líneas específicas para DAO reduciendo errores manuales.",
+    "options": [
+      { "text": "Facilita la integración detallada de memorias descriptivas.", "isCorrect": false, "explanation": "Incorrecto. La norma alude al dibujo gráfico en ordenador, no a memorias." },
+      { "text": "Permite la preparación de líneas específicas para DAO reduciendo errores manuales.", "isCorrect": true, "explanation": "Correcto. El sistema digital se asegura de mantener la coherencia en los grosores y tipos de trazos sin depender del pulso o interpretación humana." },
+      { "text": "Optimiza la impresión en formatos grandes.", "isCorrect": false, "explanation": "Incorrecto. La optimización de impresión depende de los drivers del plotter, no de esta norma de diseño de trazado." }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Para garantizar un diseño eficiente en un proyecto automatizado, ¿qué aspecto normativo es crucial con el software técnico utilizado?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Que el software tenga la capacidad de generar documentación conforme a la normativa mencionada.",
+    "options": [
+      { "text": "Que el software no requiera actualizaciones frecuentes.", "isCorrect": false, "explanation": "Incorrecto. De hecho, los softwares CAD se actualizan para integrar nuevas normativas industriales." },
+      { "text": "Que el software sea de última generación.", "isCorrect": false, "explanation": "Incorrecto. Programas más antiguos pueden servir siempre que respeten la norma." },
+      { "text": "Que el software tenga la capacidad de generar documentación conforme a la normativa mencionada.", "isCorrect": true, "explanation": "Correcto. Si el programa no es capaz de exportar símbolos y trazados bajo estándares (UNE, IEC), sus planos podrían no ser visados." }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "En términos de economicidad y calidad, ¿qué debe garantizar el diseño de las instalaciones eléctricas en un proyecto de automatización?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Cumplimiento con especificaciones técnicas y normas de calidad.",
+    "options": [
+      { "text": "Debe cumplir solo con las normas nacionales.", "isCorrect": false, "explanation": "Incorrecto. Frecuentemente también se debe cumplir con estándares europeos (EN) o internacionales (CEI)." },
+      { "text": "Cumplimiento con especificaciones técnicas y normas de calidad.", "isCorrect": true, "explanation": "Correcto. Garantizar normativas y especificaciones asegura la viabilidad técnica y minimiza sobrecostes a largo plazo." },
+      { "text": "Reducción máxima de costos sin importar las normas.", "isCorrect": false, "explanation": "Incorrecto. Abaratar infringiendo las normas puede causar averías o accidentes fatales que arruinen el proyecto." }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "¿Qué características debe incluir un archivo digital para facilitar un rápido acceso y uso de documentos técnicos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Compresión máxima y estructura organizada",
+    "options": [
+      { "text": "Ser de gran formato y poco comprimido", "isCorrect": false, "explanation": "Incorrecto. Esto haría que pesaran gigabytes y fueran muy lentos de enviar o abrir." },
+      { "text": "Compresión máxima y estructura organizada", "isCorrect": true, "explanation": "Correcto. Un tamaño de archivo optimizado junto con una buena nomenclatura de carpetas acelera su apertura e intercambio por red." },
+      { "text": "Restringir el acceso a personal calificado", "isCorrect": false, "explanation": "Incorrecto. Eso aumenta la seguridad, pero no hace el documento más ágil para quien sí tiene permiso de visualizarlo." }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "¿Qué anchura mínima debe tener el margen de un A0?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 20 mm",
+    "options": [
+      { "text": "25 mm", "isCorrect": false, "explanation": "Incorrecto. Aunque el margen izquierdo de archivo/taladrado suele dejarse en 20-25 mm, el margen perimetral normativo es otro." },
+      { "text": "20 mm", "isCorrect": true, "explanation": "Correcto. Según la norma (DIN 823 / ISO), para los formatos grandes (A0 y A1) el margen perimetral es de 20 mm." },
+      { "text": "13 mm", "isCorrect": false, "explanation": "Incorrecto. No corresponde a ninguna estandarización ISO para cajetines y márgenes de planos." }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "¿Qué es una unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una parte del proyecto que permite su valoración y control.",
+    "options": [
+      { "text": "Una parte del proyecto que permite su valoración y control.", "isCorrect": true, "explanation": "Correcto. Es el elemento básico en el que se divide una obra (ej. 1 metro cuadrado de alicatado) para calcular su coste unitario." },
+      { "text": "Una herramienta usada en construcción.", "isCorrect": false, "explanation": "Incorrecto. Es un concepto económico y organizativo, no algo físico que use el obrero." },
+      { "text": "El costo total de un proyecto técnico.", "isCorrect": false, "explanation": "Incorrecto. El coste total es la multiplicación de TODAS las unidades de obra por sus precios." }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "¿Qué es una partida alzada?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una unidad de obra que es difícilmente medible.",
+    "options": [
+      { "text": "Una unidad de obra para tabiques de ladrillo.", "isCorrect": false, "explanation": "Incorrecto. Los tabiques son muy fáciles de medir (en metros cuadrados), por lo que no requieren partida alzada." },
+      { "text": "Una unidad de obra que es difícilmente medible.", "isCorrect": true, "explanation": "Correcto. Se presupuestan de forma global (ej: 'Partida alzada para limpieza y desescombro') sin una medición geométrica estricta, y pueden ser a justificar." },
+      { "text": "Una unidad de obra claramente cuantificable.", "isCorrect": false, "explanation": "Incorrecto. Precisamente son aquellas cuya descomposición métrica a priori es compleja o indeterminada." }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "¿Qué incluye el coste total del proyecto (CT)?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: PEM, GG y BI",
+    "options": [
+      { "text": "Solería, iluminación y decoración", "isCorrect": false, "explanation": "Incorrecto. Son capítulos de obra específicos, pero no representan la suma global del coste." },
+      { "text": "Materiales, mano de obra y equipamiento", "isCorrect": false, "explanation": "Incorrecto. Esos conforman el PEM, pero les falta el margen de la empresa constructora." },
+      { "text": "PEM, GG y BI", "isCorrect": true, "explanation": "Correcto. Incluye Presupuesto de Ejecución Material + Gastos Generales + Beneficio Industrial (también llamado Presupuesto de Contrata)." }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "¿Qué se debe hacer para obtener el presupuesto total (PT) a partir del PEC?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Sumar honorarios profesionales",
+    "options": [
+      { "text": "Multiplicarlo por un factor de seguridad", "isCorrect": false, "explanation": "Incorrecto. El factor de seguridad se aplica a la resistencia de materiales, no a los presupuestos fiscales." },
+      { "text": "Sumar honorarios profesionales", "isCorrect": true, "explanation": "Correcto. Al PEC hay que añadirle honorarios de redacción, permisos, impuestos e imprevistos del promotor para obtener el total general." },
+      { "text": "Restar honorarios profesionales", "isCorrect": false, "explanation": "Incorrecto. Representan un gasto, por tanto, se suman." }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "¿Qué significa PEM en el contexto de elaboración de presupuestos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Presupuesto de Ejecución Material",
+    "options": [
+      { "text": "Planificación de Estimación Mínima", "isCorrect": false, "explanation": "Incorrecto. No corresponde a la sigla normalizada." },
+      { "text": "Precio de ejecución máximo", "isCorrect": false, "explanation": "Incorrecto. No marca topes, sino costes básicos a nivel de tajo." },
+      { "text": "Presupuesto de Ejecución Material", "isCorrect": true, "explanation": "Correcto. Es el coste estricto de materiales, equipos, herramientas y la mano de obra sin sumar beneficios." }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "¿Qué elementos se incluyen en los costos iniciales de implantación de una instalación industrial?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Stock de repuestos y herramientas específicas",
+    "options": [
+      { "text": "Stock de repuestos y herramientas específicas", "isCorrect": true, "explanation": "Correcto. Son compras de arranque vitales para poner en servicio la planta y soportar las incidencias tempranas." },
+      { "text": "Seguro e impuestos", "isCorrect": false, "explanation": "Incorrecto. Se tratan más bien de costes de operación anuales." },
+      { "text": "Costos de reparación programada", "isCorrect": false, "explanation": "Incorrecto. Se encuadrarían en el Mantenimiento Preventivo (costo operativo) no en implantación." }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "¿Cuál es el objetivo del desglose de unidades de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Elaborar correctamente un presupuesto minimizando desviaciones.",
+    "options": [
+      { "text": "Reducir la cantidad de material utilizado durante el proyecto.", "isCorrect": false, "explanation": "Incorrecto. Desglosar no reduce la cantidad física del material a ejecutar." },
+      { "text": "Elaborar correctamente un presupuesto minimizando desviaciones.", "isCorrect": true, "explanation": "Correcto. Cuanto más detallado sea el estudio partida a partida, más preciso y cercano a la realidad será el costo." },
+      { "text": "Permitir una estimación rápida sin entrar en detalles específicos.", "isCorrect": false, "explanation": "Incorrecto. Desglosar unidades hace el proceso de presupuestar más lento y minucioso." }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "En el análisis de costos de mantenimiento, ¿qué parte es fija y qué parte es variable?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Fija: mano de obra, Variable: tipos de averías",
+    "options": [
+      { "text": "Fija: costos de reparación, Variable: mano de obra", "isCorrect": false, "explanation": "Incorrecto. Los costos de reparación no son fijos, dependen de lo que se rompa cada año." },
+      { "text": "Ambas son variables", "isCorrect": false, "explanation": "Incorrecto. Hay un componente estructural (fijo) como son los técnicos de mantenimiento en plantilla." },
+      { "text": "Fija: mano de obra, Variable: tipos de averías", "isCorrect": true, "explanation": "Correcto. Las nóminas de los mantenedores hay que pagarlas todos los meses (fijo); los repuestos dependen de los fallos esporádicos (variable)." }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "¿Cómo se consideran los costes indirectos en una unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Se estiman como un porcentaje añadido a los costes directos.",
+    "options": [
+      { "text": "Se incluyen en los costes directos.", "isCorrect": false, "explanation": "Incorrecto. Por definición, se evalúan de forma independiente porque no se pueden achacar a una sola unidad." },
+      { "text": "Se estiman como un porcentaje añadido a los costes directos.", "isCorrect": true, "explanation": "Correcto. Al final de descomponer el costo directo (material+trabajo), se aplica un % para cubrir gastos de instalación de obra y técnicos." },
+      { "text": "No se consideran en absoluto.", "isCorrect": false, "explanation": "Incorrecto. Si no se considerasen, las facturas finales causarían pérdidas a la empresa contratista." }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "¿Qué característica tienen las mediciones respecto a las unidades de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Pueden tener valores positivos o negativos",
+    "options": [
+      { "text": "Pueden tener valores positivos o negativos", "isCorrect": true, "explanation": "Correcto. Por ejemplo, al medir un muro de ladrillo (positivo) se le restan los huecos de ventanas y puertas que lleva en medio (negativo)." },
+      { "text": "Son únicamente positivas", "isCorrect": false, "explanation": "Incorrecto. A veces hay que deducir volúmenes o áreas para no cobrar de más al cliente." },
+      { "text": "Siempre son estáticas y no cambian", "isCorrect": false, "explanation": "Incorrecto. En los modificados y cierres de certificación se actualizan a lo ejecutado." }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "¿Cuál es un ejemplo de aplicaciones informáticas utilizadas en presupuestos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Hojas de cálculo",
+    "options": [
+      { "text": "Juegos de estrategia", "isCorrect": false, "explanation": "Incorrecto. No tienen carácter profesional para gestión de datos." },
+      { "text": "Hojas de cálculo", "isCorrect": true, "explanation": "Correcto. Software como Excel o herramientas de mediciones específicas son la norma en la presupuestación de obras." },
+      { "text": "Programas de edición de video", "isCorrect": false, "explanation": "Incorrecto. Son para el ámbito audiovisual, no para bases de datos numéricas." }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "¿Cuál es el porcentaje aproximado de los honorarios por la redacción y elaboración del proyecto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 10% del PEM",
+    "options": [
+      { "text": "10% del PEM", "isCorrect": true, "explanation": "Correcto. Las normativas de los colegios profesionales y estimaciones generales suelen considerar el 8-10% del PEM para honorarios de ingeniería." },
+      { "text": "8% del PEM", "isCorrect": false, "explanation": "Incorrecto en el contexto de esta pregunta específica, donde se valora el estándar superior del 10%." },
+      { "text": "12% del PEM", "isCorrect": false, "explanation": "Incorrecto. Sería un porcentaje algo elevado comparado con la media de presupuestación general enseñada." }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "¿Qué relación tiene la formación inicial de operarios con los costes de mantenimiento?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Forma parte de los costes iniciales de implantación",
+    "options": [
+      { "text": "Es un coste indirecto", "isCorrect": false, "explanation": "Incorrecto. Es un pago que se hace directamente a los formadores en una etapa específica del proyecto." },
+      { "text": "Forma parte de los costes iniciales de implantación", "isCorrect": true, "explanation": "Correcto. Antes de encender las máquinas, los empleados necesitan capacitación. Se contabiliza al poner en marcha el sistema." },
+      { "text": "Es parte de los costes anuales de mantenimiento", "isCorrect": false, "explanation": "Incorrecto. Solo ocurre al principio, no cada año (salvo reciclaje de personal, pero la pregunta dice 'inicial')." }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "¿Qué pasos se deben seguir en la fase de proyecto para realizar mediciones?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Descomponer en unidades y definir criterios de medición",
+    "options": [
+      { "text": "Cuantificar partidas antes de definirlas", "isCorrect": false, "explanation": "Incorrecto. No puedes asignar un valor en metros a una pared de ladrillo sin decidir antes si medirás en metros cuadrados o por unidad." },
+      { "text": "Solo agrupar unidades sin definirlas", "isCorrect": false, "explanation": "Incorrecto. Sin definir no hay rigor presupuestario y se caería en las partidas alzadas." },
+      { "text": "Descomponer en unidades y definir criterios de medición", "isCorrect": true, "explanation": "Correcto. Primero defines el árbol de elementos a construir, y después fijas bajo qué norma (lineal, superficie, volumen) vas a contarlos." }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Según el texto, ¿Cuál es la función de los costos indirectos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Son parte de los gastos generales",
+    "options": [
+      { "text": "Son insignificantes para el presupuesto", "isCorrect": false, "explanation": "Incorrecto. Pueden suponer un desvío económico crítico en caso de ignorarlos." },
+      { "text": "Son parte de los gastos generales", "isCorrect": true, "explanation": "Correcto. Representan gastos de estructura (seguros, vehículos del jefe de obra, casetas) que no se atribuyen a un kilo de acero o metro de cable." },
+      { "text": "Están directamente ligados al proceso productivo", "isCorrect": false, "explanation": "Incorrecto. Eso es la definición exacta de costos directos." }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "¿Qué criterio no está incluido como una forma de medición común?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Por días de obra",
+    "options": [
+      { "text": "Por días de obra", "isCorrect": true, "explanation": "Correcto. El tiempo ('días') se usa en la planificación temporal (diagramas Gantt), pero no para la medición física de las unidades de obra del PEM." },
+      { "text": "Por pesos", "isCorrect": false, "explanation": "Incorrecto. Sí se usa; por ejemplo en toneladas métricas (t) o kilogramos (kg) para estructuras metálicas." },
+      { "text": "Por áreas", "isCorrect": false, "explanation": "Incorrecto. Sí se usa; en m2 para pintura, pavimentos o alicatados." }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "¿Cuál es el incremento total aplicado sobre el PEM para obtener el precio de ejecución material contemplando costos indirectos y directos complementarios?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 10%",
+    "options": [
+      { "text": "8%", "isCorrect": false, "explanation": "Incorrecto. Suele quedar algo corto para la media teórica enseñada." },
+      { "text": "10%", "isCorrect": true, "explanation": "Correcto. En algunas bases de datos como estándar académico rápido se asume un plus del 10% para englobar maquinaria auxiliar y costes indirectos." },
+      { "text": "12%", "isCorrect": false, "explanation": "Incorrecto." }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Para calcular el G del ejemplo, ¿qué cantidad de GG se debe sumar como mínimo para un PEM de 54,000?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 7,020",
+    "options": [
+      { "text": "7,020", "isCorrect": true, "explanation": "Correcto. Asumiendo que el texto original toma el porcentaje base normativo de 13% para Gastos Generales, 54000 x 0.13 = 7,020." },
+      { "text": "8,100", "isCorrect": false, "explanation": "Incorrecto. Esta cifra correspondería si los GG fuesen del 15%." },
+      { "text": "5,400", "isCorrect": false, "explanation": "Incorrecto. Esta cifra correspondería a un mero 10%." }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "¿Por qué es crucial una correcta codificación en la referencia de la unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para garantizar que se puede ubicar fácilmente en el presupuesto y su control.",
+    "options": [
+      { "text": "Para asegurar la compra de los materiales correctos.", "isCorrect": false, "explanation": "Incorrecto. Las compras se guían por listados de despiece o planos, no tanto por el código contable de presupuesto." },
+      { "text": "Para garantizar que se puede ubicar fácilmente en el presupuesto y su control.", "isCorrect": true, "explanation": "Correcto. Organizar las bases de datos (Ej: C01.E02.03) ayuda a conectar los precios unitarios con los capítulos correspondientes sin pérdida de información." },
+      { "text": "Para simplificar el proceso de creación de planos.", "isCorrect": false, "explanation": "Incorrecto. Dibujar planos en CAD no tiene que ver con los códigos alfanuméricos de presupuesto." }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "¿Por qué es esencial mantener los criterios de medición de proyecto durante la ejecución?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para garantizar que las facturas puedan coincidir con el proyecto",
+    "options": [
+      { "text": "Para garantizar que las facturas puedan coincidir con el proyecto", "isCorrect": true, "explanation": "Correcto. Si en el proyecto las tuberías se medían por metro, las certificaciones de contratistas al final de mes se pagarán por metro. Mezclar unidades inviabiliza el control." },
+      { "text": "Para optimizar recursos empleados en áreas no prioritarias", "isCorrect": false, "explanation": "Incorrecto. Mantener el criterio es un control fiscal, no de eficiencia en mano de obra." },
+      { "text": "Para simplificar el proceso de auditoría interna", "isCorrect": false, "explanation": "Incorrecto. Aunque ayude a la auditoría, su motivo primario es el pago directo de facturas frente al presupuesto." }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "¿Qué función tiene un escalímetro?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Medir distancias en planos a escala",
+    "options": [
+      { "text": "Dibujar círculos", "isCorrect": false, "explanation": "Incorrecto. Es una regla de sección en estrella, imposible dibujar arcos con ella (se usaría compás)." },
+      { "text": "Medir ángulos", "isCorrect": false, "explanation": "Incorrecto. Para medir grados o transportes angulares se usan semicírculos o goniómetros." },
+      { "text": "Medir distancias en planos a escala", "isCorrect": true, "explanation": "Correcto. Es una herramienta técnica empleada para leer o trazar directamente magnitudes métricas al visualizar planos impresos a menor escala." }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "¿Qué significa CAD en el contexto del diseño?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Diseño Asistido por Computadora",
+    "options": [
+      { "text": "Diseño Asistido por Documentos", "isCorrect": false, "explanation": "Incorrecto. Acrónimo inventado." },
+      { "text": "Diseño Automatizado y Digital", "isCorrect": false, "explanation": "Incorrecto. Suena parecido, pero la traducción literal al español se aleja de ahí." },
+      { "text": "Diseño Asistido por Computadora", "isCorrect": true, "explanation": "Correcto. Proviene del inglés 'Computer-Aided Design'. En español también se usó DAO (Diseño Asistido por Ordenador)." }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "¿Qué se debe hacer cuando una instalación sufre cambios o mejoras?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Los planos deben actualizarse con la nueva información.",
+    "options": [
+      { "text": "Los planos deben actualizarse con la nueva información.", "isCorrect": true, "explanation": "Correcto. Así se generan los planos 'Conforme a Obra' (As-Built), fundamentales para el mantenimiento futuro de la máquina o edificio." },
+      { "text": "No es necesario registrar cambios menores en los planos.", "isCorrect": false, "explanation": "Incorrecto. En sistemas complejos como la electricidad o la automatización, una línea cambiada lo altera todo." },
+      { "text": "Los cambios deben informarse verbalmente al equipo técnico.", "isCorrect": false, "explanation": "Incorrecto. Las palabras se las lleva el viento; en ingeniería, los cambios se documentan formalmente." }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "¿Qué indica una escala 3:1?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una ampliación al triple del tamaño real",
+    "options": [
+      { "text": "Una ampliación al triple del tamaño real", "isCorrect": true, "explanation": "Correcto. El formato Dibujo:Realidad (3 unidades en plano = 1 unidad en realidad) indica que el esquema dibujado amplifica los detalles pequeños." },
+      { "text": "Una representación a tamaño real", "isCorrect": false, "explanation": "Incorrecto. Una escala natural se representa como 1:1." },
+      { "text": "Una reducción a un tercio del tamaño", "isCorrect": false, "explanation": "Incorrecto. Si fuera de reducción, la escala sería 1:3." }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "¿Qué tipo de plano es comúnmente utilizado como base en proyectos automatizados, según el texto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Plano en 2D generados por programas como AutoCAD.",
+    "options": [
+      { "text": "Plano en 2D generados por programas como AutoCAD.", "isCorrect": true, "explanation": "Correcto. A pesar de los avances 3D, la simbología y los esquemas unifilares y de planta de automatización se conciben comúnmente en proyecciones diédricas planas (2D)." },
+      { "text": "Esquemas conceptuales en papel.", "isCorrect": false, "explanation": "Incorrecto. Esos son bocetos, hoy en día se exige software para dar validez industrial." },
+      { "text": "Plano en 3D generado con software de modelado.", "isCorrect": false, "explanation": "Incorrecto. Es muy pesado y caro crear circuitos lógicos y trazados de automatismos primarios bajo este paradigma." }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Según el texto, ¿qué se debe incluir en los planos para gestionar la documentación técnica?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Datos concretos sobre las características, fabricante, modelo, etc.",
+    "options": [
+      { "text": "Datos concretos sobre las características, fabricante, modelo, etc.", "isCorrect": true, "explanation": "Correcto. En los cajetines o tablas de leyendas de los diagramas, esa información resulta vital para reparaciones futuras." },
+      { "text": "Resumen del proyecto.", "isCorrect": false, "explanation": "Incorrecto. El resumen o descripción global se localiza en la Memoria del proyecto." },
+      { "text": "Solo gráficos de referencia.", "isCorrect": false, "explanation": "Incorrecto. Un gráfico sin información del equipo o referencias (marcas, modelos) es inservible a nivel industrial." }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "¿Qué ventaja ofrece el uso de software técnico que genera documentación compatible con la norma UNE 157.001:2000?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Simplificación del proceso de elaboración de documentación gráfica.",
+    "options": [
+      { "text": "Reducción de la calidad de los documentos.", "isCorrect": false, "explanation": "Incorrecto. Por el contrario, asegura una presentación estándar y legible." },
+      { "text": "Simplificación del proceso de elaboración de documentación gráfica.", "isCorrect": true, "explanation": "Correcto. Si el programa conoce el estándar (cajetines, índices, estructura), ahorra horas manuales automatizando formatos a los proyectistas." },
+      { "text": "Aumento de los costos del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Simplificar el proceso disminuye las horas invertidas, abaratando los costes de redacción del proyecto." }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "¿Cuál es la clasificación adoptada a partir de la digitalización de documentos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Sistemas basados en OCR",
+    "options": [
+      { "text": "Sistemas basados en OCR", "isCorrect": true, "explanation": "Correcto. El Reconocimiento Óptico de Caracteres escanea archivos de texto como el PDF y permite catalogarlos y buscar palabras clave dentro de su contenido de manera digital." },
+      { "text": "Clasificación aleatoria", "isCorrect": false, "explanation": "Incorrecto. La clasificación carecería de utilidad y entorpecería la recuperación documental." },
+      { "text": "Clasificación por tamaño", "isCorrect": false, "explanation": "Incorrecto. En formatos digitales el tamaño del papel es intrascendente para almacenar en la base de datos." }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "¿Qué tipo de escala es la 1:50?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Escala de reducción",
+    "options": [
+      { "text": "Escala natural", "isCorrect": false, "explanation": "Incorrecto. La escala natural es de relación 1:1." },
+      { "text": "Escala de reducción", "isCorrect": true, "explanation": "Correcto. El número 50 indica que en el plano, el objeto está representado de forma 50 veces más pequeña que la realidad para que quepa." },
+      { "text": "Escala de ampliación", "isCorrect": false, "explanation": "Incorrecto. Estaría designada de forma invertida, es decir 50:1." }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Al elaborar planos para proyectos automatizados, considerando el flujo de energía, ¿cómo deben representarse los esquemas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Según el orden en el que fluye la energía.",
+    "options": [
+      { "text": "En base a la jerarquía de componentes.", "isCorrect": false, "explanation": "Incorrecto. Aunque hay jerarquías, el esquema obedece primordialmente al viaje de la electricidad (de la fuente a los actuadores)." },
+      { "text": "Según una secuencia lógico-semántica.", "isCorrect": false, "explanation": "Incorrecto. Eso es habitual en programación (software, PLC), no en los trazados de potencia." },
+      { "text": "Según el orden en el que fluye la energía.", "isCorrect": true, "explanation": "Correcto. La disposición normativa suele trazarse desde la alimentación (arriba/izquierda) y discurre por las protecciones hasta terminar en el receptor." }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "En la selección de un programa CAD, ¿por qué puede ser importante la capacidad de representación en 3D?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Es esencial para simular procesos complejos",
+    "options": [
+      { "text": "Es crucial para edición de texto", "isCorrect": false, "explanation": "Incorrecto. Para eso se utiliza Microsoft Word o equivalentes." },
+      { "text": "Para diseñar interfaces de usuario", "isCorrect": false, "explanation": "Incorrecto. El 3D no influye directamente en las interfaces visuales HMI de manera esencial." },
+      { "text": "Es esencial para simular procesos complejos", "isCorrect": true, "explanation": "Correcto. Permite observar si existirá colisión entre tuberías, piezas móviles, brazos robóticos o estudiar integraciones mecánicas avanzadas (Digital Twins)." }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "¿Cuál es el procedimiento correcto para calcular la longitud real si no se dispone de un escalímetro?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Se multiplica el valor medido por el valor de la escala de representación",
+    "options": [
+      { "text": "Se multiplica el valor medido por el valor de la escala de representación", "isCorrect": true, "explanation": "Correcto. Si mides en plano 3cm con una regla normal y la escala es 1:100, multiplicas por 100 obteniendo 300cm, que son 3 metros reales." },
+      { "text": "Se multiplica el valor medido por el valor inverso de la escala", "isCorrect": false, "explanation": "Incorrecto. Operativamente arrojaría un valor muy por debajo de la realidad en planos de reducción." },
+      { "text": "Se divide el valor medido por el valor de la escala", "isCorrect": false, "explanation": "Incorrecto. Al dividir (ej. 3 / 100), el objeto resultaría de escala microscópica." }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Considerando la distribución de sectores, ¿cómo se nombraría un segundo cuadro de fuerza en el sector de destrío?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: CF2-B-4",
+    "options": [
+      { "text": "CF2-B-4", "isCorrect": true, "explanation": "Correcto. Asumiendo la lógica de etiquetado vista: CF = Cuadro Fuerza, 2 = el segundo cuadro, B = sector asignado, 4 = submódulo." },
+      { "text": "CF2-B-4 (Variante)", "isCorrect": false, "explanation": "Incorrecto. La nomenclatura no incluye aclaraciones entre paréntesis dentro de la normalización del tag de campo." },
+      { "text": "CF2-B-3", "isCorrect": false, "explanation": "Incorrecto. El número final indica la localización o la variante, la respuesta correcta la fija en el módulo 4." }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "¿Qué debe incluir una descripción correcta de una unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Precios de materiales en obra o en almacén.",
+    "options": [
+      { "text": "La dirección del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Eso iría en el encabezado general del proyecto, no dentro del documento del presupuesto." },
+      { "text": "Solo el nombre del proyecto.", "isCorrect": false, "explanation": "Incorrecto. La unidad debe detallar explícitamente lo que se ejecuta." },
+      { "text": "Precios de materiales en obra o en almacén.", "isCorrect": true, "explanation": "Correcto. En cuadros de precios descompuestos integrados en el pliego de condiciones o presupuestos detallados, se estipula el precio aportado a pie de obra." }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "¿Qué porcentaje aproximado del PEM representan los gastos generales?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Entre 13% y 20%",
+    "options": [
+      { "text": "Entre 13% y 20%", "isCorrect": true, "explanation": "Correcto. Históricamente y según la legislación de contratos (ej. España), los Gastos Generales aplicados a la contrata oscilan en este abanico porcentual." },
+      { "text": "Entre 21% y 30%", "isCorrect": false, "explanation": "Incorrecto. Son porcentajes exagerados y no los asumiría ninguna administración pública." },
+      { "text": "Entre 5% y 12%", "isCorrect": false, "explanation": "Incorrecto. Suelen ser demasiado escasos para cubrir fianzas, casetas o sueldos del personal de oficina de la constructora." }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "¿Para qué se utilizan las mediciones de obra durante la ejecución?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para ajustarse a los criterios de medición del proyecto",
+    "options": [
+      { "text": "Para ajustarse a los criterios de medición del proyecto", "isCorrect": true, "explanation": "Correcto. Mediante la toma periódica de datos con los criterios pactados, se tramitan las certificaciones mensuales que aseguran el cobro regular del avance físico." },
+      { "text": "Solo para evaluar costes indirectos", "isCorrect": false, "explanation": "Incorrecto. Evalúan y contabilizan el coste directo fundamental (hormigón, cables echados, tierra movida)." },
+      { "text": "Para reducir el tiempo de ejecución", "isCorrect": false, "explanation": "Incorrecto. Las mediciones verifican la cantidad abonable, no aceleran mecánicamente las cuadrillas para acabar antes." }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "Para qué tipo de diseño es ideal LibreCAD?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Diseño en 2D",
+    "options": [
+      { "text": "Diseño 3D avanzado", "isCorrect": false, "explanation": "Incorrecto. LibreCAD carece de un motor de modelado y renderizado en tres dimensiones." },
+      { "text": "Diseño de video juegos", "isCorrect": false, "explanation": "Incorrecto. Se utilizarían motores como Unity o Unreal Engine, o modeladores como Blender." },
+      { "text": "Diseño en 2D", "isCorrect": true, "explanation": "Correcto. LibreCAD es un software Open Source específicamente diseñado para trazar esquemas, planos y geometría plana en dos dimensiones." }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "En el proceso de integración de documentación, ¿qué se necesita si el software no es compatible con normas citadas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Un proceso manual de integración.",
+    "options": [
+      { "text": "Un proceso manual de integración.", "isCorrect": true, "explanation": "Correcto. Si el software no genera automáticamente listas, símbolos o formatos normalizados, los ingenieros deben transcribir o maquetar a mano los datos en documentos de texto u hojas de cálculo." },
+      { "text": "Una reducción en la calidad del diseño.", "isCorrect": false, "explanation": "Incorrecto. La calidad del diseño técnico no tiene por qué bajar, pero el tiempo invertido en documentarlo será mucho mayor." },
+      { "text": "Un sistema automático de corrección de errores.", "isCorrect": false, "explanation": "Incorrecto. Si no es compatible, no tendrá un sistema automático para corregirlo hacia dicha norma." }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "¿Cuál es una ventaja de los sistemas CAD avanzados al elaborar documentos adicionales?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Generan listas de materiales y presupuestos",
+    "options": [
+      { "text": "Pueden crear presentaciones multimedia", "isCorrect": false, "explanation": "Incorrecto. Su objetivo no es la edición audiovisual." },
+      { "text": "Generan listas de materiales y presupuestos", "isCorrect": true, "explanation": "Correcto. El software moderno asocia datos a los símbolos (parametrización), permitiendo extraer automáticamente las BOM (Bill of Materials) o mediciones para el presupuesto." },
+      { "text": "Ofrecen tutoriales para todos los niveles de usuario", "isCorrect": false, "explanation": "Incorrecto. Esto es una ventaja comercial del fabricante, no una ventaja técnica de producción documental." }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "En la nomenclatura 'CF1-A-2', ¿qué representa la letra 'A'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Zona A de limpieza",
+    "options": [
+      { "text": "Zona A de limpieza", "isCorrect": true, "explanation": "Correcto. En codificaciones estándar, la parte central alfabética suele designar la ubicación, área, local o sector de las instalaciones." },
+      { "text": "Sector 2", "isCorrect": false, "explanation": "Incorrecto. El número 2 representa en este caso un orden, submódulo o sector numérico, no la letra." },
+      { "text": "Cuadro alumbrado", "isCorrect": false, "explanation": "Incorrecto. Vendría codificado en el prefijo, normalmente como 'CA', no como 'CF' (Cuadro de Fuerza)." }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "En la documentación para un proyecto de automatización, ¿qué se debe evitar al crear planos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Usar un mismo plano para varias instalaciones.",
+    "options": [
+      { "text": "Generar planos para cada instalación.", "isCorrect": false, "explanation": "Incorrecto. Precisamente esto es lo que SÍ se debe hacer para mantener la claridad." },
+      { "text": "Usar un mismo plano para varias instalaciones.", "isCorrect": true, "explanation": "Correcto. Mezclar neumática, potencia eléctrica y comunicaciones de red en una sola hoja provoca errores de interpretación en el taller o la obra." },
+      { "text": "Incluir demasiados detalles técnicos.", "isCorrect": false, "explanation": "Incorrecto. En un proyecto industrial, el detalle técnico riguroso es obligatorio, no algo a evitar." }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "¿Qué tipo de archivo es más adecuado para guardar un solo documento con múltiples planos y datos anexos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Archivo PDF unificado",
+    "options": [
+      { "text": "Archivo PDF unificado", "isCorrect": true, "explanation": "Correcto. Permite combinar hojas de distintos tamaños, textos y planos CAD en un solo archivo inalterable, ligero y fácilmente imprimible." },
+      { "text": "Documento Word con anexos", "isCorrect": false, "explanation": "Incorrecto. Word deforma los planos CAD, altera las escalas al pasarlos a imagen y se desmaqueta según la versión." },
+      { "text": "Serie de archivos JPG", "isCorrect": false, "explanation": "Incorrecto. Genera multitud de archivos sueltos, con baja calidad para líneas técnicas finas y pérdida de compresión." }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "¿Qué significa PEM en el contexto de presupuestos en proyectos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Presupuesto de Ejecución Material",
+    "options": [
+      { "text": "Planificación Económica Media", "isCorrect": false, "explanation": "Incorrecto. No corresponde a ninguna nomenclatura estandarizada en edificación o ingeniería." },
+      { "text": "Presupuesto de Ejecución Material", "isCorrect": true, "explanation": "Correcto. Es el resultado de multiplicar las mediciones por los precios unitarios directos e indirectos, sin sumar aún el beneficio de la empresa constructora." },
+      { "text": "Presupuesto Estimado Mensual", "isCorrect": false, "explanation": "Incorrecto. Las estimaciones mensuales se denominan Certificaciones, no PEM." }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "¿Cuál es el porcentaje del PEM que se añade como beneficio industrial?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 8%",
+    "options": [
+      { "text": "8%", "isCorrect": true, "explanation": "Correcto. Aunque en la ley de Contratos del Sector Público suele ser el 6%, en muchos manuales y sectores industriales se estipula un 8% o 10% estándar como Beneficio Industrial." },
+      { "text": "5%", "isCorrect": false, "explanation": "Incorrecto. Suele quedar por debajo de los márgenes comerciales operativos de las ingenierías y contratas." },
+      { "text": "10%", "isCorrect": false, "explanation": "Incorrecto para el contexto de este examen en particular." }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "¿Qué son los costes directos de una unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Costes de materiales, mano de obra y maquinaria.",
+    "options": [
+      { "text": "Costes relacionados con la administración.", "isCorrect": false, "explanation": "Incorrecto. Esos conforman los Costes Indirectos y los Gastos Generales." },
+      { "text": "Costes financieros y de imprevistos.", "isCorrect": false, "explanation": "Incorrecto. Los financieros recaen en Gastos Generales; los imprevistos no son un coste directo de ejecución estándar." },
+      { "text": "Costes de materiales, mano de obra y maquinaria.", "isCorrect": true, "explanation": "Correcto. Son los elementos que se pueden asignar de manera directa, proporcional y obvia a la ejecución física de esa unidad." }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "¿Qué importancia tienen los catálogos de precios en la determinación de costes?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Permiten definir precios unitarios basados en costes reales.",
+    "options": [
+      { "text": "Permiten definir precios unitarios basados en costes reales.", "isCorrect": true, "explanation": "Correcto. Las bases de precios de la construcción e industria se actualizan anualmente reflejando la inflación, coste de la vida y mercado real de fabricantes." },
+      { "text": "Facilitan la coordinación logística del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Las bases de precios son herramientas contables, no softwares de gestión de suministro o cadena de transporte." },
+      { "text": "Son solo referencias históricas sin aplicación práctica.", "isCorrect": false, "explanation": "Incorrecto. Son la piedra angular del 90% de los presupuestos realizados en España y Latinoamérica." }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "¿Qué representa el 'importe' en una unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Precio unitario multiplicado por la cantidad prevista.",
+    "options": [
+      { "text": "Precio unitario multiplicado por la cantidad prevista.", "isCorrect": true, "explanation": "Correcto. Es la columna final de la línea presupuestaria: si tienes 10 enchufes (medición) a 5€ cada uno (precio unitario), el importe es 50€." },
+      { "text": "Costos indirectos de un proyecto.", "isCorrect": false, "explanation": "Incorrecto. Los indirectos son un sumando conceptual que va dentro del precio unitario, no el resultado final." },
+      { "text": "Gastos administrativos totales.", "isCorrect": false, "explanation": "Incorrecto. Esos gastos pertenecen al nivel de proyecto general (Gastos Generales), no se limitan a la unidad de obra." }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "¿Por qué deben evitarse las unidades de obra demasiado pequeñas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Porque no definen adecuadamente una unidad de obra.",
+    "options": [
+      { "text": "Porque no definen adecuadamente una unidad de obra.", "isCorrect": true, "explanation": "Correcto. Desglosar al extremo (ej. cobrar por separado cada tuerca o cada gota de estaño) rompe el concepto de 'unidad de obra final terminada' y hace inmanejable el documento." },
+      { "text": "Porque no permiten una correcta estimación de tiempo.", "isCorrect": false, "explanation": "Incorrecto. De hecho, a mayor detalle microscópico, en teoría podrías afinar tiempos, pero el coste burocrático de gestionarlo lo hace inviable." },
+      { "text": "Porque dificultan su cuantificación y control.", "isCorrect": false, "explanation": "Incorrecto. Aunque es cierto que lo dificultan, el motivo técnico principal es que pierden la entidad conceptual de un elemento útilizado en obra." }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "¿Cuál es la principal ventaja de utilizar aplicaciones de catálogos de precios?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Permiten obtener previsiones ajustadas a la realidad",
+    "options": [
+      { "text": "Limitan el acceso a precios por comunidad autónoma", "isCorrect": false, "explanation": "Incorrecto. Aunque algunas bases están regionalizadas, esto no es una limitación, sino una virtud para ganar precisión geográfica." },
+      { "text": "Facilitan el acceso a herramientas de estimación aleatorias", "isCorrect": false, "explanation": "Incorrecto. La estimación técnica no tiene nada de aleatorio, se basa en rendimientos empíricos." },
+      { "text": "Permiten obtener previsiones ajustadas a la realidad", "isCorrect": true, "explanation": "Correcto. Al integrar millones de datos reales y actualizados, el error económico en la previsión del ingeniero se minimiza drásticamente." }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "¿Cuál de las siguientes no es una función de las aplicaciones informáticas para la elaboración de presupuestos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Jugar videojuegos",
+    "options": [
+      { "text": "Realizar estudios de seguridad", "isCorrect": false, "explanation": "Incorrecto. Muchos programas de presupuestos (como Presto o Arquímedes) integran módulos para generar el Presupuesto de Seguridad y Salud." },
+      { "text": "Jugar videojuegos", "isCorrect": true, "explanation": "Correcto. Es un software puramente corporativo, técnico y contable." },
+      { "text": "Importar y exportar bases de datos", "isCorrect": false, "explanation": "Incorrecto. La exportación (mediante formato estandarizado BC3) es una de sus funciones más vitales." }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "¿Qué se suma para obtener el presupuesto de ejecución por contrata (PEC)?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: CT + IVA",
+    "options": [
+      { "text": "CT + IVA", "isCorrect": true, "explanation": "Correcto. En este contexto formativo concreto, el Coste Total (CT = PEM+GG+BI) más los impuestos fiscales (IVA) conforman el montante final a pagar a la Contrata (PEC o PBL)." },
+      { "text": "PEM + BI", "isCorrect": false, "explanation": "Incorrecto. Faltan los Gastos Generales (GG)." },
+      { "text": "GG + HP", "isCorrect": false, "explanation": "Incorrecto. Son partidas complementarias (Gastos Generales + Honorarios Profesionales), no conforman por sí solas el coste de una obra." }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "¿Qué aspecto es clave para asegurar que los costes indirectos son precisos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Evaluar de forma exhaustiva las necesidades de instalaciones temporales.",
+    "options": [
+      { "text": "Incluir un margen muy pequeño para imprevistos.", "isCorrect": false, "explanation": "Incorrecto. Los imprevistos no se pueden tasar como pequeños de antemano, y los costes indirectos responden a gastos fijos y predecibles (casetas, vallados)." },
+      { "text": "Evaluar de forma exhaustiva las necesidades de instalaciones temporales.", "isCorrect": true, "explanation": "Correcto. Alquiler de andamios, grúas, luz de obra, agua, vallado y casetas suponen el mayor porcentaje del costo indirecto mensual a pie de obra." },
+      { "text": "Reducir al mínimo posible los costes relacionados con las comunicaciones.", "isCorrect": false, "explanation": "Incorrecto. Reducir telefonía o internet no garantiza la \"precisión\" del cálculo, solo abarata levemente el proyecto." }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "¿Cómo se definen los costes directos complementarios en las unidades de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Como porcentajes de materiales y mano de obra.",
+    "options": [
+      { "text": "Como porcentajes de materiales y mano de obra.", "isCorrect": true, "explanation": "Correcto. Tradicionalmente se aplican como un pequeño % adicional (ej. medios auxiliares, herramienta de mano) sobre la suma de la mano de obra y el material directo." },
+      { "text": "Como porcentajes de los costes indirectos.", "isCorrect": false, "explanation": "Incorrecto. Se calculan sobre los costes directos, no se anidan sobre los indirectos." },
+      { "text": "Como tarifas fijas independientemente del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Son proporcionales: si aumenta el coste de mano de obra en el tajo, aumenta el porcentaje destinado a desgaste de herramienta." }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "¿Qué sucede cuando las mediciones del proyecto y de obra no coinciden?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Se determina la desviación de la medición y se procede según el contrato",
+    "options": [
+      { "text": "Se determina la desviación de la medición y se procede según el contrato", "isCorrect": true, "explanation": "Correcto. Dependiendo del contrato (a precio cerrado o abierto por unidades), se liquidará el exceso abonándolo al constructor o se requerirá la aprobación de un Proyecto Modificado." },
+      { "text": "Se deben volver a realizar las mediciones en todo el proyecto", "isCorrect": false, "explanation": "Incorrecto. Solo se vuelven a medir y consensuar (contradictorios) las partidas exactas donde existe conflicto o desviación." },
+      { "text": "Se incrementan únicamente los costes directos complementarios", "isCorrect": false, "explanation": "Incorrecto. El exceso de medición repercute en todo: materiales, trabajo directo, beneficio industrial, etc." }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "¿Qué ventaja del uso de herramientas CAD permite mostrar al cliente una representación previa al modelo final?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Visualización",
+    "options": [
+      { "text": "Optimización", "isCorrect": false, "explanation": "Incorrecto. La optimización se refiere a la mejora del diseño técnico y el ahorro de materiales o espacio." },
+      { "text": "Desarrollo rápido", "isCorrect": false, "explanation": "Incorrecto. Acelera el proceso de dibujo, pero no es la característica específica de 'mostrar' el modelo." },
+      { "text": "Visualización", "isCorrect": true, "explanation": "Correcto. El CAD permite generar vistas previas, perspectivas y modelos 3D que facilitan al cliente comprender el proyecto antes de que se construya." }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "¿Cuál es el primer tipo de plano que debe incluirse en un proyecto técnico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Planos de situación y emplazamiento",
+    "options": [
+      { "text": "Planos de distribución de plantas", "isCorrect": false, "explanation": "Incorrecto. Estos son planos de detalle interior que van después de situar el edificio." },
+      { "text": "Planos de detalle de instalaciones", "isCorrect": false, "explanation": "Incorrecto. Las instalaciones son de las últimas cosas en documentarse en el orden de los planos." },
+      { "text": "Planos de situación y emplazamiento", "isCorrect": true, "explanation": "Correcto. Normativamente, el primer plano es el que ubica el proyecto a nivel geográfico (ciudad/calle) y dentro de la parcela." }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "¿Qué formato es el más recomendado para el almacenamiento y archivo de documentos técnicos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: PDF",
+    "options": [
+      { "text": "JPEG", "isCorrect": false, "explanation": "Incorrecto. Es un formato de imagen que pierde calidad con la compresión y no permite selección de texto." },
+      { "text": "DOCX", "isCorrect": false, "explanation": "Incorrecto. Es un formato editable que puede desmaquetarse dependiendo de la versión de Word en que se abra." },
+      { "text": "PDF", "isCorrect": true, "explanation": "Correcto. El Portable Document Format garantiza la integridad visual, es inalterable y estandarizado para archivos a largo plazo." }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "¿Qué regula la norma UNE-EN ISO 5455:1996?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El empleo de escalas",
+    "options": [
+      { "text": "La organización de archivos", "isCorrect": false, "explanation": "Incorrecto. Existen otras normas para la gestión documental, no esta." },
+      { "text": "El plegado de planos", "isCorrect": false, "explanation": "Incorrecto. El plegado y los formatos base se rigen por normas derivadas de la UNE-EN ISO 216 o normas DIN clásicas equivalentes." },
+      { "text": "El empleo de escalas", "isCorrect": true, "explanation": "Correcto. Esta norma especifica las escalas recomendadas y su designación en el dibujo técnico." }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "¿Por qué es importante seguir un criterio de representación en la elaboración de documentación gráfica?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para asegurar la claridad en la interpretación de los documentos.",
+    "options": [
+      { "text": "Para garantizar que los documentos sean estéticamente atractivos.", "isCorrect": false, "explanation": "Incorrecto. La estética es secundaria frente al rigor técnico." },
+      { "text": "Para cumplir con la normativa internacional.", "isCorrect": false, "explanation": "Incorrecto. Cumplir la norma es el medio, pero el fin último u objetivo es que se entienda el plano sin errores." },
+      { "text": "Para asegurar la claridad en la interpretación de los documentos.", "isCorrect": true, "explanation": "Correcto. Usar un lenguaje gráfico universal evita confusiones costosas en la fase de fabricación o montaje." }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "¿En qué formato de papel puede archivarse un plano una vez plegado?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: A4",
+    "options": [
+      { "text": "A3", "isCorrect": false, "explanation": "Incorrecto. Es demasiado grande para la mayoría de archivadores, carpesanos y estanterías estándar de oficina." },
+      { "text": "A2", "isCorrect": false, "explanation": "Incorrecto. Es un formato de plotter mediano que debe plegarse para poder encuadernarse." },
+      { "text": "A4", "isCorrect": true, "explanation": "Correcto. Todos los planos técnicos, independientemente de su tamaño original, deben plegarse en acordeón hasta alcanzar el tamaño A4 para encuadernarlos en las memorias." }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "Además de la impresión en papel, ¿cómo se recomienda archivar documentos en las empresas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: En formatos papel y digital",
+    "options": [
+      { "text": "Solo en papel", "isCorrect": false, "explanation": "Incorrecto. Supone un riesgo de pérdida total en caso de incendio y es lento de consultar." },
+      { "text": "Solo en formato digital", "isCorrect": false, "explanation": "Incorrecto. Aunque es la tendencia, muchos trámites legales, visados y consultas a pie de obra aún requieren copias físicas de respaldo." },
+      { "text": "En formatos papel y digital", "isCorrect": true, "explanation": "Correcto. Mantener un sistema híbrido asegura accesibilidad inmediata (digital) y seguridad física ante fallos informáticos." }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "¿Qué capacidad adicional es ventajosa para trabajar desde varias ubicaciones en un proyecto CAD?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Capacidad de alojamiento en la nube",
+    "options": [
+      { "text": "Almacenamiento local", "isCorrect": false, "explanation": "Incorrecto. El almacenamiento en discos duros locales impide la colaboración ágil si se trabaja desde distintas ciudades." },
+      { "text": "Impresión en 3D", "isCorrect": false, "explanation": "Incorrecto. Es un método de prototipado, no de trabajo descentralizado." },
+      { "text": "Capacidad de alojamiento en la nube", "isCorrect": true, "explanation": "Correcto. El cloud computing (como BIM 360 o sistemas PDM en la nube) permite a proyectistas de diferentes ubicaciones editar el mismo modelo." }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "¿Cuál es la anchura mínima de margen recomendada para un formato A2?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 10 mm",
+    "options": [
+      { "text": "5 mm", "isCorrect": false, "explanation": "Incorrecto. Un margen tan estrecho causaría que la información sea cortada por impresoras o plotters." },
+      { "text": "20 mm", "isCorrect": false, "explanation": "Incorrecto. Este margen perimetral se reserva habitualmente para los formatos más grandes: A0 y A1." },
+      { "text": "10 mm", "isCorrect": true, "explanation": "Correcto. Según las normas ISO (ej. ISO 5457), el margen perimetral para los formatos A2, A3 y A4 es de 10 mm." }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "¿Qué considera la norma UNE-EN ISO 216:2008 respecto a los formatos de papel?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Establece las normas para formatos de dibujo técnico, archivadores y documentos comerciales",
+    "options": [
+      { "text": "Únicamente regula el plegado de planos", "isCorrect": false, "explanation": "Incorrecto. El plegado se define en otras normas específicas." },
+      { "text": "Solo establece los tamaños de los formatos tipo B", "isCorrect": false, "explanation": "Incorrecto. Regula las series A, B y C." },
+      { "text": "Establece las normas para formatos de dibujo técnico, archivadores y documentos comerciales", "isCorrect": true, "explanation": "Correcto. Define las dimensiones estandarizadas de toda la papelería comercial (Series A, B, C)." }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "¿Qué tipo de mantenimiento se basa en averías producidas durante un periodo de tiempo?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Predictivo",
+    "options": [
+      { "text": "Proactivo", "isCorrect": false, "explanation": "Incorrecto. El proactivo busca la causa raíz del fallo para rediseñar la máquina, no se basa solo en estadísticas de tiempo." },
+      { "text": "Correctivo", "isCorrect": false, "explanation": "Incorrecto. El correctivo ocurre 'después' de que la máquina se rompe, no planifica periodos." },
+      { "text": "Predictivo", "isCorrect": true, "explanation": "Correcto. Estudia el histórico de averías, vibraciones y Tiempo Medio Entre Fallos (MTBF) para predecir cuándo ocurrirá la próxima rotura." }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "¿Qué incluyen los capítulos de un proyecto de instalaciones eléctricas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Operaciones de actividades similares o de un mismo oficio",
+    "options": [
+      { "text": "Únicamente la instalación de dispositivos", "isCorrect": false, "explanation": "Incorrecto. También incluyen movimiento de tierras, ayudas de albañilería, legalizaciones, etc." },
+      { "text": "Solo el cableado", "isCorrect": false, "explanation": "Incorrecto. El cableado es solo una parte de la instalación." },
+      { "text": "Operaciones de actividades similares o de un mismo oficio", "isCorrect": true, "explanation": "Correcto. Agrupan unidades lógicas. Ejemplo: Capítulo 1: Canalizaciones, Capítulo 2: Cuadros eléctricos, Capítulo 3: Iluminación." }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "¿Cómo ayuda un catálogo de precios en la fase de mantenimiento de un proyecto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Facilita la documentación técnica vinculada a cada unidad de obra",
+    "options": [
+      { "text": "Proporciona reglamentos más estrictos", "isCorrect": false, "explanation": "Incorrecto. Los catálogos son económicos/técnicos, las normas las dictan las leyes." },
+      { "text": "Reduce la calidad de la conservación", "isCorrect": false, "explanation": "Incorrecto. Su uso correcto mejora la planificación económica, en ningún caso disminuye la calidad física del mantenimiento." },
+      { "text": "Facilita la documentación técnica vinculada a cada unidad de obra", "isCorrect": true, "explanation": "Correcto. Muchos catálogos (como bases BC3 completas) incluyen el pliego de condiciones de la pieza, su garantía y normativas vinculadas a su mantenimiento." }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "¿Qué porcentaje aproximado se debe considerar para los honorarios de la dirección de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 6% del PEM",
+    "options": [
+      { "text": "10% del PEM", "isCorrect": false, "explanation": "Incorrecto. El 10% suele ser la suma global de Redacción del Proyecto, no solo la Dirección de Obra." },
+      { "text": "1% del PEM", "isCorrect": false, "explanation": "Incorrecto. Es un porcentaje excesivamente bajo y no cubre las responsabilidades civiles y visitas de un Director de Obra." },
+      { "text": "6% del PEM", "isCorrect": true, "explanation": "Correcto. Como regla empírica o tarifa orientativa de los colegios profesionales, la Dirección de Obra y su ejecución suele rondar el 6%." }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "¿Qué incluye el desglose de precios unitarios de una obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Materiales, mano de obra, y maquinaria.",
+    "options": [
+      { "text": "Solamente los costes indirectos.", "isCorrect": false, "explanation": "Incorrecto. Los indirectos son un porcentaje final, no desglosan en sí la unidad ejecutada." },
+      { "text": "Solo materiales necesarios.", "isCorrect": false, "explanation": "Incorrecto. Un material no se instala solo; requiere tiempo de personal y herramientas." },
+      { "text": "Materiales, mano de obra, y maquinaria.", "isCorrect": true, "explanation": "Correcto. Constituye la estructura básica de descomposición de los costes directos de una partida." }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "La elaboración de un presupuesto parcial se realiza multiplicando...",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Número de unidades por el precio descompuesto",
+    "options": [
+      { "text": "Costo de mano de obra por el tiempo estimado", "isCorrect": false, "explanation": "Incorrecto. Eso te daría solo el coste de la fuerza laboral, faltarían los materiales." },
+      { "text": "Precio total del material por unidades de mano de obra", "isCorrect": false, "explanation": "Incorrecto. Matemáticamente y conceptualmente no tiene sentido multiplicar precios por unidades de mano de obra de esta forma." },
+      { "text": "Número de unidades por el precio descompuesto", "isCorrect": true, "explanation": "Correcto. Multiplicar la Medición (cantidad) por el Precio Unitario de la partida arroja el importe o presupuesto parcial." }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "¿Qué porcentaje del CT representa el IVA en un presupuesto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 21%",
+    "options": [
+      { "text": "18%", "isCorrect": false, "explanation": "Incorrecto. Ese era el tipo impositivo antiguo en España." },
+      { "text": "25%", "isCorrect": false, "explanation": "Incorrecto. Es un valor que no se corresponde con el tipo general español para la construcción industrial." },
+      { "text": "21%", "isCorrect": true, "explanation": "Correcto. En España, salvo que sea una obra muy específica que tribute al 10%, el tipo impositivo general aplicado a la contrata es del 21%." }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "¿Qué estrategia pueden seguir los proyectistas para manejar la falta de bases de datos actualizadas para sistemas automatizados?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Recurrir a catálogos de productos de fabricantes en formatos compatibles",
+    "options": [
+      { "text": "Utilizar precios estimados basados en experiencias previas", "isCorrect": false, "explanation": "Incorrecto. La electrónica y la automatización varían de precio rapidísimo; guiarse por experiencias de años pasados arruinaría el presupuesto." },
+      { "text": "Duplicar los costos estándar de otros sectores", "isCorrect": false, "explanation": "Incorrecto. Es una práctica poco profesional y que provocaría que el cliente rechace la oferta por cara." },
+      { "text": "Recurrir a catálogos de productos de fabricantes en formatos compatibles", "isCorrect": true, "explanation": "Correcto. Muchos fabricantes como Siemens o Schneider proveen archivos de tarifas BIE o BC3 que se insertan directamente en el presupuesto CAD." }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "¿Cuál es el monto en euros de un precio descompuesto de 40 horas de trabajo de un ayudante (3 ayudantes) según el cuadro de precios de mano de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: 840",
+    "options": [
+      { "text": "2520", "isCorrect": false, "explanation": "Incorrecto. El cálculo sería este si la hora se cobrase a 21€." },
+      { "text": "120", "isCorrect": false, "explanation": "Incorrecto. Este número corresponde solo a la cantidad total de horas (40h x 3)." },
+      { "text": "840", "isCorrect": true, "explanation": "Correcto. Si se asume la tarifa estándar empleada en los ejemplos del texto de estudio (7€/h para el ayudante), 120 horas en total x 7€/hora = 840€." }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "En el cálculo de paredes con puertas y ventanas, ¿por qué es importante descontar ciertos elementos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Porque se debe descontar el material de los huecos para mayor precisión",
+    "options": [
+      { "text": "Porque siempre son considerados como adicionales", "isCorrect": false, "explanation": "Incorrecto. Las puertas no son 'adicionales' al muro, ocupan su lugar." },
+      { "text": "Porque únicamente afectan los costes indirectos", "isCorrect": false, "explanation": "Incorrecto. Afectan directamente a la cantidad física de material (ladrillos, pintura, etc.)." },
+      { "text": "Porque se debe descontar el material de los huecos para mayor precisión", "isCorrect": true, "explanation": "Correcto. Esa deducción (valores negativos en las líneas de medición) garantiza que no se le cobre al cliente muro que realmente no se va a construir, ajustando el presupuesto real." }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "A la hora de seleccionar un software CAD para un proyecto, ¿qué criterio fundamental se debe aplicar respecto a la complejidad del programa?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Debe cumplir las especificaciones mínimas sin necesidad de pagar por un exceso de aplicaciones que no se usarán. (Pregunta probable de examen porque evalúa el criterio técnico-económico fundamental que un profesional debe aplicar al elegir herramientas de trabajo frente a opciones sobredimensionadas).",
+    "options": [
+      { "text": "Debe elegirse siempre el que tenga las características más innovadoras y complejas del mercado.", "isCorrect": false, "explanation": "Incorrecto. El texto indica que esto puede suponer un sobrecosto innecesario si no se van a utilizar." },
+      { "text": "Debe cumplir las especificaciones mínimas sin necesidad de tener un exceso de aplicaciones que no se van a utilizar.", "isCorrect": true, "explanation": "Correcto. El software debe ajustarse a las necesidades reales del diseño para evitar sobrecostes." },
+      { "text": "Debe ser obligatoriamente un software de distribución gratuita, independientemente de la complejidad del producto.", "isCorrect": false, "explanation": "Incorrecto. Se puede valorar el software gratuito, pero siempre que cumpla con los requisitos técnicos del producto." }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "¿Cuál es la característica principal del programa LibreCAD mencionada en el texto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Es un software de código abierto y distribución gratuita, ideal para la iniciación en 2D. (Pregunta probable de examen porque comprueba el conocimiento directo sobre las herramientas de software específicas y su ámbito de aplicación en el sector).",
+    "options": [
+      { "text": "Es un programa exclusivo para modelado y renderizado en 3D.", "isCorrect": false, "explanation": "Incorrecto. LibreCAD es ideal para la iniciación en entornos de diseño 2D." },
+      { "text": "Es el software más complejo del mercado y requiere licencias muy costosas.", "isCorrect": false, "explanation": "Incorrecto. Destaca precisamente por lo contrario: es sencillo, de código abierto y gratuito." },
+      { "text": "Es un software de código abierto y de distribución gratuita, ideal para iniciarse en diseño 2D.", "isCorrect": true, "explanation": "Correcto. Es una herramienta accesible sin la complejidad de otros programas." }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "En el entorno de las instalaciones eléctricas, ¿qué función adicional presenta el programa Elcad respecto a los CAD de dibujo genérico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Permite obtener automáticamente listas de materiales, cables, mangueras y borneros. (Pregunta probable de examen porque distingue las capacidades técnicas de un software específico de ingeniería frente a uno de dibujo general).",
+    "options": [
+      { "text": "Permite realizar simulaciones de resistencia de materiales mecánicos.", "isCorrect": false, "explanation": "Incorrecto. Elcad está especializado en esquemas eléctricos, no en análisis mecánicos." },
+      { "text": "Permite obtener listas de materiales, cables, mangueras y borneros de forma automática.", "isCorrect": true, "explanation": "Correcto. Es un programa muy completo enfocado a la ingeniería de instalaciones eléctricas." },
+      { "text": "Permite la impresión 3D de los cuadros eléctricos directamente.", "isCorrect": false, "explanation": "Incorrecto. El texto no menciona la impresión 3D como característica de Elcad." }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "Según los criterios de selección de programas de diseño, ¿por qué es un factor decisivo que el software se enseñe en centros educativos (grados o FP)?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Porque es más probable que los trabajadores ya estén familiarizados con él y el aprendizaje sea más corto. (Pregunta probable de examen porque relaciona el entorno académico con la productividad e integración real en la empresa).",
+    "options": [
+      { "text": "Porque así las licencias son siempre gratuitas para las empresas.", "isCorrect": false, "explanation": "Incorrecto. Que se enseñe en centros educativos no exime a las empresas de pagar licencias comerciales." },
+      { "text": "Porque es más probable que los trabajadores estén familiarizados con el software, acortando los procesos de aprendizaje.", "isCorrect": true, "explanation": "Correcto. Reduce la curva de aprendizaje de las nuevas incorporaciones a la empresa." },
+      { "text": "Porque es el único método para garantizar que los archivos tengan compatibilidad de formatos.", "isCorrect": false, "explanation": "Incorrecto. La compatibilidad de formatos es un criterio distinto e independiente del nivel educativo." }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "¿Qué norma de cumplimiento obligatorio establece los documentos básicos que debe contener un proyecto técnico?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La norma UNE 157.001:2000. (Pregunta probable de examen porque el conocimiento de la normativa marco que regula la estructura legal de un proyecto es vital para cualquier técnico).",
+    "options": [
+      { "text": "La norma UNE-EN ISO 216:2002.", "isCorrect": false, "explanation": "Incorrecto. Esta norma establece los tipos y tamaños de formatos de papel." },
+      { "text": "La norma UNE 157.001:2000.", "isCorrect": true, "explanation": "Correcto. Es la norma española general para la elaboración y estructuración de proyectos técnicos." },
+      { "text": "La norma UNE-EN ISO 1039:1994.", "isCorrect": false, "explanation": "Incorrecto. Esta norma trata sobre los principios generales de acotación en dibujo técnico." }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "En la elaboración de planos para un proyecto complejo, ¿qué práctica se recomienda para asegurar la claridad de la documentación?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Elaborar tantos planos como sea necesario, evitando usar un mismo plano para instalaciones distintas. (Pregunta probable de examen porque evalúa buenas prácticas de diseño y legibilidad, evitando planos saturados e incomprensibles).",
+    "options": [
+      { "text": "Elaborar tantos planos como sea necesario, evitando utilizar un mismo plano para instalaciones distintas.", "isCorrect": true, "explanation": "Correcto. Se debe separar, por ejemplo, el alumbrado de emergencia, de la fuerza o el control." },
+      { "text": "Aglutinar todas las instalaciones (fuerza, alumbrado, control) en un único plano general para ahorrar papel.", "isCorrect": false, "explanation": "Incorrecto. Esto contraviene la norma de evitar un mismo plano para instalaciones distintas, ya que genera confusión." },
+      { "text": "Eliminar la representación en 2D y usar exclusivamente modelado 3D para la distribución de los cables.", "isCorrect": false, "explanation": "Incorrecto. Los esquemas 2D son la base normativa de la documentación eléctrica." }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "¿Qué orden o criterio se recomienda utilizar de forma estándar al representar los esquemas en instalaciones eléctricas?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Representar los esquemas según el orden en el que fluye la energía. (Pregunta probable de examen porque es el método estandarizado en la industria para facilitar la lectura lógica del funcionamiento de un circuito).",
+    "options": [
+      { "text": "Según el orden alfabético de los componentes instalados.", "isCorrect": false, "explanation": "Incorrecto. Esto no aportaría ninguna lógica al funcionamiento del circuito." },
+      { "text": "Según el coste económico de cada instalación, de mayor a menor.", "isCorrect": false, "explanation": "Incorrecto. El presupuesto tiene otro documento; en el plano importa la parte técnica." },
+      { "text": "Representar los esquemas según el orden en el que fluye la energía.", "isCorrect": true, "explanation": "Correcto. Este es el criterio de representación técnica más claro y utilizado." }
+    ]
+  },
+  {
+    "id": 102,
+    "text": "¿Qué aspecto específico de los dibujos técnicos regula la norma UNE-EN ISO 128-20: 1996?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Define las normas generales sobre los tipos de líneas, grosores y su utilización. (Pregunta probable de examen porque asocia directamente una norma ISO clave con los fundamentos del dibujo técnico).",
+    "options": [
+      { "text": "Define los tipos de escalas (ampliación y reducción).", "isCorrect": false, "explanation": "Incorrecto. Las escalas están reguladas por la norma UNE-EN ISO 5455." },
+      { "text": "Define las técnicas de plegado de los planos para su archivado.", "isCorrect": false, "explanation": "Incorrecto. El plegado se regula mediante la norma UNE-EN ISO 1027." },
+      { "text": "Define las normas generales sobre los tipos de líneas, grosores y la utilización de cada uno de ellos.", "isCorrect": true, "explanation": "Correcto. Es la norma que rige qué tipo de trazo (continuo, discontinuo, grueso, fino) debe usarse." }
+    ]
+  },
+  {
+    "id": 103,
+    "text": "Si encontramos un plano codificado como 'CF1-A-2' en una planta industrial, ¿qué significa habitualmente esta nomenclatura?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Cuadro de fuerza 1, situado en la zona A, sector 2. (Pregunta probable de examen porque evalúa la capacidad del alumno para interpretar, deducir y aplicar sistemas lógicos de nomenclatura industrial).",
+    "options": [
+      { "text": "Cuadro de fuerza 1, zona A, sector 2.", "isCorrect": true, "explanation": "Correcto. Corresponde al ejemplo de nomenclatura que identifica el equipo, su zona y su sector." },
+      { "text": "Circuito cerrado de fluido 1, área 2.", "isCorrect": false, "explanation": "Incorrecto. En este contexto de esquemas eléctricos, 'CF' designa 'Cuadro de fuerza'." },
+      { "text": "Código de fabricación 1, versión A2.", "isCorrect": false, "explanation": "Incorrecto. Es un código de localización y elemento, no de versión de fabricación." }
+    ]
+  },
+  {
+    "id": 104,
+    "text": "Cuando una instalación automatizada sufre modificaciones o actualizaciones, ¿qué información documental es obligatorio que recojan los nuevos planos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La fecha de aprobación del cambio y el plano al que sustituye. (Pregunta probable de examen porque el control de versiones, mantenimiento de la trazabilidad y gestión de la calidad son funciones primordiales del técnico).",
+    "options": [
+      { "text": "Solo deben cambiar el color de las líneas para indicar que es un plano nuevo.", "isCorrect": false, "explanation": "Incorrecto. El color de las líneas no aporta trazabilidad documental." },
+      { "text": "La fecha de aprobación del cambio y el plano al que sustituye.", "isCorrect": true, "explanation": "Correcto. Es esencial para el control de versiones y evitar usar planos obsoletos." },
+      { "text": "El coste total de las piezas que se han sustituido.", "isCorrect": false, "explanation": "Incorrecto. Los costes pertenecen al presupuesto, no a la gestión gráfica del plano." }
+    ]
+  },
+  {
+    "id": 105,
+    "text": "Debido a las grandes dimensiones de la mayoría de los planos en proyectos técnicos, ¿qué equipo de impresión es necesario utilizar habitualmente?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Plotters de impresión. (Pregunta probable de examen porque comprueba el conocimiento sobre periféricos de formato ancho, estándar en la industria de la ingeniería y arquitectura).",
+    "options": [
+      { "text": "Impresoras láser convencionales A4.", "isCorrect": false, "explanation": "Incorrecto. Las impresoras convencionales no admiten los formatos grandes (A0, A1, A2)." },
+      { "text": "Plotters de impresión.", "isCorrect": true, "explanation": "Correcto. Los plotters están diseñados específicamente para imprimir planos de grandes dimensiones." },
+      { "text": "Escáneres industriales con tecnología OCR.", "isCorrect": false, "explanation": "Incorrecto. El OCR y el escáner se usan para digitalizar o leer, no para imprimir." }
+    ]
+  },
+  {
+    "id": 106,
+    "text": "En términos de seguridad, ¿qué ventaja fundamental ofrece el uso del formato PDF para archivar documentos técnicos y planos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Garantiza la no modificación del documento y permite insertar firmas digitales. (Pregunta probable de examen porque el marco legal exige documentos inalterables y visados electrónicamente para la entrega de proyectos).",
+    "options": [
+      { "text": "Permite que cualquier operario modifique las cotas del plano fácilmente desde su smartphone.", "isCorrect": false, "explanation": "Incorrecto. Precisamente su ventaja es la contraria, que garantiza la no modificación accidental." },
+      { "text": "Garantiza la no modificación del documento y permite la inserción de una firma digital.", "isCorrect": true, "explanation": "Correcto. Aporta seguridad, integridad y validez legal al documento." },
+      { "text": "Aumenta considerablemente el tamaño del archivo, evitando que se pierda en la nube.", "isCorrect": false, "explanation": "Incorrecto. Al contrario, el PDF tiene una alta capacidad de compresión reduciendo el tamaño." }
+    ]
+  },
+  {
+    "id": 107,
+    "text": "Si aplicamos una escala donde el denominador es menor que el numerador (por ejemplo, 3:1), ¿de qué tipo de escala estamos hablando?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Escala de ampliación. (Pregunta probable de examen porque la interpretación matemática y visual de las escalas es el conocimiento más básico e indispensable en representación gráfica).",
+    "options": [
+      { "text": "Escala natural.", "isCorrect": false, "explanation": "Incorrecto. La escala natural es siempre 1:1." },
+      { "text": "Escala de reducción.", "isCorrect": false, "explanation": "Incorrecto. En reducción, el denominador es mayor (ej. 1:50)." },
+      { "text": "Escala de ampliación.", "isCorrect": true, "explanation": "Correcto. Se utiliza en piezas muy pequeñas para representarlas más grandes en el plano." }
+    ]
+  },
+  {
+    "id": 108,
+    "text": "Según la norma UNE-EN ISO 216, ¿qué características definen al formato de papel base (A0) a partir del cual se obtienen los demás?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Dimensiones de 1189 x 841 mm y una superficie de 1 metro cuadrado. (Pregunta probable de examen porque memorizar la base del formato universal de dibujo (A0) es cultura general técnica obligatoria).",
+    "options": [
+      { "text": "Sus dimensiones son 210 x 297 mm y es el formato más utilizado en oficinas.", "isCorrect": false, "explanation": "Incorrecto. Esas son las dimensiones de un formato A4." },
+      { "text": "Sus dimensiones son 1189 x 841 mm, teniendo una superficie total de 1 metro cuadrado.", "isCorrect": true, "explanation": "Correcto. A partir de este formato base se sacan los demás (A1, A2, etc.) por doblado transversal." },
+      { "text": "Tiene unas dimensiones que varían en función del tamaño del cajetín empleado.", "isCorrect": false, "explanation": "Incorrecto. Las dimensiones están rígidamente normalizadas." }
+    ]
+  },
+  {
+    "id": 109,
+    "text": "Al aplicar la norma UNE 1027:1995 para el plegado de un plano en papel, ¿cuál es el objetivo final y qué parte debe quedar a la vista?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Reducirlo a tamaño A4 asegurando que el cajetín de rotulación quede en la cara visible. (Pregunta probable de examen porque dictamina cómo debe ser la presentación física estandarizada de proyectos ante la administración o clientes).",
+    "options": [
+      { "text": "Reducirlo al tamaño de una tarjeta, escondiendo el cajetín por protección de datos.", "isCorrect": false, "explanation": "Incorrecto. Los planos no se pliegan en tarjetas y el cajetín debe leerse sin desplegar." },
+      { "text": "Plegarlo en tamaño A3 para que quepa en un sobre de tipo C.", "isCorrect": false, "explanation": "Incorrecto. El tamaño final de archivado estandarizado es el A4." },
+      { "text": "Reducirlo a un tamaño A4 y asegurar que el cuadro de rotulación quede en la cara visible.", "isCorrect": true, "explanation": "Correcto. Esto permite archivarlos en carpetas y consultar los datos básicos sin necesidad de abrirlos." }
+    ]
+  },
+  {
+    "id": 110,
+    "text": "¿Qué medida establece la norma como anchura mínima obligatoria para los márgenes en los grandes formatos A0 y A1?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: No debe ser inferior a 20 mm. (Pregunta probable de examen porque exige precisión sobre tolerancias normativas vitales para la correcta encuadernación y lectura del borde del plano).",
+    "options": [
+      { "text": "No debe ser inferior a 20 mm.", "isCorrect": true, "explanation": "Correcto. Es el margen normativo para los tamaños más grandes; para el resto es de 10 mm." },
+      { "text": "No debe superar los 5 mm para aprovechar al máximo el área de dibujo.", "isCorrect": false, "explanation": "Incorrecto. Un margen de 5 mm es inferior a la norma y podría dar problemas al imprimir o encuadernar." },
+      { "text": "Debe ser de 10 mm exactos, sin importar el lado o si se va a plegar.", "isCorrect": false, "explanation": "Incorrecto. En A0 y A1 es mínimo 20 mm, y el lado de plegado suele requerir también los 20 mm." }
+    ]
+  },
+  {
+    "id": 111,
+    "text": "En la confección de presupuestos, ¿cómo se define el concepto de 'unidad de obra'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Cada una de las partes en las que puede dividirse un proyecto para permitir su valoración y control. (Pregunta probable de examen porque la 'unidad de obra' es el pilar fundamental sobre el que se estructura y calcula cualquier presupuesto técnico).",
+    "options": [
+      { "text": "El coste total de todos los materiales empleados en la ejecución completa del proyecto.", "isCorrect": false, "explanation": "Incorrecto. Eso sería el coste de materiales general, no la unidad de obra." },
+      { "text": "Cada una de las partes en las que puede dividirse un proyecto para permitir su valoración y control.", "isCorrect": true, "explanation": "Correcto. Es la definición exacta del elemento fundamental de referencia en un presupuesto." },
+      { "text": "El conjunto de normativas de seguridad que rigen la instalación de los cuadros eléctricos.", "isCorrect": false, "explanation": "Incorrecto. Las normativas no definen las unidades presupuestarias." }
+    ]
+  },
+  {
+    "id": 112,
+    "text": "¿Qué característica de tamaño o especificidad debe tener una unidad de obra bien definida?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: No debe ser demasiado genérica (ej. 'planta entera') ni demasiado pequeña (ej. 'un ladrillo'). (Pregunta probable de examen porque evalúa el criterio práctico del proyectista para desglosar un trabajo en partes medibles de forma lógica y útil).",
+    "options": [
+      { "text": "Debe ser lo más pequeña posible, contabilizando elementos unitarios como clavos o ladrillos individuales.", "isCorrect": false, "explanation": "Incorrecto. Si es demasiado pequeña o concreta resulta imposible de gestionar en un presupuesto." },
+      { "text": "Debe agrupar la totalidad de una instalación bajo un único concepto general para simplificar el documento.", "isCorrect": false, "explanation": "Incorrecto. Una unidad muy genérica resulta muy compleja de cuantificar y valorar con exactitud." },
+      { "text": "No debe ser demasiado genérica ni demasiado pequeña, buscando una magnitud física que la defina correctamente (ej. m2).", "isCorrect": true, "explanation": "Correcto. Se busca un equilibrio práctico que facilite la medición y el control." }
+    ]
+  },
+  {
+    "id": 113,
+    "text": "¿Qué es una 'partida alzada' dentro de un presupuesto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Una unidad de obra muy compleja, difícilmente medible en la fase de proyecto, que se valora mediante estimaciones. (Pregunta probable de examen porque es una figura excepcional y específica en presupuestos que todo técnico debe saber manejar y justificar).",
+    "options": [
+      { "text": "Una unidad de obra muy compleja, difícilmente medible en la fase de proyecto, que se valora mediante estimaciones.", "isCorrect": true, "explanation": "Correcto. Se basa en experiencias anteriores al no poder cuantificarse exactamente a priori." },
+      { "text": "El beneficio industrial que se lleva la empresa contratista una vez finalizada la obra.", "isCorrect": false, "explanation": "Incorrecto. El beneficio industrial es un porcentaje fijo (BI), no una partida alzada." },
+      { "text": "El coste de los impuestos (como el IVA) que se alzan sobre el presupuesto total.", "isCorrect": false, "explanation": "Incorrecto. Los impuestos se aplican al final, la partida alzada es una unidad de obra." }
+    ]
+  },
+  {
+    "id": 114,
+    "text": "¿Por qué es de vital importancia redactar una descripción minuciosa en la identificación de la unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para evitar malentendidos con el cliente, dejando claro qué elementos (materiales, transportes, etc.) están incluidos. (Pregunta probable de examen porque incide en las consecuencias contractuales y legales de una mala redacción técnica).",
+    "options": [
+      { "text": "Para evitar malentendidos con el cliente, aclarando exactamente cómo va a ejecutarse y qué incluye el precio.", "isCorrect": true, "explanation": "Correcto. Una buena descripción define si se incluye transporte, acabado, etc., protegiendo legalmente el acuerdo." },
+      { "text": "Para justificar ante Hacienda los impuestos derivados de la mano de obra.", "isCorrect": false, "explanation": "Incorrecto. Su función principal es técnica y contractual con el cliente, no tributaria." },
+      { "text": "Para que el programa informático CAD pueda dibujar la pieza en 3D automáticamente.", "isCorrect": false, "explanation": "Incorrecto. La descripción del presupuesto no tiene enlace directo paramétrico con el software de dibujo CAD 3D." }
+    ]
+  },
+  {
+    "id": 115,
+    "text": "En la determinación del coste, ¿qué conceptos se consideran 'costes indirectos'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Los gastos de instalación de oficinas a pie de obra, personal técnico y administrativo, e imprevistos. (Pregunta probable de examen porque la correcta imputación de gastos diferenciando directo vs. indirecto es la base del control de costes).",
+    "options": [
+      { "text": "La mano de obra directa de los electricistas y los materiales instalados.", "isCorrect": false, "explanation": "Incorrecto. Estos son los principales componentes de los costes directos." },
+      { "text": "Los gastos de instalación de oficinas a pie de obra, personal técnico y administrativo, e imprevistos.", "isCorrect": true, "explanation": "Correcto. Son gastos necesarios para el proyecto pero no imputables físicamente a una unidad de obra concreta." },
+      { "text": "El combustible de la maquinaria pesada usada durante la ejecución.", "isCorrect": false, "explanation": "Incorrecto. El combustible y amortización de maquinaria específica es un coste directo." }
+    ]
+  },
+  {
+    "id": 116,
+    "text": "¿Cómo se calculan y aplican normalmente los 'costes directos complementarios'?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Como un porcentaje aplicado sobre los grupos anteriores (mano de obra, materiales, maquinaria). (Pregunta probable de examen porque examina el método de cálculo estándar para las pequeñas partidas que son difíciles de cuantificar individualmente).",
+    "options": [
+      { "text": "Sumando el valor del IVA al beneficio industrial.", "isCorrect": false, "explanation": "Incorrecto. Son conceptos presupuestarios totalmente distintos." },
+      { "text": "Contando uno por uno los elementos pequeños (tornillos, bridas) y multiplicándolos por su precio de almacén.", "isCorrect": false, "explanation": "Incorrecto. Al ser de difícil cuantificación, no se cuentan uno a uno." },
+      { "text": "Como un porcentaje aplicado sobre los grupos anteriores (mano de obra, materiales, maquinaria).", "isCorrect": true, "explanation": "Correcto. Se estima un porcentaje para cubrir estos pequeños gastos directos de difícil medición." }
+    ]
+  },
+  {
+    "id": 117,
+    "text": "¿Cuál es la fórmula para obtener el 'precio unitario' definitivo de una unidad de obra?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Sumar los costes directos, los costes directos complementarios y los costes indirectos. (Pregunta probable de examen porque representa el sumatorio final que determina a cuánto se cobra cada unidad ejecutada).",
+    "options": [
+      { "text": "Sumar el coste del material y sumarle un 21% de IVA directamente.", "isCorrect": false, "explanation": "Incorrecto. Ignora la mano de obra, costes indirectos y otros factores; además, el IVA va al final del presupuesto total." },
+      { "text": "Sumar los costes directos, los costes directos complementarios y los costes indirectos.", "isCorrect": true, "explanation": "Correcto. Esta es la composición completa estipulada para hallar el precio unitario de la partida." },
+      { "text": "Restar los costes indirectos al total de los materiales empleados en la obra.", "isCorrect": false, "explanation": "Incorrecto. Los costes se suman, no se restan." }
+    ]
+  },
+  {
+    "id": 118,
+    "text": "¿Para qué son especialmente útiles los 'catálogos o bancos de precios' informatizados?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Permiten obtener previsiones de presupuestos muy ajustadas a la realidad en distintas fases del proyecto. (Pregunta probable de examen porque valora el conocimiento de las herramientas actuales del mercado para la estimación realista de costes).",
+    "options": [
+      { "text": "Para calcular las horas extras de los operarios a final de mes.", "isCorrect": false, "explanation": "Incorrecto. Su función no es llevar el control de nóminas, sino ofrecer precios de referencia de unidades de obra." },
+      { "text": "Para realizar el dibujo en 3D de los componentes del cuadro eléctrico.", "isCorrect": false, "explanation": "Incorrecto. Eso es función del software CAD, no del banco de precios." },
+      { "text": "Permiten obtener previsiones de presupuestos muy ajustadas a la realidad en distintas fases del proyecto.", "isCorrect": true, "explanation": "Correcto. Aportan precios actualizados y detallados, diferenciados incluso por comunidades autónomas." }
+    ]
+  },
+  {
+    "id": 119,
+    "text": "En el contexto de las mediciones, ¿cuál es una característica peculiar que se puede aplicar a ciertas cuantificaciones?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Pueden tomar valores negativos, por ejemplo, para descontar huecos de puertas en paredes. (Pregunta probable de examen porque evalúa una excepción metodológica importante: no todo se suma, los vacíos se restan para mayor exactitud).",
+    "options": [
+      { "text": "Deben realizarse siempre a escala 1:1 sobre el terreno antes de dibujar el plano.", "isCorrect": false, "explanation": "Incorrecto. Las mediciones del proyecto se hacen sobre planos, aplicando la escala." },
+      { "text": "Pueden tomar valores negativos, por ejemplo, para descontar huecos de puertas y ventanas en paredes.", "isCorrect": true, "explanation": "Correcto. Esto permite no cobrar exceso de material en los lugares donde no va a existir." },
+      { "text": "Solo pueden medirse usando el criterio de toneladas métricas en proyectos de automatización.", "isCorrect": false, "explanation": "Incorrecto. Se usan unidades, longitudes, áreas y volúmenes según convenga." }
+    ]
+  },
+  {
+    "id": 120,
+    "text": "Para una correcta ejecución y control, ¿cuáles son los dos tipos de mediciones que se deben realizar?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La medición del proyecto (sobre plano) y la medición de la obra (física durante la ejecución). (Pregunta probable de examen porque distingue las fases teórica y real de una obra, base para el control de desviaciones).",
+    "options": [
+      { "text": "La medición de longitud y la medición de volumen exclusivamente.", "isCorrect": false, "explanation": "Incorrecto. Esos son criterios de medición, no fases metodológicas." },
+      { "text": "La medición del proyecto (sobre planos) y la medición de la obra (durante la ejecución).", "isCorrect": true, "explanation": "Correcto. Ambas deben compararse para verificar si lo planificado coincide con la realidad." },
+      { "text": "La medición previa del solar y la medición posterior a la demolición.", "isCorrect": false, "explanation": "Incorrecto. Esto solo aplica a proyectos de obra civil muy concretos, no es la regla general técnica." }
+    ]
+  },
+  {
+    "id": 121,
+    "text": "Si al realizar el seguimiento de una obra las cantidades ejecutadas no coinciden con las indicadas en los planos, ¿cómo se denomina a este hecho?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Desviación de la medición. (Pregunta probable de examen porque el análisis de desviaciones es la función principal del control de costes y certificaciones de obra).",
+    "options": [
+      { "text": "Partida alzada.", "isCorrect": false, "explanation": "Incorrecto. Una partida alzada es un método de estimación, no el nombre del error entre plano y realidad." },
+      { "text": "Desviación de la medición.", "isCorrect": true, "explanation": "Correcto. Refleja la diferencia (por imprevistos o mal diseño) entre lo presupuestado y lo realmente ejecutado." },
+      { "text": "Amortización de maquinaria.", "isCorrect": false, "explanation": "Incorrecto. No tiene ninguna relación con las mediciones." }
+    ]
+  },
+  {
+    "id": 122,
+    "text": "En la fase de ejecución de la obra, ¿qué regla fundamental debe seguirse a la hora de medir lo construido?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Mantener exactamente el mismo criterio de medición que se estableció en la fase de proyecto. (Pregunta probable de examen porque garantiza la coherencia administrativa; no se pueden comparar metros con kilogramos si se cambia el criterio a mitad de obra).",
+    "options": [
+      { "text": "Se debe cambiar siempre el criterio de medición a 'unidades' para facilitar el conteo visual.", "isCorrect": false, "explanation": "Incorrecto. Cambiar el criterio impediría comparar la obra con el proyecto original." },
+      { "text": "Se pueden ignorar las partidas de bajo coste para agilizar la certificación mensual.", "isCorrect": false, "explanation": "Incorrecto. Todo debe medirse y documentarse." },
+      { "text": "Mantener exactamente el mismo criterio de medición que se estableció en la fase de proyecto.", "isCorrect": true, "explanation": "Correcto. Es vital para que las facturas emitidas coincidan con las previsiones presupuestarias." }
+    ]
+  },
+  {
+    "id": 123,
+    "text": "¿Qué representa el Presupuesto de Ejecución Material (PEM)?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: El importe del coste total de las obras necesarias (costes directos + indirectos) sin aplicar gastos generales ni impuestos. (Pregunta probable de examen porque el PEM es la base matemática sobre la cual gravitan todos los porcentajes legales posteriores).",
+    "options": [
+      { "text": "El importe del coste total de las obras sumando únicamente la mano de obra y el IVA.", "isCorrect": false, "explanation": "Incorrecto. El IVA nunca forma parte del PEM." },
+      { "text": "El importe del coste total de las obras necesarias, resultado de sumar los costes directos e indirectos.", "isCorrect": true, "explanation": "Correcto. Es el coste neto de ejecutar materialmente el proyecto." },
+      { "text": "El coste final que paga el cliente incluyendo honorarios, licencias y beneficios empresariales.", "isCorrect": false, "explanation": "Incorrecto. Eso sería el Presupuesto Total (PT)." }
+    ]
+  },
+  {
+    "id": 124,
+    "text": "¿Cómo se calculan los 'Gastos Generales' (GG) dentro del presupuesto de un proyecto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Aplicando un porcentaje (generalmente entre el 13% y el 20%) sobre el Presupuesto de Ejecución Material (PEM). (Pregunta probable de examen porque exige recordar cómo se imputan matemáticamente los gastos de mantenimiento de la propia empresa al proyecto).",
+    "options": [
+      { "text": "Aplicando un porcentaje (entre el 13% y el 20%) sobre el Presupuesto de Ejecución Material (PEM).", "isCorrect": true, "explanation": "Correcto. Es la norma estándar para cubrir contabilidad, seguros y estructura de la empresa." },
+      { "text": "Son una cantidad fija impuesta por la comunidad autónoma independientemente del volumen de la obra.", "isCorrect": false, "explanation": "Incorrecto. Son proporcionales al PEM de la obra." },
+      { "text": "Sumando todas las facturas de agua y luz de la empresa y dividiéndolas entre el número de trabajadores.", "isCorrect": false, "explanation": "Incorrecto. Se estipula mediante un porcentaje aplicado al PEM, no mediante división de facturas reales." }
+    ]
+  },
+  {
+    "id": 125,
+    "text": "Para calcular el Coste Total (CT) del proyecto sin incluir impuestos, ¿qué factores se deben sumar?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: PEM + Gastos Generales (GG) + Beneficio Industrial (BI). (Pregunta probable de examen porque evalúa el conocimiento de la cascada de sumatorios que conforman la estructura jerárquica de un presupuesto).",
+    "options": [
+      { "text": "Presupuesto de Ejecución por Contrata (PEC) + Honorarios Profesionales.", "isCorrect": false, "explanation": "Incorrecto. Eso da como resultado el Presupuesto Total, no el CT." },
+      { "text": "PEM + Gastos Generales (GG) + Beneficio Industrial (BI).", "isCorrect": true, "explanation": "Correcto. El Coste Total se forma antes de aplicar el IVA con estos tres conceptos (CT = PEM + GG + BI)." },
+      { "text": "Costes Directos + IVA + Beneficio Industrial.", "isCorrect": false, "explanation": "Incorrecto. El IVA no interviene en el Coste Total (CT), interviene después en el PEC." }
+    ]
+  },
+  {
+    "id": 126,
+    "text": "En la organización del documento, ¿qué es un 'Capítulo' de presupuesto?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: La agrupación cronológica o por oficios de unidades de obra similares. (Pregunta probable de examen porque entender la estructura de agrupación es necesario para leer e interpretar un presupuesto complejo).",
+    "options": [
+      { "text": "La agrupación cronológica o por oficios de actividades o unidades de obra similares (ej. albañilería, cableado).", "isCorrect": true, "explanation": "Correcto. Los capítulos ordenan lógicamente el presupuesto facilitando su lectura." },
+      { "text": "Cada una de las páginas impresas del proyecto final.", "isCorrect": false, "explanation": "Incorrecto. Un capítulo se refiere a una agrupación temática, no a una limitación de papel." },
+      { "text": "Una partida alzada que no puede ser desglosada.", "isCorrect": false, "explanation": "Incorrecto. Un capítulo agrupa partidas, no es una partida en sí misma." }
+    ]
+  },
+  {
+    "id": 127,
+    "text": "Ante la falta de bases de datos específicas para sistemas automatizados, ¿qué solución suelen aportar los fabricantes de materiales eléctricos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Facilitar catálogos de productos y precios en formatos compatibles para ser importados a los programas de presupuestos. (Pregunta probable de examen porque vincula una carencia real del sector industrial con la solución técnica aportada por los distribuidores).",
+    "options": [
+      { "text": "Obligar al usuario a insertar los precios manualmente buscando en tarifas impresas en papel.", "isCorrect": false, "explanation": "Incorrecto. La tendencia es facilitar el trabajo digital, no forzar el trabajo manual." },
+      { "text": "Facilitar catálogos de productos y precios en formatos compatibles para ser importados a los programas de presupuestos.", "isCorrect": true, "explanation": "Correcto. Esto suple la falta de bancos de precios genéricos en robótica y automatización." },
+      { "text": "Desarrollar sus propios lenguajes de programación PLC gratuitos.", "isCorrect": false, "explanation": "Incorrecto. Eso es para control, no soluciona el problema de la elaboración de presupuestos." }
+    ]
+  },
+  {
+    "id": 128,
+    "text": "Además de presupuestos y mediciones, ¿qué otro tipo de documento técnico permiten redactar las aplicaciones informáticas actuales de gestión de proyectos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Pliegos de condiciones y estudios de seguridad. (Pregunta probable de examen porque exige conocer el alcance y la versatilidad del software técnico, que va mucho más allá de ser una simple hoja de cálculo).",
+    "options": [
+      { "text": "Certificados energéticos de edificios residenciales únicamente.", "isCorrect": false, "explanation": "Incorrecto. No se limitan a eso, y no es su principal documento secundario mencionado." },
+      { "text": "Programación de autómatas (PLC) y modelado de piezas mecánicas.", "isCorrect": false, "explanation": "Incorrecto. Esas tareas pertenecen a software de control y CAD 3D, respectivamente." },
+      { "text": "Pliegos de condiciones, estudios de seguridad y de eficiencia energética.", "isCorrect": true, "explanation": "Correcto. Son documentos fundamentales vinculados a las partidas del presupuesto que estos programas pueden autogenerar." }
+    ]
+  },
+  {
+    "id": 129,
+    "text": "En relación con la planificación, ¿qué herramienta gráfica permiten realizar muchos programas de presupuestos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Diagramas de tiempos y actividades. (Pregunta probable de examen porque conecta la fase de valoración económica con la planificación temporal del proyecto, como los diagramas de Gantt).",
+    "options": [
+      { "text": "Diagramas de tiempos y actividades.", "isCorrect": true, "explanation": "Correcto. Relacionan las unidades de obra del presupuesto con el tiempo necesario para ejecutarlas." },
+      { "text": "Esquemas unifilares de potencia.", "isCorrect": false, "explanation": "Incorrecto. Los esquemas eléctricos se hacen con software CAD especializado, no con el de presupuestos." },
+      { "text": "Diagramas de flujo de fluidos (P&ID).", "isCorrect": false, "explanation": "Incorrecto. Pertenecen a diseño de procesos." }
+    ]
+  },
+  {
+    "id": 130,
+    "text": "¿Por qué resulta crucial que las aplicaciones de presupuestos tengan la capacidad de exportar e importar datos?",
+    "type": "single",
+    "generalExplanation": "La respuesta correcta es: Para intercambiar documentos y trabajar de forma conjunta con otras aplicaciones como hojas de cálculo o procesadores de texto. (Pregunta probable de examen porque la interoperabilidad y el flujo de trabajo entre distintas plataformas es una competencia digital básica del proyectista).",
+    "options": [
+      { "text": "Para poder evadir los sistemas de seguridad de las redes corporativas.", "isCorrect": false, "explanation": "Incorrecto. Las funciones de importación/exportación no están hechas para vulnerar la ciberseguridad." },
+      { "text": "Para evitar tener que pagar licencias de otros programas de Microsoft.", "isCorrect": false, "explanation": "Incorrecto. Su objetivo es la compatibilidad, no la evasión de licencias." },
+      { "text": "Para intercambiar documentos con otras aplicaciones, como procesadores de texto y hojas de cálculo.", "isCorrect": true, "explanation": "Correcto. La interoperabilidad permite aprovechar la información generada en otras herramientas ofimáticas o técnicas." }
+    ]
+  }
+]
+}

@@ -1,0 +1,373 @@
+import { Component, computed, inject, OnDestroy, OnInit, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ExamData, ExamOption, ExamQuestion } from '../models/exam.model';
+import { ExamService } from '../services/exam.service';
+
+@Component({
+  selector: 'app-exam',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './exam.html',
+  styleUrls: ['./exam.scss']
+})
+export class ExamComponent implements OnInit, OnDestroy {
+
+  // ==========================================
+  // 1. INYECCIONES DE DEPENDENCIAS
+  // ==========================================
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private examService = inject(ExamService);
+
+  // ==========================================
+  // 2. SIGNALS DE ESTADO (STATE)
+  // ==========================================
+  examData = signal<ExamData | null>(null);
+  hasStarted = signal(false);
+  isFinished = signal(false);
+  timeLeft = signal(0);
+  score = signal(0);
+  private timerRef: any;
+
+  // ==========================================
+  // 3. COMPUTED SIGNALS (DERIVED STATE)
+  // ==========================================
+
+  /** Formatea el tiempo restante en MM:SS */
+  timeLeftFormatted = computed(() => {
+    const m = Math.floor(this.timeLeft() / 60).toString().padStart(2, '0');
+    const s = (this.timeLeft() % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  });
+
+  /** Determina si el usuario ha alcanzado la nota de corte */
+  hasPassed = computed(() => {
+    const data = this.examData();
+    if (!data) return false;
+    return this.currentPercentage() >= data.examProperties.examConfig.passingPercentage;
+  });
+
+  /** Calcula el número de preguntas necesarias para aprobar */
+  requiredHitsToPass = computed(() => {
+    const total = this.totalQuestions();
+    const percentage = this.examData()?.examProperties.examConfig.passingPercentage ?? 0;
+    return Math.ceil((total * percentage) / 100);
+  });
+
+  /** Calcula el porcentaje de éxito actual (0-100) */
+  currentPercentage = computed(() => {
+    const total = this.totalQuestions();
+    if (total === 0) return 0;
+    return (this.score() / total) * 100;
+  });
+
+  /** Nota final escalada a base 10 */
+  finalGrade = computed(() => {
+    const total = this.totalQuestions();
+    if (total === 0) return 0;
+    return (this.score() / total) * 10;
+  });
+
+  /** Indica si queda menos de un minuto de examen */
+  isLowTime = computed(() => this.timeLeft() < 60 && this.hasStarted());
+
+  /** Peso unitario de cada pregunta (base 1) */
+  questionWeight = computed(() => 1);
+
+  /** Total de preguntas cargadas en el examen */
+  totalQuestions = computed(() => this.examData()?.questions.length ?? 0);
+
+  /** Cantidad de preguntas respondidas por el usuario */
+  answeredCount = computed(() => {
+    return this.examData()?.questions.filter(q => this.isAnyOptionSelected(q)).length ?? 0;
+  });
+
+  /** Cantidad de preguntas pendientes de respuesta */
+  remainingCount = computed(() => this.totalQuestions() - this.answeredCount());
+
+  /** Indica si la configuración del examen aplica penalización por respuestas vacías */
+  wasPenaltyApplied = computed(() => {
+    return this.examData()?.examProperties.examConfig.emptyAnswersCount ?? false;
+  });
+
+  // ==========================================
+  // 4. CICLO DE VIDA (LIFECYCLE HOOKS)
+  // ==========================================
+
+  ngOnInit() {
+    const fileName = this.route.snapshot.paramMap.get('id');
+
+    if (fileName) {
+      this.examService.getExamById(fileName).subscribe({
+        next: (data) => {
+          this.initExam({ ...data, fileName });
+        },
+        error: (err) => {
+          console.error('Error cargando el examen:', err);
+          this.goHome();
+        }
+      });
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.timerRef) clearInterval(this.timerRef);
+  }
+
+  // ==========================================
+  // 5. MÉTODOS PRIVADOS DE INICIALIZACIÓN
+  // ==========================================
+
+ private initExam(data: ExamData) {
+    const groupByUnit = data.examProperties.examConfig.groupByUnit;
+    let processedQuestions = [...data.questions];
+
+    // 1. Lógica de ordenación o barajado según la configuración
+    // 1. Lógica de ordenación o barajado según la configuración
+    if (groupByUnit) {
+      // 1A. Si groupyByUnit es TRUE: ORDENAMOS numéricamente por la unidad.
+      processedQuestions.sort((a, b) => {
+        const unitA = a.unit?.unitNumber || 0;
+        const unitB = b.unit?.unitNumber || 0;
+        return unitA - unitB;
+      });
+
+      // Variables para llevar la cuenta local
+      let currentUnitNumber = -1;
+      let localCounter = 0;
+
+      // Asignamos el índice local y barajamos las respuestas
+      processedQuestions = processedQuestions.map(q => {
+        const uNum = q.unit?.unitNumber || 0;
+        
+        if (uNum !== currentUnitNumber) {
+          currentUnitNumber = uNum;
+          localCounter = 1; // Reiniciamos el contador al cambiar de tema
+        } else {
+          localCounter++; // Sumamos 1 si es el mismo tema
+        }
+
+        return {
+          ...q,
+          unitLocalIndex: localCounter, // <-- GUARDAMOS EL NÚMERO AQUÍ
+          options: this.shuffleArray(q.options)
+        };
+      });
+
+    } else {
+      // 1B. Si groupyByUnit es FALSE: BARAJAMOS todo (comportamiento por defecto).
+      // Se mezclan las preguntas globalmente y también las opciones de cada una.
+      processedQuestions = this.shuffleArray(processedQuestions).map(q => ({
+        ...q,
+        options: this.shuffleArray(q.options)
+      }));
+    }
+
+    // 2. Guardar los datos con el nuevo orden procesado
+    this.examData.set({
+      ...data,
+      questions: processedQuestions
+    });
+
+    // 3. Configurar el temporizador si la duración es mayor a 0
+    const duration = data.examProperties.examConfig.examDurationMinutes;
+    if (duration > 0) {
+      this.timeLeft.set(duration * 60);
+    }
+  }
+
+  /** Algoritmo de barajado Fisher-Yates */
+  private shuffleArray<T>(array: T[]): T[] {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  }
+
+  // ==========================================
+  // 6. LÓGICA DE CONTROL DEL EXAMEN
+  // ==========================================
+
+  shouldShowContent(): boolean {
+    // Solo muestra las preguntas si el usuario pulsó empezar o si ya terminó (revisión)
+    return this.hasStarted() || this.isFinished();
+  }
+
+  startExam() {
+    if (this.hasStarted()) return;
+    this.hasStarted.set(true);
+
+    const props = this.examData()?.examProperties;
+    if (props && props.examConfig.examDurationMinutes > 0) {
+      this.timerRef = setInterval(() => {
+        this.timeLeft.update(t => {
+          if (t <= 1) {
+            this.finishExam();
+            return 0;
+          }
+          return t - 1;
+        });
+      }, 1000);
+    }
+  }
+
+  selectOption(question: ExamQuestion, option: ExamOption, canChange: boolean) {
+    if (this.isFinished()) return;
+
+    if (question.type === 'single') {
+      const anySelected = question.options.some(o => o.selected);
+      if (!canChange && anySelected) return;
+      question.options.forEach(o => o.selected = false);
+      option.selected = true;
+    } else {
+      if (!canChange && option.selected) return;
+      option.selected = !option.selected;
+    }
+
+    this.examData.update(current => current ? { ...current } : null);
+  }
+
+  finishExam() {
+    if (this.isFinished()) return;
+    clearInterval(this.timerRef);
+    this.isFinished.set(true);
+    this.calculateScore();
+  }
+
+  clearQuestion(question: ExamQuestion) {
+    if (this.isFinished()) return;
+    question.options.forEach(o => o.selected = false);
+    this.examData.update(current => current ? { ...current } : null);
+  }
+
+  goHome() {
+    this.router.navigate(['/']);
+  }
+
+  // ==========================================
+  // 7. LÓGICA DE CORRECCIÓN Y PUNTUACIÓN
+  // ==========================================
+
+  isAnyOptionSelected(question: ExamQuestion): boolean {
+    return question.options.some(o => o.selected);
+  }
+
+  isQuestionFullyCorrect(question: ExamQuestion): boolean {
+    const selectedOptions = question.options.filter(o => o.selected);
+    const correctOptions = question.options.filter(o => o.isCorrect);
+
+    if (selectedOptions.length !== correctOptions.length) return false;
+    return selectedOptions.every(o => o.isCorrect);
+  }
+
+  getQuestionState(question: ExamQuestion): 'correct' | 'incorrect' | 'unanswered' {
+    if (!this.isAnyOptionSelected(question)) return 'unanswered';
+    const isCorrect = this.isQuestionFullyCorrect(question);
+    return isCorrect ? 'correct' : 'incorrect';
+  }
+
+  getQuestionPoints(question: ExamQuestion): number {
+    const config = this.examData()?.examProperties.examConfig;
+    const penalty = config?.penaltyRate ?? 0;
+    const hasSelection = this.isAnyOptionSelected(question);
+
+    if (!hasSelection) {
+      return config?.emptyAnswersCount ? -penalty : 0;
+    }
+
+    return this.isQuestionFullyCorrect(question) ? 1 : -penalty;
+  }
+
+  calculateScore() {
+    const data = this.examData();
+    if (!data) return;
+
+    let rawScore = 0;
+    data.questions.forEach(q => {
+      rawScore += this.getQuestionPoints(q);
+    });
+
+    this.score.set(Math.max(0, rawScore));
+  }
+
+  // ==========================================
+  // 8. FUNCIONES DE APOYO Y EXPORTACIÓN
+  // ==========================================
+
+  groupedQuestions = computed(() => {
+    const data = this.examData();
+    if (!data || !data.questions) return [];
+
+    const groupsMap = new Map<number, { unit: any, questions: any[] }>();
+    
+    data.questions.forEach((q: any, index: number) => {
+      // Guardamos el índice global (1, 2, 3...) para pintar en el HTML
+      q.globalIndex = index + 1; 
+      const unitNum = q.unit?.unitNumber || 0;
+      
+      if (!groupsMap.has(unitNum)) {
+        groupsMap.set(unitNum, { unit: q.unit, questions: [] });
+      }
+      groupsMap.get(unitNum)!.questions.push(q);
+    });
+
+    // Ordenar los grupos por número de unidad
+    return Array.from(groupsMap.values()).sort((a, b) => {
+      const numA = a.unit?.unitNumber || 0;
+      const numB = b.unit?.unitNumber || 0;
+      return numA - numB;
+    });
+  });
+
+  /** 
+   * Rellena el examen con respuestas aleatorias 
+   */
+  fillRandomly() {
+    const data = this.examData();
+    if (!data || this.isFinished()) return;
+
+    data.questions.forEach(q => {
+      // Solo respondemos si no tiene respuesta (opcional, para no sobreescribir)
+      const randomIdx = Math.floor(Math.random() * q.options.length);
+      const config = data.examProperties.examConfig.canChangeResponse;
+      this.selectOption(q, q.options[randomIdx], config);
+    });
+  }
+
+  /** 
+   * Rellena el examen con todas las respuestas correctas 
+   */
+  fillCorrectly() {
+    const data = this.examData();
+    if (!data || this.isFinished()) return;
+
+    data.questions.forEach(q => {
+      const config = data.examProperties.examConfig.canChangeResponse;
+      // En tipo 'single' buscamos la correcta, en 'multiple' todas las que sean correctas
+      q.options.forEach(opt => {
+        if (opt.isCorrect) {
+          this.selectOption(q, opt, config);
+        } else if (q.type === 'single') {
+          opt.selected = false;
+        }
+      });
+    });
+  }
+
+  /**
+   * Dispara el diálogo de impresión del sistema para guardar como PDF
+   */
+  downloadPDF() {
+    // Cambiamos temporalmente el título del documento para que el PDF 
+    // se guarde por defecto con el nombre del examen
+    const originalTitle = document.title;
+    const examTitle = this.examData()?.examProperties.examTitle || 'Examen';
+
+    document.title = `Resultado - ${examTitle}`;
+    window.print();
+    document.title = originalTitle;
+  }
+}

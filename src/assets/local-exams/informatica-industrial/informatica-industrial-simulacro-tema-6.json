@@ -1,0 +1,559 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-6.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 6: Configuración de páginas web industriales",
+    "examSummary": "Evaluación técnica sobre Configuración de páginas web industriales, HTML5, CSS, JS y HTTP",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 45,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 45,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Quién estableció por primera vez una comunicación entre cliente y servidor usando HTTP y HTML en 1990?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es Tim Berners-Lee. En 1990, desarrolló el lenguaje HTML y utilizó el protocolo HTTP, dando nacimiento a la web.",
+      "options": [
+        { "text": "Bill Gates", "isCorrect": false },
+        { "text": "Steve Jobs", "isCorrect": false },
+        { "text": "Tim Berners-Lee", "isCorrect": true },
+        { "text": "Dennis Ritchie", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué organización es la encargada actual de mantener y actualizar las especificaciones del estándar HTML?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es el World Wide Web Consortium (W3C), que estandariza y actualiza el lenguaje HTML.",
+      "options": [
+        { "text": "IEEE", "isCorrect": false },
+        { "text": "W3C (World Wide Web Consortium)", "isCorrect": true },
+        { "text": "ISO (International Organization for Standardization)", "isCorrect": false },
+        { "text": "IETF", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Qué versión de HTML introdujo soporte nativo para multimedia, geolocalización y almacenamiento local?",
+      "type": "single",
+      "generalExplanation": "HTML5 (2014) fue la versión que introdujo etiquetas nativas para multimedia, geolocalización y mejoras de accesibilidad.",
+      "options": [
+        { "text": "HTML 3.2", "isCorrect": false },
+        { "text": "HTML 4.01", "isCorrect": false },
+        { "text": "XHTML 1.0", "isCorrect": false },
+        { "text": "HTML5", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cómo se denomina la parte del navegador encargada de interpretar las etiquetas HTML y dibujar visualmente la página?",
+      "type": "single",
+      "generalExplanation": "El motor de renderizado es el componente del navegador que interpreta el HTML y 'dibuja' la página web en la pantalla.",
+      "options": [
+        { "text": "Motor de búsqueda", "isCorrect": false },
+        { "text": "Intérprete JavaScript", "isCorrect": false },
+        { "text": "Motor de renderizado", "isCorrect": true },
+        { "text": "Cliente FTP", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "En HTML, ¿qué característica define a las denominadas 'etiquetas vacías'?",
+      "type": "single",
+      "generalExplanation": "Las etiquetas vacías, como <img>, <br> o <input>, no necesitan etiqueta de cierre porque no envuelven ningún texto o contenido interno.",
+      "options": [
+        { "text": "No necesitan etiqueta de cierre porque no tienen texto interno.", "isCorrect": true },
+        { "text": "No tienen ninguna función visual, solo semántica.", "isCorrect": false },
+        { "text": "Solo se pueden utilizar en la sección <head> del documento.", "isCorrect": false },
+        { "text": "Requieren obligatoriamente código CSS para ser válidas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Qué significa el acrónimo DOM en el contexto de una página web?",
+      "type": "single",
+      "generalExplanation": "El Document Object Model (DOM) es la estructura en forma de árbol que se genera al anidar etiquetas HTML, permitiendo la interacción con JavaScript.",
+      "options": [
+        { "text": "Data Output Manager", "isCorrect": false },
+        { "text": "Document Object Model", "isCorrect": true },
+        { "text": "Digital Object Maker", "isCorrect": false },
+        { "text": "Dynamic Orientation Method", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Cuál es la función de la etiqueta <!DOCTYPE html>?",
+      "type": "single",
+      "generalExplanation": "La etiqueta <!DOCTYPE html> indica al navegador que el documento utiliza la versión actual de HTML (HTML5).",
+      "options": [
+        { "text": "Enlazar el documento con una hoja de estilos externa.", "isCorrect": false },
+        { "text": "Declarar la codificación de caracteres del archivo.", "isCorrect": false },
+        { "text": "Indicar al navegador la versión de HTML que se está utilizando en el documento.", "isCorrect": true },
+        { "text": "Cerrar la conexión HTTP con el servidor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "De los siguientes atributos globales en HTML, ¿cuál se utiliza para asignar un identificador único e irrepetible a un elemento?",
+      "type": "single",
+      "generalExplanation": "El atributo 'id' asigna un identificador único a un elemento, a diferencia de 'class' que puede compartirse entre varios elementos.",
+      "options": [
+        { "text": "class", "isCorrect": false },
+        { "text": "name", "isCorrect": false },
+        { "text": "id", "isCorrect": true },
+        { "text": "title", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué diferencia principal hay entre los 'elementos de bloque' y los 'elementos de línea' en HTML?",
+      "type": "single",
+      "generalExplanation": "Los elementos de bloque (como <div> o <p>) ocupan todo el ancho disponible y crean saltos de línea, mientras que los de línea (como <span> o <a>) solo ocupan el espacio de su contenido.",
+      "options": [
+        { "text": "Los de bloque solo admiten texto, y los de línea solo admiten imágenes.", "isCorrect": false },
+        { "text": "Los de bloque ocupan todo el ancho disponible creando saltos de línea, y los de línea solo el espacio necesario para su contenido.", "isCorrect": true },
+        { "text": "Los de bloque se usan exclusivamente en el <head> y los de línea en el <body>.", "isCorrect": false },
+        { "text": "Los de bloque no pueden ser modificados mediante CSS, mientras que los de línea sí.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué etiqueta sirve como contenedor para toda la información meta, enlaces a scripts y hojas de estilo, pero NO contiene elementos visibles para el usuario?",
+      "type": "single",
+      "generalExplanation": "La etiqueta <head> contiene información para el navegador, como título, codificación, enlaces CSS y scripts, pero no el contenido visual.",
+      "options": [
+        { "text": "<body>", "isCorrect": false },
+        { "text": "<footer>", "isCorrect": false },
+        { "text": "<head>", "isCorrect": true },
+        { "text": "<meta>", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Para asegurar que un navegador muestra correctamente los caracteres especiales del español (como la 'ñ' o vocales con tilde), ¿qué etiqueta y atributo deben usarse?",
+      "type": "single",
+      "generalExplanation": "Se utiliza <meta charset=\"UTF-8\"> dentro del <head> para declarar la codificación adecuada de caracteres.",
+      "options": [
+        { "text": "<meta charset=\"UTF-8\">", "isCorrect": true },
+        { "text": "<html lang=\"es\">", "isCorrect": false },
+        { "text": "<script type=\"text/spanish\">", "isCorrect": false },
+        { "text": "<body language=\"es\">", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Dónde se visualiza el texto contenido dentro de la etiqueta <title> de un documento HTML?",
+      "type": "single",
+      "generalExplanation": "El contenido de <title> se muestra en la pestaña del navegador web o en la barra de título de la ventana, no en el cuerpo de la página.",
+      "options": [
+        { "text": "En el encabezado principal (h1) de la página.", "isCorrect": false },
+        { "text": "En la pestaña del navegador o en la barra de título de la ventana.", "isCorrect": true },
+        { "text": "En el pie de página (footer) automáticamente.", "isCorrect": false },
+        { "text": "Como un texto flotante emergente al pasar el ratón.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué indica el nivel numérico en las etiquetas de encabezado <h1> a <h6>?",
+      "type": "single",
+      "generalExplanation": "El número indica el nivel de importancia jerárquica del encabezado, siendo <h1> el más importante y <h6> el menos importante.",
+      "options": [
+        { "text": "El tamaño de la fuente en píxeles.", "isCorrect": false },
+        { "text": "El orden secuencial obligatorio de aparición en la página.", "isCorrect": false },
+        { "text": "El nivel de importancia del encabezado, donde 1 es el más importante y 6 el menos importante.", "isCorrect": true },
+        { "text": "El número de caracteres máximos que puede contener el título.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Por qué se recomienda utilizar las etiquetas <em> y <strong> en lugar de <i> y <b>?",
+      "type": "single",
+      "generalExplanation": "<em> y <strong> tienen valor semántico reconocido por tecnologías de asistencia (como lectores de pantalla), mientras que <i> y <b> solo aplican estilos visuales.",
+      "options": [
+        { "text": "Porque <i> y <b> no funcionan en HTML5.", "isCorrect": false },
+        { "text": "Porque <em> y <strong> tienen un propósito semántico reconocido por tecnologías de asistencia (lectores de pantalla).", "isCorrect": true },
+        { "text": "Porque <em> y <strong> aplican colores automáticamente, mejorando el diseño.", "isCorrect": false },
+        { "text": "Porque son más cortas de procesar para el motor de renderizado.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "En la etiqueta <a>, ¿para qué sirve el atributo 'href'?",
+      "type": "single",
+      "generalExplanation": "El atributo 'href' especifica la URL o dirección del recurso (absoluta o relativa) al que enlaza el hipervínculo.",
+      "options": [
+        { "text": "Especifica el estilo visual del enlace.", "isCorrect": false },
+        { "text": "Especifica si el enlace se abre en una pestaña nueva o en la misma.", "isCorrect": false },
+        { "text": "Especifica la URL o dirección del recurso al que apunta el hipervínculo.", "isCorrect": true },
+        { "text": "Indica el texto alternativo si el enlace está roto.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Si se desea que un enlace se abra en una nueva pestaña o ventana del navegador, ¿qué atributo y valor deben añadirse a la etiqueta <a>?",
+      "type": "single",
+      "generalExplanation": "El atributo target=\"_blank\" fuerza al navegador a abrir el hipervínculo en una pestaña o ventana nueva.",
+      "options": [
+        { "text": "target=\"_self\"", "isCorrect": false },
+        { "text": "href=\"_new\"", "isCorrect": false },
+        { "text": "target=\"_blank\"", "isCorrect": true },
+        { "text": "open=\"new_tab\"", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "En la etiqueta <img>, ¿cuál es la función del atributo 'alt'?",
+      "type": "single",
+      "generalExplanation": "El atributo 'alt' proporciona un texto descriptivo alternativo, útil para la accesibilidad (lectores de pantalla) y en caso de que la imagen no cargue.",
+      "options": [
+        { "text": "Aplicar un estilo CSS alternativo si la imagen no cabe en la pantalla.", "isCorrect": false },
+        { "text": "Proporcionar un texto alternativo que describe la imagen para accesibilidad o fallos de carga.", "isCorrect": true },
+        { "text": "Indicar la ruta donde se encuentra el archivo de imagen alternativo.", "isCorrect": false },
+        { "text": "Forzar la alineación de la imagen a la izquierda o derecha.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué etiqueta se utiliza en HTML para definir una celda que actúa como encabezado dentro de una tabla (cuyo texto se muestra en negrita y centrado por defecto)?",
+      "type": "single",
+      "generalExplanation": "La etiqueta <th> (table header) define una celda de encabezado, a diferencia de <td> que define una celda normal de datos.",
+      "options": [
+        { "text": "<tr>", "isCorrect": false },
+        { "text": "<td>", "isCorrect": false },
+        { "text": "<th>", "isCorrect": true },
+        { "text": "<thead>", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "En una tabla HTML, ¿qué atributo se emplea en una celda (<td> o <th>) para combinar varias columnas adyacentes horizontalmente?",
+      "type": "single",
+      "generalExplanation": "El atributo 'colspan' especifica el número de columnas contiguas que una misma celda debe ocupar (combinación horizontal).",
+      "options": [
+        { "text": "rowspan", "isCorrect": false },
+        { "text": "merge-col", "isCorrect": false },
+        { "text": "colspan", "isCorrect": true },
+        { "text": "headers", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Por qué en HTML5 no se recomienda el uso de atributos como 'border', 'bgcolor' o 'align' en la etiqueta <table>?",
+      "type": "single",
+      "generalExplanation": "Estos atributos presentacionales están obsoletos en HTML5. Se recomienda separar la estructura de la presentación utilizando CSS para los estilos.",
+      "options": [
+        { "text": "Porque esos atributos fueron reemplazados por etiquetas exclusivas de JavaScript.", "isCorrect": false },
+        { "text": "Porque en HTML5 se recomienda separar la estructura de la presentación visual utilizando hojas de estilo (CSS).", "isCorrect": true },
+        { "text": "Porque provocan vulnerabilidades de seguridad en el servidor web.", "isCorrect": false },
+        { "text": "Porque las tablas ya no se usan en HTML5, siendo reemplazadas por etiquetas <div>.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "Si se desea crear una lista con viñetas no numeradas, ¿qué etiqueta contenedora debe emplearse?",
+      "type": "single",
+      "generalExplanation": "La etiqueta <ul> (unordered list) crea listas desordenadas marcadas normalmente con viñetas, mientras que <ol> crea listas ordenadas/numeradas.",
+      "options": [
+        { "text": "<ol>", "isCorrect": false },
+        { "text": "<li>", "isCorrect": false },
+        { "text": "<ul>", "isCorrect": true },
+        { "text": "<dl>", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué etiqueta reemplaza en HTML5 a las obsoletas <frame> y <frameset> permitiendo incrustar otro documento web, como un mapa de Google o vídeo de YouTube?",
+      "type": "single",
+      "generalExplanation": "La etiqueta <iframe> se utiliza para incrustar un marco en línea con contenido externo o de otra página HTML de forma mucho más flexible.",
+      "options": [
+        { "text": "<embed>", "isCorrect": false },
+        { "text": "<object>", "isCorrect": false },
+        { "text": "<canvas>", "isCorrect": false },
+        { "text": "<iframe>", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "En un formulario web creado con la etiqueta <form>, ¿qué define el atributo 'action'?",
+      "type": "single",
+      "generalExplanation": "El atributo 'action' especifica la URL o dirección del servidor o script al que se enviarán los datos introducidos en el formulario al pulsar 'Submit'.",
+      "options": [
+        { "text": "El método HTTP de envío (GET o POST).", "isCorrect": false },
+        { "text": "La URL del servidor al que se enviarán los datos del formulario.", "isCorrect": true },
+        { "text": "La acción JavaScript que validará el formulario en local.", "isCorrect": false },
+        { "text": "El nombre único del formulario en el DOM.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Cuál es la función principal de la etiqueta <label> en un formulario?",
+      "type": "single",
+      "generalExplanation": "La etiqueta <label> asocia un texto descriptivo a un campo de entrada (<input>) a través de su atributo 'for', mejorando la accesibilidad y usabilidad.",
+      "options": [
+        { "text": "Establecer una contraseña oculta para enviar datos seguros.", "isCorrect": false },
+        { "text": "Agrupar múltiples formularios en un solo envío.", "isCorrect": false },
+        { "text": "Asociar un texto descriptivo a un elemento de entrada, indicando qué dato se espera.", "isCorrect": true },
+        { "text": "Crear un botón de envío final (submit).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Cuál es el objetivo principal del lenguaje CSS en el desarrollo web?",
+      "type": "single",
+      "generalExplanation": "CSS (Cascading Style Sheets) está diseñado para separar la estructura y el contenido (HTML) de la presentación visual y el diseño.",
+      "options": [
+        { "text": "Definir las conexiones a las bases de datos en el servidor web.", "isCorrect": false },
+        { "text": "Programar la lógica e interactividad dinámica del lado del cliente.", "isCorrect": false },
+        { "text": "Separar la estructura y contenido del documento HTML de su presentación visual y diseño.", "isCorrect": true },
+        { "text": "Crear etiquetas semánticas para mejorar el posicionamiento SEO.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "Existen tres formas de incluir estilos CSS en HTML. ¿Cuál corresponde a la forma 'Externa'?",
+      "type": "single",
+      "generalExplanation": "La forma externa enlaza a un archivo '.css' independiente utilizando la etiqueta <link> dentro del <head>, promoviendo código más limpio y reutilizable.",
+      "options": [
+        { "text": "Incluir el atributo 'style' directamente dentro de la etiqueta HTML.", "isCorrect": false },
+        { "text": "Utilizar la etiqueta <style> dentro de la sección <head>.", "isCorrect": false },
+        { "text": "Enlazar a un archivo con extensión .css mediante la etiqueta <link> en el <head>.", "isCorrect": true },
+        { "text": "Incrustar un archivo mediante la etiqueta <iframe>.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "En CSS, ¿qué carácter se utiliza como prefijo para crear un 'Selector de clase' (que selecciona elementos con un atributo class específico)?",
+      "type": "single",
+      "generalExplanation": "En CSS, el selector de clase se define precediendo el nombre de la clase con un punto (ej. .miClase).",
+      "options": [
+        { "text": "El símbolo de numeral (#)", "isCorrect": false },
+        { "text": "El signo de arroba (@)", "isCorrect": false },
+        { "text": "El asterisco (*)", "isCorrect": false },
+        { "text": "Un punto (.)", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "Para evitar código mezclado, la forma recomendada de incluir JavaScript en un documento HTML es referenciarlo a un archivo externo. ¿Qué atributo de <script> hace esto posible?",
+      "type": "single",
+      "generalExplanation": "El atributo 'src' de la etiqueta <script> permite especificar la ruta a un archivo externo .js (ej. <script src=\"script.js\"></script>).",
+      "options": [
+        { "text": "href", "isCorrect": false },
+        { "text": "src", "isCorrect": true },
+        { "text": "link", "isCorrect": false },
+        { "text": "type", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿A qué se refiere el término WYSIWYG en editores visuales de páginas web (como Dreamweaver)?",
+      "type": "single",
+      "generalExplanation": "WYSIWYG (What You See Is What You Get) significa que el entorno visualiza el resultado final durante la edición, sin necesidad de teclear HTML manualmente.",
+      "options": [
+        { "text": "Web Yellow System Included With Your Grid (Sistema amarillo de web incluido en rejilla).", "isCorrect": false },
+        { "text": "Without Your Server It Won't Yield Graphics (Sin tu servidor no producirá gráficos).", "isCorrect": false },
+        { "text": "What You See Is What You Get (Lo que ves es lo que obtienes).", "isCorrect": true },
+        { "text": "Web Yields Synchronized Images With Globalisation (La web produce imágenes sincronizadas con la globalización).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué ventaja aporta agrupar todos los archivos de un sitio web en una misma carpeta principal y usar vínculos 'relativos'?",
+      "type": "single",
+      "generalExplanation": "El uso de vínculos relativos en una carpeta raíz compartida permite mover o subir el proyecto completo a otro servidor o dominio sin que se rompan los enlaces internos.",
+      "options": [
+        { "text": "Reduce automáticamente el peso de las imágenes mediante compresión.", "isCorrect": false },
+        { "text": "Permite cambiar de servidor o de dominio de forma sencilla sin que se rompan las referencias a los archivos.", "isCorrect": true },
+        { "text": "Encripta todo el contenido local en base 64 para mayor seguridad.", "isCorrect": false },
+        { "text": "Fuerza al navegador a usar el protocolo SFTP en lugar de HTTP.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "Por convención universal en los servidores web, ¿cuál es el nombre que debe tener la página de inicio o página por defecto que se carga al acceder a la raíz del sitio?",
+      "type": "single",
+      "generalExplanation": "La convención es nombrar la página de aterrizaje/inicio como 'index.html' o similar, ya que el servidor busca este archivo automáticamente.",
+      "options": [
+        { "text": "main.html", "isCorrect": false },
+        { "text": "inicio.html", "isCorrect": false },
+        { "text": "index.html", "isCorrect": true },
+        { "text": "home.html", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Cuál de las siguientes es una 'buena práctica' recomendada para nombrar archivos y carpetas en un servidor web?",
+      "type": "single",
+      "generalExplanation": "Es recomendable usar letras minúsculas del alfabeto inglés, números, y guiones o guiones bajos, evitando espacios, eñes y tildes para prevenir problemas de rutas en servidores (especialmente Linux).",
+      "options": [
+        { "text": "Utilizar espacios en blanco para separar palabras largas.", "isCorrect": false },
+        { "text": "Usar la letra 'ñ' y tildes para mantener la corrección ortográfica.", "isCorrect": false },
+        { "text": "Escribir nombres con más de cincuenta caracteres para ser lo más descriptivo posible.", "isCorrect": false },
+        { "text": "Evitar espacios, caracteres especiales, y utilizar letras minúsculas consistentemente.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "En el diseño de la estructura de navegación de un sitio web, ¿qué son las 'migas de pan' (breadcrumbs)?",
+      "type": "single",
+      "generalExplanation": "Las migas de pan son una ruta de enlaces textuales, usualmente en la parte superior, que indica la jerarquía y ubicación actual del usuario dentro del sitio web.",
+      "options": [
+        { "text": "Archivos temporales generados por el cliente FTP al publicar el sitio.", "isCorrect": false },
+        { "text": "Una serie de enlaces jerárquicos que indican la ubicación actual del usuario y facilitan ir hacia atrás.", "isCorrect": true },
+        { "text": "Las cookies que almacenan el historial de compras del usuario.", "isCorrect": false },
+        { "text": "Los botones de redes sociales incluidos en el pie de página.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Por qué el protocolo SFTP es preferible al clásico FTP para subir los archivos de la página web al servidor?",
+      "type": "single",
+      "generalExplanation": "FTP transmite credenciales y datos en texto plano. SFTP está basado en el protocolo seguro SSH, lo que encripta la comunicación frente a intercepciones.",
+      "options": [
+        { "text": "Porque SFTP está basado en el estándar SSH, lo que permite transferencias encriptadas y seguras.", "isCorrect": true },
+        { "text": "Porque SFTP es el único protocolo compatible con archivos HTML5 y CSS3.", "isCorrect": false },
+        { "text": "Porque FTP ya no permite la subida de imágenes pesadas.", "isCorrect": false },
+        { "text": "Porque FTP obliga a modificar los enlaces relativos por enlaces absolutos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué información adicional puede solicitar un servidor para autenticarse por SFTP además del usuario, contraseña y la URL?",
+      "type": "single",
+      "generalExplanation": "Las conexiones seguras por SFTP frecuentemente pueden configurarse o requerir la provisión de un archivo de claves (key file) privado para autenticarse.",
+      "options": [
+        { "text": "Una cuenta de administrador de Google.", "isCorrect": false },
+        { "text": "Un archivo de claves (key file) generado previamente.", "isCorrect": true },
+        { "text": "La etiqueta <iframe> insertada en el index.html.", "isCorrect": false },
+        { "text": "Una dirección MAC de red local validada por W3C.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "En la comunicación Cliente-Servidor en la web, ¿cuál de los siguientes elementos suele actuar siempre como 'Cliente'?",
+      "type": "single",
+      "generalExplanation": "En el modelo HTTP de la web, el navegador actúa como cliente realizando peticiones (requests) al programa servidor.",
+      "options": [
+        { "text": "El Navegador web (como Chrome, Firefox o Edge).", "isCorrect": true },
+        { "text": "El Servidor de base de datos MySQL.", "isCorrect": false },
+        { "text": "El Servidor Apache.", "isCorrect": false },
+        { "text": "El motor PHP instalado en el servidor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Según la arquitectura Cliente-Servidor, ¿cuál de las siguientes es una desventaja del modelo?",
+      "type": "single",
+      "generalExplanation": "La dependencia del servidor es una desventaja crítica: si el servidor central falla, los clientes quedan imposibilitados de acceder a los recursos.",
+      "options": [
+        { "text": "La imposibilidad de aplicar políticas de seguridad centralizadas.", "isCorrect": false },
+        { "text": "La dificultad de acceso desde diferentes dispositivos.", "isCorrect": false },
+        { "text": "La dependencia del servidor: si este falla, los clientes se ven afectados (punto único de fallo).", "isCorrect": true },
+        { "text": "La falta de escalabilidad ante aumentos de demanda.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Qué protocolo de comunicación está basado en texto y sigue un modelo de solicitud-respuesta entre clientes y servidores web?",
+      "type": "single",
+      "generalExplanation": "HTTP (HyperText Transfer Protocol) es el protocolo de capa de aplicación estándar para la web basado en solicitudes y respuestas.",
+      "options": [
+        { "text": "TCP/IP", "isCorrect": false },
+        { "text": "HTTP", "isCorrect": true },
+        { "text": "SMTP", "isCorrect": false },
+        { "text": "FTP", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "En el protocolo HTTP, ¿qué método de solicitud (method) es 'seguro e idempotente', diseñado exclusivamente para solicitar y recuperar datos sin modificar el servidor?",
+      "type": "single",
+      "generalExplanation": "El método GET es idempotente (repetir la petición genera el mismo resultado) y seguro, ya que se limita a solicitar recursos sin alterar el estado del servidor.",
+      "options": [
+        { "text": "POST", "isCorrect": false },
+        { "text": "PUT", "isCorrect": false },
+        { "text": "DELETE", "isCorrect": false },
+        { "text": "GET", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Si un formulario web necesita enviar datos sensibles al servidor para procesarlos y realizar cambios en la base de datos, ¿qué método HTTP no idempotente se utiliza?",
+      "type": "single",
+      "generalExplanation": "POST es el método diseñado para enviar datos en el cuerpo de la petición hacia el servidor, creando recursos o provocando cambios (no es idempotente).",
+      "options": [
+        { "text": "OPTIONS", "isCorrect": false },
+        { "text": "GET", "isCorrect": false },
+        { "text": "HEAD", "isCorrect": false },
+        { "text": "POST", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "¿Qué son las 'Cabeceras HTTP' (headers) dentro de una solicitud o respuesta?",
+      "type": "single",
+      "generalExplanation": "Las cabeceras o headers son líneas que adjuntan metadatos a la comunicación HTTP, como Content-Type, Cookies o User-Agent, configurando los detalles del intercambio.",
+      "options": [
+        { "text": "Son las etiquetas <head> del documento HTML.", "isCorrect": false },
+        { "text": "Metadatos que proporcionan información adicional sobre la solicitud o respuesta (ej. tipo de contenido o cookies).", "isCorrect": true },
+        { "text": "La primera línea del código JavaScript que inicializa el servidor.", "isCorrect": false },
+        { "text": "El enrutamiento físico por el que circulan los paquetes en internet.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "En los códigos de estado HTTP, ¿qué indica la clase 4xx (como un error 404)?",
+      "type": "single",
+      "generalExplanation": "La serie 4xx indica errores del cliente, es decir, que la solicitud hecha por el cliente está mal formada o el recurso solicitado no existe (404 Not Found).",
+      "options": [
+        { "text": "Que la solicitud necesita una redirección a otra URL.", "isCorrect": false },
+        { "text": "Que la solicitud fue procesada con total éxito por el servidor.", "isCorrect": false },
+        { "text": "Que ha habido un error interno en el servidor que impidió procesar una petición correcta.", "isCorrect": false },
+        { "text": "Que hay un error originado en el cliente (ej. recurso no encontrado o datos incorrectos).", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "Si un usuario recibe el código de estado HTTP '500 Internal Server Error', ¿a qué tipo de error corresponde según su primer dígito?",
+      "type": "single",
+      "generalExplanation": "La clase 5xx se reserva para errores producidos por fallos internos del propio servidor al intentar procesar una solicitud que a priori era válida.",
+      "options": [
+        { "text": "Errores de cliente (el usuario introdujo mal la URL).", "isCorrect": false },
+        { "text": "Errores del servidor (el servidor falló al procesar una solicitud válida).", "isCorrect": true },
+        { "text": "Errores de caché y redirección.", "isCorrect": false },
+        { "text": "Operaciones exitosas ejecutadas con advertencias.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "¿Qué código de estado HTTP de la serie 2xx es el estándar para indicar que la solicitud fue procesada con éxito y el recurso se ha proporcionado?",
+      "type": "single",
+      "generalExplanation": "El código '200 OK' es el indicador estándar de que la petición HTTP ha sido recibida, procesada y respondida con el recurso solicitado de forma exitosa.",
+      "options": [
+        { "text": "201 Created", "isCorrect": false },
+        { "text": "200 OK", "isCorrect": true },
+        { "text": "202 Accepted", "isCorrect": false },
+        { "text": "204 No Content", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "En una URL completa como 'https://www.example.com:80/path/to/resource', ¿qué elemento representa el esquema o protocolo?",
+      "type": "single",
+      "generalExplanation": "El esquema de la URL indica el protocolo utilizado para acceder al recurso; en este caso es 'https'.",
+      "options": [
+        { "text": "www.example.com", "isCorrect": false },
+        { "text": "https", "isCorrect": true },
+        { "text": "80", "isCorrect": false },
+        { "text": "/path/to/resource", "isCorrect": false }
+      ]
+    }
+  ]
+}

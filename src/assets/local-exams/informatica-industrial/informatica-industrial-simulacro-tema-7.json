@@ -1,0 +1,523 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-7.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 7: Mantenimiento y diagnóstico de averías",
+    "examSummary": "Evaluación técnica sobre mantenimiento de hardware/software, diagnóstico de redes y resolución de incidencias informáticas",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 45,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 42,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "Durante una inspección preventiva del sistema de ventilación de un PC industrial, ¿qué problema es habitual encontrar en la pasta térmica de los disipadores con el paso del tiempo?",
+      "type": "single",
+      "generalExplanation": "Con el paso del tiempo, la pasta térmica que une el componente (como la CPU) con su disipador se seca, perdiendo eficacia para transmitir el calor y pudiendo provocar sobrecalentamientos.",
+      "options": [
+        { "text": "Se vuelve líquida y provoca cortocircuitos en la placa base.", "isCorrect": false },
+        { "text": "Se magnetiza, alterando las operaciones de la memoria caché.", "isCorrect": false },
+        { "text": "Se seca, reduciendo la transmisión de calor y haciendo necesario reemplazarla.", "isCorrect": true },
+        { "text": "Aumenta de volumen, doblando los pines del procesador.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué tecnología incorporada en la mayoría de los discos duros permite la lectura de parámetros predictivos, muy útiles para prevenir y anticipar futuros fallos de almacenamiento?",
+      "type": "single",
+      "generalExplanation": "S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) es la tecnología que monitoriza el estado de salud del disco para predecir fallos inminentes.",
+      "options": [
+        { "text": "RAID", "isCorrect": false },
+        { "text": "SMART", "isCorrect": true },
+        { "text": "NVMe", "isCorrect": false },
+        { "text": "CMOS", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Si durante un mantenimiento preventivo verificamos que el espacio libre del disco duro mecánico ha disminuido drásticamente y su rendimiento ha caído, ¿qué dos operaciones básicas de mantenimiento de disco deberíamos aplicar?",
+      "type": "single",
+      "generalExplanation": "La limpieza de datos (borrar temporales, historial, etc.) y la desfragmentación (específica para discos mecánicos) son las acciones correctivas iniciales recomendadas.",
+      "options": [
+        { "text": "Cambiar la pasta térmica y actualizar la BIOS.", "isCorrect": false },
+        { "text": "Formateo de bajo nivel y modificación del registro de Windows.", "isCorrect": false },
+        { "text": "Añadir más memoria RAM y hacer overclocking al procesador.", "isCorrect": false },
+        { "text": "Limpieza de datos innecesarios y desfragmentación del disco.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Qué aplicación gratuita se menciona específicamente en el temario para medir el rendimiento de la CPU/GPU (benchmarking) y compararlo con el obtenido por procesadores del mismo modelo?",
+      "type": "single",
+      "generalExplanation": "Aplicaciones como CPU-Z y PassMark PerformanceTest (o su versión gratuita) se utilizan para realizar pruebas de rendimiento y compararlas con bases de datos globales.",
+      "options": [
+        { "text": "Advanced IP Scanner", "isCorrect": false },
+        { "text": "PerformanceTest (PassMark)", "isCorrect": true },
+        { "text": "Wireshark", "isCorrect": false },
+        { "text": "CCleaner", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "En el contexto del mantenimiento preventivo, ¿cuál es el propósito principal de una herramienta como CCleaner o Glary Utilities?",
+      "type": "single",
+      "generalExplanation": "Estas utilidades están diseñadas para la limpieza de archivos temporales, cookies, datos innecesarios, optimización del registro y mejora del rendimiento del software.",
+      "options": [
+        { "text": "Limpiar archivos temporales, cookies y otros datos innecesarios que ocupan espacio y lastran el sistema.", "isCorrect": true },
+        { "text": "Desfragmentar automáticamente la memoria RAM.", "isCorrect": false },
+        { "text": "Actualizar el firmware de la placa base desde Windows.", "isCorrect": false },
+        { "text": "Recuperar archivos que han sido borrados de la papelera de reciclaje.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "En el mantenimiento de redes inalámbricas, si los usuarios experimentan interferencias o baja velocidad, y al monitorear notamos congestión, ¿qué ajuste de configuración básico se recomienda?",
+      "type": "single",
+      "generalExplanation": "Cambiar el canal de emisión del punto de acceso (router/AP) ayuda a evitar las interferencias creadas por redes wifi vecinas que emiten en el mismo canal.",
+      "options": [
+        { "text": "Cambiar el tipo de cable de fibra a cobre.", "isCorrect": false },
+        { "text": "Aumentar la memoria RAM del servidor DNS.", "isCorrect": false },
+        { "text": "Cambiar el canal de transmisión del punto de acceso Wifi.", "isCorrect": true },
+        { "text": "Desactivar permanentemente el firewall de Windows.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué proceso ejecuta la placa base justo después de pulsar el botón de encendido y antes de intentar cargar el sistema operativo, encargado de comprobar el hardware básico?",
+      "type": "single",
+      "generalExplanation": "El POST (Power-On Self Test) es el proceso de autodiagnóstico inicial ejecutado por el firmware de la placa base (BIOS/UEFI).",
+      "options": [
+        { "text": "SMART", "isCorrect": false },
+        { "text": "POST (Power-On Self Test)", "isCorrect": true },
+        { "text": "BSOD (Blue Screen of Death)", "isCorrect": false },
+        { "text": "Bootloader", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Si al encender el ordenador la placa base emite una serie de pitidos de duración variable y la pantalla no muestra nada, ¿qué nos están indicando estos pitidos?",
+      "type": "single",
+      "generalExplanation": "Los pitidos son códigos de diagnóstico emitidos por la placa base durante el POST para indicar un fallo específico de hardware (RAM, gráfica, etc.). El significado exacto depende del fabricante.",
+      "options": [
+        { "text": "Que el disco duro está fragmentado y necesita mantenimiento.", "isCorrect": false },
+        { "text": "Que el sistema operativo está infectado por un virus.", "isCorrect": false },
+        { "text": "Que la fuente de alimentación está entregando demasiada potencia.", "isCorrect": false },
+        { "text": "Que existe un fallo de hardware; la cadencia y el tono indican el tipo de avería.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Si sospechas que una configuración errónea en la BIOS/UEFI impide que el ordenador arranque, ¿qué procedimiento manual puedes realizar en la placa base para restablecer la configuración de fábrica (CMOS)?",
+      "type": "single",
+      "generalExplanation": "Quitar la pila de la placa base (pila CR2032) durante aproximadamente un minuto con el equipo desconectado borrará la memoria CMOS volátil, restaurando los ajustes por defecto.",
+      "options": [
+        { "text": "Desconectar y volver a conectar el disco duro.", "isCorrect": false },
+        { "text": "Quitar la pila de la placa base durante un minuto (con el equipo desconectado).", "isCorrect": true },
+        { "text": "Puentear los cables verde y negro de la fuente de alimentación.", "isCorrect": false },
+        { "text": "Limpiar los contactos de la memoria RAM con alcohol isopropílico.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Si un equipo informático está expuesto a un ambiente muy seco y de repente no arranca, y sospechas de acumulación de electricidad estática en la memoria RAM, ¿cuál es el procedimiento correcto?",
+      "type": "single",
+      "generalExplanation": "Se debe desconectar el equipo, extraer la RAM con precauciones antiestáticas, tocar los contactos para descargar la electricidad estática y, opcionalmente, limpiarlos.",
+      "options": [
+        { "text": "Soplar aire caliente sobre la RAM durante 5 minutos.", "isCorrect": false },
+        { "text": "Desconectar la alimentación, extraer la RAM (usando pulsera antiestática) y tocar/limpiar los contactos.", "isCorrect": true },
+        { "text": "Aumentar el voltaje de la RAM desde la BIOS.", "isCorrect": false },
+        { "text": "Sumergir los módulos en agua destilada y secarlos rápidamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Al diagnosticar un ordenador que no muestra imagen, decides puentear los cables verde y negro del conector de la fuente de alimentación para forzar su encendido. Si el ventilador gira y da voltajes, ¿es 100% fiable concluir que la fuente funciona perfectamente?",
+      "type": "single",
+      "generalExplanation": "No es totalmente fiable. Al puentear la fuente se enciende 'en vacío', sin estar sometida a la demanda y carga real de electricidad de la placa base, por lo que podría fallar bajo carga.",
+      "options": [
+        { "text": "Sí, si los voltajes con el polímetro son correctos, la fuente es infalible.", "isCorrect": false },
+        { "text": "No, porque puentearla enciende la fuente, pero al no estar sometida a la demanda de carga de la placa, podría fallar igualmente en operación real.", "isCorrect": true },
+        { "text": "Sí, el giro del ventilador garantiza que los condensadores principales están en perfecto estado.", "isCorrect": false },
+        { "text": "No, porque el puente estropea automáticamente la línea de 12V.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Si debes probar el arranque de una placa base por el método de eliminación, ¿cuál es el número 'mínimo' de componentes estrictamente necesarios para visualizar el arranque (llegar a la BIOS)?",
+      "type": "single",
+      "generalExplanation": "Para que un PC arranque y muestre imagen (POST) se requiere: Placa base, Microprocesador, Memoria RAM (al menos 1 módulo), Tarjeta gráfica (integrada o dedicada) y Fuente de alimentación.",
+      "options": [
+        { "text": "Placa base y fuente de alimentación.", "isCorrect": false },
+        { "text": "Placa base, Microprocesador, 1 módulo RAM, Tarjeta gráfica y Fuente de alimentación.", "isCorrect": true },
+        { "text": "Placa base, CPU, RAM, Disco duro, Teclado y Fuente de alimentación.", "isCorrect": false },
+        { "text": "Placa base, CPU, RAM, y Disco de rescate USB.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Si el ordenador arranca, emite un pitido corto, pero luego aparece el mensaje 'No bootable device found' (o similar), ¿cuál de las siguientes causas es la más probable?",
+      "type": "single",
+      "generalExplanation": "Este mensaje (que aparece después del POST) indica que el hardware básico está bien, pero no se encuentra un disco duro operativo o el sector de arranque/archivos del sistema operativo están dañados.",
+      "options": [
+        { "text": "El microprocesador tiene pines doblados.", "isCorrect": false },
+        { "text": "La memoria RAM no está bien insertada en su ranura.", "isCorrect": false },
+        { "text": "Hay un error en el sector de arranque del disco, archivos del SO dañados o el disco duro falla mecánicamente.", "isCorrect": true },
+        { "text": "La fuente de alimentación no entrega la tensión correcta a la tarjeta gráfica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Si te encuentras con un disco duro averiado mecánicamente (chirridos) y que contiene datos no respaldados e inaccesibles desde el SO, ¿qué debes intentar hacer antes de usar herramientas agresivas de diagnóstico de disco?",
+      "type": "single",
+      "generalExplanation": "La prioridad absoluta antes de alterar el disco es intentar rescatar o recuperar los datos conectándolo a otro equipo seguro o usando un Live USB con software de rescate, antes de que el disco muera del todo.",
+      "options": [
+        { "text": "Realizar un formateo rápido para reparar los sectores lógicos.", "isCorrect": false },
+        { "text": "Ejecutar la herramienta Chkdsk /r repetidas veces.", "isCorrect": false },
+        { "text": "Intentar rescatar los datos arrancando desde un medio externo o conectándolo a otro equipo con herramientas de recuperación.", "isCorrect": true },
+        { "text": "Abrir físicamente la carcasa del disco para limpiar los platos magnéticos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Aparecen líneas de colores, manchas extrañas y 'artefactos' en el monitor, seguidos del bloqueo de una aplicación de diseño 3D. ¿Hacia qué componente apunta inicialmente este diagnóstico?",
+      "type": "single",
+      "generalExplanation": "Los 'artefactos' visuales (líneas, polígonos rotos, colores falsos) durante cargas gráficas son el síntoma clásico de problemas en la Tarjeta Gráfica (GPU) o su memoria (VRAM).",
+      "options": [
+        { "text": "Disco Duro mecánico.", "isCorrect": false },
+        { "text": "Placa Base (controlador SATA).", "isCorrect": false },
+        { "text": "Tarjeta Gráfica (GPU).", "isCorrect": true },
+        { "text": "Tarjeta de Red (NIC).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Un equipo industrial sufre apagados súbitos sin previo aviso (se corta la energía) después de estar operando durante una hora bajo carga de trabajo. ¿Cuáles son los dos componentes más sospechosos?",
+      "type": "single",
+      "generalExplanation": "Los apagados repentinos bajo carga suelen deberse a fallos de suministro (Fuente de alimentación) o medidas de protección térmica (sobrecalentamiento crítico en la CPU).",
+      "options": [
+        { "text": "Disco duro y lector óptico.", "isCorrect": false },
+        { "text": "Módulos de Memoria RAM y puertos USB.", "isCorrect": false },
+        { "text": "Fuente de alimentación o sobrecalentamiento de la CPU.", "isCorrect": true },
+        { "text": "Tarjeta de red y controlador de audio.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "En el diagnóstico de un PC, detectamos reinicios aleatorios y la aparición esporádica de la temida 'Pantalla azul de la muerte' (BSOD). ¿Qué componente es estadísticamente el principal responsable de este síntoma específico?",
+      "type": "single",
+      "generalExplanation": "Los bloqueos aleatorios con pantallazos azules por fallos en las direcciones de memoria y corrupción de ejecución están típicamente originados por fallos en la memoria RAM.",
+      "options": [
+        { "text": "La memoria RAM.", "isCorrect": true },
+        { "text": "El disco duro externo.", "isCorrect": false },
+        { "text": "El ventilador de la carcasa.", "isCorrect": false },
+        { "text": "La pila del CMOS.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué herramienta integrada en el propio sistema operativo Windows permite diagnosticar errores lógicos en el sistema de archivos de un disco duro?",
+      "type": "single",
+      "generalExplanation": "Chkdsk (Check Disk) es la herramienta nativa en la línea de comandos de Windows para reparar errores en el sistema de archivos FAT/NTFS y sectores defectuosos lógicos.",
+      "options": [
+        { "text": "Prime95", "isCorrect": false },
+        { "text": "MemTest86", "isCorrect": false },
+        { "text": "Chkdsk", "isCorrect": true },
+        { "text": "Furmark", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Para qué tipo de componente específico se utiliza habitualmente el software de estrés y testeo conocido como 'Furmark'?",
+      "type": "single",
+      "generalExplanation": "Furmark es una aplicación diseñada explícitamente para someter a estrés ('torture test') la Tarjeta Gráfica (GPU), elevando su consumo y temperatura para probar su estabilidad.",
+      "options": [
+        { "text": "Para discos SSD NVMe.", "isCorrect": false },
+        { "text": "Para Tarjetas Gráficas (GPU).", "isCorrect": true },
+        { "text": "Para Memorias RAM DDR4.", "isCorrect": false },
+        { "text": "Para Routers y Switches de red.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Cuál es la función principal de la conocida aplicación de software 'MemTest86'?",
+      "type": "single",
+      "generalExplanation": "MemTest86 es el estándar de la industria (que se arranca habitualmente desde un USB) para diagnosticar de forma exhaustiva errores de hardware en los módulos de memoria RAM.",
+      "options": [
+        { "text": "Recuperar contraseñas perdidas de administrador de Windows.", "isCorrect": false },
+        { "text": "Estresar la CPU para comprobar su sistema de refrigeración líquida.", "isCorrect": false },
+        { "text": "Comprobar y diagnosticar exhaustivamente la memoria RAM buscando fallos físicos o lógicos.", "isCorrect": true },
+        { "text": "Optimizar el registro de Windows eliminando claves obsoletas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Qué programa, ampliamente citado en el manual, se utiliza para monitorizar en tiempo real el voltaje, las temperaturas y la velocidad de los ventiladores leyendo los sensores del sistema?",
+      "type": "single",
+      "generalExplanation": "HWMonitor (junto con HWiNFO) está diseñado específicamente para la lectura y monitorización en tiempo real de todos los sensores de salud, térmicos y eléctricos de la placa base y componentes.",
+      "options": [
+        { "text": "Advanced IP Scanner", "isCorrect": false },
+        { "text": "MemTest64", "isCorrect": false },
+        { "text": "Traceroute", "isCorrect": false },
+        { "text": "HWMonitor (o HWiNFO)", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué software se describe en el texto como una herramienta de prueba de estabilidad ('estrés') que permite poner a prueba la CPU, GPU, fuente de alimentación y memoria, generando informes detallados?",
+      "type": "single",
+      "generalExplanation": "OCCT es una suite completa y muy exigente de pruebas de estabilidad utilizada para diagnosticar si algún componente, incluida la fuente de alimentación, falla bajo carga máxima.",
+      "options": [
+        { "text": "Wireshark", "isCorrect": false },
+        { "text": "OCCT", "isCorrect": true },
+        { "text": "CCleaner", "isCorrect": false },
+        { "text": "Nmap", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Si en un entorno industrial necesitas arrancar un equipo severamente dañado utilizando un entorno Live (un sistema operativo en un pendrive) repleto de herramientas de recuperación, reparación de disco y antivirus, ¿qué distribución es un clásico reconocido?",
+      "type": "single",
+      "generalExplanation": "Hiren's BootCD (o sus variantes modernas como Medicat USB o SystemRescue) es un célebre entorno Live USB que arranca independientemente del disco duro y agrupa herramientas de diagnóstico informático.",
+      "options": [
+        { "text": "Windows Server 2022", "isCorrect": false },
+        { "text": "Hiren's BootCD (o entorno PE similar)", "isCorrect": true },
+        { "text": "Android Studio", "isCorrect": false },
+        { "text": "FileZilla Live", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "Un equipo arranca bien, el hardware se ha testeado sin errores, pero el sistema va extremadamente lento, el navegador redirige a páginas no deseadas y se abren ventanas emergentes. ¿A qué apunta claramente el diagnóstico?",
+      "type": "single",
+      "generalExplanation": "Todos esos síntomas (ralentización, redirecciones, pop-ups extraños) son los indicadores típicos de una infección por Malware, Spyware o Adware en el sistema operativo.",
+      "options": [
+        { "text": "A un problema inminente en la fuente de alimentación.", "isCorrect": false },
+        { "text": "A un conflicto de interrupciones de la BIOS.", "isCorrect": false },
+        { "text": "A un problema severo de Software (probablemente presencia de Malware o Adware).", "isCorrect": true },
+        { "text": "A que el procesador ha perdido su pasta térmica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "Para descartar rápidamente si un problema (como reinicios, lentitud o drivers corruptos) es provocado por el hardware o por el software del sistema operativo, ¿cuál es una técnica de diagnóstico clásica muy eficaz?",
+      "type": "single",
+      "generalExplanation": "Iniciar el sistema desde un medio externo limpio (como un USB Live de Linux) aísla el disco duro y el Windows instalado. Si el error persiste, es de hardware; si desaparece, era el software.",
+      "options": [
+        { "text": "Iniciar el equipo con un medio de arranque externo limpio (como un Live CD/USB).", "isCorrect": true },
+        { "text": "Formatear el disco duro a bajo nivel y reinstalar tres veces.", "isCorrect": false },
+        { "text": "Hacer un ping recursivo al router de la operadora.", "isCorrect": false },
+        { "text": "Comprar RAM nueva e instalarla.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "Si se detecta en la red Ethernet de una fábrica que las comunicaciones sufren microcortes y hay sospechas de que un cable pudo haber sido mordido por roedores en alguna canaleta, ¿qué herramienta hardware mide el tiempo de reflejo de la señal para calcular la distancia exacta al corte?",
+      "type": "single",
+      "generalExplanation": "El Reflectómetro de Dominio de Tiempo (TDR) envía pulsos por el cable y mide el tiempo que tardan en rebotar en la falla (corte, cortocircuito), calculando así a qué distancia en metros está el problema.",
+      "options": [
+        { "text": "Osciloscopio analógico.", "isCorrect": false },
+        { "text": "Multímetro digital en modo continuidad.", "isCorrect": false },
+        { "text": "TDR (Time-Domain Reflectometer).", "isCorrect": true },
+        { "text": "Sniffer de paquetes inalámbrico.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué función cumple un 'Certificador de cables' en las infraestructuras de red de las empresas?",
+      "type": "single",
+      "generalExplanation": "El certificador realiza pruebas avanzadas de diafonía, atenuación y ruido para garantizar que el cable tendido cumple estrictamente con las normas y soporta el ancho de banda requerido para su Categoría (ej. Cat6).",
+      "options": [
+        { "text": "Comprueba si el cable cumple estrictamente los estándares (ej. Cat6) y garantiza que soportará las velocidades de datos requeridas.", "isCorrect": true },
+        { "text": "Solamente verifica si los 8 hilos están conectados en el orden correcto (mapa de hilos).", "isCorrect": false },
+        { "text": "Interpreta y lee el contenido de los paquetes IP encriptados.", "isCorrect": false },
+        { "text": "Genera direcciones MAC falsas para probar la seguridad de los switches.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "El comando de red nativo del sistema operativo que te muestra el estado de los interfaces de red, las conexiones activas y las tablas de enrutamiento se denomina:",
+      "type": "single",
+      "generalExplanation": "El comando 'netstat' (network statistics) muestra por consola un listado de todas las conexiones TCP/IP activas (entrantes y salientes) del equipo local.",
+      "options": [
+        { "text": "ipconfig", "isCorrect": false },
+        { "text": "traceroute", "isCorrect": false },
+        { "text": "ping", "isCorrect": false },
+        { "text": "netstat", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Si sospechas que hay un equipo extraño conectado clandestinamente a la subred de tu empresa pero no quieres usar línea de comandos compleja, ¿qué herramienta de software simple y gráfica se menciona para descubrir hosts y servicios?",
+      "type": "single",
+      "generalExplanation": "Advanced IP Scanner es un software gráfico y gratuito muy popular para listar rápidamente todas las IPs, nombres de equipo y MACs conectadas a una red local.",
+      "options": [
+        { "text": "Advanced IP Scanner", "isCorrect": true },
+        { "text": "PuTTY", "isCorrect": false },
+        { "text": "CPU-Z", "isCorrect": false },
+        { "text": "PassMark", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Cómo se define a Nmap ('Mapeador de redes') en la documentación técnica?",
+      "type": "single",
+      "generalExplanation": "Nmap es la herramienta 'open source' estándar en la industria para auditoría de seguridad, exploración profunda de red, escaneo de puertos abiertos e identificación de sistemas operativos.",
+      "options": [
+        { "text": "Como un antivirus residente que bloquea ataques de día cero.", "isCorrect": false },
+        { "text": "Como un navegador web anónimo en la deep web.", "isCorrect": false },
+        { "text": "Como un software de diseño de planos de red en 3D.", "isCorrect": false },
+        { "text": "Como una herramienta de exploración de red y auditoría de seguridad para descubrir hosts, servicios (puertos abiertos) y sistemas operativos.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Cuál es uno de los analizadores ('sniffers') de paquetes de red más conocidos, complejos y utilizados, indispensable para administradores que necesitan ver el tráfico 'crudo' en tiempo real?",
+      "type": "single",
+      "generalExplanation": "Wireshark es el analizador de protocolos de red por excelencia; captura tramas y paquetes de datos en la tarjeta de red para un análisis forense a nivel microscópico del tráfico.",
+      "options": [
+        { "text": "NetSpot", "isCorrect": false },
+        { "text": "Wireshark", "isCorrect": true },
+        { "text": "TeamViewer", "isCorrect": false },
+        { "text": "CrystalDiskInfo", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "Estás diagnosticando un equipo Windows que va muy lento y sospechas que hay algún programa malicioso enviando datos a un servidor desconocido. ¿Qué herramienta específica de Microsoft te proporciona una visualización en tiempo real de todas las conexiones TCP/IP que nacen de los procesos locales?",
+      "type": "single",
+      "generalExplanation": "TCPView (herramienta de la suite Sysinternals de Microsoft) mapea en tiempo real qué programa/proceso concreto de Windows está abriendo conexiones y hacia qué IPs externas.",
+      "options": [
+        { "text": "TCPView", "isCorrect": true },
+        { "text": "PingTools", "isCorrect": false },
+        { "text": "DiskCheckup", "isCorrect": false },
+        { "text": "MemTest64", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "Si estás analizando la red WiFi de una nave industrial con un dispositivo móvil y necesitas mapear la intensidad de la señal, los 'puntos muertos' y qué canales están saturados por redes vecinas, ¿qué aplicación popular se menciona en el temario?",
+      "type": "single",
+      "generalExplanation": "NetSpot (y aplicaciones de análisis Wifi similares) se utiliza con un portátil o móvil para visualizar el espectro de frecuencias, los canales ocupados y la cobertura de la señal inalámbrica.",
+      "options": [
+        { "text": "NetSpot", "isCorrect": true },
+        { "text": "Nmap", "isCorrect": false },
+        { "text": "HWMonitor", "isCorrect": false },
+        { "text": "Advanced IP Scanner", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "Frente a un problema donde no puedes alcanzar un servidor corporativo remoto, ejecutas 'Ping' al servidor y este no responde. Luego usas 'Ping' a tu propio Router local y sí responde. Finalmente, usas 'Traceroute'. ¿Qué información clave te proporcionará Traceroute?",
+      "type": "single",
+      "generalExplanation": "Traceroute mapea todos los saltos (routers intermedios) que da el paquete de datos en Internet; al ver en qué salto exacto el paquete se pierde o agota su tiempo, localiza el punto físico donde se interrumpe la conexión.",
+      "options": [
+        { "text": "Te mostrará la contraseña del servidor remoto.", "isCorrect": false },
+        { "text": "Te mostrará qué aplicación de tu PC está bloqueando el tráfico.", "isCorrect": false },
+        { "text": "Identificará exactamente en qué 'salto' o router intermedio se interrumpe la ruta hacia el servidor.", "isCorrect": true },
+        { "text": "Limpiará la caché DNS para obligar a reconectar.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "En el contexto de la gestión de operaciones de TI (Tecnologías de la Información), ¿cómo se define el 'Registro de Averías' (o Ticketing)?",
+      "type": "single",
+      "generalExplanation": "El registro de averías (creación de tickets) es el sistema formal para documentar incidentes con datos como fecha, síntoma, equipo afectado, personal asignado y estado, para rastrear la resolución.",
+      "options": [
+        { "text": "Es el archivo de texto ('log') que crea Wireshark al escanear la red.", "isCorrect": false },
+        { "text": "Es un chip de la placa base que graba el código de los pantallazos azules.", "isCorrect": false },
+        { "text": "El proceso organizativo de documentar los problemas (hardware/software), rastrearlos, asignarlos y archivarlos para control.", "isCorrect": true },
+        { "text": "El archivo de registro (Registry) del sistema operativo Windows.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué utilidad tiene archivar históricamente los 'Informes de Incidencias' en una empresa a largo plazo?",
+      "type": "single",
+      "generalExplanation": "El archivo de informes crea una base de conocimiento que permite resolver más rápido casos futuros, además de identificar patrones de falla sistémicos que justifiquen compras o renovaciones de hardware.",
+      "options": [
+        { "text": "Proporcionan información valiosa como base de conocimiento para prevenir problemas similares y guían criterios para futuras adquisiciones.", "isCorrect": true },
+        { "text": "Sirven exclusivamente para descontar salario a los operarios que rompen equipos.", "isCorrect": false },
+        { "text": "Aumentan automáticamente el espacio disponible en los discos duros mediante borrado de logs.", "isCorrect": false },
+        { "text": "Sustituyen a las copias de seguridad de los datos de producción.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Entre la información que DEBE incluir la documentación (entrada) en un registro de averías/incidencias ideal, encontramos:",
+      "type": "single",
+      "generalExplanation": "Un buen ticket de avería requiere trazabilidad completa: cuándo, qué falla, por qué (si se sabe), quién lo atiende, su estado y qué se ha hecho.",
+      "options": [
+        { "text": "Dirección MAC, puerto UDP del fallo y contraseña de root.", "isCorrect": false },
+        { "text": "Fecha y hora, descripción detallada, sistema afectado, estado actual (ej. en proceso) y personal asignado.", "isCorrect": true },
+        { "text": "Un esquema eléctrico completo de la placa base afectada.", "isCorrect": false },
+        { "text": "El contrato laboral de la persona que reportó la falla.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Qué nombre técnico recibe la técnica descrita en el tema para volver a colocar la pasta térmica entre la CPU y el disipador metálico?",
+      "type": "single",
+      "generalExplanation": "Aunque no se le da un nombre técnico específico complejo en este temario, la acción consiste en limpiar los restos viejos, aplicar pasta nueva y ensamblar el disipador, vital en el mantenimiento preventivo térmico.",
+      "options": [
+        { "text": "Overclocking térmico.", "isCorrect": false },
+        { "text": "Repasteo o sustitución de la pasta térmica.", "isCorrect": true },
+        { "text": "Delidding.", "isCorrect": false },
+        { "text": "Reflow de GPU.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "Para iniciar una limpieza interna en la placa base y tarjetas del ordenador con el fin de retirar el polvo, ¿cuál de los siguientes métodos es el más recomendado en el entorno industrial para no dañar componentes?",
+      "type": "single",
+      "generalExplanation": "El uso de aire comprimido (con control de presión) es la forma estándar y segura de desalojar el polvo profundo de las aletas de los disipadores sin rozar componentes con paños que generen estática.",
+      "options": [
+        { "text": "Lavar la placa base con agua y jabón neutro secándola al sol.", "isCorrect": false },
+        { "text": "Pasar un plumero de lana frotando los circuitos.", "isCorrect": false },
+        { "text": "Usar un chorro de aire a presión o un bote de aire comprimido especial.", "isCorrect": true },
+        { "text": "Aplicar aceite lubricante multiusos en los conectores PCIe.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Al lidiar con un problema donde el equipo funciona muy lento y la aplicación 'Administrador de Tareas' (Task Manager) de Windows muestra que la CPU está al 100% de uso sin tener ninguna aplicación abierta, ¿qué se debe sospechar inmediatamente?",
+      "type": "single",
+      "generalExplanation": "Un uso injustificado de la CPU al 100% en reposo es síntoma de que un proceso oculto (como minería de criptomonedas, malware o una actualización trabada) está consumiendo recursos en segundo plano.",
+      "options": [
+        { "text": "Que la pantalla del monitor tiene una tasa de refresco demasiado alta.", "isCorrect": false },
+        { "text": "Que el polvo ha bloqueado el puerto Gigabit Ethernet.", "isCorrect": false },
+        { "text": "Que existe un proceso anómalo, posiblemente malware u optimización trabada, consumiendo recursos.", "isCorrect": true },
+        { "text": "Que la fuente de alimentación está enviando voltaje insuficiente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "La suite HWiNFO no solo diagnostica hardware, también provee una característica muy útil de generación de salida de datos. ¿Cuál es?",
+      "type": "single",
+      "generalExplanation": "HWiNFO permite crear reportes exhaustivos con el inventario completo y el estado del sistema en múltiples formatos tabulares o de texto para integrarlo en inventarios corporativos.",
+      "options": [
+        { "text": "Generación de facturas comerciales automáticas de reparación.", "isCorrect": false },
+        { "text": "Recuperación de contraseñas de red en texto plano.", "isCorrect": false },
+        { "text": "Generación de informes detallados del inventario de hardware en formatos como texto, CSV, XML o HTML.", "isCorrect": true },
+        { "text": "Actualización automática de la BIOS desde su propio interfaz.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "Si una empresa tiene varios ordenadores clónicos (idénticos), ¿qué 'truco o consejo' operativo menciona el manual para agilizar muchísimo la reparación en caso de avería de uno de ellos?",
+      "type": "single",
+      "generalExplanation": "La estandarización del hardware permite a los técnicos realizar pruebas de intercambio rápido ('swapping') de componentes entre el equipo averiado y uno sano para aislar el fallo sin necesidad de test de software largos.",
+      "options": [
+        { "text": "Que se pueden conectar todos a la misma fuente de alimentación potente.", "isCorrect": false },
+        { "text": "Que permite intercambiar fácilmente componentes (fuente, RAM, GPU) entre ellos para aislar y detectar el origen del fallo por eliminación rápidamente.", "isCorrect": true },
+        { "text": "Que permite saltarse las licencias de sistema operativo clonando el disco.", "isCorrect": false },
+        { "text": "Que se pueden colocar todos en el mismo armario rack sin problemas térmicos.", "isCorrect": false }
+      ]
+    }
+  ]
+}

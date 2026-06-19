@@ -1,0 +1,499 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-1.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 1: Introducción a los sistemas informáticos industriales",
+    "examSummary": "Evaluación sobre la evolución histórica de la informática, generaciones de computadoras, arquitectura de sistemas y aplicaciones industriales.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cómo define la RAE el concepto de informática?",
+      "type": "single",
+      "generalExplanation": "Según la RAE, es el conjunto de conocimientos científicos y técnicas que hacen posible el tratamiento automático de la información por medio de computadoras.",
+      "options": [
+        { "text": "La ciencia que estudia exclusivamente el hardware de los ordenadores.", "isCorrect": false },
+        { "text": "Conjunto de conocimientos y técnicas para el tratamiento automático de la información mediante computadoras.", "isCorrect": true },
+        { "text": "El arte de programar sistemas operativos en entornos industriales.", "isCorrect": false },
+        { "text": "La gestión manual de datos mediante sistemas electrónicos complejos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿En qué año y con qué máquina se considera que arranca la historia de la informática?",
+      "type": "single",
+      "generalExplanation": "Arranca en 1890 con las máquinas tabuladoras de Herman Hollerith para el censo de EE. UU.",
+      "options": [
+        { "text": "En 1944 con la Mark I de IBM.", "isCorrect": false },
+        { "text": "En 1890 con las máquinas tabuladoras de Herman Hollerith.", "isCorrect": true },
+        { "text": "En 1950 con la UNIVAC I.", "isCorrect": false },
+        { "text": "En 1854 con el desarrollo del álgebra de Boole.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál de los siguientes es un antecedente de la informática del siglo II a. C.?",
+      "type": "single",
+      "generalExplanation": "El Mecanismo de Anticitera data del siglo II a. C.",
+      "options": [
+        { "text": "La regla de cálculo.", "isCorrect": false },
+        { "text": "La máquina de Babbage.", "isCorrect": false },
+        { "text": "El Mecanismo de Anticitera.", "isCorrect": true },
+        { "text": "El ábaco.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿En qué componentes electrónicos se basaban las computadoras electromecánicas de mediados del siglo XX?",
+      "type": "single",
+      "generalExplanation": "Los primeros ordenadores electromecánicos como el Z3 o Mark I se basaban en relés.",
+      "options": [
+        { "text": "Transistores de silicio.", "isCorrect": false },
+        { "text": "Válvulas de vacío.", "isCorrect": false },
+        { "text": "Circuitos integrados.", "isCorrect": false },
+        { "text": "Relés.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Qué característica física definía a la computadora Mark I de 1944?",
+      "type": "single",
+      "generalExplanation": "Medía 15,5 metros de largo, pesaba 5000 kg y tenía 800 km de cable.",
+      "options": [
+        { "text": "Era del tamaño de una maleta portátil.", "isCorrect": false },
+        { "text": "Pesaba 5000 kilogramos y medía más de 15 metros de largo.", "isCorrect": true },
+        { "text": "Fue la primera en usar microprocesadores Intel.", "isCorrect": false },
+        { "text": "Su consumo era inferior a 1 kW.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Qué tecnología sustituyó a los relés en la primera generación de computadoras electrónicas?",
+      "type": "single",
+      "generalExplanation": "Las válvulas electrónicas de vacío sustituyeron a los relés.",
+      "options": [
+        { "text": "Los transistores.", "isCorrect": false },
+        { "text": "Las válvulas electrónicas de vacío.", "isCorrect": true },
+        { "text": "Los chips de memoria flash.", "isCorrect": false },
+        { "text": "La fibra óptica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Cuál fue la primera computadora basada en la arquitectura von Neumann?",
+      "type": "single",
+      "generalExplanation": "La EDSAC (1949) fue la primera basada en arquitectura von Neumann.",
+      "options": [
+        { "text": "ENIAC.", "isCorrect": false },
+        { "text": "UNIVAC I.", "isCorrect": false },
+        { "text": "EDSAC.", "isCorrect": true },
+        { "text": "IBM 705.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Para qué tarea principal se utilizó la computadora ENIAC?",
+      "type": "single",
+      "generalExplanation": "Se utilizó para el cálculo de trayectorias balísticas y diseño de armamento nuclear.",
+      "options": [
+        { "text": "Control de tráfico aéreo.", "isCorrect": false },
+        { "text": "Cálculo de trayectorias balísticas y armamento nuclear.", "isCorrect": true },
+        { "text": "Gestión de nóminas industriales.", "isCorrect": false },
+        { "text": "Predicción meteorológica comercial.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué hito tecnológico marca el inicio de la segunda generación de computadoras en 1958?",
+      "type": "single",
+      "generalExplanation": "La sustitución de las válvulas de vacío por transistores.",
+      "options": [
+        { "text": "El uso de pantallas táctiles.", "isCorrect": false },
+        { "text": "La invención del ratón.", "isCorrect": false },
+        { "text": "La sustitución de válvulas de vacío por transistores.", "isCorrect": true },
+        { "text": "La creación de Internet.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Cuál es una ventaja principal del transistor sobre la válvula de vacío?",
+      "type": "single",
+      "generalExplanation": "Supuso una reducción importante en el tamaño y en el consumo eléctrico.",
+      "options": [
+        { "text": "Mayor generación de calor.", "isCorrect": false },
+        { "text": "Reducción de tamaño y menor consumo eléctrico.", "isCorrect": true },
+        { "text": "Necesidad de mayor voltaje de funcionamiento.", "isCorrect": false },
+        { "text": "Menor velocidad de conmutación.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "La sigla ENIAC corresponde a:",
+      "type": "single",
+      "generalExplanation": "Electronic Numerical Integrator and Calculator.",
+      "options": [
+        { "text": "Electronic Network Interactive And Computing.", "isCorrect": false },
+        { "text": "Electronic Numerical Integrator and Calculator.", "isCorrect": true },
+        { "text": "Engineered Numerical Industrial Analog Computer.", "isCorrect": false },
+        { "text": "Essential Number Internal Automatic Code.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Qué significa la sigla UNIVAC?",
+      "type": "single",
+      "generalExplanation": "UNIversal Automatic Computer.",
+      "options": [
+        { "text": "UNIversal Automatic Computer.", "isCorrect": true },
+        { "text": "United Variable Advanced Calculator.", "isCorrect": false },
+        { "text": "Unitary Virtual Access Component.", "isCorrect": false },
+        { "text": "Universal Virtual Analog Control.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué componente fue clave para la miniaturización de los ordenadores en la tercera generación?",
+      "type": "single",
+      "generalExplanation": "La aparición de los circuitos integrados permitió meter miles de transistores en un solo chip.",
+      "options": [
+        { "text": "El disco duro magnético.", "isCorrect": false },
+        { "text": "El circuito integrado.", "isCorrect": true },
+        { "text": "La cinta perforada.", "isCorrect": false },
+        { "text": "El monitor de rayos catódicos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Cuál es el objetivo principal de un sistema informático industrial?",
+      "type": "single",
+      "generalExplanation": "El objetivo es controlar, supervisar y optimizar procesos de producción en tiempo real.",
+      "options": [
+        { "text": "Navegar por redes sociales en la fábrica.", "isCorrect": false },
+        { "text": "Controlar, supervisar y optimizar procesos de producción.", "isCorrect": true },
+        { "text": "Sustituir a todos los trabajadores humanos.", "isCorrect": false },
+        { "text": "Reducir el uso de electricidad en las oficinas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué diferencia fundamental hay entre un PC doméstico y un PC industrial?",
+      "type": "single",
+      "generalExplanation": "El PC industrial está diseñado para entornos hostiles (polvo, vibración, temperatura) y funcionamiento 24/7.",
+      "options": [
+        { "text": "El PC industrial es más barato.", "isCorrect": false },
+        { "text": "El PC industrial soporta condiciones ambientales extremas y uso continuo.", "isCorrect": true },
+        { "text": "El PC doméstico es más rápido siempre.", "isCorrect": false },
+        { "text": "No hay ninguna diferencia técnica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué significa que un sistema trabaje en 'Tiempo Real'?",
+      "type": "single",
+      "generalExplanation": "Significa que el sistema debe responder a eventos externos dentro de un tiempo máximo garantizado.",
+      "options": [
+        { "text": "Que los datos se guardan en un reloj de pared.", "isCorrect": false },
+        { "text": "Que el tiempo de respuesta es determinista y garantizado.", "isCorrect": true },
+        { "text": "Que el ordenador nunca se apaga.", "isCorrect": false },
+        { "text": "Que funciona a la velocidad de la luz.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Cuál es una aplicación típica de la informática industrial en la regulación?",
+      "type": "single",
+      "generalExplanation": "El control de bucle cerrado (PID) para mantener variables como la temperatura.",
+      "options": [
+        { "text": "Diseño de logotipos.", "isCorrect": false },
+        { "text": "Control de procesos mediante lazos cerrados (PID).", "isCorrect": true },
+        { "text": "Escritura de correos electrónicos.", "isCorrect": false },
+        { "text": "Edición de vídeo promocional.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "En informática industrial, ¿qué es un SCADA?",
+      "type": "single",
+      "generalExplanation": "Es un sistema de Control, Supervisión y Adquisición de Datos.",
+      "options": [
+        { "text": "Un tipo de cable de red.", "isCorrect": false },
+        { "text": "Sistema de Supervisión, Control y Adquisición de Datos.", "isCorrect": true },
+        { "text": "Un robot articulado.", "isCorrect": false },
+        { "text": "Un lenguaje de programación de bajo nivel.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué puerto de comunicación clásico se menciona como alternativa al USB en entornos industriales?",
+      "type": "single",
+      "generalExplanation": "El RS232 se menciona como un estándar previo al USB.",
+      "options": [
+        { "text": "HDMI.", "isCorrect": false },
+        { "text": "RS232.", "isCorrect": true },
+        { "text": "SATA.", "isCorrect": false },
+        { "text": "VGA.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué ventaja ofrece el estándar USB en la conexión de dispositivos?",
+      "type": "single",
+      "generalExplanation": "Permite la conexión y desconexión (Plug & Play) sin necesidad de apagar la computadora.",
+      "options": [
+        { "text": "Solo sirve para teclados.", "isCorrect": false },
+        { "text": "Conexión y desconexión sencilla sin apagar el equipo.", "isCorrect": true },
+        { "text": "Es inmune a todas las interferencias magnéticas industriales.", "isCorrect": false },
+        { "text": "No requiere drivers en ningún caso.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Cuál es la velocidad máxima teórica de USB 3.2 según el texto?",
+      "type": "single",
+      "generalExplanation": "Puede llegar hasta los 10 gigabits por segundo.",
+      "options": [
+        { "text": "480 Mbps.", "isCorrect": false },
+        { "text": "5 Gbps.", "isCorrect": false },
+        { "text": "10 Gbps.", "isCorrect": true },
+        { "text": "100 Gbps.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué componente de un PC industrial permite la expansión para tarjetas de comunicación específicas?",
+      "type": "single",
+      "generalExplanation": "Los buses de expansión (como PCIe o backplanes industriales).",
+      "options": [
+        { "text": "La fuente de alimentación.", "isCorrect": false },
+        { "text": "Los buses de expansión (PCI/PCIe).", "isCorrect": true },
+        { "text": "El ventilador de la CPU.", "isCorrect": false },
+        { "text": "El teclado robustecido.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿A qué se refiere el término 'Fanless' en un PC industrial?",
+      "type": "single",
+      "generalExplanation": "A equipos que no usan ventiladores para evitar la entrada de suciedad y mejorar la fiabilidad.",
+      "options": [
+        { "text": "Que no tiene sistema operativo.", "isCorrect": false },
+        { "text": "Que no utiliza ventiladores mecánicos para refrigeración.", "isCorrect": true },
+        { "text": "Que no tiene pantalla conectada.", "isCorrect": false },
+        { "text": "Que no necesita energía eléctrica constante.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Cuál es una tendencia actual mencionada en el sumario?",
+      "type": "single",
+      "generalExplanation": "La integración de IoT y la digitalización de la industria (Industria 4.0).",
+      "options": [
+        { "text": "Volver a los sistemas analógicos.", "isCorrect": false },
+        { "text": "La Industria 4.0 y el IoT.", "isCorrect": true },
+        { "text": "La eliminación de los PLC.", "isCorrect": false },
+        { "text": "El uso exclusivo de papel para planos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué papel juega el PLC en un sistema informático industrial?",
+      "type": "single",
+      "generalExplanation": "Es el cerebro que ejecuta la lógica de control en la planta o proceso.",
+      "options": [
+        { "text": "Es solo una pantalla de visualización.", "isCorrect": false },
+        { "text": "Es el controlador lógico programable encargado de la ejecución.", "isCorrect": true },
+        { "text": "Sirve para realizar copias de seguridad de documentos Office.", "isCorrect": false },
+        { "text": "Es un sensor de temperatura avanzado.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué significa el concepto de 'Disponibilidad' en la industria?",
+      "type": "single",
+      "generalExplanation": "Es la capacidad de un sistema para estar operativo y funcionando el mayor tiempo posible.",
+      "options": [
+        { "text": "Que el técnico esté localizable por teléfono.", "isCorrect": false },
+        { "text": "La capacidad del sistema para estar operativo sin fallos.", "isCorrect": true },
+        { "text": "Que haya stock de piezas en la tienda.", "isCorrect": false },
+        { "text": "La rapidez con la que se enciende el monitor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué es la 'Adquisición de Datos' en un proceso industrial?",
+      "type": "single",
+      "generalExplanation": "Es el proceso de capturar señales del mundo físico (sensores) y convertirlas en datos digitales.",
+      "options": [
+        { "text": "Comprar bases de datos a otras empresas.", "isCorrect": false },
+        { "text": "Capturar señales de sensores para su procesamiento digital.", "isCorrect": true },
+        { "text": "Imprimir los informes de producción al final del día.", "isCorrect": false },
+        { "text": "Contratar analistas de datos externos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "En la pirámide de automatización, ¿dónde se sitúa el PC Industrial?",
+      "type": "single",
+      "generalExplanation": "Suele situarse en los niveles de control y supervisión (Nivel 1 y 2).",
+      "options": [
+        { "text": "Nivel de gestión empresarial únicamente.", "isCorrect": false },
+        { "text": "Niveles de control y supervisión.", "isCorrect": true },
+        { "text": "Solo en el nivel de campo (sensores).", "isCorrect": false },
+        { "text": "Fuera de la pirámide.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué tecnología permitió el paso de la computación de 'grandes salas' a la computación 'personal'?",
+      "type": "single",
+      "generalExplanation": "El microprocesador.",
+      "options": [
+        { "text": "La válvula de vacío de mayor tamaño.", "isCorrect": false },
+        { "text": "El microprocesador.", "isCorrect": true },
+        { "text": "La refrigeración líquida.", "isCorrect": false },
+        { "text": "El teclado mecánico.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué es un sistema informático industrial 'Embebido'?",
+      "type": "single",
+      "generalExplanation": "Es un sistema diseñado para realizar una o pocas funciones dedicadas dentro de un dispositivo mayor.",
+      "options": [
+        { "text": "Un sistema que está mojado en aceite industrial.", "isCorrect": false },
+        { "text": "Un sistema dedicado integrado dentro del propio equipo o máquina.", "isCorrect": true },
+        { "text": "Un ordenador que se puede llevar en el bolsillo.", "isCorrect": false },
+        { "text": "Una red de miles de ordenadores interconectados.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué característica define a la 'Robustez' de un sistema?",
+      "type": "single",
+      "generalExplanation": "La resistencia a fallos ante perturbaciones externas o mal uso.",
+      "options": [
+        { "text": "El peso total de la carcasa de acero.", "isCorrect": false },
+        { "text": "La resistencia ante condiciones adversas y fallos.", "isCorrect": true },
+        { "text": "La cantidad de memoria RAM que dispone.", "isCorrect": false },
+        { "text": "La velocidad del procesador.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué tipo de señales maneja principalmente la informática industrial a nivel de campo?",
+      "type": "single",
+      "generalExplanation": "Señales analógicas y digitales provenientes de sensores y actuadores.",
+      "options": [
+        { "text": "Solo señales de audio de alta fidelidad.", "isCorrect": false },
+        { "text": "Señales analógicas y digitales de sensores/actuadores.", "isCorrect": true },
+        { "text": "Obras de arte digitales (NFT).", "isCorrect": false },
+        { "text": "Señales de radio de larga distancia únicamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Por qué es crítica la ciberseguridad en la informática industrial actual?",
+      "type": "single",
+      "generalExplanation": "Porque la interconexión (IT/OT) expone a las fábricas a ataques que pueden parar la producción.",
+      "options": [
+        { "text": "Para evitar que los empleados jueguen online.", "isCorrect": false },
+        { "text": "Para proteger la producción y la seguridad física de los procesos interconectados.", "isCorrect": true },
+        { "text": "Para que no se agote la batería de los sensores.", "isCorrect": false },
+        { "text": "Para mejorar la calidad de las videollamadas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué función tiene una HMI?",
+      "type": "single",
+      "generalExplanation": "Human-Machine Interface: Permite la interacción entre el operario y la máquina.",
+      "options": [
+        { "text": "Hardware de Memoria Interna.", "isCorrect": false },
+        { "text": "Interfaz Hombre-Máquina para la interacción y control.", "isCorrect": true },
+        { "text": "Herramienta de Mantenimiento Integral.", "isCorrect": false },
+        { "text": "Un protocolo de red inalámbrica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Cuál es la principal fuente de calor en un PC que los diseños industriales intentan mitigar?",
+      "type": "single",
+      "generalExplanation": "El microprocesador (CPU).",
+      "options": [
+        { "text": "El teclado.", "isCorrect": false },
+        { "text": "El microprocesador (CPU).", "isCorrect": true },
+        { "text": "Los cables de red.", "isCorrect": false },
+        { "text": "El ratón óptico.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿A qué generación pertenecen las computadoras que usan Circuitos Integrados?",
+      "type": "single",
+      "generalExplanation": "Tercera generación.",
+      "options": [
+        { "text": "Primera generación.", "isCorrect": false },
+        { "text": "Segunda generación.", "isCorrect": false },
+        { "text": "Tercera generación.", "isCorrect": true },
+        { "text": "Cuarta generación.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Quién desarrolló la máquina tabuladora para el censo de 1890?",
+      "type": "single",
+      "generalExplanation": "Herman Hollerith.",
+      "options": [
+        { "text": "Charles Babbage.", "isCorrect": false },
+        { "text": "Herman Hollerith.", "isCorrect": true },
+        { "text": "Alan Turing.", "isCorrect": false },
+        { "text": "George Boole.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "La cuarta generación de computadoras se caracteriza por:",
+      "type": "single",
+      "generalExplanation": "La integración a gran escala (LSI y VLSI) y el nacimiento del microprocesador.",
+      "options": [
+        { "text": "El uso masivo de válvulas de vacío.", "isCorrect": false },
+        { "text": "La integración a gran escala y microprocesadores.", "isCorrect": true },
+        { "text": "La desaparición de los discos duros.", "isCorrect": false },
+        { "text": "El uso exclusivo de inteligencia artificial cuántica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué ventaja tiene el uso de arquitecturas abiertas (como el PC) en la industria?",
+      "type": "single",
+      "generalExplanation": "Facilidad de repuestos, compatibilidad de software y menor coste frente a sistemas propietarios.",
+      "options": [
+        { "text": "Que cualquiera puede entrar en la fábrica.", "isCorrect": false },
+        { "text": "Compatibilidad de software y facilidad de encontrar repuestos estándar.", "isCorrect": true },
+        { "text": "Que no requieren mantenimiento.", "isCorrect": false },
+        { "text": "Que funcionan sin electricidad.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "En el contexto de comunicaciones, ¿qué significa 'Plug and Play'?",
+      "type": "single",
+      "generalExplanation": "Capacidad de un sistema informático para configurar automáticamente los dispositivos al conectarlos.",
+      "options": [
+        { "text": "Conectar y jugar videojuegos.", "isCorrect": false },
+        { "text": "Configuración automática de dispositivos al conectarlos.", "isCorrect": true },
+        { "text": "Tener que reiniciar el equipo cada vez que se conecta algo.", "isCorrect": false },
+        { "text": "Solo funciona para dispositivos con cable de red.", "isCorrect": false }
+      ]
+    }
+  ]
+}

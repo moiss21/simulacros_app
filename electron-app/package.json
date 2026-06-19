@@ -1,0 +1,41 @@
+{
+  "name": "nombre-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "icon": "icon.ico",    
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "asar": true,
+    "win": {
+      "signAndEditExecutable": false,
+      "forceCodeSigning": false,
+      "target": [
+        "nsis"
+      ]
+    },
+    "extraResources": [
+      {
+        "from": "nombre-app/browser",
+        "to": "nombre-app/browser"
+      }
+    ]
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

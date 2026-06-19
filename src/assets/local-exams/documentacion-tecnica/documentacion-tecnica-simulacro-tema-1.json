@@ -1,0 +1,499 @@
+{
+  "examProperties": {
+    "id": "documentacion-tecnica/documentacion-tecnica-simulacro-tema-1.json",
+    "subjectName": "Documentación Técnica",
+    "examTitle": "Simulacro Examen de Documentación Técnica - UD 1: Introducción a los sistemas informáticos industriales",
+    "examSummary": "Evaluación técnica sobre el ciclo de vida del proyecto, estructura documental normalizada y trámites de legalización industrial.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#4169e1"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cómo se define un proyecto desde el punto de vista estrictamente técnico?",
+      "type": "single",
+      "generalExplanation": "Técnicamente, el proyecto es el conjunto de documentos que permiten definir una instalación o proceso industrial para su ejecución.",
+      "options": [
+        { "text": "Un conjunto de croquis y esquemas preliminares de una idea.", "isCorrect": false },
+        { "text": "El conjunto de documentos necesarios para definir una instalación o proceso industrial.", "isCorrect": true },
+        { "text": "La ejecución material de una obra siguiendo instrucciones verbales.", "isCorrect": false },
+        { "text": "El contrato legal que vincula al promotor con la administración pública.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "En el contexto de la Industria 4.0, ¿qué área técnica es ahora crítica en los proyectos de automatización?",
+      "type": "single",
+      "generalExplanation": "La Industria 4.0 integra áreas como el Cloud Computing, IoT, Big Data y Ciberseguridad en el diseño de proyectos.",
+      "options": [
+        { "text": "Mantenimiento correctivo mecánico.", "isCorrect": false },
+        { "text": "Ciberseguridad e integración de sistemas en la nube.", "isCorrect": true },
+        { "text": "Dibujo técnico asistido por tablero.", "isCorrect": false },
+        { "text": "Gestión de residuos de oficina.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Qué implica la característica de 'Unicidad' en un proyecto técnico?",
+      "type": "single",
+      "generalExplanation": "Cada proyecto es único porque se adapta a los requisitos específicos de un cliente y un emplazamiento concreto.",
+      "options": [
+        { "text": "Que el proyecto debe ser realizado por un único técnico.", "isCorrect": false },
+        { "text": "Que el proyecto es personalizado y adaptado a los requisitos específicos del cliente.", "isCorrect": true },
+        { "text": "Que solo se puede utilizar un tipo de tecnología en toda la instalación.", "isCorrect": false },
+        { "text": "Que el presupuesto debe ser una cifra única sin desglose.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cuál es la desviación presupuestaria máxima recomendada en la ejecución de un proyecto técnico?",
+      "type": "single",
+      "generalExplanation": "Se establece que la ejecución debe ajustarse al presupuesto con una desviación no superior al 5%.",
+      "options": [
+        { "text": "Un 10% sobre el Presupuesto de Ejecución Material.", "isCorrect": false },
+        { "text": "Un 5% sobre el presupuesto inicial.", "isCorrect": true },
+        { "text": "Un 15% debido a la volatilidad de precios de materiales.", "isCorrect": false },
+        { "text": "No existe límite mientras esté justificado por el director de obra.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cuáles son las tres fases fundamentales de un proyecto técnico?",
+      "type": "single",
+      "generalExplanation": "Todo proyecto técnico debe contar al menos con las fases de planificación, ejecución y entrega.",
+      "options": [
+        { "text": "Diseño, contratación y facturación.", "isCorrect": false },
+        { "text": "Planificación, ejecución y entrega.", "isCorrect": true },
+        { "text": "Anteproyecto, proyecto básico y proyecto ejecutivo.", "isCorrect": false },
+        { "text": "Estudio de mercado, viabilidad y puesta en marcha.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Según su complejidad, ¿cuál es un ejemplo de proyecto sencillo?",
+      "type": "single",
+      "generalExplanation": "Proyectos con pocos ámbitos tecnológicos y tiempos cortos, como un armario eléctrico para cámaras frigoríficas.",
+      "options": [
+        { "text": "Automatización integral de una planta de ensamblaje de vehículos.", "isCorrect": false },
+        { "text": "Diseño y montaje del armario eléctrico de unas cámaras frigoríficas.", "isCorrect": true },
+        { "text": "Implementación de un sistema Big Data para control de inventarios nacional.", "isCorrect": false },
+        { "text": "Desarrollo de un gemelo digital para una refinería.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué define a un proyecto de titularidad pública?",
+      "type": "single",
+      "generalExplanation": "Son proyectos promovidos por las Administraciones Públicas (Estado, Comunidades Autónomas, Ayuntamientos).",
+      "options": [
+        { "text": "Cualquier proyecto que pueda ser visitado por el público.", "isCorrect": false },
+        { "text": "Proyectos promovidos por Administraciones como Ayuntamientos o Ministerios.", "isCorrect": true },
+        { "text": "Proyectos de empresas privadas subvencionados parcialmente.", "isCorrect": false },
+        { "text": "Proyectos realizados por Colegios Profesionales.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿En qué documento se dimensionan y justifican los medios necesarios para el plan?",
+      "type": "single",
+      "generalExplanation": "La Memoria es el documento donde se detalla, dimensiona y justifica la solución técnica.",
+      "options": [
+        { "text": "En el Pliego de Condiciones Técnicas.", "isCorrect": false },
+        { "text": "En la Memoria del proyecto.", "isCorrect": true },
+        { "text": "En el Presupuesto de Ejecución Material.", "isCorrect": false },
+        { "text": "En los Planos de conjunto.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué información debe contener la Memoria Descriptiva?",
+      "type": "single",
+      "generalExplanation": "Incluye el objeto del proyecto, antecedentes, ubicación y la justificación de la solución elegida.",
+      "options": [
+        { "text": "El listado de precios unitarios de cada componente.", "isCorrect": false },
+        { "text": "El objeto, antecedentes, emplazamiento y justificación de la solución.", "isCorrect": true },
+        { "text": "Las fórmulas matemáticas y cálculos de secciones.", "isCorrect": false },
+        { "text": "Las normas de seguridad y salud en el trabajo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Cuál es la función de los 'Anexos' en la Memoria?",
+      "type": "single",
+      "generalExplanation": "Contener información detallada que, por su extensión o especificidad, no debe estar en el cuerpo principal.",
+      "options": [
+        { "text": "Sustituir a los planos en caso de error gráfico.", "isCorrect": false },
+        { "text": "Recoger información que no se considera esencial para el cuerpo principal de la memoria.", "isCorrect": true },
+        { "text": "Establecer las sanciones por incumplimiento de plazos.", "isCorrect": false },
+        { "text": "Listar exclusivamente a los proveedores homologados.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Por qué se dice que los Planos son un 'lenguaje universal'?",
+      "type": "single",
+      "generalExplanation": "Deben ser comprensibles por cualquier técnico, utilizando simbología normalizada e inequívoca.",
+      "options": [
+        { "text": "Porque se deben redactar obligatoriamente en inglés.", "isCorrect": false },
+        { "text": "Porque deben ser entendidos por cualquier técnico mediante simbología normalizada.", "isCorrect": true },
+        { "text": "Porque son el único documento que no requiere firma del técnico.", "isCorrect": false },
+        { "text": "Porque su escala siempre debe ser 1:1 para evitar traducciones.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Qué es el Pliego de Condiciones?",
+      "type": "single",
+      "generalExplanation": "Es el documento que establece las normas, calidades de materiales y condiciones legales/económicas de la obra.",
+      "options": [
+        { "text": "Un resumen de los cálculos de potencia.", "isCorrect": false },
+        { "text": "El documento que regula las calidades, normas de ejecución y cláusulas del contrato.", "isCorrect": true },
+        { "text": "El registro de horas de trabajo de los operarios.", "isCorrect": false },
+        { "text": "La lista de planos entregados al cliente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Dentro del Pliego de Condiciones, ¿qué regulan las 'Condiciones Económicas'?",
+      "type": "single",
+      "generalExplanation": "Regulan la forma de pago, plazos, revisión de precios y posibles indemnizaciones.",
+      "options": [
+        { "text": "El coste de los materiales en el mercado mayorista.", "isCorrect": false },
+        { "text": "La forma de pago, revisiones de precios y penalizaciones.", "isCorrect": true },
+        { "text": "El salario neto de los técnicos proyectistas.", "isCorrect": false },
+        { "text": "El margen de beneficio neto de la empresa promotora.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Qué son las 'Mediciones' en un proyecto?",
+      "type": "single",
+      "generalExplanation": "Es el listado cuantitativo de las unidades de obra necesarias para la ejecución.",
+      "options": [
+        { "text": "El cálculo de las dimensiones de las piezas en el plano.", "isCorrect": false },
+        { "text": "El listado de cantidades de cada unidad de obra que compone el proyecto.", "isCorrect": true },
+        { "text": "Las comprobaciones de tensión y corriente tras la instalación.", "isCorrect": false },
+        { "text": "El pesaje de los materiales antes de entrar en fábrica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Cómo se calcula el Presupuesto de Ejecución Material (PEM)?",
+      "type": "single",
+      "generalExplanation": "Es el sumatorio del coste de materiales y mano de obra de todas las partidas.",
+      "options": [
+        { "text": "Aplicando el IVA al presupuesto total.", "isCorrect": false },
+        { "text": "Sumando el coste de materiales y mano de obra de las unidades de obra.", "isCorrect": true },
+        { "text": "Sumando el PEM más los gastos generales.", "isCorrect": false },
+        { "text": "Multiplicando la superficie por un coeficiente estándar de mercado.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué conceptos se añaden al PEM para obtener el Presupuesto de Ejecución por Contrata (PEC)?",
+      "type": "single",
+      "generalExplanation": "El PEC se obtiene sumando al PEM los Gastos Generales (GG) y el Beneficio Industrial (BI).",
+      "options": [
+        { "text": "Solo el IVA vigente.", "isCorrect": false },
+        { "text": "Los Gastos Generales y el Beneficio Industrial.", "isCorrect": true },
+        { "text": "Los honorarios del técnico y las tasas de visado.", "isCorrect": false },
+        { "text": "Las posibles indemnizaciones por retrasos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué es el Anteproyecto o Proyecto Básico?",
+      "type": "single",
+      "generalExplanation": "Es un estudio previo para definir las líneas generales y evaluar la viabilidad técnica y económica.",
+      "options": [
+        { "text": "Un borrador de los planos finales sin acotar.", "isCorrect": false },
+        { "text": "Un estudio previo para definir las líneas generales y comprobar la viabilidad.", "isCorrect": true },
+        { "text": "El documento que se entrega tras finalizar la obra.", "isCorrect": false },
+        { "text": "Una ampliación del proyecto ejecutivo para reformas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué documentación mínima suele incluir un Anteproyecto?",
+      "type": "single",
+      "generalExplanation": "Suele constar de memoria descriptiva, presupuesto estimado y esquemas o planos generales.",
+      "options": [
+        { "text": "Cálculos estructurales detallados y firmas de instaladores.", "isCorrect": false },
+        { "text": "Memoria descriptiva, presupuesto estimado y esquemas o planos generales.", "isCorrect": true },
+        { "text": "Pliego de condiciones particulares y anexos de cálculo.", "isCorrect": false },
+        { "text": "Certificado final de obra y manual de usuario.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "En la tramitación de un proyecto, ¿qué es una OCA?",
+      "type": "single",
+      "generalExplanation": "Es un Organismo de Control Autorizado para realizar inspecciones reglamentarias.",
+      "options": [
+        { "text": "Una Oficina de Coordinación Administrativa.", "isCorrect": false },
+        { "text": "Un Organismo de Control Autorizado.", "isCorrect": true },
+        { "text": "Una Organización de Consultoría Ambiental.", "isCorrect": false },
+        { "text": "Un Operador de Comunicaciones Automatizadas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué normativa regula específicamente las verificaciones en instalaciones eléctricas de baja tensión?",
+      "type": "single",
+      "generalExplanation": "El Reglamento Electrotécnico de Baja Tensión (REBT) marca los ensayos y mediciones necesarios.",
+      "options": [
+        { "text": "El Código Técnico de la Edificación (CTE).", "isCorrect": false },
+        { "text": "El REBT.", "isCorrect": true },
+        { "text": "La Ley de Prevención de Riesgos Laborales.", "isCorrect": false },
+        { "text": "La normativa ISO 9001.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Quién debe emitir el Certificado de Dirección de Obra?",
+      "type": "single",
+      "generalExplanation": "Lo emite y firma el técnico competente encargado de dirigir y supervisar la ejecución.",
+      "options": [
+        { "text": "El cliente o promotor del proyecto.", "isCorrect": false },
+        { "text": "El director de obra o técnico competente.", "isCorrect": true },
+        { "text": "El jefe de almacén de la empresa suministradora.", "isCorrect": false },
+        { "text": "El funcionario de la delegación de industria.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "Para la puesta en marcha de una instalación industrial, ¿qué trámite es imprescindible?",
+      "type": "single",
+      "generalExplanation": "Es necesario presentar el certificado de dirección de obra y el certificado de inspección favorable ante la administración.",
+      "options": [
+        { "text": "Haber pagado todos los materiales al proveedor.", "isCorrect": false },
+        { "text": "Presentar el certificado de dirección de obra y la inspección favorable.", "isCorrect": true },
+        { "text": "Tener contratado el servicio de mantenimiento externo.", "isCorrect": false },
+        { "text": "Publicar el proyecto en el Boletín Oficial correspondiente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Según el flujo de proceso del Tema 1, ¿cuál es el paso inmediato tras la Verificación?",
+      "type": "single",
+      "generalExplanation": "Tras la verificación (por OCA o empresa contratada), se procede a la emisión del Certificado de la Instalación.",
+      "options": [
+        { "text": "La fase de Planificación.", "isCorrect": false },
+        { "text": "La emisión del Certificado de la Instalación.", "isCorrect": true },
+        { "text": "La redacción del Anteproyecto.", "isCorrect": false },
+        { "text": "La compra de maquinaria adicional.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Qué documento justifica técnicamente las secciones de cable o potencias de motores?",
+      "type": "single",
+      "generalExplanation": "Los Cálculos (dentro de la Memoria) justifican las dimensiones de los elementos de la instalación.",
+      "options": [
+        { "text": "El Pliego de Condiciones Económicas.", "isCorrect": false },
+        { "text": "Los Anexos de Cálculo de la Memoria.", "isCorrect": true },
+        { "text": "El Plano de Situación.", "isCorrect": false },
+        { "text": "La carátula del proyecto.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué se entiende por 'Temporalidad' de un proyecto?",
+      "type": "single",
+      "generalExplanation": "Un proyecto tiene una duración limitada, con hitos marcados de inicio y fin.",
+      "options": [
+        { "text": "Que el proyecto solo sirve para una temporada del año.", "isCorrect": false },
+        { "text": "Que debe cumplir unos plazos de ejecución, verificación y puesta en marcha.", "isCorrect": true },
+        { "text": "Que los materiales usados tienen fecha de caducidad.", "isCorrect": false },
+        { "text": "Que el técnico solo puede trabajar a tiempo parcial.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "En el Pliego de Condiciones, ¿qué contienen las 'Condiciones Generales'?",
+      "type": "single",
+      "generalExplanation": "Contienen cláusulas legales, administrativas y obligaciones generales de las partes.",
+      "options": [
+        { "text": "La lista de herramientas permitidas.", "isCorrect": false },
+        { "text": "Aspectos legales, administrativos y obligaciones del promotor y contratista.", "isCorrect": true },
+        { "text": "Las potencias nominales de los equipos a instalar.", "isCorrect": false },
+        { "text": "El presupuesto detallado por partidas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Cuál es un ejemplo de proyecto de 'Área de influencia Nacional'?",
+      "type": "single",
+      "generalExplanation": "Proyectos cuyo impacto o regulación afectan a todo el territorio del país.",
+      "options": [
+        { "text": "La electrificación de un garaje comunitario.", "isCorrect": false },
+        { "text": "El despliegue de una red de fibra óptica estatal.", "isCorrect": true },
+        { "text": "La automatización de una PYME local.", "isCorrect": false },
+        { "text": "El alumbrado de una plaza municipal.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Por qué es importante la 'Flexibilidad' en un proyecto técnico?",
+      "type": "single",
+      "generalExplanation": "Permite gestionar imprevistos, modificaciones del cliente o cambios normativos durante la ejecución.",
+      "options": [
+        { "text": "Para poder usar materiales de menor calidad si es necesario.", "isCorrect": false },
+        { "text": "Para poder gestionar necesidades e imprevistos durante el proceso.", "isCorrect": true },
+        { "text": "Para permitir que los planos se dibujen a mano alzada.", "isCorrect": false },
+        { "text": "Para evitar tener que firmar los documentos finales.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué función cumple el 'Visado' de un colegio profesional?",
+      "type": "single",
+      "generalExplanation": "Acredita la identidad del técnico, su habilitación y la corrección formal de la documentación.",
+      "options": [
+        { "text": "Aprobar el precio final del proyecto.", "isCorrect": false },
+        { "text": "Validar la habilitación del técnico y la integridad formal del proyecto.", "isCorrect": true },
+        { "text": "Sustituir a la inspección de la OCA.", "isCorrect": false },
+        { "text": "Certificar que el cliente ha pagado la obra.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "En el presupuesto, ¿qué es el 'Beneficio Industrial' (BI)?",
+      "type": "single",
+      "generalExplanation": "Es el porcentaje de beneficio previsto para la empresa constructora/instaladora.",
+      "options": [
+        { "text": "El dinero que se ahorra al comprar materiales usados.", "isCorrect": false },
+        { "text": "El margen de beneficio neto para la empresa contratista.", "isCorrect": true },
+        { "text": "Los impuestos estatales aplicados a la maquinaria.", "isCorrect": false },
+        { "text": "El sueldo de los operarios de montaje.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué documento especifica los procedimientos de montaje de un PLC en cuadro?",
+      "type": "single",
+      "generalExplanation": "El Pliego de Condiciones de Ejecución detalla cómo deben realizarse los trabajos técnicos.",
+      "options": [
+        { "text": "La Memoria Descriptiva.", "isCorrect": false },
+        { "text": "El Pliego de Condiciones de Ejecución.", "isCorrect": true },
+        { "text": "El Presupuesto de Ejecución Material.", "isCorrect": false },
+        { "text": "El Anexo de Cálculos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Cuál es el objetivo principal del Pliego de Seguridad y Salud?",
+      "type": "single",
+      "generalExplanation": "Garantizar la integridad física de los trabajadores y el cumplimiento de la normativa de prevención.",
+      "options": [
+        { "text": "Listar los hospitales más cercanos.", "isCorrect": false },
+        { "text": "Establecer las medidas de prevención de riesgos durante la obra.", "isCorrect": true },
+        { "text": "Definir las multas por llegar tarde al trabajo.", "isCorrect": false },
+        { "text": "Calcular la resistencia de los materiales al fuego.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "Un proyecto de automatización para una fábrica privada promovido por la propia empresa es de titularidad:",
+      "type": "single",
+      "generalExplanation": "Es de titularidad privada, ya que el promotor y los fondos son de una entidad particular.",
+      "options": [
+        { "text": "Mixta.", "isCorrect": false },
+        { "text": "Privada.", "isCorrect": true },
+        { "text": "Pública local.", "isCorrect": false },
+        { "text": "Académica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "En la Memoria, ¿qué se explica en el apartado de 'Antecedentes'?",
+      "type": "single",
+      "generalExplanation": "Describe la situación previa, la necesidad que da origen al proyecto o proyectos anteriores relacionados.",
+      "options": [
+        { "text": "El futuro mantenimiento de la instalación.", "isCorrect": false },
+        { "text": "La situación previa y la necesidad que origina el proyecto.", "isCorrect": true },
+        { "text": "Las marcas de los componentes que se van a comprar.", "isCorrect": false },
+        { "text": "El currículum vitae del ingeniero proyectista.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué representa la 'Planificación y Organización rigurosa' en un proyecto?",
+      "type": "single",
+      "generalExplanation": "Esencial para gestionar grandes recursos financieros y productivos sin desviaciones críticas.",
+      "options": [
+        { "text": "El diseño de los logotipos de la empresa.", "isCorrect": false },
+        { "text": "La gestión eficiente de los recursos financieros y productivos involucrados.", "isCorrect": true },
+        { "text": "La selección del color de los cables.", "isCorrect": false },
+        { "text": "La organización de la fiesta de inauguración.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿A qué se refiere el término 'Gemelo Digital' mencionado en el tema?",
+      "type": "single",
+      "generalExplanation": "Es una representación virtual de un sistema físico usada para simulación y optimización en proyectos modernos.",
+      "options": [
+        { "text": "A una copia en papel de toda la documentación.", "isCorrect": false },
+        { "text": "A una réplica virtual de la instalación para simulación y control.", "isCorrect": true },
+        { "text": "A tener dos directores de obra iguales.", "isCorrect": false },
+        { "text": "A instalar dos máquinas idénticas para evitar paradas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Cuál es un ejemplo de proyecto técnico 'Complejo'?",
+      "type": "single",
+      "generalExplanation": "Aquellos que integran múltiples tecnologías (Big Data, Cloud, IA) y gran número de elementos.",
+      "options": [
+        { "text": "Sustitución de una bombilla por un LED.", "isCorrect": false },
+        { "text": "Automatización integral de una refinería con integración IoT y Cloud.", "isCorrect": true },
+        { "text": "Instalación de un magnetotérmico adicional.", "isCorrect": false },
+        { "text": "Cableado de una toma de corriente doméstica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Qué importancia tiene el 'Emplazamiento' en la Memoria?",
+      "type": "single",
+      "generalExplanation": "Define la ubicación geográfica exacta donde se ejecutará la instalación.",
+      "options": [
+        { "text": "Determina el sueldo del técnico según la zona.", "isCorrect": false },
+        { "text": "Define la ubicación geográfica precisa de la instalación.", "isCorrect": true },
+        { "text": "Indica el lugar donde se guardan los planos físicamente.", "isCorrect": false },
+        { "text": "Es el nombre de la empresa de transporte.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué se debe hacer tras obtener un certificado de inspección 'Favorable'?",
+      "type": "single",
+      "generalExplanation": "Se debe registrar en el organismo competente de la Administración para su legalización definitiva.",
+      "options": [
+        { "text": "Archivarlo sin más trámites.", "isCorrect": false },
+        { "text": "Registrarlo ante el organismo competente de la Administración.", "isCorrect": true },
+        { "text": "Enviarlo al fabricante de la maquinaria para su garantía.", "isCorrect": false },
+        { "text": "Publicarlo en las redes sociales de la empresa.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "En la documentación técnica, ¿qué significa 'Unidad de Obra'?",
+      "type": "single",
+      "generalExplanation": "Es cada uno de los elementos o tareas desglosables en los que se divide la ejecución para su medición y valoración.",
+      "options": [
+        { "text": "La oficina física donde trabajan los ingenieros.", "isCorrect": false },
+        { "text": "Cada partida o elemento desglosable para su medición y valoración.", "isCorrect": true },
+        { "text": "El número de operarios necesarios por día.", "isCorrect": false },
+        { "text": "Una máquina terminada y lista para vender.", "isCorrect": false }
+      ]
+    }
+  ]
+}

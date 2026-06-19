@@ -1,0 +1,499 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-2.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 2: Montaje y configuración de un sistema informático",
+    "examSummary": "Evaluación detallada sobre hardware, arquitectura de CPU, jerarquía de memorias y periféricos de entrada/salida.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué componentes forman parte del 'Hardware' de un sistema informático?",
+      "type": "single",
+      "generalExplanation": "El hardware es la parte física: componentes eléctricos, electrónicos, electromecánicos y mecánicos.",
+      "options": [
+        { "text": "Los programas y el sistema operativo.", "isCorrect": false },
+        { "text": "Los elementos físicos como circuitos, cables y dispositivos.", "isCorrect": true },
+        { "text": "Únicamente la CPU y la memoria RAM.", "isCorrect": false },
+        { "text": "Los datos almacenados en el disco duro.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Cuál es la función principal de la Placa Base (Motherboard)?",
+      "type": "single",
+      "generalExplanation": "Actúa como soporte físico y permite la interconexión de todos los componentes del sistema.",
+      "options": [
+        { "text": "Almacenar los archivos del usuario permanentemente.", "isCorrect": false },
+        { "text": "Realizar los cálculos matemáticos del sistema.", "isCorrect": false },
+        { "text": "Servir de soporte e interconexión para todos los componentes.", "isCorrect": true },
+        { "text": "Transformar la corriente alterna en continua.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Qué elemento de la CPU se encarga de realizar operaciones aritméticas y lógicas?",
+      "type": "single",
+      "generalExplanation": "La ALU (Arithmetic Logic Unit) es la unidad encargada de los cálculos.",
+      "options": [
+        { "text": "La Unidad de Control (UC).", "isCorrect": false },
+        { "text": "La Memoria Caché.", "isCorrect": false },
+        { "text": "La Unidad Aritmético-Lógica (ALU).", "isCorrect": true },
+        { "text": "El Registro de Instrucción.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cuál es la función de la Unidad de Control (UC)?",
+      "type": "single",
+      "generalExplanation": "Dirige y coordina el flujo de datos y la ejecución de instrucciones en el procesador.",
+      "options": [
+        { "text": "Ejecutar sumas y restas de números binarios.", "isCorrect": false },
+        { "text": "Interpretar las instrucciones y coordinar los componentes del sistema.", "isCorrect": true },
+        { "text": "Almacenar los datos de configuración de la BIOS.", "isCorrect": false },
+        { "text": "Enfriar el procesador mediante señales eléctricas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Qué es la frecuencia de reloj en un procesador?",
+      "type": "single",
+      "generalExplanation": "Es la velocidad a la que el procesador realiza ciclos de operaciones, medida en Hercios (Hz).",
+      "options": [
+        { "text": "El número de programas abiertos simultáneamente.", "isCorrect": false },
+        { "text": "La velocidad de sincronización de las operaciones del procesador.", "isCorrect": true },
+        { "text": "El tiempo que tarda el PC en encenderse.", "isCorrect": false },
+        { "text": "La capacidad total de almacenamiento del disco.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Cuál es la principal característica de la Memoria RAM?",
+      "type": "single",
+      "generalExplanation": "Es una memoria volátil de acceso aleatorio que pierde la información al quitar la energía.",
+      "options": [
+        { "text": "Es permanente y no se borra nunca.", "isCorrect": false },
+        { "text": "Es volátil y de lectura/escritura rápida.", "isCorrect": true },
+        { "text": "Solo sirve para guardar la BIOS.", "isCorrect": false },
+        { "text": "Es más lenta que un disco duro mecánico.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué significa que una memoria sea 'Volátil'?",
+      "type": "single",
+      "generalExplanation": "Que requiere alimentación eléctrica para mantener la información almacenada.",
+      "options": [
+        { "text": "Que puede explotar bajo presión.", "isCorrect": false },
+        { "text": "Que pierde los datos al interrumpirse el suministro eléctrico.", "isCorrect": true },
+        { "text": "Que se puede mover de un ordenador a otro fácilmente.", "isCorrect": false },
+        { "text": "Que su capacidad cambia según el uso.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Para qué se utiliza la memoria ROM?",
+      "type": "single",
+      "generalExplanation": "Para almacenar el firmware o instrucciones de arranque que no deben borrarse (como la BIOS).",
+      "options": [
+        { "text": "Para guardar los documentos del usuario.", "isCorrect": false },
+        { "text": "Para almacenar las rutinas de arranque y configuración básica.", "isCorrect": true },
+        { "text": "Para acelerar los juegos gráficos.", "isCorrect": false },
+        { "text": "Para ampliar la memoria de vídeo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué nivel de memoria caché es el más rápido y pequeño?",
+      "type": "single",
+      "generalExplanation": "La caché L1 es la más cercana al núcleo y la más rápida.",
+      "options": [
+        { "text": "L1.", "isCorrect": true },
+        { "text": "L2.", "isCorrect": false },
+        { "text": "L3.", "isCorrect": false },
+        { "text": "La memoria RAM.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué función cumple el Chipset en una placa base?",
+      "type": "single",
+      "generalExplanation": "Gestiona la comunicación entre el procesador y el resto de periféricos y memorias.",
+      "options": [
+        { "text": "Es el procesador gráfico principal.", "isCorrect": false },
+        { "text": "Controla el flujo de datos entre la CPU, memoria y periféricos.", "isCorrect": true },
+        { "text": "Sustituye a la fuente de alimentación.", "isCorrect": false },
+        { "text": "Es un sensor de temperatura de la placa.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Qué diferencia a un SSD de un HDD?",
+      "type": "single",
+      "generalExplanation": "El SSD usa memoria flash (sin partes móviles) mientras el HDD usa platos magnéticos giratorios.",
+      "options": [
+        { "text": "El HDD es mucho más rápido que el SSD.", "isCorrect": false },
+        { "text": "El SSD no tiene partes móviles y es más resistente a vibraciones.", "isCorrect": true },
+        { "text": "El SSD tiene una vida útil infinita.", "isCorrect": false },
+        { "text": "El HDD consume menos energía.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Qué es el 'Bus de Datos'?",
+      "type": "single",
+      "generalExplanation": "Es el camino físico por el que circulan los datos entre los distintos componentes.",
+      "options": [
+        { "text": "Un tipo de cable de alimentación.", "isCorrect": false },
+        { "text": "Canal de comunicación para el transporte de información binaria.", "isCorrect": true },
+        { "text": "El conector del monitor.", "isCorrect": false },
+        { "text": "La dirección de memoria de una instrucción.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué mide el 'Ancho de Bus'?",
+      "type": "single",
+      "generalExplanation": "La cantidad de bits que pueden transmitirse simultáneamente (ej: 32 bits, 64 bits).",
+      "options": [
+        { "text": "La longitud del cable en centímetros.", "isCorrect": false },
+        { "text": "El número de bits que se transmiten a la vez.", "isCorrect": true },
+        { "text": "La resistencia eléctrica del cobre.", "isCorrect": false },
+        { "text": "La cantidad de dispositivos conectados.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Qué es un periférico de entrada?",
+      "type": "single",
+      "generalExplanation": "Dispositivo que permite introducir datos desde el exterior hacia el sistema.",
+      "options": [
+        { "text": "Monitor.", "isCorrect": false },
+        { "text": "Impresora.", "isCorrect": false },
+        { "text": "Teclado.", "isCorrect": true },
+        { "text": "Altavoces.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Cuál de estos es un periférico de salida?",
+      "type": "single",
+      "generalExplanation": "Muestra o proyecta información desde el ordenador hacia el usuario.",
+      "options": [
+        { "text": "Escáner.", "isCorrect": false },
+        { "text": "Ratón.", "isCorrect": false },
+        { "text": "Monitor.", "isCorrect": true },
+        { "text": "Micrófono.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué es la BIOS (Basic Input/Output System)?",
+      "type": "single",
+      "generalExplanation": "Software básico almacenado en ROM que chequea el hardware e inicia el sistema operativo.",
+      "options": [
+        { "text": "El sistema operativo más moderno.", "isCorrect": false },
+        { "text": "Programa de inicio que comprueba el hardware del sistema.", "isCorrect": true },
+        { "text": "Una marca de procesadores industriales.", "isCorrect": false },
+        { "text": "La memoria RAM de la tarjeta gráfica.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué unidad se utiliza para medir la capacidad de almacenamiento?",
+      "type": "single",
+      "generalExplanation": "Se mide en Bytes (y sus múltiplos: KB, MB, GB, TB).",
+      "options": [
+        { "text": "Hercios (Hz).", "isCorrect": false },
+        { "text": "Watios (W).", "isCorrect": false },
+        { "text": "Bytes (B).", "isCorrect": true },
+        { "text": "Voltios (V).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué función tiene la Fuente de Alimentación?",
+      "type": "single",
+      "generalExplanation": "Convierte la corriente alterna de la red en corriente continua para los componentes del PC.",
+      "options": [
+        { "text": "Aumentar la velocidad de internet.", "isCorrect": false },
+        { "text": "Convertir CA a CC y suministrar energía a los componentes.", "isCorrect": true },
+        { "text": "Guardar la energía para cuando se apague el PC.", "isCorrect": false },
+        { "text": "Realizar copias de seguridad eléctricas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué es un microprocesador multinúcleo (Multi-core)?",
+      "type": "single",
+      "generalExplanation": "Un procesador que incluye dos o más núcleos de ejecución independientes en un solo chip.",
+      "options": [
+        { "text": "Varios ordenadores conectados por cable.", "isCorrect": false },
+        { "text": "Un chip con varios centros de procesamiento independientes.", "isCorrect": true },
+        { "text": "Un ordenador que no necesita ventilación.", "isCorrect": false },
+        { "text": "Un sistema con mucha memoria caché.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "En informática industrial, ¿para qué se usan las tarjetas de adquisición de datos (DAQ)?",
+      "type": "single",
+      "generalExplanation": "Para leer señales del mundo físico (voltaje, corriente) y enviarlas al PC.",
+      "options": [
+        { "text": "Para jugar a simuladores.", "isCorrect": false },
+        { "text": "Para convertir señales analógicas industriales en datos digitales.", "isCorrect": true },
+        { "text": "Para imprimir facturas de producción.", "isCorrect": false },
+        { "text": "Para conectar el PC a una red WiFi.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Qué componente disipa el calor generado por el procesador?",
+      "type": "single",
+      "generalExplanation": "El conjunto de disipador y ventilador (o refrigeración líquida).",
+      "options": [
+        { "text": "El disco duro.", "isCorrect": false },
+        { "text": "El disipador de calor.", "isCorrect": true },
+        { "text": "La tarjeta de sonido.", "isCorrect": false },
+        { "text": "La memoria RAM.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué ventaja tiene el uso de arquitecturas de 64 bits frente a las de 32 bits?",
+      "type": "single",
+      "generalExplanation": "Permiten gestionar una cantidad mucho mayor de memoria RAM.",
+      "options": [
+        { "text": "Son físicamente más pequeñas.", "isCorrect": false },
+        { "text": "Pueden direccionar y usar mucha más memoria RAM.", "isCorrect": true },
+        { "text": "No necesitan sistema operativo.", "isCorrect": false },
+        { "text": "Consumen menos electricidad.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Qué es el zócalo o 'Socket' de la CPU?",
+      "type": "single",
+      "generalExplanation": "Es el conector de la placa base donde se inserta el microprocesador.",
+      "options": [
+        { "text": "Donde se conecta la pantalla.", "isCorrect": false },
+        { "text": "El sistema electromecánico de soporte y conexión de la CPU.", "isCorrect": true },
+        { "text": "Un tipo de memoria rápida.", "isCorrect": false },
+        { "text": "El puerto de conexión a internet.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Qué tipo de ranura se utiliza actualmente para tarjetas gráficas de alto rendimiento?",
+      "type": "single",
+      "generalExplanation": "El estándar actual es PCI Express (PCIe).",
+      "options": [
+        { "text": "ISA.", "isCorrect": false },
+        { "text": "PCI Express (PCIe).", "isCorrect": true },
+        { "text": "AGP.", "isCorrect": false },
+        { "text": "SATA.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué es un puerto HDMI?",
+      "type": "single",
+      "generalExplanation": "Interfaz digital para transmitir audio y vídeo de alta definición.",
+      "options": [
+        { "text": "Un puerto para ratones antiguos.", "isCorrect": false },
+        { "text": "Interfaz digital para transmisión de audio y vídeo.", "isCorrect": true },
+        { "text": "Un conector de discos duros externos.", "isCorrect": false },
+        { "text": "Una conexión de alimentación de seguridad.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué componente almacena la configuración de fecha y hora del PC?",
+      "type": "single",
+      "generalExplanation": "La memoria CMOS, alimentada por una pila de botón.",
+      "options": [
+        { "text": "La memoria RAM.", "isCorrect": false },
+        { "text": "La CMOS.", "isCorrect": true },
+        { "text": "El procesador.", "isCorrect": false },
+        { "text": "El monitor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué es el 'Firmware'?",
+      "type": "single",
+      "generalExplanation": "Software de bajo nivel que controla el hardware directamente y está grabado en memorias ROM/Flash.",
+      "options": [
+        { "text": "Un programa para retocar fotos.", "isCorrect": false },
+        { "text": "Software grabado en hardware que controla el dispositivo.", "isCorrect": true },
+        { "text": "El cableado interno de la caja.", "isCorrect": false },
+        { "text": "Un tipo de disco duro muy firme.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Qué sucede en el proceso de arranque o 'POST'?",
+      "type": "single",
+      "generalExplanation": "La BIOS realiza un test de autodiagnóstico del hardware principal.",
+      "options": [
+        { "text": "Se borran todos los archivos del disco.", "isCorrect": false },
+        { "text": "Se realiza una comprobación del estado del hardware.", "isCorrect": true },
+        { "text": "Se apaga el ordenador automáticamente.", "isCorrect": false },
+        { "text": "Se conecta el PC a internet.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué es la memoria de vídeo (VRAM)?",
+      "type": "single",
+      "generalExplanation": "Memoria dedicada exclusivamente a almacenar datos de imagen para la tarjeta gráfica.",
+      "options": [
+        { "text": "La memoria donde se guardan las películas.", "isCorrect": false },
+        { "text": "Memoria utilizada por el controlador gráfico para manejar imágenes.", "isCorrect": true },
+        { "text": "Un tipo de RAM muy lenta para ahorrar energía.", "isCorrect": false },
+        { "text": "La memoria del monitor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué función tiene el Registro de Instrucción (RI) en la CPU?",
+      "type": "single",
+      "generalExplanation": "Almacena la instrucción que se está ejecutando en ese momento.",
+      "options": [
+        { "text": "Guardar el nombre del usuario.", "isCorrect": false },
+        { "text": "Almacenar la instrucción que se está procesando.", "isCorrect": true },
+        { "text": "Contar cuántos archivos hay en el disco.", "isCorrect": false },
+        { "text": "Controlar el volumen de los altavoces.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Qué es un 'Bit'?",
+      "type": "single",
+      "generalExplanation": "Es la unidad mínima de información, con valor 0 o 1.",
+      "options": [
+        { "text": "Un conjunto de 8 caracteres.", "isCorrect": false },
+        { "text": "La unidad mínima de información binaria.", "isCorrect": true },
+        { "text": "Un tipo de cable de red.", "isCorrect": false },
+        { "text": "Una marca de ordenadores.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Cuántos Bits tiene un Byte?",
+      "type": "single",
+      "generalExplanation": "Un Byte siempre está formado por 8 bits.",
+      "options": [
+        { "text": "4.", "isCorrect": false },
+        { "text": "8.", "isCorrect": true },
+        { "text": "16.", "isCorrect": false },
+        { "text": "32.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué es el 'Overclocking'?",
+      "type": "single",
+      "generalExplanation": "Forzar a un componente a trabajar a una frecuencia superior a la de fábrica.",
+      "options": [
+        { "text": "Bajar la velocidad para que no haga ruido.", "isCorrect": false },
+        { "text": "Aumentar la velocidad del reloj por encima de la nominal.", "isCorrect": true },
+        { "text": "Poner un reloj de pared sobre el ordenador.", "isCorrect": false },
+        { "text": "Limpiar el polvo de los ventiladores.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué característica define a los discos duros externos?",
+      "type": "single",
+      "generalExplanation": "Son dispositivos de almacenamiento que se conectan por puertos externos como USB.",
+      "options": [
+        { "text": "Son más rápidos que la memoria caché.", "isCorrect": false },
+        { "text": "Permiten el transporte y copia de datos de forma sencilla.", "isCorrect": true },
+        { "text": "Solo funcionan si el PC está apagado.", "isCorrect": false },
+        { "text": "No pueden almacenar archivos grandes.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué es un sistema de alimentación ininterrumpida (SAI/UPS)?",
+      "type": "single",
+      "generalExplanation": "Dispositivo con batería que protege al equipo ante cortes eléctricos.",
+      "options": [
+        { "text": "Un generador de gasolina para la fábrica.", "isCorrect": false },
+        { "text": "Dispositivo de protección que suministra energía temporal ante apagones.", "isCorrect": true },
+        { "text": "Un cable de alta tensión.", "isCorrect": false },
+        { "text": "Un software de ahorro de energía.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué es la arquitectura de Von Neumann?",
+      "type": "single",
+      "generalExplanation": "Modelo que utiliza la misma memoria para datos e instrucciones.",
+      "options": [
+        { "text": "Un diseño de teclados ergonómicos.", "isCorrect": false },
+        { "text": "Arquitectura donde datos e instrucciones comparten memoria y bus.", "isCorrect": true },
+        { "text": "Un tipo de refrigeración por aire.", "isCorrect": false },
+        { "text": "Un lenguaje de programación industrial.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Cuál es la función del 'Northbridge' (Puente Norte) en arquitecturas clásicas?",
+      "type": "single",
+      "generalExplanation": "Gestionar la comunicación entre CPU, memoria RAM y tarjeta gráfica.",
+      "options": [
+        { "text": "Controlar los puertos USB.", "isCorrect": false },
+        { "text": "Gestionar la comunicación con los componentes de alta velocidad.", "isCorrect": true },
+        { "text": "Controlar el disco duro.", "isCorrect": false },
+        { "text": "Gestionar la entrada del ratón.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Cuál es la función del 'Southbridge' (Puente Sur)?",
+      "type": "single",
+      "generalExplanation": "Gestionar los periféricos de entrada/salida y componentes de menor velocidad.",
+      "options": [
+        { "text": "Enfriar la parte inferior del PC.", "isCorrect": false },
+        { "text": "Controlar los periféricos y dispositivos de baja velocidad.", "isCorrect": true },
+        { "text": "Alimentar el microprocesador.", "isCorrect": false },
+        { "text": "Acelerar los cálculos matemáticos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué es la 'Virtualización' a nivel de hardware?",
+      "type": "single",
+      "generalExplanation": "Tecnología que permite ejecutar varios sistemas operativos en una sola máquina física.",
+      "options": [
+        { "text": "Tener un fondo de pantalla en 3D.", "isCorrect": false },
+        { "text": "Capacidad de simular varios hardware independientes sobre uno físico.", "isCorrect": true },
+        { "text": "Usar el PC sin monitor.", "isCorrect": false },
+        { "text": "Jugar a juegos de realidad virtual.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "¿Qué es un periférico de almacenamiento?",
+      "type": "single",
+      "generalExplanation": "Dispositivo capaz de guardar información de forma permanente.",
+      "options": [
+        { "text": "El ratón.", "isCorrect": false },
+        { "text": "El monitor.", "isCorrect": false },
+        { "text": "El disco duro.", "isCorrect": true },
+        { "text": "El procesador.", "isCorrect": false }
+      ]
+    }
+  ]
+}

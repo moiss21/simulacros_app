@@ -1,0 +1,499 @@
+{
+  "examProperties": {
+    "id": "documentacion-tecnica/documentacion-tecnica-simulacro-tema-2.json",
+    "subjectName": "Documentación Técnica",
+    "examTitle": "Simulacro Examen de Documentación Técnica - UD 2: Representación gráfica de las instalaciones automatizadas",
+    "examSummary": "Evaluación técnica sobre representación gráfica, identificación de componentes según EN 81346, técnicas de croquizado y normas de acotación industrial.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 40,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#4169e1"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "Según la norma EN 81346, ¿qué indica la primera letra en la identificación de un componente?",
+      "type": "single",
+      "generalExplanation": "La primera letra designa el tipo de componente según su función principal dentro del sistema.",
+      "options": [
+        { "text": "La ubicación física en el cuadro.", "isCorrect": false },
+        { "text": "El tipo de componente.", "isCorrect": true },
+        { "text": "El número de bornes de conexión.", "isCorrect": false },
+        { "text": "La función específica de mando.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué clase de componente se identifica con la letra 'K' según la norma EN 81346?",
+      "type": "single",
+      "generalExplanation": "La letra K se reserva para contactores auxiliares y relés de todo tipo.",
+      "options": [
+        { "text": "Relés y contactores auxiliares.", "isCorrect": true },
+        { "text": "Contactores de potencia.", "isCorrect": false },
+        { "text": "Dispositivos de protección.", "isCorrect": false },
+        { "text": "Motores eléctricos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál es la letra utilizada para designar dispositivos de protección como disyuntores o fusibles?",
+      "type": "single",
+      "generalExplanation": "La letra F identifica componentes cuya función principal es la protección del circuito.",
+      "options": [
+        { "text": "Letra P.", "isCorrect": false },
+        { "text": "Letra F.", "isCorrect": true },
+        { "text": "Letra Q.", "isCorrect": false },
+        { "text": "Letra S.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "En la identificación de componentes, ¿qué representa la letra 'M'?",
+      "type": "single",
+      "generalExplanation": "La letra M identifica a los motores en la clasificación funcional.",
+      "options": [
+        { "text": "Mecanismos de mando manual.", "isCorrect": false },
+        { "text": "Motores.", "isCorrect": true },
+        { "text": "Módulos de comunicación.", "isCorrect": false },
+        { "text": "Medidores de energía.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Qué componente se designa con la letra 'Q' en los planos de circuitos?",
+      "type": "single",
+      "generalExplanation": "La letra Q se utiliza para aparatos mecánicos de conexión para circuitos de potencia, como contactores de potencia.",
+      "options": [
+        { "text": "Fuentes de alimentación.", "isCorrect": false },
+        { "text": "Contactores de potencia.", "isCorrect": true },
+        { "text": "Resistencias de frenado.", "isCorrect": false },
+        { "text": "Selectores de mando.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Cuál es la definición técnica de un croquis?",
+      "type": "single",
+      "generalExplanation": "Un croquis es una representación gráfica a mano alzada que respeta las proporciones pero no requiere escala exacta.",
+      "options": [
+        { "text": "Un dibujo técnico delineado con software CAD.", "isCorrect": false },
+        { "text": "Una representación gráfica a mano alzada sin ayuda de instrumentos.", "isCorrect": true },
+        { "text": "Un esquema eléctrico unifilar sin medidas.", "isCorrect": false },
+        { "text": "Un plano a escala reducida 1:50.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Para realizar un croquis técnico profesional, ¿qué material es el más adecuado?",
+      "type": "single",
+      "generalExplanation": "El material básico y profesional para croquizar es papel (preferiblemente cuadriculado), lápiz y goma.",
+      "options": [
+        { "text": "Regla, compás y estilógrafo.", "isCorrect": false },
+        { "text": "Papel, lápiz y goma de borrar.", "isCorrect": true },
+        { "text": "Escalímetro y cartabón.", "isCorrect": false },
+        { "text": "Tableta digitalizadora únicamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "En el procedimiento de croquizado, ¿qué se recomienda dibujar primero?",
+      "type": "single",
+      "generalExplanation": "Se deben encajar las vistas mediante líneas finas y dibujar los ejes de simetría antes de definir las aristas.",
+      "options": [
+        { "text": "Las cotas definitivas.", "isCorrect": false },
+        { "text": "Los ejes de simetría y el encajado de las vistas.", "isCorrect": true },
+        { "text": "La leyenda del plano.", "isCorrect": false },
+        { "text": "Las aristas ocultas con trazo grueso.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Qué tipo de trazo se debe emplear para las aristas principales vistas de una pieza?",
+      "type": "single",
+      "generalExplanation": "Las aristas vistas se representan con trazo continuo y grueso para destacarlas.",
+      "options": [
+        { "text": "Trazo fino y discontinuo.", "isCorrect": false },
+        { "text": "Trazo continuo y grueso.", "isCorrect": true },
+        { "text": "Trazo de puntos y rayas.", "isCorrect": false },
+        { "text": "Trazo fino y continuo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Cómo se representan las aristas ocultas en un croquis o plano?",
+      "type": "single",
+      "generalExplanation": "Las partes no visibles de la pieza se representan con líneas discontinuas de trazo fino.",
+      "options": [
+        { "text": "No se representan en el croquis.", "isCorrect": false },
+        { "text": "Mediante líneas discontinuas.", "isCorrect": true },
+        { "text": "Con trazo grueso y continuo de color rojo.", "isCorrect": false },
+        { "text": "Mediante una línea de puntos gruesos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Qué es la acotación en un plano técnico?",
+      "type": "single",
+      "generalExplanation": "Es el proceso de anotar las medidas reales de una pieza mediante líneas, símbolos y cifras.",
+      "options": [
+        { "text": "El cálculo del peso de los materiales.", "isCorrect": false },
+        { "text": "La indicación de las medidas reales en el dibujo.", "isCorrect": true },
+        { "text": "La selección de la escala del plano.", "isCorrect": false },
+        { "text": "La asignación de códigos a los bornes.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Cuál es la función de las líneas auxiliares de cota?",
+      "type": "single",
+      "generalExplanation": "Son líneas finas que parten de la pieza para delimitar dónde empieza y termina la línea de cota.",
+      "options": [
+        { "text": "Soportar el valor numérico de la medida.", "isCorrect": false },
+        { "text": "Limitar la longitud de las líneas de cota.", "isCorrect": true },
+        { "text": "Indicar el centro de un taladro.", "isCorrect": false },
+        { "text": "Representar el contorno de la pieza.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Cómo se deben colocar las cifras de cota en líneas horizontales?",
+      "type": "single",
+      "generalExplanation": "Las cifras deben situarse por encima de la línea de cota y centradas respecto a ella.",
+      "options": [
+        { "text": "Interrumpiendo la línea en el centro.", "isCorrect": false },
+        { "text": "Por encima de la línea de cota.", "isCorrect": true },
+        { "text": "Por debajo de la línea de cota.", "isCorrect": false },
+        { "text": "En un lateral de la línea auxiliar.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Qué indica el símbolo 'Ø' precediendo a una cifra de cota?",
+      "type": "single",
+      "generalExplanation": "Este símbolo se utiliza para indicar el diámetro de formas circulares.",
+      "options": [
+        { "text": "El radio de una curva.", "isCorrect": false },
+        { "text": "El diámetro.", "isCorrect": true },
+        { "text": "El espesor de la chapa.", "isCorrect": false },
+        { "text": "El ángulo de inclinación.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué es una cota funcional?",
+      "type": "single",
+      "generalExplanation": "Es una medida esencial para el funcionamiento o montaje correcto de la pieza.",
+      "options": [
+        { "text": "Una cota que se añade al final de forma opcional.", "isCorrect": false },
+        { "text": "Aquella que es esencial para el uso de la pieza.", "isCorrect": true },
+        { "text": "La cota que indica el tamaño total del bruto.", "isCorrect": false },
+        { "text": "Una cota que se representa entre paréntesis.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Cómo se representan las cotas auxiliares en un plano?",
+      "type": "single",
+      "generalExplanation": "Las cotas auxiliares (informativas) se colocan siempre entre paréntesis.",
+      "options": [
+        { "text": "Con trazo grueso.", "isCorrect": false },
+        { "text": "Entre paréntesis.", "isCorrect": true },
+        { "text": "En color distinto al resto.", "isCorrect": false },
+        { "text": "Subrayadas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Según las normas generales de acotación, ¿se pueden repetir cotas en diferentes vistas?",
+      "type": "single",
+      "generalExplanation": "No se deben repetir cotas a menos que sea estrictamente necesario para la claridad.",
+      "options": [
+        { "text": "Sí, para asegurar que el operario las vea bien.", "isCorrect": false },
+        { "text": "No, no se deben repetir a menos que sea necesario.", "isCorrect": true },
+        { "text": "Solo en los planos de conjunto.", "isCorrect": false },
+        { "text": "Solo si la pieza es muy compleja.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿En qué unidad se expresan normalmente las cotas en dibujo industrial si no se indica otra?",
+      "type": "single",
+      "generalExplanation": "La unidad estándar en dibujo técnico industrial es el milímetro (mm).",
+      "options": [
+        { "text": "Centímetros.", "isCorrect": false },
+        { "text": "Milímetros.", "isCorrect": true },
+        { "text": "Metros.", "isCorrect": false },
+        { "text": "Pulgadas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué es una línea de referencia de cota?",
+      "type": "single",
+      "generalExplanation": "Sirve para indicar una nota, valor o símbolo asociado a una parte de la pieza cuando no hay espacio.",
+      "options": [
+        { "text": "La línea que separa el dibujo del cajetín.", "isCorrect": false },
+        { "text": "La línea que une el texto con el elemento al que se refiere.", "isCorrect": true },
+        { "text": "El eje de simetría principal.", "isCorrect": false },
+        { "text": "La prolongación de una arista oculta.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué representa la letra 'R' delante de una cifra de cota?",
+      "type": "single",
+      "generalExplanation": "Indica el valor del radio de un arco de circunferencia.",
+      "options": [
+        { "text": "Resistencia eléctrica.", "isCorrect": false },
+        { "text": "Radio.", "isCorrect": true },
+        { "text": "Rugosidad superficial.", "isCorrect": false },
+        { "text": "Rectitud de la arista.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Cuál es el símbolo utilizado para representar un contacto de cierre (normalmente abierto)?",
+      "type": "single",
+      "generalExplanation": "Es el símbolo base para interruptores y contactores en reposo abierto según la norma.",
+      "options": [
+        { "text": "Una línea con un círculo tachado.", "isCorrect": false },
+        { "text": "Dos líneas paralelas con una diagonal que no las une.", "isCorrect": true },
+        { "text": "Un rectángulo con una flecha.", "isCorrect": false },
+        { "text": "Un triángulo invertido.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "En simbología eléctrica, ¿qué representa un rectángulo con una diagonal (habitualmente con la letra K)?",
+      "type": "single",
+      "generalExplanation": "Representa la bobina de un relé o contactor.",
+      "options": [
+        { "text": "Una bombilla de señalización.", "isCorrect": false },
+        { "text": "Una bobina de mando.", "isCorrect": true },
+        { "text": "Un fusible térmico.", "isCorrect": false },
+        { "text": "Un transformador de corriente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Qué indica el símbolo de una línea con un trazo oblicuo corto cruzado?",
+      "type": "single",
+      "generalExplanation": "Representa un conductor o cable en un esquema unifilar.",
+      "options": [
+        { "text": "Puesta a tierra.", "isCorrect": false },
+        { "text": "Número de conductores.", "isCorrect": true },
+        { "text": "Punto de conexión rápida.", "isCorrect": false },
+        { "text": "Corriente alterna.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Cuál es el identificador para un avisador acústico (zumbador o sirena) según la norma?",
+      "type": "single",
+      "generalExplanation": "Los dispositivos de señalización acústica se identifican con la letra H o P según la tabla de clases.",
+      "options": [
+        { "text": "Letra S.", "isCorrect": false },
+        { "text": "Letra H.", "isCorrect": true },
+        { "text": "Letra M.", "isCorrect": false },
+        { "text": "Letra B.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué símbolo representa la 'Puesta a Tierra'?",
+      "type": "single",
+      "generalExplanation": "Tres líneas horizontales paralelas de longitud decreciente unidas por una vertical superior.",
+      "options": [
+        { "text": "Un círculo con una cruz.", "isCorrect": false },
+        { "text": "Líneas horizontales decrecientes.", "isCorrect": true },
+        { "text": "Un cuadrado con una T.", "isCorrect": false },
+        { "text": "Una flecha hacia abajo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "En la norma EN 81346, ¿qué función cumple la letra 'T'?",
+      "type": "single",
+      "generalExplanation": "La letra T designa transformadores o dispositivos de conversión de magnitudes.",
+      "options": [
+        { "text": "Temporizadores.", "isCorrect": false },
+        { "text": "Transformadores.", "isCorrect": true },
+        { "text": "Terminales de conexión.", "isCorrect": false },
+        { "text": "Transistores.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué representa un círculo con una 'M' y un '3~' en su interior?",
+      "type": "single",
+      "generalExplanation": "Es el símbolo normalizado para un motor de corriente alterna trifásico.",
+      "options": [
+        { "text": "Un generador monofásico.", "isCorrect": false },
+        { "text": "Un motor trifásico.", "isCorrect": true },
+        { "text": "Un ventilador de cuadro.", "isCorrect": false },
+        { "text": "Un contador de energía.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Cuál es el objetivo de los ejes de simetría en un dibujo?",
+      "type": "single",
+      "generalExplanation": "Indicar que la pieza es idéntica a ambos lados del eje, facilitando la interpretación y acotación.",
+      "options": [
+        { "text": "Dividir el plano en cuatro partes.", "isCorrect": false },
+        { "text": "Indicar la simetría de la pieza.", "isCorrect": true },
+        { "text": "Representar el movimiento de la máquina.", "isCorrect": false },
+        { "text": "Servir de línea de cota principal.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué elemento de acotación termina en flecha, punto o trazo oblicuo?",
+      "type": "single",
+      "generalExplanation": "La línea de cota utiliza flechas o trazos en sus extremos para indicar el límite de la medida.",
+      "options": [
+        { "text": "La línea auxiliar.", "isCorrect": false },
+        { "text": "La línea de cota.", "isCorrect": true },
+        { "text": "El eje de revolución.", "isCorrect": false },
+        { "text": "La línea de referencia.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "Para acotar un ángulo, ¿qué forma debe tener la línea de cota?",
+      "type": "single",
+      "generalExplanation": "Para ángulos, la línea de cota debe ser un arco de circunferencia con centro en el vértice del ángulo.",
+      "options": [
+        { "text": "Línea recta horizontal.", "isCorrect": false },
+        { "text": "Arco de circunferencia.", "isCorrect": true },
+        { "text": "Línea quebrada.", "isCorrect": false },
+        { "text": "No se usan líneas de cota en ángulos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "Según la norma, ¿dónde se ubica preferiblemente el cajetín de un plano?",
+      "type": "single",
+      "generalExplanation": "El cajetín se sitúa habitualmente en la esquina inferior derecha del formato.",
+      "options": [
+        { "text": "En la esquina superior izquierda.", "isCorrect": false },
+        { "text": "En la esquina inferior derecha.", "isCorrect": true },
+        { "text": "Centrado en la parte inferior.", "isCorrect": false },
+        { "text": "En el reverso del plano.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué letra identifica a un pulsador de parada de emergencia?",
+      "type": "single",
+      "generalExplanation": "Los dispositivos de mando manual se identifican con la letra S.",
+      "options": [
+        { "text": "Letra E.", "isCorrect": false },
+        { "text": "Letra S.", "isCorrect": true },
+        { "text": "Letra Q.", "isCorrect": false },
+        { "text": "Letra K.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué símbolo representa un fusible en un esquema eléctrico?",
+      "type": "single",
+      "generalExplanation": "Un rectángulo pequeño con una línea que lo atraviesa longitudinalmente.",
+      "options": [
+        { "text": "Un círculo con una F.", "isCorrect": false },
+        { "text": "Un rectángulo atravesado por una línea.", "isCorrect": true },
+        { "text": "Dos líneas paralelas.", "isCorrect": false },
+        { "text": "Un zigzag.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "En la acotación de piezas pequeñas con poco espacio, ¿qué se permite hacer con las flechas?",
+      "type": "single",
+      "generalExplanation": "Se permite colocar las flechas por fuera de las líneas auxiliares apuntando hacia adentro.",
+      "options": [
+        { "text": "Omitir las flechas.", "isCorrect": false },
+        { "text": "Colocarlas exteriormente.", "isCorrect": true },
+        { "text": "Dibujarlas más pequeñas de lo normal.", "isCorrect": false },
+        { "text": "Sustituirlas por números de bornes.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué representa la letra 'B' en la identificación de componentes?",
+      "type": "single",
+      "generalExplanation": "La letra B designa transductores de magnitudes no eléctricas a eléctricas (sensores, detectores).",
+      "options": [
+        { "text": "Baterías.", "isCorrect": false },
+        { "text": "Sensores o detectores.", "isCorrect": true },
+        { "text": "Bobinas de potencia.", "isCorrect": false },
+        { "text": "Buzzer (zumbadores).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué indica una línea fina de trazo y punto en dibujo técnico?",
+      "type": "single",
+      "generalExplanation": "Se utiliza para representar ejes de simetría y de revolución.",
+      "options": [
+        { "text": "Arista oculta.", "isCorrect": false },
+        { "text": "Ejes de simetría.", "isCorrect": true },
+        { "text": "Línea de cota.", "isCorrect": false },
+        { "text": "Contorno de piezas adyacentes.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Qué es un esquema unifilar?",
+      "type": "single",
+      "generalExplanation": "Es una representación simplificada donde varios conductores se representan con una sola línea.",
+      "options": [
+        { "text": "Un plano que solo tiene una vista.", "isCorrect": false },
+        { "text": "Representación simplificada de circuitos eléctricos.", "isCorrect": true },
+        { "text": "Un croquis hecho con un solo lápiz.", "isCorrect": false },
+        { "text": "Un listado de materiales en una sola columna.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Cómo se identifica un cable de protección (tierra) en un esquema?",
+      "type": "single",
+      "generalExplanation": "Mediante las siglas PE (Protective Earth).",
+      "options": [
+        { "text": "Siglas N.", "isCorrect": false },
+        { "text": "Siglas PE.", "isCorrect": true },
+        { "text": "Siglas L1.", "isCorrect": false },
+        { "text": "Siglas GND.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué significa que un dibujo esté 'a escala'?",
+      "type": "single",
+      "generalExplanation": "Que existe una relación constante entre las medidas del dibujo y las medidas reales del objeto.",
+      "options": [
+        { "text": "Que se ha dibujado con regla.", "isCorrect": false },
+        { "text": "Relación proporcional entre dibujo y realidad.", "isCorrect": true },
+        { "text": "Que el dibujo es más grande que la pieza real.", "isCorrect": false },
+        { "text": "Que se ha medido con un escalímetro.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "En el cajetín de un plano, ¿qué información NO es obligatoria pero sí común?",
+      "type": "single",
+      "generalExplanation": "El nombre del proyecto, escala y fecha son esenciales; el color de la pintura de la máquina suele ir en el pliego, no siempre en el cajetín.",
+      "options": [
+        { "text": "Escala y fecha.", "isCorrect": false },
+        { "text": "Especificaciones de color de pintura.", "isCorrect": true },
+        { "text": "Nombre del técnico o diseñador.", "isCorrect": false },
+        { "text": "Título del plano.", "isCorrect": false }
+      ]
+    }
+  ]
+}

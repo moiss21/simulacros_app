@@ -1,0 +1,569 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-final-1.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Final Examen de Informática Industrial - UD 1, 2, 3 y 4",
+    "examSummary": "Cubre arquitectura de computadores, representación de la información, componentes de hardware y fundamentos de redes industriales y protocolos de comunicación.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 50,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cuál es la utilidad principal del comando tracert?",
+      "type": "single",
+      "generalExplanation": "La utilidad principal del comando tracert es rastrear la ruta de los paquetes a través de la red, permitiendo identificar cada uno de los nodos o saltos por los que pasa la información hasta llegar al destino.",
+      "options": [
+        { "text": "Diagnosticar conexiones de red", "isCorrect": false, "explanation": "Incorrecto. Aunque ayuda al diagnóstico, esa es la función más general de 'ping'." },
+        { "text": "Cambiar configuraciones de red", "isCorrect": false, "explanation": "Incorrecto. Tracert es una herramienta de consulta, no de configuración." },
+        { "text": "Rastrear la ruta de los paquetes a través de la red", "isCorrect": true, "explanation": "Correcto. Muestra el camino exacto y los retardos de cada salto." }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué problema resuelve parcialmente la arquitectura Harvard?",
+      "type": "single",
+      "generalExplanation": "La arquitectura Harvard resuelve parcialmente el cuello de botella de Von Neumann al utilizar buses separados para instrucciones y datos, evitando que ambos tengan que compartir un mismo canal de acceso.",
+      "options": [
+        { "text": "El cuello de botella de Von Neumann", "isCorrect": true, "explanation": "Correcto. Al separar buses de datos e instrucciones se mejora el flujo." },
+        { "text": "La sincronización de buses", "isCorrect": false, "explanation": "Incorrecto. La sincronización depende del reloj y el controlador de bus, no de la arquitectura de memoria." },
+        { "text": "La velocidad del reloj interno", "isCorrect": false, "explanation": "Incorrecto. La velocidad de reloj está limitada por la tecnología del semiconductor." }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál de los siguientes es un aspecto de seguridad que puede implementarse en una red LAN?",
+      "type": "single",
+      "generalExplanation": "Un aspecto de seguridad fundamental en redes LAN es el uso de un cortafuegos (firewall), que actúa filtrando el tráfico entrante y saliente para proteger los dispositivos de la red local.",
+      "options": [
+        { "text": "MAC", "isCorrect": false, "explanation": "Incorrecto. La MAC es una dirección física identificadora, no una medida de seguridad por sí misma." },
+        { "text": "Cortafuegos", "isCorrect": true, "explanation": "Correcto. Es una barrera de seguridad esencial para redes internas." },
+        { "text": "Hub", "isCorrect": false, "explanation": "Incorrecto. Un hub es un dispositivo de red básico que, de hecho, es poco seguro al difundir tráfico a todos los puertos." }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Qué tipo de red cubre típicamente un campus universitario o un parque industrial?",
+      "type": "single",
+      "generalExplanation": "Una red MAN (Metropolitan Area Network) es la que cubre típicamente áreas de tamaño intermedio como un campus universitario o un parque industrial, interconectando diversas redes locales.",
+      "options": [
+        { "text": "WAN", "isCorrect": false, "explanation": "Incorrecto. Las redes WAN cubren áreas geográficas extensas como países o continentes." },
+        { "text": "MAN", "isCorrect": true, "explanation": "Correcto. Las redes metropolitanas o de campus (CAN) se engloban en este rango." },
+        { "text": "LAN", "isCorrect": false, "explanation": "Incorrecto. Una LAN se limita generalmente a un solo edificio o una oficina." }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Qué se utiliza para conectar físicamente un procesador a la placa base?",
+      "type": "single",
+      "generalExplanation": "Se utiliza un zócalo (socket) para conectar físicamente un procesador a la placa base, proporcionando la interfaz mecánica y eléctrica necesaria para su funcionamiento.",
+      "options": [
+        { "text": "Un zócalo", "isCorrect": true, "explanation": "Correcto. Es la pieza de plástico y contactos donde encaja la CPU." },
+        { "text": "Un bus", "isCorrect": false, "explanation": "Incorrecto. El bus es el camino lógico de datos, no la conexión física mecánica." },
+        { "text": "Un disipador", "isCorrect": false, "explanation": "Incorrecto. El disipador se coloca sobre la CPU para enfriarla, no para conectarla a la placa." }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Qué media de transmisión no suele ser utilizada para conexiones MAN?",
+      "type": "single",
+      "generalExplanation": "El Token Ring no suele ser utilizado para conexiones MAN, ya que no es un medio de transmisión físico sino un protocolo de red de área local (LAN) hoy en día obsoleto.",
+      "options": [
+        { "text": "Coaxial", "isCorrect": false, "explanation": "Incorrecto. El cable coaxial se ha usado ampliamente en redes metropolitanas de televisión e internet (HFC)." },
+        { "text": "Token Ring", "isCorrect": true, "explanation": "Correcto. Es una tecnología de acceso al medio para LAN, no un medio físico para MAN." },
+        { "text": "Fibra óptica", "isCorrect": false, "explanation": "Incorrecto. La fibra óptica es el medio preferido actualmente para infraestructuras MAN." }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Qué mejora aportan las memorias ECC?",
+      "type": "single",
+      "generalExplanation": "Las memorias ECC aportan una mejora significativa mediante la corrección de errores en la integridad de datos, siendo capaces de detectar y reparar corrupciones de bits de forma automática.",
+      "options": [
+        { "text": "Corrección de errores en la integridad de datos", "isCorrect": true, "explanation": "Correcto. Muy utilizadas en servidores y sistemas industriales críticos." },
+        { "text": "Mayor velocidad en la transferencia de datos", "isCorrect": false, "explanation": "Incorrecto. De hecho, ECC puede ser ligeramente más lenta debido al cálculo de paridad." },
+        { "text": "Reducción del consumo eléctrico", "isCorrect": false, "explanation": "Incorrecto. El consumo depende del estándar DDR, no de la función ECC." }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Qué ocurre cuando un TTL (Time to Live) de un paquete llega a 0?",
+      "type": "single",
+      "generalExplanation": "Cuando el TTL de un paquete llega a 0, el paquete es descartado por el router que lo procesa para evitar que circule indefinidamente por la red.",
+      "options": [
+        { "text": "El paquete es descartado", "isCorrect": true, "explanation": "Correcto. El router lo elimina y envía un mensaje ICMP al origen." },
+        { "text": "El paquete se reenvía al origen", "isCorrect": false, "explanation": "Incorrecto. No se reenvía el paquete completo, solo se notifica el error." },
+        { "text": "El paquete pasa a la siguiente red", "isCorrect": false, "explanation": "Incorrecto. Si el TTL es 0, el router tiene prohibido reenviarlo." }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Describe una aplicación de la topología en árbol en redes LAN.",
+      "type": "single",
+      "generalExplanation": "La topología en árbol facilita la gestión jerárquica y optimización de tráfico, permitiendo estructurar la red en niveles de acceso, distribución y núcleo.",
+      "options": [
+        { "text": "Útil para pequeñas redes domésticas", "isCorrect": false, "explanation": "Incorrecto. En hogares se suele usar topología en estrella simple." },
+        { "text": "Usada principalmente en la transmisión de video continuo", "isCorrect": false, "explanation": "Incorrecto. El video depende de protocolos y ancho de banda, no estrictamente de esta topología." },
+        { "text": "Facilita la gestión jerárquica y optimización de tráfico", "isCorrect": true, "explanation": "Correcto. Permite una expansión ordenada y jerárquica de la red." }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué propiedad indica el número de bits de un procesador?",
+      "type": "single",
+      "generalExplanation": "El número de bits de un procesador indica los datos binarios que puede procesar simultáneamente, definiendo así el tamaño de sus registros internos y buses.",
+      "options": [
+        { "text": "La velocidad de su reloj", "isCorrect": false, "explanation": "Incorrecto. La velocidad se mide en Hertz (Hz) e indica ciclos por segundo." },
+        { "text": "Los datos binarios que puede procesar simultáneamente", "isCorrect": true, "explanation": "Correcto. Define la capacidad de procesamiento paralelo básico." },
+        { "text": "La cantidad de memoria caché disponible", "isCorrect": false, "explanation": "Incorrecto. La caché se mide en Bytes (KB, MB) y es memoria de apoyo." }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Qué es un archivo?",
+      "type": "single",
+      "generalExplanation": "Un archivo es un conjunto de datos relacionados almacenados como una unidad dentro de un sistema de almacenamiento, identificado por un nombre y una extensión.",
+      "options": [
+        { "text": "Un conjunto de datos relacionados almacenados como una unidad", "isCorrect": true, "explanation": "Correcto. Es la unidad lógica de almacenamiento de información." },
+        { "text": "Una representación binaria de la RAM", "isCorrect": false, "explanation": "Incorrecto. La RAM es volátil; los archivos residen en almacenamiento persistente." },
+        { "text": "Una partición de disco", "isCorrect": false, "explanation": "Incorrecto. Una partición es un contenedor físico/lógico que alberga sistemas de archivos." }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Cuál es la capacidad mínima de un sistema con 4 bits?",
+      "type": "single",
+      "generalExplanation": "Un sistema de 4 bits permite representar exactamente 16 valores distintos ($2^4 = 16$).",
+      "options": [
+        { "text": "16 valores", "isCorrect": true, "explanation": "Correcto. Resulta de la base binaria elevada al número de bits (2^4)." },
+        { "text": "4 valores", "isCorrect": false, "explanation": "Incorrecto. Esto sería un sistema de 2 bits." },
+        { "text": "8 valores", "isCorrect": false, "explanation": "Incorrecto. Esto sería un sistema de 3 bits." }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Cómo afecta la arquitectura Harvard al acceso a memoria?",
+      "type": "single",
+      "generalExplanation": "La arquitectura Harvard permite un acceso más rápido al separar datos e instrucciones, eliminando los tiempos de espera que se producen cuando comparten el mismo bus.",
+      "options": [
+        { "text": "Incrementa el tiempo de procesamiento", "isCorrect": false, "explanation": "Incorrecto. Al contrario, lo reduce al permitir accesos paralelos." },
+        { "text": "Permite un acceso más rápido al separar datos e instrucciones", "isCorrect": true, "explanation": "Correcto. Evita conflictos de acceso al tener caminos independientes." },
+        { "text": "Reduce el tamaño del almacenamiento", "isCorrect": false, "explanation": "Incorrecto. El tamaño depende de los módulos físicos, no de la organización del bus." }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Cómo se corrige un error de 'underflow' en una operación binaria?",
+      "type": "single",
+      "generalExplanation": "Un error de underflow (o de precisión insuficiente) se corrige usando más bits en la representación de los números para permitir valores más pequeños o precisos.",
+      "options": [
+        { "text": "Redondeando hacia cero", "isCorrect": false, "explanation": "Incorrecto. El redondeo puede provocar precisamente la pérdida de precisión que causa el underflow." },
+        { "text": "Aplicando el complemento a 2", "isCorrect": false, "explanation": "Incorrecto. El complemento a 2 es para representar números negativos, no para ganar precisión." },
+        { "text": "Usando más bits en la representación", "isCorrect": true, "explanation": "Correcto. Permite representar magnitudes más pequeñas o con más decimales." }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué diferencia hay entre codificación UTF-16 y UTF-32?",
+      "type": "single",
+      "generalExplanation": "La diferencia fundamental reside en la cantidad de bytes utilizada por carácter: UTF-16 usa una longitud variable (2 o 4 bytes) mientras que UTF-32 usa siempre 4 bytes fijos.",
+      "options": [
+        { "text": "El rango de caracteres que pueden representar", "isCorrect": false, "explanation": "Incorrecto. Ambas pueden representar todo el estándar Unicode." },
+        { "text": "Su compatibilidad con sistemas operativos", "isCorrect": false, "explanation": "Incorrecto. Ambas son ampliamente compatibles, aunque UTF-16 es nativa en Windows." },
+        { "text": "La cantidad de bytes utilizada por carácter", "isCorrect": true, "explanation": "Correcto. UTF-16 es de longitud variable y UTF-32 de longitud fija." }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Qué dispositivo en un sistema informático actúa como el 'cerebro' del ordenador?",
+      "type": "single",
+      "generalExplanation": "La CPU (Unidad Central de Procesamiento) es el dispositivo que actúa como el 'cerebro' del ordenador, encargándose de ejecutar las instrucciones de los programas.",
+      "options": [
+        { "text": "La CPU", "isCorrect": true, "explanation": "Correcto. Procesa todas las instrucciones lógicas y matemáticas." },
+        { "text": "El disco duro", "isCorrect": false, "explanation": "Incorrecto. Es el almacén de datos a largo plazo." },
+        { "text": "La memoria RAM", "isCorrect": false, "explanation": "Incorrecto. Es el espacio de trabajo temporal para datos activos." }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué es un bus dedicado en una computadora?",
+      "type": "single",
+      "generalExplanation": "Un bus dedicado es un bus reservado para una conexión de alto rendimiento entre dos componentes específicos, evitando el uso compartido con otros periféricos.",
+      "options": [
+        { "text": "Un bus que conecta exclusivamente dispositivos de almacenamiento", "isCorrect": false, "explanation": "Incorrecto. Eso sería un bus de interfaz de almacenamiento (como SATA)." },
+        { "text": "Un bus que opera únicamente con sistemas operativos avanzados", "isCorrect": false, "explanation": "Incorrecto. Es una característica de hardware, independiente del software." },
+        { "text": "Un bus reservado para una conexión de alto rendimiento entre dos componentes específicos", "isCorrect": true, "explanation": "Correcto. Maximiza el ancho de banda para esa comunicación particular." }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué estándar Ethernet introduce la extensión de la trama máxima permitiendo el uso de 'Q-tag'?",
+      "type": "single",
+      "generalExplanation": "El estándar 802.3ac introduce la extensión de la trama máxima para permitir el uso de 'Q-tag', necesario para el etiquetado de VLANs según 802.1Q.",
+      "options": [
+        { "text": "802.3ac", "isCorrect": true, "explanation": "Correcto. Amplía la trama de 1518 a 1522 bytes para dar cabida al tag de VLAN." },
+        { "text": "802.3z", "isCorrect": false, "explanation": "Incorrecto. Se refiere a Gigabit Ethernet sobre fibra óptica." },
+        { "text": "802.3ae", "isCorrect": false, "explanation": "Incorrecto. Se refiere a 10 Gigabit Ethernet." }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué problema resuelve parcialmente la arquitectura Harvard?",
+      "type": "single",
+      "generalExplanation": "La arquitectura Harvard resuelve parcialmente el conflicto entre accesos a datos e instrucciones gracias a su sistema de buses independientes.",
+      "options": [
+        { "text": "Conflicto entre accesos a datos e instrucciones", "isCorrect": true, "explanation": "Correcto. Permite leer una instrucción mientras se accede a un dato." },
+        { "text": "Acceso simultáneo a múltiples dispositivos", "isCorrect": false, "explanation": "Incorrecto. Eso lo gestionan los controladores de interrupciones o DMA." },
+        { "text": "Límite en el tamaño de los buses", "isCorrect": false, "explanation": "Incorrecto. El tamaño depende del diseño del procesador, no de la topología." }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Qué tecnología es menos común en WANs pero popular en LANs para conectar computadoras?",
+      "type": "single",
+      "generalExplanation": "Token Ring es una tecnología popular en LANs para conectar computadoras en el pasado, pero es prácticamente inexistente o menos común en redes WAN.",
+      "options": [
+        { "text": "Microondas", "isCorrect": false, "explanation": "Incorrecto. Las microondas son muy comunes en enlaces WAN inalámbricos de larga distancia." },
+        { "text": "VoIP", "isCorrect": false, "explanation": "Incorrecto. VoIP es un servicio de voz sobre IP, no una tecnología de enlace de red." },
+        { "text": "Token Ring", "isCorrect": true, "explanation": "Correcto. Fue un estándar de IBM para LAN, pero no escala eficientemente a WAN." }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Qué ventaja tiene la memoria de estado sólido sobre las unidades magnéticas?",
+      "type": "single",
+      "generalExplanation": "La principal ventaja de la memoria de estado sólido es una velocidad de acceso más rápida, ya que no depende de partes mecánicas en movimiento.",
+      "options": [
+        { "text": "Velocidad de acceso más rápida", "isCorrect": true, "explanation": "Correcto. Al no tener cabezales físicos, el acceso es casi instantáneo." },
+        { "text": "Costo más bajo", "isCorrect": false, "explanation": "Incorrecto. Históricamente, el GB en magnético es más barato." },
+        { "text": "Mayor capacidad", "isCorrect": false, "explanation": "Incorrecto. Los discos magnéticos suelen ofrecer mayores capacidades máximas." }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué dispositivo permite la interacción entre el ordenador y el mundo exterior?",
+      "type": "single",
+      "generalExplanation": "Los dispositivos de E/S (Entrada/Salida) son los que permiten la interacción entre el ordenador y el mundo exterior, recibiendo o enviando información.",
+      "options": [
+        { "text": "Reloj interno", "isCorrect": false, "explanation": "Incorrecto. Sincroniza procesos internos, no interactúa con el exterior." },
+        { "text": "Dispositivos de E/S", "isCorrect": true, "explanation": "Correcto. Teclados, monitores y sensores cumplen esta función." },
+        { "text": "Unidad Aritmético-Lógica", "isCorrect": false, "explanation": "Incorrecto. Realiza cálculos dentro de la CPU." }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Qué tipo de disipador se utiliza para mejorar la eficiencia térmica en procesadores portátiles?",
+      "type": "single",
+      "generalExplanation": "Se utiliza el Heat pipe para mejorar la eficiencia térmica en procesadores portátiles, ya que permite transportar el calor rápidamente a zonas de disipación alejadas de la CPU.",
+      "options": [
+        { "text": "Radiador pasivo", "isCorrect": false, "explanation": "Incorrecto. Los radiadores pasivos suelen ser demasiado voluminosos para portátiles finos." },
+        { "text": "Ventilador centrífugo", "isCorrect": false, "explanation": "Incorrecto. Ayuda a expulsar el aire, pero el Heat Pipe es el que transporta el calor inicialmente." },
+        { "text": "Heat pipe", "isCorrect": true, "explanation": "Correcto. Usa cambio de fase de un líquido para transferir calor rápidamente." }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "¿Qué es una dirección IP?",
+      "type": "single",
+      "generalExplanation": "Una dirección IP es un identificador único para dispositivos en una red, permitiendo que la información se encamine correctamente entre origen y destino.",
+      "options": [
+        { "text": "Un código binario que almacena datos", "isCorrect": false, "explanation": "Incorrecto. Confunde dirección lógica con almacenamiento de datos." },
+        { "text": "Una representación hexadecimal de la memoria RAM", "isCorrect": false, "explanation": "Incorrecto. La RAM usa direcciones físicas de memoria, no IP." },
+        { "text": "Un identificador único para dispositivos en una red", "isCorrect": true, "explanation": "Correcto. Es necesaria para el enrutamiento en la capa 3 (Red)." }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Qué característica de los módulos DDR4 mejora el rendimiento comparado con generaciones anteriores?",
+      "type": "single",
+      "generalExplanation": "Los módulos DDR4 ofrecen una velocidad de transferencia más alta, lo que mejora significativamente el rendimiento global del sistema al mover datos entre CPU y RAM.",
+      "options": [
+        { "text": "Mayor tamaño físico", "isCorrect": false, "explanation": "Incorrecto. El tamaño físico es similar; cambian los pines y muescas." },
+        { "text": "Reducción de las ranuras en el módulo", "isCorrect": false, "explanation": "Incorrecto. Eso dificultaría la expansión de memoria." },
+        { "text": "Velocidad de transferencia más alta", "isCorrect": true, "explanation": "Correcto. Aumenta los MT/s (Megatransferencias por segundo)." }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "¿Qué función realiza la ALU dentro de la CPU?",
+      "type": "single",
+      "generalExplanation": "La ALU tiene la función de ejecutar operaciones aritméticas y lógicas, siendo el componente que realiza los cálculos matemáticos y las comparaciones binarias.",
+      "options": [
+        { "text": "Ejecutar operaciones aritméticas y lógicas", "isCorrect": true, "explanation": "Correcto. Es el 'calculador' de la CPU." },
+        { "text": "Almacenar datos", "isCorrect": false, "explanation": "Incorrecto. De eso se encargan los registros y la memoria caché." },
+        { "text": "Controlar la comunicación con la memoria", "isCorrect": false, "explanation": "Incorrecto. Esa es función de la Unidad de Control o el controlador de memoria." }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Qué valor hexadecimal tiene el binario 1111 1111?",
+      "type": "single",
+      "generalExplanation": "El valor hexadecimal de 1111 1111 es FF, donde cada cuarteto (1111) corresponde al valor 15 decimal o F en hexadecimal.",
+      "options": [
+        { "text": "F0", "isCorrect": false, "explanation": "Incorrecto. F0 sería 1111 0000." },
+        { "text": "FF", "isCorrect": true, "explanation": "Correcto. 1111 (F) y 1111 (F) forman FF." },
+        { "text": "0F", "isCorrect": false, "explanation": "Incorrecto. 0F sería 0000 1111." }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "¿Qué característica distingue a los discos duros magnéticos?",
+      "type": "single",
+      "generalExplanation": "La característica distintiva es la grabación de datos mediante magnetización sobre platos giratorios recubiertos de material magnético.",
+      "options": [
+        { "text": "Almacenamiento en chips flash", "isCorrect": false, "explanation": "Incorrecto. Eso es propio de los SSD." },
+        { "text": "Uso de láser para lectura", "isCorrect": false, "explanation": "Incorrecto. Eso es propio de unidades ópticas (CD/DVD/BD)." },
+        { "text": "Grabación de datos mediante magnetización", "isCorrect": true, "explanation": "Correcto. Utiliza magnetismo para alterar la polaridad de las partículas en el plato." }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué sistema numérico es más usado en direcciones IP?",
+      "type": "single",
+      "generalExplanation": "Aunque para los humanos se presentan en decimal (IPv4), el sistema numérico más usado por los equipos de red en las direcciones IP es el binario.",
+      "options": [
+        { "text": "Decimal", "isCorrect": false, "explanation": "Incorrecto. Se usa solo para facilitar la lectura humana (notación de puntos)." },
+        { "text": "Binario", "isCorrect": true, "explanation": "Correcto. Los routers procesan las IP como cadenas de 32 o 128 bits binarios." },
+        { "text": "Hexadecimal", "isCorrect": false, "explanation": "Incorrecto. Se usa en IPv6, pero internamente sigue siendo binario." }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué técnica ayuda a evitar el cuello de botella de Von Neumann?",
+      "type": "single",
+      "generalExplanation": "La memoria caché ayuda a evitar el cuello de botella de Von Neumann al almacenar temporalmente datos e instrucciones frecuentes cerca de la CPU para reducir accesos lentos a la RAM.",
+      "options": [
+        { "text": "Frecuencia de reloj más alta", "isCorrect": false, "explanation": "Incorrecto. De hecho, esto puede empeorar el cuello de botella si la memoria no sigue el ritmo." },
+        { "text": "Aumento del tamaño de la ALU", "isCorrect": false, "explanation": "Incorrecto. La ALU procesa, pero el cuello de botella es un problema de transporte de datos." },
+        { "text": "Memoria caché", "isCorrect": true, "explanation": "Correcto. Reduce la necesidad de acudir constantemente a la memoria principal lenta." }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "¿Cuál es el rango de valores representables en un número entero de 8 bits sin signo?",
+      "type": "single",
+      "generalExplanation": "En 8 bits sin signo, el rango de valores representables va de 0 a 255 ($2^8 - 1$).",
+      "options": [
+        { "text": "0 a 1023", "isCorrect": false, "explanation": "Incorrecto. Este es el rango para 10 bits." },
+        { "text": "-128 a 127", "isCorrect": false, "explanation": "Incorrecto. Este es el rango para 8 bits con signo (Complemento a 2)." },
+        { "text": "0 a 255", "isCorrect": true, "explanation": "Correcto. Son 256 valores posibles incluyendo el cero." }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué base utiliza el sistema binario?",
+      "type": "single",
+      "generalExplanation": "El sistema binario utiliza la base 2, empleando únicamente los dígitos 0 y 1.",
+      "options": [
+        { "text": "8", "isCorrect": false, "explanation": "Incorrecto. La base 8 es el sistema Octal." },
+        { "text": "2", "isCorrect": true, "explanation": "Correcto. Es la base de toda la informática digital." },
+        { "text": "16", "isCorrect": false, "explanation": "Incorrecto. La base 16 es el sistema Hexadecimal." }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué dispositivo permite la creación de VLAN para segmentar una red?",
+      "type": "single",
+      "generalExplanation": "El switch gestionable permite la creación de VLAN para segmentar una red física en varias redes lógicas independientes.",
+      "options": [
+        { "text": "Hub", "isCorrect": false, "explanation": "Incorrecto. Un hub no tiene inteligencia para gestionar niveles lógicos de red." },
+        { "text": "Módem", "isCorrect": false, "explanation": "Incorrecto. Su función es modular/demodular señales para acceso a internet." },
+        { "text": "Switch gestionable", "isCorrect": true, "explanation": "Correcto. Permite configurar puertos en diferentes dominios de difusión." }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Qué ocurre en un cuello de botella de Von Neumann?",
+      "type": "single",
+      "generalExplanation": "Se produce un cuello de botella de Von Neumann cuando la CPU trabaja más rápido que la memoria, obligando al procesador a esperar a que los datos lleguen por el bus.",
+      "options": [
+        { "text": "La CPU trabaja más rápido que la memoria", "isCorrect": true, "explanation": "Correcto. El rendimiento se ve limitado por la velocidad del bus de memoria compartido." },
+        { "text": "Los datos se pierden durante la transmisión", "isCorrect": false, "explanation": "Incorrecto. Eso es un error de integridad, no un cuello de botella arquitectónico." },
+        { "text": "La velocidad del bus limita las operaciones", "isCorrect": false, "explanation": "Incorrecto. Es la causa del cuello de botella, pero la opción correcta describe el fenómeno resultante." }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "¿Qué componente de un ordenador realiza las operaciones aritméticas y lógicas?",
+      "type": "single",
+      "generalExplanation": "La Unidad Aritmético-Lógica (ALU) es el componente que realiza las operaciones aritméticas y lógicas básicas del ordenador.",
+      "options": [
+        { "text": "Unidad Aritmético-Lógica (ALU)", "isCorrect": true, "explanation": "Correcto. Ejecuta sumas, restas y comparaciones booleanas." },
+        { "text": "Memoria principal", "isCorrect": false, "explanation": "Incorrecto. Almacena los datos pero no los opera." },
+        { "text": "Unidad de control", "isCorrect": false, "explanation": "Incorrecto. Dirige el tráfico de datos e instrucciones pero no calcula." }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué componente decide cuándo ejecutar una instrucción específica?",
+      "type": "single",
+      "generalExplanation": "La Unidad de control es el componente que decide cuándo ejecutar una instrucción específica, coordinando el flujo de datos entre los distintos componentes de la CPU.",
+      "options": [
+        { "text": "Unidad Aritmético-Lógica", "isCorrect": false, "explanation": "Incorrecto. Ejecuta la operación, pero no decide el 'cuándo'." },
+        { "text": "Unidad de control", "isCorrect": true, "explanation": "Correcto. Es el 'director de orquesta' del procesador." },
+        { "text": "Bus de direcciones", "isCorrect": false, "explanation": "Incorrecto. Es el canal físico por el que se indica a qué dirección de memoria acceder." }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "¿Qué puerto se utiliza comúnmente para conectar dispositivos de red como routers o switches?",
+      "type": "single",
+      "generalExplanation": "El puerto RJ-45 es el que se utiliza comúnmente para conectar dispositivos de red a través de cables de par trenzado.",
+      "options": [
+        { "text": "SATA", "isCorrect": false, "explanation": "Incorrecto. Se usa para conectar discos duros internos." },
+        { "text": "RJ-45", "isCorrect": true, "explanation": "Correcto. Es el conector estándar de las redes Ethernet." },
+        { "text": "VGA", "isCorrect": false, "explanation": "Incorrecto. Se usa para salida de video analógico." }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Cuál es una función del switch con puertos autoMDIX?",
+      "type": "single",
+      "generalExplanation": "La función autoMDIX permite al switch detectar la disposición del cable (si es directo o cruzado) y configurar el puerto automáticamente para establecer la conexión.",
+      "options": [
+        { "text": "Detectar la disposición del cable", "isCorrect": true, "explanation": "Correcto. Elimina la necesidad de usar cables cruzados específicos." },
+        { "text": "Aumentar la velocidad de red", "isCorrect": false, "explanation": "Incorrecto. La velocidad depende de los estándares (Fast, Giga, etc.), no de MDIX." },
+        { "text": "Detectar formato de trama Ethernet", "isCorrect": false, "explanation": "Incorrecto. El switch procesa tramas Ethernet por defecto, MDIX es a nivel físico." }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "¿Qué significa que un procesador tiene hyperthreading con cuatro núcleos físicos?",
+      "type": "single",
+      "generalExplanation": "Significa que el procesador puede ejecutar ocho hilos simultáneamente, ya que el hyperthreading permite que cada núcleo físico gestione dos hilos lógicos de forma paralela.",
+      "options": [
+        { "text": "Puede ejecutar ocho hilos simultáneamente", "isCorrect": true, "explanation": "Correcto. Duplica el número de hilos lógicos por núcleo físico." },
+        { "text": "Reduce a la mitad su consumo eléctrico", "isCorrect": false, "explanation": "Incorrecto. Hyperthreading suele aumentar ligeramente el consumo debido al mayor uso de recursos." },
+        { "text": "Duplica la velocidad del bus de datos", "isCorrect": false, "explanation": "Incorrecto. La velocidad del bus depende del chipset y la arquitectura, no del multi-threading." }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "¿Cómo se calcula el complemento a 2 de un número binario?",
+      "type": "single",
+      "generalExplanation": "El complemento a 2 se calcula invirtiendo todos los bits y sumando 1 al resultado final.",
+      "options": [
+        { "text": "Sumando 2 a cada bit", "isCorrect": false, "explanation": "Incorrecto. Eso no tiene sentido en aritmética binaria de base 2." },
+        { "text": "Invirtiendo todos los bits y sumando 1", "isCorrect": true, "explanation": "Correcto. Es el método estándar para representar negativos en computación." },
+        { "text": "Multiplicando por -1", "isCorrect": false, "explanation": "Incorrecto. Esa es la operación matemática que queremos representar, no el método de cálculo binario." }
+      ]
+    },
+    {
+    "id": 41,
+    "text": "¿Cuál es la principal ventaja del sistema IEEE 754?",
+    "type": "single",
+    "generalExplanation": "El estándar IEEE 754 es la norma técnica para la computación en punto flotante, diseñada para representar una vasta escala de números (muy grandes o muy pequeños) manteniendo un nivel de precisión constante.",
+    "options": [
+      { "text": "Representa un amplio rango de números con alta precisión", "isCorrect": true, "explanation": "Correcto. Permite trabajar con decimales y potencias en una escala que los enteros no permiten." },
+      { "text": "Incrementa la velocidad del bus de datos", "isCorrect": false, "explanation": "Incorrecto. El estándar define la representación de datos, no la velocidad física de los buses." },
+      { "text": "Reduce el tiempo de acceso a la memoria", "isCorrect": false, "explanation": "Incorrecto. El acceso a memoria depende del hardware (RAM/Caché), no de la codificación numérica." }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "¿Cómo se llama el sistema utilizado para representar fracciones en números binarios?",
+    "type": "single",
+    "generalExplanation": "El sistema de punto flotante permite representar números racionales extremadamente grandes o pequeños mediante una mantisa y un exponente, similar a la notación científica.",
+    "options": [
+      { "text": "Punto flotante", "isCorrect": true, "explanation": "Correcto. Es el método estándar (IEEE 754) para manejar decimales en computación." },
+      { "text": "Codificación directa", "isCorrect": false, "explanation": "Incorrecto. La codificación directa suele referirse a enteros simples sin parte fraccionaria." },
+      { "text": "Paginación", "isCorrect": false, "explanation": "Incorrecto. La paginación es un método de gestión de memoria virtual del sistema operativo." }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "¿Qué elemento del chipset suele integrarse actualmente en la CPU para mejorar el rendimiento?",
+    "type": "single",
+    "generalExplanation": "En las arquitecturas modernas, el Puente Norte (Northbridge), que gestiona la comunicación con la RAM y la tarjeta gráfica, se ha integrado en el procesador para reducir la latencia.",
+    "options": [
+      { "text": "El puente norte", "isCorrect": true, "explanation": "Correcto. Al estar dentro del silicio de la CPU, la comunicación con la memoria es mucho más veloz." },
+      { "text": "El reloj del sistema", "isCorrect": false, "explanation": "Incorrecto. Aunque la CPU tiene su multiplicador, el generador de reloj base suele ser un componente externo en la placa." },
+      { "text": "La memoria RAM", "isCorrect": false, "explanation": "Incorrecto. La RAM sigue siendo un componente modular externo, salvo en sistemas embebidos específicos (SoC)." }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "¿Qué función realiza el puente sur del chipset?",
+    "type": "single",
+    "generalExplanation": "El Puente Sur (Southbridge o PCH) se encarga de las comunicaciones de baja velocidad y periféricos, como puertos USB, audio, almacenamiento SATA y buses PCI estándar.",
+    "options": [
+      { "text": "Gestiona el intercambio de datos entre la CPU y la RAM", "isCorrect": false, "explanation": "Incorrecto. Esa es la función histórica del puente norte (ahora integrada en la CPU)." },
+      { "text": "Controla dispositivos de entrada/salida y periféricos conectados", "isCorrect": true, "explanation": "Correcto. Es el centro de control para los buses de expansión y periféricos lentos." },
+      { "text": "Sincroniza la señal del reloj del sistema", "isCorrect": false, "explanation": "Incorrecto. La sincronización es una función de temporización general, no la tarea principal de gestión del puente sur." }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "En una instalación de red local, ¿qué elemento se utiliza para conectar todos los cables de red procedentes de una sala informática?",
+    "type": "single",
+    "generalExplanation": "El panel de parcheo (patch panel) es un elemento pasivo donde terminan los cables horizontales de la red, permitiendo una organización clara antes de conectar los equipos al switch mediante latiguillos cortos.",
+    "options": [
+      { "text": "Switch", "isCorrect": false, "explanation": "Incorrecto. El switch es el dispositivo activo que conmuta los datos, pero no el punto de terminación física del cableado estructurado." },
+      { "text": "Panel de parcheo", "isCorrect": true, "explanation": "Correcto. Sirve para organizar y centralizar físicamente los cables antes de distribuirlos." },
+      { "text": "Rúter", "isCorrect": false, "explanation": "Incorrecto. El router une redes diferentes; no se usa para la terminación de cables de una sala local." }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "¿Qué diferencia hay entre una partición lógica y una primaria?",
+    "type": "single",
+    "generalExplanation": "En el sistema de particiones MBR, solo puede haber 4 particiones primarias. Para tener más, se crea una partición extendida que contiene múltiples particiones lógicas en su interior.",
+    "options": [
+      { "text": "Las lógicas están dentro de una partición extendida", "isCorrect": true, "explanation": "Correcto. Es la forma de superar el límite de 4 particiones del estándar MBR." },
+      { "text": "Las lógicas no pueden contener sistemas operativos", "isCorrect": false, "explanation": "Incorrecto. Muchos sistemas operativos pueden arrancarse desde particiones lógicas." },
+      { "text": "Las primarias se usan exclusivamente para sistemas UEFI", "isCorrect": false, "explanation": "Incorrecto. UEFI prefiere el estándar GPT, donde la distinción entre primaria y lógica ya no existe." }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "¿Qué se utiliza para proporcionar alimentación eléctrica y datos a un punto de acceso a través del mismo cable?",
+    "type": "single",
+    "generalExplanation": "Power over Ethernet (PoE) es una tecnología que permite que el cable de red (par trenzado) transporte tanto los datos como la energía eléctrica necesaria para dispositivos como cámaras IP o puntos de acceso.",
+    "options": [
+      { "text": "DHCP", "isCorrect": false, "explanation": "Incorrecto. DHCP es un protocolo para asignar direcciones IP automáticamente." },
+      { "text": "PoE (Power Over Ethernet)", "isCorrect": true, "explanation": "Correcto. Elimina la necesidad de tomas de corriente cerca del dispositivo final." },
+      { "text": "DNS", "isCorrect": false, "explanation": "Incorrecto. DNS es el sistema de resolución de nombres de dominio." }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "¿Qué característica distingue a un socket LGA de un PGA?",
+    "type": "single",
+    "generalExplanation": "La diferencia radica en la ubicación de los pines: en el Land Grid Array (LGA) los pines están en el zócalo de la placa base, mientras que en el Pin Grid Array (PGA) están en el propio procesador.",
+    "options": [
+      { "text": "LGA está diseñado para memorias RAM y el PGA para CPU", "isCorrect": false, "explanation": "Incorrecto. Ambos son tipos de zócalos exclusivos para procesadores (CPU)." },
+      { "text": "El socket LGA usa contactos planos, mientras que el PGA usa pines", "isCorrect": true, "explanation": "Correcto. En LGA el procesador tiene contactos planos que tocan los pines del zócalo." },
+      { "text": "LGA es exclusivamente para equipos portátiles", "isCorrect": false, "explanation": "Incorrecto. LGA es el estándar predominante en procesadores Intel de escritorio." }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "¿Cuál es la principal ventaja de los diferenciales superinmunizados en una instalación eléctrica para informática?",
+    "type": "single",
+    "generalExplanation": "Los equipos informáticos generan armónicos y pequeñas fugas que pueden hacer saltar un diferencial normal. Los superinmunizados distinguen entre estas fugas 'ruido' y una fuga real peligrosa.",
+    "options": [
+      { "text": "Aumentan la velocidad de procesamiento", "isCorrect": false, "explanation": "Incorrecto. No tienen impacto alguno en el rendimiento lógico de la CPU." },
+      { "text": "Detectan falsas corrientes de fuga", "isCorrect": true, "explanation": "Correcto. Evitan cortes de luz inesperados causados por el ruido electromagnético de las fuentes de alimentación." },
+      { "text": "Evitan la oxidación de los componentes", "isCorrect": false, "explanation": "Incorrecto. La oxidación depende de la humedad y el ambiente, no del tipo de diferencial." }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "¿Cuántos símbolos distintos utiliza el sistema octal?",
+    "type": "single",
+    "generalExplanation": "El sistema octal es de base 8, lo que significa que utiliza ocho símbolos distintos para representar cantidades: los dígitos del 0 al 7.",
+    "options": [
+      { "text": "8", "isCorrect": true, "explanation": "Correcto. Utiliza los dígitos del 0 al 7." },
+      { "text": "16", "isCorrect": false, "explanation": "Incorrecto. El sistema con 16 símbolos es el Hexadecimal." },
+      { "text": "10", "isCorrect": false, "explanation": "Incorrecto. El sistema con 10 símbolos es el Decimal." }
+    ]
+  }
+  ]
+}

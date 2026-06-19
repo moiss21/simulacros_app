@@ -1,0 +1,1928 @@
+{
+  "examProperties": {
+    "id": "sistemas-medida-regulacion/sistemas-medida-regulacion-simulacro-2.json",
+    "subjectName": "Sistemas de Medida y Regulación",
+    "examTitle": "Simulacro Examen de Sistemas de Medida y Regulación - UD 4 y 5 ",
+    "examSummary": "Evaluación extendida: Verificación, puesta en marcha (commissioning), mantenimiento predictivo/preventivo/correctivo, diagnóstico de averías eléctricas y de control, y prevención de riesgos laborales (normativa y EPIs).",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 85,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 83,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#bf53db"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué ocurre en un sistema inestable?",
+      "type": "single",
+      "generalExplanation": "En un sistema inestable, las variables salen de los límites de control, lo que provoca oscilaciones crecientes y descontroladas que pueden dañar el equipo o el proceso.",
+      "options": [
+        {
+          "text": "Las variables se mantienen constantes.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si se mantienen constantes, el sistema está en un estado estacionario (estable o con error, pero no inestable)."
+        },
+        {
+          "text": "Las variables oscilan sin control.",
+          "isCorrect": true,
+          "explanation": "Correcto. La inestabilidad se manifiesta como oscilaciones cuya amplitud no decae, sino que crece o se mantiene errática."
+        },
+        {
+          "text": "No se detectan errores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Un sistema inestable genera errores masivos al no poder alcanzar el setpoint."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Cuál es uno de los objetivos del plan de actuación para la puesta en servicio?",
+      "type": "single",
+      "generalExplanation": "El plan de actuación para la puesta en servicio (commissioning) busca verificar sistemáticamente el funcionamiento para identificar y corregir errores antes de la operación normal.",
+      "options": [
+        {
+          "text": "Garantizar el retraso en la puesta en marcha.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El objetivo es planificar eficientemente para evitar retrasos."
+        },
+        {
+          "text": "Identificar y corregir errores.",
+          "isCorrect": true,
+          "explanation": "Correcto. Las pruebas preoperacionales detectan fallos de instalación o configuración."
+        },
+        {
+          "text": "Reducir el número de sensores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El número de sensores lo define el diseño (ingeniería), no la fase de puesta en servicio."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Qué es esencial para el ajuste de sistemas de medida y regulación?",
+      "type": "single",
+      "generalExplanation": "Para ajustar o sintonizar un lazo de control de forma segura, es imprescindible conocer los límites físicos de la planta y las especificaciones del proceso para evitar daños durante las pruebas.",
+      "options": [
+        {
+          "text": "Conocer las especificaciones y límites del sistema",
+          "isCorrect": true,
+          "explanation": "Correcto. Conocer los límites (ej. presión máxima, temperaturas críticas) evita accidentes al inyectar perturbaciones o cambiar ganancias."
+        },
+        {
+          "text": "Contar con un equipo de más de 5 personas",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El tamaño del equipo depende de la magnitud de la instalación, no es una regla fija."
+        },
+        {
+          "text": "Tener las últimas actualizaciones de software",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque es recomendable, no es el factor técnico más crítico frente al conocimiento de los límites de seguridad."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cómo se configura inicialmente el controlador para aplicar el método de oscilaciones amortiguadas?",
+      "type": "single",
+      "generalExplanation": "En métodos empíricos como el de oscilaciones amortiguadas (o el de ganancia límite de Ziegler-Nichols), se anulan las acciones integral y derivativa, dejando el controlador operando solo en modo Proporcional.",
+      "options": [
+        {
+          "text": "Modo proporcional integral",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La acción integral introduciría un desfase que invalida la prueba de sintonización inicial."
+        },
+        {
+          "text": "Modo proporcional puro",
+          "isCorrect": true,
+          "explanation": "Correcto. Se aumenta gradualmente la ganancia proporcional hasta obtener la respuesta oscilatoria deseada."
+        },
+        {
+          "text": "Modo derivativo puro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El control derivativo puro no se utiliza de forma aislada, ya que no corrige el error estático."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cuál es la función principal de realizar pruebas de respuestas a perturbaciones?",
+      "type": "single",
+      "generalExplanation": "Estas pruebas (como introducir un cambio en escalón en la consigna o en la carga) sirven para evaluar cómo reacciona la dinámica del sistema bajo condiciones controladas de estrés.",
+      "options": [
+        {
+          "text": "Evaluar la respuesta del sistema bajo condiciones de perturbación",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite observar el tiempo de respuesta, la sobreoscilación y el rechazo a la perturbación."
+        },
+        {
+          "text": "Verificar la polaridad",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La polaridad se verifica en la comprobación eléctrica estática, no inyectando perturbaciones al proceso."
+        },
+        {
+          "text": "Verificar la resistencia eléctrica",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es una comprobación eléctrica, no de dinámica de control."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Qué debe ser verificado si el sistema incluye controles manuales?",
+      "type": "single",
+      "generalExplanation": "En sistemas mixtos, es crítico verificar la transición (bumpless transfer) entre modo manual y automático para asegurar que el control manual no cause saltos bruscos ni interfiera negativamente con el bucle automático.",
+      "options": [
+        {
+          "text": "Que no interfieran con las operaciones automáticas",
+          "isCorrect": true,
+          "explanation": "Correcto. Debe garantizarse un traspaso suave entre los modos automático y manual."
+        },
+        {
+          "text": "Que sean fáciles de usar",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La ergonomía es importante, pero técnicamente la prioridad es evitar interferencias peligrosas."
+        },
+        {
+          "text": "Que sean de última tecnología",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La tecnología debe ser adecuada y fiable, no necesariamente la última."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Por qué es importante la calibración en sistemas de medida?",
+      "type": "single",
+      "generalExplanation": "La calibración compara la medida de un sensor con un patrón de referencia conocido para ajustar su salida, garantizando que los datos enviados al controlador sean precisos y fiables.",
+      "options": [
+        {
+          "text": "Para medir la potencia eléctrica consumida",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso es función de un vatímetro o analizador de redes, no el propósito general de la calibración."
+        },
+        {
+          "text": "Para verificar la polaridad y secuencia de fases",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esas son verificaciones eléctricas, no procesos de calibración metrológica."
+        },
+        {
+          "text": "Para asegurar la precisión de las mediciones",
+          "isCorrect": true,
+          "explanation": "Correcto. Evita errores de lectura (offset o ganancia) que desestabilizarían el lazo de control."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Qué fase incluye la simulación del sistema en un PLC idéntico al instalado?",
+      "type": "single",
+      "generalExplanation": "La simulación en laboratorio (FAT - Factory Acceptance Test) con hardware idéntico al real permite probar la lógica de control antes de aplicarla físicamente en la planta.",
+      "options": [
+        {
+          "text": "Fase de comprobación",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La comprobación suele referirse a pruebas de conexionado físico (SAT - Site Acceptance Test)."
+        },
+        {
+          "text": "Fase de implementación",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es la fase de instalación real."
+        },
+        {
+          "text": "Fase de simulación",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite depurar el programa del PLC en un entorno seguro antes del despliegue final."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Cuál es el objetivo de la normativa establecida en el Reglamento de Instalaciones Térmicas en Edificios (RITE)?",
+      "type": "single",
+      "generalExplanation": "El RITE tiene como objetivo principal fijar las exigencias de eficiencia energética y seguridad que deben cumplir las instalaciones de climatización (calefacción, refrigeración y ACS).",
+      "options": [
+        {
+          "text": "Establecer condiciones para eficiencia en climatización, calefacción y agua caliente",
+          "isCorrect": true,
+          "explanation": "Correcto. Define los estándares obligatorios en España para estas instalaciones."
+        },
+        {
+          "text": "Regular exclusivas instalaciones de climatización en industrias",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El RITE aplica principalmente a edificación, no exclusivamente a procesos industriales puros."
+        },
+        {
+          "text": "Limitar la instalación de sistemas de climatización a energías no renovables",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Al contrario, el RITE fomenta la incorporación de energías renovables (solar, biomasa)."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Qué es el factor de seguridad de un transformador de intensidad (TI) y cómo se calcula?",
+      "type": "single",
+      "generalExplanation": "En transformadores de intensidad de medida, el factor de seguridad (Fs) indica a partir de qué sobrecorriente en el primario el núcleo magnético se satura, protegiendo así los instrumentos de medida conectados al secundario. Se calcula como la relación entre la intensidad primaria que produce saturación y la nominal.",
+      "options": [
+        {
+          "text": "Establece el rango de saturación; FS = I1s/I1N",
+          "isCorrect": true,
+          "explanation": "Correcto. I1s es la corriente primaria que produce saturación y I1N la intensidad nominal primaria."
+        },
+        {
+          "text": "Se refiere a su resistencia al sobrecalentamiento; FS = V2/V1",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es la relación de transformación de tensiones."
+        },
+        {
+          "text": "Indica su capacidad de carga óptima; FS = P2/P1",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa fórmula reflejaría el rendimiento o eficiencia de potencia."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "En la fase documental de la puesta en servicio, además de los resultados de las pruebas, ¿qué más debe incluirse indispensablemente?",
+      "type": "single",
+      "generalExplanation": "La trazabilidad de la puesta en servicio exige documentar no solo que el sistema funciona, sino qué problemas surgieron y cómo se solucionaron (lista de puntos pendientes o 'Punch List').",
+      "options": [
+        {
+          "text": "El listado de herramientas utilizadas en el proceso.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las herramientas no son relevantes para el historial del activo."
+        },
+        {
+          "text": "Un informe detallando todas las observaciones, problemas y acciones correctivas.",
+          "isCorrect": true,
+          "explanation": "Correcto. Constituye el historial de 'As-Built' o de finalización de obra, crucial para futuros mantenimientos."
+        },
+        {
+          "text": "La lista completa de componentes del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La lista de materiales (BOM) ya existe en la ingeniería básica, el informe de pruebas requiere acciones correctivas."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Durante el ajuste empírico de un controlador PID en la planta, ¿cuál es el método que requiere medir el periodo de oscilación crítica para calcular las acciones integrales y derivativas?",
+      "type": "single",
+      "generalExplanation": "El método clásico de ganancia límite de Ziegler-Nichols (o método de oscilaciones sostenidas/amortiguadas) sube la ganancia proporcional hasta que el sistema oscila de forma sostenida para medir el periodo crítico (Tc).",
+      "options": [
+        {
+          "text": "Método de ajuste por prueba y error",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El prueba y error es arbitrario y no se basa en medir un periodo de oscilación crítico específico."
+        },
+        {
+          "text": "Método de oscilaciones amortiguadas",
+          "isCorrect": true,
+          "explanation": "Correcto. Es una variante del método de ganancia límite, donde se evalúa el periodo de la señal al oscilar."
+        },
+        {
+          "text": "Método de sintonización manual",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Sintonización manual es un término genérico."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "En el método de respuesta al escalón de Ziegler-Nichols, ¿qué acción se realiza en la entrada para generar la curva de reacción que se debe observar?",
+      "type": "single",
+      "generalExplanation": "El primer método de Ziegler-Nichols requiere poner el controlador en manual y aplicar una variación repentina (en escalón) a la señal de control (o consigna) para grabar la respuesta transitoria de la planta.",
+      "options": [
+        {
+          "text": "La disminución en voltaje del sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No se altera la alimentación eléctrica de la planta."
+        },
+        {
+          "text": "Un cambio brusco en el valor de consigna",
+          "isCorrect": true,
+          "explanation": "Correcto. O en la salida del controlador en modo manual, lo que constituye una función escalón."
+        },
+        {
+          "text": "El crecimiento exponencial de la señal",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El crecimiento es el efecto que se observa, no la acción que se inyecta."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Cuál es la función principal de la Instrucción Técnica Complementaria ITC-BT-03 del Reglamento Electrotécnico de Baja Tensión (REBT)?",
+      "type": "single",
+      "generalExplanation": "La ITC-BT-03 ('Empresas instaladoras en baja tensión') define las categorías (básica y especialista), los medios técnicos y los requisitos formativos exigidos para que una empresa pueda certificar instalaciones eléctricas legalmente.",
+      "options": [
+        {
+          "text": "Establecer condiciones y requisitos para la certificación de competencia.",
+          "isCorrect": true,
+          "explanation": "Correcto. Define qué requisitos debe cumplir una empresa instaladora habilitada."
+        },
+        {
+          "text": "Determinar el costo del servicio de instalación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El REBT regula seguridad y homologación, no precios de mercado."
+        },
+        {
+          "text": "Ofrecer capacitaciones en línea gratuitas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El REBT es un marco normativo legal, no una entidad formativa."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Qué regulaciones son aplicables específicamente a las instalaciones de medida, control y automatización según el marco del REBT?",
+      "type": "single",
+      "generalExplanation": "Los cuadros y sistemas de control deben cumplir varias ITCs relacionadas con la seguridad eléctrica, protecciones, armarios y compatibilidad electromagnética.",
+      "options": [
+        {
+          "text": "Reglamento de protección contra incendios",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Ese es el RIPCI, un reglamento independiente del REBT."
+        },
+        {
+          "text": "Solo la Directiva de Compatibilidad Electromagnética",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque aplica a los equipos (marcado CE), la instalación física requiere más normas de seguridad."
+        },
+        {
+          "text": "Varias normativas relacionadas con la seguridad",
+          "isCorrect": true,
+          "explanation": "Correcto. Implica puestas a tierra, protección diferencial, seccionamiento, etc."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "¿Cuál es la 'Regla de Oro' número uno que debe cumplirse antes de iniciar cualquier intervención de mantenimiento o diagnóstico intrusivo en una máquina eléctrica?",
+      "type": "single",
+      "generalExplanation": "Por normativas de prevención de riesgos laborales (ej. las 5 reglas de oro de la electricidad), el primer paso es la desconexión o corte efectivo de todas las fuentes de tensión.",
+      "options": [
+        {
+          "text": "Realizar una prueba de funcionamiento",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esto se hace antes de parar, no antes de intervenir con las manos."
+        },
+        {
+          "text": "Conectar la máquina a la red eléctrica",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Causaría un riesgo de electrocución inminente."
+        },
+        {
+          "text": "Desconectar la máquina de la red eléctrica",
+          "isCorrect": true,
+          "explanation": "Correcto. El corte visible o efectivo de la energía es el paso principal de seguridad."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Qué medida de seguridad automática incorpora un comprobador de aislamiento (megóhmetro) moderno tras finalizar la inyección de alta tensión para medir un cable?",
+      "type": "single",
+      "generalExplanation": "Los megóhmetros inyectan altas tensiones continuas en cables que actúan como condensadores. Al terminar, el equipo debe descargar internamente esa energía acumulada para proteger al operario.",
+      "options": [
+        {
+          "text": "Dispone de un dispositivo de descarga",
+          "isCorrect": true,
+          "explanation": "Correcto. Descarga la energía capacitiva acumulada en la instalación testeada."
+        },
+        {
+          "text": "Desconecta el circuito",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El circuito ya debía estar desconectado de la red antes de usar el megóhmetro."
+        },
+        {
+          "text": "Apaga automáticamente la instalación",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El equipo de medida no controla el suministro eléctrico general."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Cuál de los siguientes instrumentos de medición se utiliza y se conecta siempre 'en paralelo' al circuito para medir la diferencia de potencial eléctrico?",
+      "type": "single",
+      "generalExplanation": "El voltímetro es el instrumento diseñado para medir tensión (voltaje o diferencia de potencial) y su alta impedancia interna exige que se conecte siempre en paralelo a la carga.",
+      "options": [
+        {
+          "text": "Amperímetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Mide intensidad de corriente y se conecta en serie."
+        },
+        {
+          "text": "Voltímetro",
+          "isCorrect": true,
+          "explanation": "Correcto. Mide tensión y se conecta en paralelo."
+        },
+        {
+          "text": "Óhmetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Mide resistencia y exige que el circuito esté sin tensión."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Qué parámetro específico de la calidad de energía en corriente alterna determina y visualiza directamente un fasímetro?",
+      "type": "single",
+      "generalExplanation": "El fasímetro (o cosímetro) es un instrumento que mide el desfase entre las ondas de tensión y corriente, mostrando directamente el factor de potencia (cos phi).",
+      "options": [
+        {
+          "text": "Factor de potencia",
+          "isCorrect": true,
+          "explanation": "Correcto. Muestra el ángulo de desfase o el valor del coseno de phi."
+        },
+        {
+          "text": "Potencia total",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La potencia total (activa) se mide con un vatímetro."
+        },
+        {
+          "text": "Tensión",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La tensión se mide con un voltímetro."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Para diagnosticar si existen corrientes de derivación a tierra utilizando una pinza amperimétrica de alta sensibilidad en un circuito monofásico, ¿qué conductores deben abrazarse simultáneamente?",
+      "type": "single",
+      "generalExplanation": "Para medir fugas sin interrumpir el circuito, se abrazan la fase y el neutro juntos. Según la ley de Kirchhoff, si no hay fuga, la suma magnética de ambas corrientes debe ser cero.",
+      "options": [
+        {
+          "text": "Fase y Tierra",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La tierra no retornaría la corriente normal de trabajo."
+        },
+        {
+          "text": "Fase y Neutro",
+          "isCorrect": true,
+          "explanation": "Correcto. El desequilibrio magnético entre ambos conductores detecta la fuga a tierra."
+        },
+        {
+          "text": "Neutro y Tierra",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Solo mediría posibles desequilibrios pero no la corriente total demandada."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Cuál es una de las causas principales de las interferencias electromagnéticas (EMI) que pueden alterar las señales analógicas en un sistema de automatización?",
+      "type": "single",
+      "generalExplanation": "Los transitorios en la red generados por el arranque de grandes motores, conmutaciones de variadores o apertura de contactores inductivos generan picos que se acoplan a los cables de control.",
+      "options": [
+        {
+          "text": "Fluctuaciones de temperatura",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La temperatura afecta a la resistencia, pero no genera interferencia electromagnética (EMI)."
+        },
+        {
+          "text": "Transitorios en la red",
+          "isCorrect": true,
+          "explanation": "Correcto. Los picos de alta frecuencia provocan ruido eléctrico inducido en el lazo de medida."
+        },
+        {
+          "text": "Inyección de voltaje directo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso sería un fallo de conexión física, no una interferencia."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "Si sospechamos del salto de un interruptor diferencial trifásico, usamos una pinza amperimétrica abrazando las tres fases y el neutro. Si el aislamiento del motor es perfecto, ¿qué valor debería marcar?",
+      "type": "single",
+      "generalExplanation": "En un sistema trifásico sano (sin fugas a tierra), la suma vectorial de las corrientes de las tres fases más el neutro se anula magnéticamente dentro de la pinza toriodal.",
+      "options": [
+        {
+          "text": "La suma vectorial de todas las corrientes debe ser aproximadamente 0 mA",
+          "isCorrect": true,
+          "explanation": "Correcto. Cualquier valor superior indicaría que parte de la corriente se está perdiendo por tierra."
+        },
+        {
+          "text": "La corriente siempre es 0 mA",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No siempre, dependerá de si hay un defecto de aislamiento real."
+        },
+        {
+          "text": "La corriente de fuga es siempre 5 mA",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No hay un valor fijo estándar residual universal en todos los motores."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Un sistema de control descentralizado cuenta con PLC y E/S remotas distribuidas por la planta. ¿Qué factor es críticamente necesario para garantizar que el lazo de regulación funcione correctamente?",
+      "type": "single",
+      "generalExplanation": "Las arquitecturas descentralizadas dependen íntegramente de la fiabilidad, velocidad y determinismo del bus de campo o red industrial para intercambiar datos entre sensor y controlador.",
+      "options": [
+        {
+          "text": "Conexiones a tierra independiente",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La tierra independiente genera bucles de masa perjudiciales."
+        },
+        {
+          "text": "Protocolos de comunicación eficaces",
+          "isCorrect": true,
+          "explanation": "Correcto. Los tiempos de transmisión y recepción del bus de red son vitales para la estabilidad del lazo."
+        },
+        {
+          "text": "Sistemas SAI independientes",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque la energía es vital, la funcionalidad distribuida depende de las comunicaciones."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "Durante una intervención por un sensor averiado, vas a comprobar su resistencia interna. ¿Qué condición de seguridad debe cumplirse obligatoriamente en el circuito antes de conectar el multímetro en modo Óhmetro?",
+      "type": "single",
+      "generalExplanation": "Para medir resistencia, el óhmetro inyecta su propia corriente de la batería interna. Si el circuito está bajo tensión, se falseará la medida y se quemará el instrumento.",
+      "options": [
+        {
+          "text": "Que el circuito esté sin tensión",
+          "isCorrect": true,
+          "explanation": "Correcto. Jamás se debe medir continuidad o resistencia en circuitos energizados."
+        },
+        {
+          "text": "Conectar en serie con el componente",
+          "isCorrect": false,
+          "explanation": "Incorrecto. En serie se conectan los amperímetros, la resistencia se mide en paralelo."
+        },
+        {
+          "text": "Una batería externa",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El multímetro ya lleva su propia pila."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "Para monitorizar el consumo de una bomba en una línea de alta tensión/corriente, se instala un Transformador de Intensidad (TI). ¿Cuál es su función técnica?",
+      "type": "single",
+      "generalExplanation": "Los equipos de control no soportan miles de amperios. El TI reduce esa corriente alta del primario a una señal proporcional estándar y segura (ej. 5A o 1A) en el secundario.",
+      "options": [
+        {
+          "text": "Modifica la tensión del circuito",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso lo haría un transformador de tensión (TT o TV)."
+        },
+        {
+          "text": "Proporciona un valor proporcional de la intensidad",
+          "isCorrect": true,
+          "explanation": "Correcto. Reduce electromagnéticamente la magnitud de la corriente para su medición."
+        },
+        {
+          "text": "Reduce la frecuencia de la corriente",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La frecuencia de la red no se altera con un transformador."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "En el informe final de incidencias (parte de mantenimiento) tras reparar un cuadro de control, ¿qué información debe documentar el técnico?",
+      "type": "single",
+      "generalExplanation": "Los registros de averías exigen documentar el proceso completo, incluyendo diagnósticos fallidos. Esto nutre el historial para que futuros técnicos no repitan procedimientos inútiles.",
+      "options": [
+        {
+          "text": "Solo las acciones exitosas",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si se omite lo fallido, se pierde conocimiento del tiempo invertido y diagnóstico descartado."
+        },
+        {
+          "text": "Recomendaciones para acciones futuras",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Son deseables, pero por sí solas no detallan el trabajo ejecutado en esta avería."
+        },
+        {
+          "text": "Detalle de todas las acciones realizadas, exitosas o no",
+          "isCorrect": true,
+          "explanation": "Correcto. El historial completo facilita los diagnósticos posteriores."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "Si la malla apantallada de un cable de instrumentación no se ha conectado correctamente al embarrado de tierra, ¿qué falla puede estar sufriendo el lazo analógico?",
+      "type": "single",
+      "generalExplanation": "El cableado suele usar malla de Faraday para bloquear interferencias. Si no drena a tierra o lo hace defectuosamente, la señal captará ruido parasitario.",
+      "options": [
+        {
+          "text": "Error en el código de controlador",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El origen de las fluctuaciones es físico/eléctrico, no de software."
+        },
+        {
+          "text": "Falta de refrigeración suficiente",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El fallo de apantallamiento provoca EMI, no sobrecalentamiento."
+        },
+        {
+          "text": "Ruido electromagnético",
+          "isCorrect": true,
+          "explanation": "Correcto. Las EMI se inducirán en el cable al perder su apantallamiento, ensuciando la medida."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "Si una planta industrial comienza a sufrir de forma intermitente que las salidas de control se activan con segundos de retraso o el proceso parece 'quedarse colgado', ¿qué indica el diagnóstico?",
+      "type": "single",
+      "generalExplanation": "Lentitud de procesamiento, tiempo de scan dilatado o retardos suelen ser indicios de cuellos de botella en la red de comunicaciones industriales o sobrecarga de tareas en el propio PLC.",
+      "options": [
+        {
+          "text": "Falla de alimentación eléctrica",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Una falla eléctrica suele reiniciar (resetear) el equipo, no ralentizarlo gradualmente."
+        },
+        {
+          "text": "Interferencia electromagnética",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Causaría errores de valores analógicos, pero rara vez ralentiza los tiempos lógicos de escaneo."
+        },
+        {
+          "text": "Errores en los controladores o en el PLC",
+          "isCorrect": true,
+          "explanation": "Correcto. Retrasos y 'cuelgues' son sintomáticos de fallos de lógica del PLC o de su hardware de procesamiento."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "¿Qué concepto de programación temporal introduce la metodología del mantenimiento 'Predictivo' frente al preventivo tradicional?",
+      "type": "single",
+      "generalExplanation": "El mantenimiento predictivo monitorea variables para predecir cuándo el componente está comenzando a degradarse, permitiendo cambiarlo justo antes del fallo (CBM - Condition Based Maintenance).",
+      "options": [
+        {
+          "text": "Programación periódica basada en manuales",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esto describe el Mantenimiento Preventivo clásico (por horas o fechas)."
+        },
+        {
+          "text": "Intervenciones planificadas sin análisis de datos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Precisamente la predicción se basa en el análisis exhaustivo de datos reales."
+        },
+        {
+          "text": "Mantenimiento justo a tiempo basado en datos",
+          "isCorrect": true,
+          "explanation": "Correcto. La intervención se planifica basándose en la monitorización de la degradación real."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Qué se busca identificar principalmente durante el análisis de datos extraídos (datalogger) en un diagnóstico de avería?",
+      "type": "single",
+      "generalExplanation": "Visualizar las curvas históricas de las variables permite descubrir patrones ocultos, oscilaciones antes del fallo o picos anómalos que expliquen el origen de la incidencia.",
+      "options": [
+        {
+          "text": "La ubicación física del problema",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Los datos indican el comportamiento, no siempre la coordenada física exacta de la falla."
+        },
+        {
+          "text": "La regulación óptima de los actuadores",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso es sintonización, pero el análisis diagnóstico busca las causas-raíz."
+        },
+        {
+          "text": "Patrones o tendencias que indiquen la causa del problema",
+          "isCorrect": true,
+          "explanation": "Correcto. Revela el comportamiento anómalo previo a la parada técnica."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "Para medir la resistencia de la pica de puesta a tierra con un telurómetro, ¿qué frecuencia de inyección de corriente se utiliza?",
+      "type": "single",
+      "generalExplanation": "Los telurómetros de precisión inyectan frecuencias distintas a la red (ej. 128 Hz) para que sus mediciones sean inmunes a las corrientes de fuga naturales a 50Hz presentes en el terreno.",
+      "options": [
+        {
+          "text": "Superior a 50 Hz",
+          "isCorrect": true,
+          "explanation": "Correcto. Frecuencias como 128 Hz permiten filtrar el ruido eléctrico industrial de 50Hz/60Hz."
+        },
+        {
+          "text": "Exactamente 50 Hz",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si usara 50Hz, la medida se distorsionaría con las fugas de la instalación general."
+        },
+        {
+          "text": "Exactamente 60 Hz",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Por el mismo motivo, sería vulnerable en instalaciones americanas o marinas."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "¿Qué sucede cuando no se respeta la polaridad al medir tensión en corriente continua con un multímetro digital moderno?",
+      "type": "single",
+      "generalExplanation": "A diferencia de los analógicos que romperían la aguja, los multímetros digitales modernos están protegidos e indicarán el valor correcto de tensión precedido por un signo negativo (-).",
+      "options": [
+        {
+          "text": "La medición se detendrá automáticamente",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El equipo sigue midiendo sin sufrir daño."
+        },
+        {
+          "text": "El multímetro podría mostrar un valor incorrecto",
+          "isCorrect": true,
+          "explanation": "Correcto. Mostrará un valor negativo (ej. -24V), lo que se considera una 'lectura incorrecta' de polaridad para el operario inexperto."
+        },
+        {
+          "text": "El multímetro medirá correctamente sin importar la polaridad",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El valor absoluto es correcto, pero el signo inverso cambia la lectura del vector real."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "Al realizar medidas de potencia en un sistema trifásico a 4 hilos con cargas fuertemente desequilibradas, ¿cómo se calcula la potencia activa total consumida?",
+      "type": "single",
+      "generalExplanation": "Según el teorema de Blondel en sistemas a 4 hilos (con neutro), si la carga es asimétrica se necesita sumar algebraicamente la medida independiente de los tres vatímetros instalados por fase.",
+      "options": [
+        {
+          "text": "Promediando la medición de los vatímetros",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La potencia nunca se promedia para hallar el total, se suma."
+        },
+        {
+          "text": "Sumando las mediciones de los tres vatímetros",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el método estándar de los 3 vatímetros (Pt = P1 + P2 + P3)."
+        },
+        {
+          "text": "Duplicando la medición del primer vatímetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso solo aproximaría en caso de equilibrio absoluto en 2 de las fases, algo irreal aquí."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "¿Cuándo es estrictamente recomendable medir la corriente de fuga real de la planta en los circuitos protegidos por interruptores diferenciales?",
+      "type": "single",
+      "generalExplanation": "Los defectos de aislamiento de las cargas (resistencias, bobinados) solo se manifiestan y drenan corriente a tierra bajo tensión nominal y en funcionamiento operativo.",
+      "options": [
+        {
+          "text": "Cuando los receptores están desconectados",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Sin tensión, las fugas de operación no existirán."
+        },
+        {
+          "text": "Cuando los receptores están conectados y la tensión de servicio está activa",
+          "isCorrect": true,
+          "explanation": "Correcto. Es la única forma de capturar las corrientes capacitivas y derivaciones reales de la carga."
+        },
+        {
+          "text": "Cuando solo uno de los circuits está activo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Hay que evaluar la suma vectorial de todas las cargas aguas abajo del diferencial."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "En un sistema trifásico perfectamente equilibrado, ¿cómo se realiza la medición de la potencia total aproximada con un solo vatímetro?",
+      "type": "single",
+      "generalExplanation": "Si el sistema está equilibrado (P1=P2=P3), basta medir la potencia de una fase respecto al neutro y el sistema asume que la total es 3 veces ese valor medido.",
+      "options": [
+        {
+          "text": "Conectando la bobina voltimétrica a una fase y el neutro, y la amperimétrica en serie con otra fase",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Provocaría errores de desfase graves entre U e I."
+        },
+        {
+          "text": "Conectando ambas bobinas a las mismas fases",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La bobina de tensión debe ir entre fase y neutro."
+        },
+        {
+          "text": "Conectando la bobina voltimétrica entre fase y neutro, y la amperimétrica en serie con esa misma fase",
+          "isCorrect": true,
+          "explanation": "Correcto. Es la configuración estándar de medición monofásica para derivar la trifásica equilibrada."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "En una arquitectura donde la variable del proceso de un controlador ajusta dinámicamente el Setpoint de otro controlador interno, ¿cómo se denomina y qué requiere?",
+      "type": "single",
+      "generalExplanation": "El control en Cascada anida un lazo secundario dentro de uno primario. Para garantizar estabilidad, la dinámica del lazo esclavo/secundario debe ser sustancialmente más rápida que la del maestro.",
+      "options": [
+        {
+          "text": "Control predictivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Utiliza modelos dinámicos, no necesariamente lazos anidados."
+        },
+        {
+          "text": "Control en cascada",
+          "isCorrect": true,
+          "explanation": "Correcto. Exige que el controlador secundario sea mucho más rápido que el primario."
+        },
+        {
+          "text": "Control en adelanto",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El Feedforward lee perturbaciones entrantes, no se alimenta del error de salida de otro."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Durante la sintonización de un PID, ¿cómo afecta concretamente aumentar un control derivativo (Td) al sistema?",
+      "type": "single",
+      "generalExplanation": "La acción derivativa se opone a las variaciones rápidas del error. Funciona como un freno amortiguador, reduciendo la sobreoscilación transitoria (overshoot) antes de llegar a consigna.",
+      "options": [
+        {
+          "text": "Aumenta el tiempo de respuesta del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Suele permitir subir la ganancia proporcional, por lo que a menudo lo acelera sin que oscile."
+        },
+        {
+          "text": "Incrementa la acumulación de errores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El Windup es provocado por la acción integral, no derivativa."
+        },
+        {
+          "text": "Reduce la sobreoscilación y mejora la estabilidad.",
+          "isCorrect": true,
+          "explanation": "Correcto. Amortigua la subida anticipando la tendencia del error, logrando mayor estabilidad dinámica."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "¿Cuál es la importancia capital de llevar un registro histórico de acciones durante la verificación y el mantenimiento rutinario?",
+      "type": "single",
+      "generalExplanation": "El registro documental en sistemas GMAO construye el conocimiento empírico de planta, reduciendo el MTTR (Tiempo Medio de Reparación) en el futuro ante síntomas ya documentados.",
+      "options": [
+        {
+          "text": "Facilita la resolución de problemas y optimización futura",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite analizar tendencias crónicas y aplicar soluciones aprendidas."
+        },
+        {
+          "text": "Establece la secuencia de fases en sistemas trifásicos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No tiene que ver con tareas documentales de mantenimiento."
+        },
+        {
+          "text": "Asegura que se cumplan las especificaciones de diseño",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las especificaciones se verifican inicialmente, el registro ataca la vida útil operativa."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "Según las inspecciones reglamentarias que impone el REBT en materia de industria, ¿qué organizaciones o personas tienen responsabilidades de control asignadas?",
+      "type": "single",
+      "generalExplanation": "El titular de la instalación es legalmente responsable del mantenimiento. Solo un instalador autorizado interviene, y un Organismo de Control (OCA) inspecciona periódicamente para certificar su aptitud.",
+      "options": [
+        {
+          "text": "Propietarios, instaladores y organismos de control",
+          "isCorrect": true,
+          "explanation": "Correcto. Es una responsabilidad repartida normativamente entre el cliente, el técnico habilitado y el auditor oficial."
+        },
+        {
+          "text": "Solo los instaladores eléctricos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El propietario asume obligaciones legales ineludibles sobre su propiedad."
+        },
+        {
+          "text": "Solo organismos de control",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La OCA no instala ni repara, solo verifica el cumplimiento del REBT."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "¿Qué ofrece y permite un transformador de corriente (TI) montado en los circuitos de alta intensidad?",
+      "type": "single",
+      "generalExplanation": "Aísla galvánicamente el circuito de medida y reduce los miles de amperios a magnitudes seguras (generalmente 5A o 1A) aptas para los componentes electrónicos y multímetros.",
+      "options": [
+        {
+          "text": "Reduce la magnitud a un nivel más seguro para las mediciones",
+          "isCorrect": true,
+          "explanation": "Correcto. Protege los equipos de medida y a los operarios de la potencia destructiva del primario."
+        },
+        {
+          "text": "Aumenta la precisión de las mediciones",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Los transformadores introducen siempre un mínimo factor de error o clase de precisión propia."
+        },
+        {
+          "text": "Incrementa la potencia transmitida",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Un TI de instrumentación no altera ni participa en la transferencia de potencia de la línea."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "Según el RITE, ¿qué deben promover prioritariamente las instalaciones térmicas en los edificios?",
+      "type": "single",
+      "generalExplanation": "El RITE tiene como pilar fundamental la eficiencia energética y el uso racional de la energía térmica e instalaciones frigoríficas.",
+      "options": [
+        {
+          "text": "Eficiencia energética",
+          "isCorrect": true,
+          "explanation": "Correcto. Se busca reducir emisiones y racionalizar el consumo de energía en todos los subsistemas."
+        },
+        {
+          "text": "Exclusivamente energía solar",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque promueve las renovables, no se restringe 'exclusivamente' a solar."
+        },
+        {
+          "text": "Uso de energías no renovables",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es justamente el sentido opuesto al mandato de descarbonización de la norma."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "En sistemas complejos, ¿cómo se recomienda realizar metodológicamente las pruebas de conjunto en la fase de puesta en marcha?",
+      "type": "single",
+      "generalExplanation": "En sistemas complejos, se debe realizar un 'commissioning' progresivo probando lazos y lazos auxiliares por zonas de proceso, antes de integrar las pruebas maestras del sistema completo.",
+      "options": [
+        {
+          "text": "Solo los actuadores por separado.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es solo la fase previa 'en frío' (Cold Commissioning)."
+        },
+        {
+          "text": "Todo el sistema de una sola vez.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. En sistemas complejos sería imposible aislar el origen si todo falla al mismo tiempo."
+        },
+        {
+          "text": "Por zonas o bloques de funcionamiento, y luego el sistema completo.",
+          "isCorrect": true,
+          "explanation": "Correcto. El escalado modular minimiza los riesgos de propagación de fallos incontrolables."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "¿Qué debe incluir indispensablemente la documentación (dossier final) resultante del proceso de puesta en servicio?",
+      "type": "single",
+      "generalExplanation": "El dossier o 'As-Built' debe contener todos los protocolos, actas de lazos (loop checks), ajustes de sintonización y resultados reales comprobables con el cliente (SAT).",
+      "options": [
+        {
+          "text": "Solo las pruebas exitosas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Ocultar los fallos iniciales merma el aprendizaje técnico y la trazabilidad de averías."
+        },
+        {
+          "text": "Registros de pruebas, ajustes y resultados.",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el acta notarial técnica que asegura que todo el proceso ha sido verificado según norma."
+        },
+        {
+          "text": "El manual del usuario del sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El manual de usuario es independiente de los registros de calibración y pruebas preoperacionales."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "¿Qué parámetro clave se debe obtener experimentalmente en la planta para calcular las ganancias del controlador mediante el primer método de Ziegler-Nichols (oscilaciones sostenidas)?",
+      "type": "single",
+      "generalExplanation": "El método de oscilaciones sostenidas requiere suprimir I y D, subiendo la ganancia proporcional hasta encontrar la ganancia crítica (Kcu) y el periodo crítico (Tcu) que hacen oscilar permanentemente el sistema.",
+      "options": [
+        {
+          "text": "La ganancia crítica (Kcu)",
+          "isCorrect": true,
+          "explanation": "Correcto. A partir de ella (y del Tcu) se tabulan el Kp, el Ti y el Td definitivos del PID."
+        },
+        {
+          "text": "La amplitud crítica",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La amplitud depende de la excitación, lo vital es el valor de Kp que desencadena la oscilación."
+        },
+        {
+          "text": "El tiempo crítico",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Se mide el 'Periodo' crítico, no el tiempo transitorio total crítico."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "¿Cuál es un propósito fundamental a largo plazo de medir la eficiencia energética de un sistema industrial?",
+      "type": "single",
+      "generalExplanation": "Medir y auditar la eficiencia de equipos (motores, enfriadoras) permite hacer un seguimiento analítico del consumo a lo largo de su vida, detectando si un mal mantenimiento degrada el COP/rendimiento y cuesta más dinero.",
+      "options": [
+        {
+          "text": "Para revertir la secuencia de fases",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso soluciona giros inversos en motores, no es un objetivo de eficiencia."
+        },
+        {
+          "text": "Para medir la intensidad de cortocircuito",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La medición de cortocircuitos pertenece a cálculo de protecciones de seguridad eléctrica."
+        },
+        {
+          "text": "Para evaluar el consumo energético a lo largo del tiempo",
+          "isCorrect": true,
+          "explanation": "Correcto. Monitoriza la tendencia y permite trazar estrategias de ahorro en el CAPEX/OPEX."
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": "¿Qué herramienta técnica y de software moderna permite simular todo el proceso en la nube sin riesgo físico para realizar puestas en marcha virtuales (Virtual Commissioning)?",
+      "type": "single",
+      "generalExplanation": "Los gemelos digitales (Digital Twins) son réplicas virtuales precisas conectadas al software PLC real que permiten simular mecánicas, tiempos de ciclo y colisiones sin arriesgar acero ni hardware real.",
+      "options": [
+        {
+          "text": "Gemelos digitales",
+          "isCorrect": true,
+          "explanation": "Correcto. Representan la máxima evolución de la simulación ciberfísica conectada al control."
+        },
+        {
+          "text": "Simuladores analógicos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La tecnología actual de virtual commissioning se apoya íntegramente en digitalización y 3D."
+        },
+        {
+          "text": "Modelos físicos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Los prototipos físicos son caros, propensos a romperse y muy limitados para programación paralela."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "¿Qué directiva fundamental de obligado cumplimiento se aplica a los requisitos de seguridad y salud de las 'máquinas' en el Espacio Económico Europeo?",
+      "type": "single",
+      "generalExplanation": "La Directiva 2006/42/CE (Directiva de Máquinas) es el texto legal supremo en Europa que impone a fabricantes e integradores el diseño seguro, el marcado CE y la Declaración de Conformidad para cualquier máquina.",
+      "options": [
+        {
+          "text": "Reglamento de Instalaciones Térmicas en Edificios",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El RITE aplica a climatización residencial/comercial, no a maquinaria industrial pesada de proceso."
+        },
+        {
+          "text": "Directiva 2006/42/CE",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el pilar del Marcado CE mecánico y de control de seguridad en Europa."
+        },
+        {
+          "text": "Directiva 2014/30/UE",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esta Directiva (EMC) se encarga de la compatibilidad electromagnética, un subsistema más del marcado global."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": "En circuitos de potencia, ¿qué ocurre si un Transformador de Intensidad (TI) es sometido a un pico de arranque o cortocircuito muy superior a su corriente primaria nominal?",
+      "type": "single",
+      "generalExplanation": "Los núcleos magnéticos de los TI tienen un límite diseñado de inducción. Si se excede ese punto, el núcleo se 'satura'. La señal secundaria deja de crecer proporcionalmente a la primaria, autoprotegiendo el multímetro conectado contra sobreintensidades.",
+      "options": [
+        {
+          "text": "Puede entrar en saturación",
+          "isCorrect": true,
+          "explanation": "Correcto. La saturación deforma la onda y evita que pasen intensidades destructivas a los equipos de panel sensibles."
+        },
+        {
+          "text": "Reduce la magnitud de la corriente medida",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No la reduce linealmente, simplemente recorta (limita abruptamente) por falta de flujo en el hierro."
+        },
+        {
+          "text": "Provoca un aumento de la precisión",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Durante la saturación, la precisión del TI se pierde completamente, midiendo menos del valor real inyectado."
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": "Según el Reglamento de Equipos a Presión (REP) español y su Directiva europea, ¿en qué etapas se debe considerar la seguridad y el diseño de la instrumentación anexada a los mismos?",
+      "type": "single",
+      "generalExplanation": "Las normativas de equipos bajo presión son muy severas e imponen vigilancia continua desde la etapa de cálculo de espesores, elección de bridas o válvulas, hasta la prueba hidrostática y las inspecciones periódicas decenales.",
+      "options": [
+        {
+          "text": "Solo materiales estéticos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Se regulan aceros, soldadores homologados y resistencia fluídica crítica, no el color."
+        },
+        {
+          "text": "Solamente el exterior del equipo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Regula corrosión interior, accesorios de seguridad (presostatos) y desgaste interno."
+        },
+        {
+          "text": "Diseño, materiales, construcción, inspección y pruebas",
+          "isCorrect": true,
+          "explanation": "Correcto. El control y trazabilidad legal de un recipiente a presión abarca su ciclo de vida completo."
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": "Durante la etapa de Cualificación y Validación (Validation) del sistema, ¿qué hito técnico e ingenieril clave debe confirmarse para poder entregar la planta al cliente final?",
+      "type": "single",
+      "generalExplanation": "La validación certifica documentadamente que el equipo o sistema final cumple estrictamente con los Requisitos Funcionales de Diseño iniciales (FDS/URS) y hace la función requerida consistentemente.",
+      "options": [
+        {
+          "text": "El coste estimado de mantenimiento.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El coste Opex se estima en el estudio de viabilidad o TCO, no en la validación funcional del PLC."
+        },
+        {
+          "text": "La estética de la disposición de los componentes.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque importa la buena praxis del cuadro, la Validación busca robustez operativa, no puramente estética."
+        },
+        {
+          "text": "Que cumpla con los requisitos de control y especificaciones del proyecto.",
+          "isCorrect": true,
+          "explanation": "Correcto. Se cruzan las actas de pruebas con el pliego de condiciones de ingeniería original."
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": "En el periodo de verificación estática de E/S de campo (I/O check), un técnico necesita comprobar que una electroválvula neumática funciona físicamente sin disponer del programa lógico definitivo en el PLC. ¿Qué técnica de software se utiliza?",
+      "type": "single",
+      "generalExplanation": "Desde el entorno de programación de TIA Portal u otros, el personal técnico puede usar las tablas de vigilancia para 'Forzar' (Force/Override) a 1 las direcciones de memoria física de las salidas digitales para excitar los relés del autómata temporalmente.",
+      "options": [
+        {
+          "text": "Desconectar el circuito de mando.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si desconectamos, jamás sabremos si la tarjeta de salida y el cableado llegan al actuador correctamente."
+        },
+        {
+          "text": "Forzar variables de salida.",
+          "isCorrect": true,
+          "explanation": "Correcto. El Forzado de E/S bypassa temporalmente la lógica programada para testear el hardware físico."
+        },
+        {
+          "text": "Establecimiento de programas temporales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No hace falta reprogramar bloques OB; las funciones de supervisión permiten forzados inmediatos en línea."
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "text": "¿Cómo se define matemáticamente la Relación de Transformación (Kt o Rt) en un transformador de intensidad de instrumentación (TI)?",
+      "type": "single",
+      "generalExplanation": "La relación de transformación en un TI define cuántos amperios del primario equivalen a cuántos amperios del secundario, expresado como el cociente directo (ej. 100/5A).",
+      "options": [
+        {
+          "text": "I1/I2",
+          "isCorrect": true,
+          "explanation": "Correcto. Representa la intensidad nominal primaria sobre la intensidad nominal secundaria."
+        },
+        {
+          "text": "V1/V2",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa sería la relación natural de un transformador de tensión puro."
+        },
+        {
+          "text": "P1/P2",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las pérdidas P2 serían muy bajas frente a P1 en la transferencia de flujos en cargas de fuerza, pero no es la 'Relación' principal de medida."
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": "A la hora de aplicar un plan de Mantenimiento Preventivo clásico, ¿cuál de las siguientes tareas encaja perfectamente en este paradigma de ejecución basada en intervalos fijos?",
+      "type": "single",
+      "generalExplanation": "El cambio de consumibles o fungibles (aceite, filtros, rodamientos) de forma programada por horas de vuelo o calendario (sin importar su degradación real instantánea) es el fundamento del Mantenimiento Preventivo (PM).",
+      "options": [
+        {
+          "text": "Reparar un motor quemado",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso es mantenimiento cien por cien Correctivo a falla (Breakdown Maintenance)."
+        },
+        {
+          "text": "Sustituir un presostato deteriorado",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si ya está roto/deteriorado en uso, su sustitución vuelve a ser de índole correctiva o por condición."
+        },
+        {
+          "text": "Cambio de aceite cada 12 meses",
+          "isCorrect": true,
+          "explanation": "Correcto. Es una intervención periódica, planificada por catálogo y sistemática independientemente de averías previas."
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": "¿Cuál es uno de los principales argumentos financieros y operativos a favor de establecer un sistema de Mantenimiento Preventivo en los sistemas de control de fluidos de una industria?",
+      "type": "single",
+      "generalExplanation": "Al lubricar, calibrar y sustituir piezas antes de su falla catastrófica en cadena (Time To Failure), se previene que una máquina comprometa a otras periféricas, salvaguardando la inversión en activos (CAPEX).",
+      "options": [
+        {
+          "text": "Prolonga la vida útil de los equipos",
+          "isCorrect": true,
+          "explanation": "Correcto. Mantiene los estándares de fricción y disipación térmica, evitando estrés de las máquinas, estirando su vida total operativa."
+        },
+        {
+          "text": "Reducción del tiempo en tareas de reparación",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Al contrario, exige más paradas programadas. Lo que reduce masivamente son los tiempos imprevistos de caída total (Downtime no planificado)."
+        },
+        {
+          "text": "Aumento de tiempos de inactividad",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Genera microparadas, pero previene los macrotarados mortales para las líneas de producción."
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": "Si una bomba reguladora de ácido de un proceso Batch falla y el PLC emite una alarma nivel 'Rojo', siendo su proceso insustituible por otro lazo de regulación. ¿Cómo clasifica el mantenimiento este evento y qué acción debe tomarse?",
+      "type": "single",
+      "generalExplanation": "Las averías críticas de grado 'A' que inmovilizan de forma total y absoluta una línea productiva prioritaria, o entrañan peligro para las personas y medio ambiente (fuga de ácidos), se denominan emergencias urgentes que deben abordarse en el mismo instante.",
+      "options": [
+        {
+          "text": "Deben atenderse solo si hay tiempo disponible",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El tiempo disponible está en función secundaria de la productividad de toda una planta."
+        },
+        {
+          "text": "Pueden posponerse hasta el próximo mantenimiento",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Retrasarlo sería Mantenimiento diferido (Deferred), inasumible en rutas críticas operativas."
+        },
+        {
+          "text": "Deben atenderse de manera inmediata",
+          "isCorrect": true,
+          "explanation": "Correcto. Desencadenan el protocolo de acción de guardias correctivas para restablecer la planta lo más pronto posible (MTTR)."
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": "En el diagnóstico básico del cableado estructurado entre un relé y una entrada digital de PLC, un operario pone el multímetro en la escala que tiene el símbolo del diodo o del altavoz acústico. Si junta las puntas a un lado y al otro del cable, y este emite un pitido continuo, ¿qué ha determinado?",
+      "type": "single",
+      "generalExplanation": "El modo de continuidad de los multímetros emite una señal sonora para avisar que la resistencia del circuito testeado está cerca a cero ohmios, lo que significa que el hilo conductor no está roto internamente y hay conducción.",
+      "options": [
+        {
+          "text": "No hay continuidad",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Cuando un cable está seccionado o roto (sin continuidad), el multímetro no pitará y la pantalla mostrará 'OL' (Over Limit)."
+        },
+        {
+          "text": "Existe continuidad",
+          "isCorrect": true,
+          "explanation": "Correcto. El hilo testeado está eléctricamente intacto y es conductor de un extremo al opuesto."
+        },
+        {
+          "text": "La batería está baja",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El fallo de batería (low batt) se señaliza con otro icono parpadeante en pantalla, no con el pitido normal de pruebas de resistencia."
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": "¿Cuál es el fin último de generar el 'Parte de avería' y nutrir de información al software del Informe de Incidencias (GMAO) dentro del departamento de Mantenimiento?",
+      "type": "single",
+      "generalExplanation": "El documento técnico de incidencia genera trazabilidad, imputa los costes y los tiempos y sirve para un análisis forense ('Análisis Causa Raíz') analítico con los responsables de área.",
+      "options": [
+        {
+          "text": "Registrar y documentar problemas para su análisis y resolución",
+          "isCorrect": true,
+          "explanation": "Correcto. Se crea la base de conocimiento para no repetir errores y entender la recurrencia de averías en activos débiles."
+        },
+        {
+          "text": "Aumentar el presupuesto de mantenimiento",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque puede derivarse una acción presupuestaria tras la auditoría, su fin original no es contable sino analítico de ingeniería."
+        },
+        {
+          "text": "Prevenir cualquier tipo de incidencia en el futuro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El informe documenta fallos del pasado; ayuda al pronóstico, pero jamás podrá extirpar 'cualquier' tipo de futuras averías por sí solo."
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": "Para medir simultáneamente los dos valores necesarios para hallar la potencia eléctrica de un motor trifásico, el vatímetro portátil incorpora dos circuitos internos (voltímetrico y amperimétrico). ¿Cómo se instala el circuito de tensión o voltimétrico del aparato hacia el motor en funcionamiento?",
+      "type": "single",
+      "generalExplanation": "La caída de tensión eléctrica se mide entre dos puntos de distinto potencial con alta resistencia, obligando que las puntas del vatímetro que leen tensión se deriven del flujo de potencia.",
+      "options": [
+        {
+          "text": "Amperímetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Un amperímetro (baja resistencia) provocaría un severo y dramático cortocircuito destructivo conectado de esa manera."
+        },
+        {
+          "text": "Telurómetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. No mide tensiones a motor, mide picas contra masas a tierra en redes fuera de servicio."
+        },
+        {
+          "text": "Vatímetro (circuito voltimétrico)",
+          "isCorrect": true,
+          "explanation": "Correcto. Al igual que el voltímetro estándar puro, la rama o circuito del medidor responsable de testear V se colgará en derivación (paralelo)."
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "text": "En vez de visualizar un transitorio de ruido eléctrico en forma de ondas sinusoidales en el dominio del tiempo con el osciloscopio, el ingeniero necesita descomponer esas formas de onda para observar los armónicos inyectados por los variadores en función de su frecuencia (Hz). ¿Qué instrumento sofisticado emplea?",
+      "type": "single",
+      "generalExplanation": "Mientras el osciloscopio representa la función Voltios frente a Segundos (tiempo), el analizador de espectros grafica los Armónicos de Potencia/Voltios frente a Hertzios (frecuencias) descubriendo los ruidos subyacentes de inversores de IGBT.",
+      "options": [
+        {
+          "text": "Multímetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El multímetro no ofrece información gráfica en el dominio temporal o de frecuencia, tan solo un valor de amplitud en RMS."
+        },
+        {
+          "text": "Analizador de espectro",
+          "isCorrect": true,
+          "explanation": "Correcto. Discrimina rápidamente las frecuencias parasitarias armónicas que están ensuciando la señal analógica original."
+        },
+        {
+          "text": "Osciloscopio",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Aunque algunos tienen Transformada Rápida de Fourier (FFT), este de base lee dominio del tiempo, y es un instrumento distinto con distinta aplicación."
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": "¿Qué beneficio de gestión operativa primordial persigue el hecho de desarrollar un 'Protocolo de Pruebas y Checklist' exhaustivo, formal y estandarizado previo a las pruebas de loop (lazo) en lugar de una inspección azarosa o intuitiva por los operarios?",
+      "type": "single",
+      "generalExplanation": "Estandarizar y seguir un guión estricto en comisionado detiene o ataja el desperdicio. Evita olvidar testear una bornera, quemar placas por improvisación y maximiza el esfuerzo del equipo técnico in situ.",
+      "options": [
+        {
+          "text": "Errores humanos durante el montaje",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El montaje del panel de la fábrica ocurrió meses antes; este es el test de puesta en marcha."
+        },
+        {
+          "text": "La frecuencia de revisión de sistemas controlados",
+          "isCorrect": false,
+          "explanation": "Incorrecto. De hecho el mantenimiento de rutinas posteriores quedará condicionado al desgaste, el commissioning no restringe esos plazos legales."
+        },
+        {
+          "text": "Recursos humanos y materiales",
+          "isCorrect": true,
+          "explanation": "Correcto. Se optimizan drásticamente los desplazamientos de los técnicos en obra, el material gastado y se previene testear lazos duplicados o dañar el PLC."
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": "Durante la etapa de diagnóstico pre-avería de un caudalímetro conectado a 24Vdc. ¿Si sabemos por diseño que la fuente de 24Vdc emite una señal puramente estable, la tarjeta de entrada está impecable y no hay cables pasando cerca, pero la medición oscila un +15% de manera constante... a qué se debe la incidencia?",
+      "type": "single",
+      "generalExplanation": "Si se descartan las caídas y las perturbaciones ruidosas externas (EMI, variadores, rizado), una lectura inestable, 'drift' de cero, o con caídas erráticas a menudo es la firma forense de un microcomponente roto internamente de la placa electrónica del instrumento o degradación del cabezal.",
+      "options": [
+        {
+          "text": "Exceso de corriente de fuga",
+          "isCorrect": false,
+          "explanation": "Incorrecto. De ser fuga importante el voltaje del circuito principal se arrastraría a cero y los diferenciales saltarían por defecto a masa."
+        },
+        {
+          "text": "Fallos o daños eléctricos en los sensores",
+          "isCorrect": true,
+          "explanation": "Correcto. El deterioro de puentes internos de resistencia o humedad infiltrada al encapsulado causan un drift irrecuperable en los milivoltios de salida."
+        },
+        {
+          "text": "Fluctuaciones de tensión",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El enunciado asegura implícitamente que se descartó la causa por tensión de fuente impura mediante medidas previas."
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": "¿Cómo debe protegerse operativamente un transmisor electrónico PLC remoto contra el peligro del rocío superficial si sabemos que trabajará en un cuadro frigorífico extremo con condensación térmica grave por diferencial de humedad relativa?",
+      "type": "single",
+      "generalExplanation": "En las instalaciones en naves químicas frías o exteriores de invierno, el choque higrotérmico humedece y forma minigotas en el cobre oxidándolo; para evitarlo se rocían, tropicalizan las tarjetas y/o se colocan con barreras antihumedad.",
+      "options": [
+        {
+          "text": "Aumentando la corriente de operación",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si hay cortocircuito superficial aumentar la intensidad solamente destruirá los chips y recalentará las pistas con mayor fatalidad."
+        },
+        {
+          "text": "Con una mejor refrigeración",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Refrigerar intensivamente una superficie en un entorno húmedo acelera la condensación del aire en punto de rocío y anega los terminales."
+        },
+        {
+          "text": "Mediante el aislamiento de componentes",
+          "isCorrect": true,
+          "explanation": "Correcto. Encapsulado epoxi, tropicalizado conformal coating en los transistores y estanqueidad del envoltorio."
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": "El Reglamento y protocolo para testear el aislamiento total a red de una línea completa dictamina y aconseja un límite físico al test. ¿Por qué es necesario aislar la instalación y probarla midiendo en circuitos parciales de tuberías de cables fraccionando en tramos de 100m para verificar al megóhmetro?",
+      "type": "single",
+      "generalExplanation": "El REBT y las rutinas exigen esto porque toda conducción eléctrica entre dos placas funciona como un inmenso condensador alargado con el suelo, lo que añade micro-fugas capacitivas que falsean la resistencia óhmica calculada por el operario si la distancia fuera de 1 km, obligando a subdividir.",
+      "options": [
+        {
+          "text": "Para proteger el megóhmetro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Estos equipos de alto rango testean sin problemas el amperaje devuelto; la protección del probador rara vez es el limitante primordial."
+        },
+        {
+          "text": "Para realizar mediciones más precisas",
+          "isCorrect": true,
+          "explanation": "Correcto. Minimiza sumatorias de falsos ruidos parásitos o reactancias que arrojan medidas de aislamiento ilusorias con error a la baja."
+        },
+        {
+          "text": "Para evitar la dispersión de corriente",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La dispersión transversal siempre existe pero no es un factor para el que el troceado limite mágicamente en sistemas blindados si no para corregir cálculos exactos."
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": "¿Cómo se mide la Tensión Nominal general en el cuadro (por ejemplo, para hallar el vector de los 400 Voltios), en un sistema de energía Trifásica equilibrada y sin defectos operando con fases y neutro?",
+      "type": "single",
+      "generalExplanation": "En España y resto de normas, la tensión simple domiciliaria (Fase-Neutro) representa la base de potencia unitaria (230V); no obstante, el voltaje de LÍNEA compuesto de los sistemas a tres patas de carga entre líneas del devanado de alternadores es la diferencia vectorial directa que asciende a la raíz de 3 (400V aprox.).",
+      "options": [
+        {
+          "text": "Midiendo la tensión de cada fase al neutro",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esta configuración evalúa los voltajes simples de las cargas unitarias en estrella, no el total trifásico de arrastre para un motor de 400V."
+        },
+        {
+          "text": "Midiendo la tensión entre dos fases",
+          "isCorrect": true,
+          "explanation": "Correcto. La colocación en borne y borne de las líneas L1 y L2 o L2 y L3 o L3 y L1 permite evaluar la tensión compuesta o Tensión de Línea total."
+        },
+        {
+          "text": "Midiendo con dos transformadores de tensión",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Es inútil la adición de dos voltajes trafos de manera general sino que se puentea el cuadro directamente con los pins multímetricos en fase."
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": "En el espectro de mantenimientos modernos aplicados en rotativas industriales, bombas de succión críticas o compresores pesados ¿Qué filosofía o técnica buscaría anticipar y evaluar un desgaste prematuro microscópico de su engranaje mediante el examen empírico de frecuencias y picos de Aceleración con acelerómetros pegados al cárter?",
+      "type": "single",
+      "generalExplanation": "El análisis de picos y armónicos de vibraciones en partes de un motor no indica fallo actual ineludible, predice un roce no detectado en un rodamiento en su fase de nacimiento antes de romper el rotor.",
+      "options": [
+        {
+          "text": "Mantenimiento predictivo",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite la monitorización por análisis avanzado detectando vibraciones u holguras (CBM) semanas o meses antes del agarre mortal definitivo."
+        },
+        {
+          "text": "Mantenimiento correctivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Consistiría simplemente en cambiar la bomba el día catastrófico de la fundición del rotor reventado que tranca el control."
+        },
+        {
+          "text": "Mantenimiento preventivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Se centraría en cambiar rutinariamente los cojinetes el año dos o los engrasadores a la hora cinco mil indiscriminadamente de su vibración puntual."
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "text": "¿Cuál es la disposición estipulada en los tutoriales de ensayo en puesta a tierra sobre la lejanía exigida por diseño entre la pica general y el segundo electrodo que inyecta corriente (conocida como H o pica C)?",
+      "type": "single",
+      "generalExplanation": "La normativa estipula el método de 'Caída de potencial a 3 hilos'. Para que los gradientes de resistencia de la tierra a medir no formen conos que falseen y choquen, el electrodo auxiliar de campo se aparta unos metros hasta encontrar curva asintótica.",
+      "options": [
+        {
+          "text": "40 metros de la pica de tierra",
+          "isCorrect": true,
+          "explanation": "Correcto. El espaciamiento promedio alejado permite disipar los voltajes falsos y testear la tensión neutra para el coeficiente 'E' exacto."
+        },
+        {
+          "text": "25 metros de la pica de tierra",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Apenas estaría al borde del bulbo crítico; es demasiado corto o para un ensayo simple ineficiente por solapamiento equipotencial de esferas."
+        },
+        {
+          "text": "10 metros de la pica de tierra",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Al colocar el electrodo en el límite propio casi al lado, la dispersión generaría un bucle erróneo casi cortocircuitado y mediría menos ohmios falsos."
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": "¿Cómo se manifiesta y de qué forma puede provocar caos silencioso en los tableros analógicos y digitales el envejecimiento y problemas de 'filtrado rizado' que inyectan los cuadros de alimentación eléctrica de 24V hacia el sistema autómata en servicio industrial continuo?",
+      "type": "single",
+      "generalExplanation": "Las fuentes de alimentación de control defectuosas de DC inyectan un ruido alterno (microcortes de tensión) en las placas base lógicas que desbordan los capacitores. Causa que el bus PLC asuma bits inexistentes falseando las variables medidas.",
+      "options": [
+        {
+          "text": "Lecturas de medición irreales",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Se pueden reportar por otros 10 factores; este síntoma no engloba solo una lectura distorsionada momentánea del ADC sino todo el caos de control subyacente de la placa."
+        },
+        {
+          "text": "Errores de lectura o comportamientos inconsistentes",
+          "isCorrect": true,
+          "explanation": "Correcto. El autómata padece 'cuelgues' fantasmas intermitentes, contadores con reset incomprensibles de memoria Vram, y paros sin fallas visuales de luz roja de Error al bajar momentáneamente las tensiones de los diodos internos."
+        },
+        {
+          "text": "Incremento de corriente de fuga",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Las derivaciones capacitivas hacia el chasis son inherentes en fuentes conmutadas robustas por el filtro EMI interno con los capacitores Y sin representar falla per se que aborte la comunicación general del CPU."
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": "¿De qué manera letal y perjudicial pueden interferir físicamente las fallas que resultan por fluctuaciones extremas de la meteorología (aire invernal-fábrica tropical o ciclos repetidos verano-invierno) de los exteriores industriales en la función de control que protegen las cajas sensóricas?",
+      "type": "single",
+      "generalExplanation": "La ley del vapor dictamina que el paso del punto seco exterior en un día húmedo de primavera a los plásticos y encapsulamientos porosos genera el punto de rocío y ahogo destructivo si se carece de barreras químicas de protección de los pines y resistencias analógicas.",
+      "options": [
+        {
+          "text": "Interrumpiendo la transmisión de datos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La humedad del aire (excluida el agua torrencial a cable pelado) no interfiere mágicamente las frecuencias ni bytes o tramas Modbus Ethernet como si lo harían los picos EMI de variador."
+        },
+        {
+          "text": "Provocando sobrecalentamiento o condensación",
+          "isCorrect": true,
+          "explanation": "Correcto. Condensan microscópicas perlas en circuitos expuestos no lacados (corrosión del verde epoxi) y si en verano la disipación se aborta por caja sellada ahoga los mosfets térmicamente quemándolos."
+        },
+        {
+          "text": "Causando ruido en la señal de entrada",
+          "isCorrect": false,
+          "explanation": "Incorrecto. El rocío no oscila las frecuencias, corroe los puentes o cortocircuita los VCC y GND causando falla general quemante, no ruido eléctrico armónico o EMI simple."
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": "En el SAT o pruebas antes del 'Hot Commissioning' final con planta en vapor ¿En qué fase y cómo se llama la rutina de comprobaciones primarias que excitan y confirman específicamente la apertura y cierre unitario a 24V de transmisores e integran relés remotos desde PLC para validar uno por uno?",
+      "type": "single",
+      "generalExplanation": "Durante el SAT (Site Acceptance Test) o puesta en servicio de frío total en campo, se efectúa un test que revisa individualmente sin arrancar agua ni secuencias programadas para confirmar que la polaridad I/O es robusta.",
+      "options": [
+        {
+          "text": "Pruebas de componentes",
+          "isCorrect": true,
+          "explanation": "Correcto. El Cold Commissioning (Test Componente a Componente / Loop checks) ataca a cada actuador y sensor por separado aislado al cien por ciento descartando cableados intercambiados o cortados del tablero de borneros."
+        },
+        {
+          "text": "Localización de la avería",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Eso sería un Troubleshooting y pertenece a mantenimientos con instalación que ya está averiada, no en primera instancia."
+        },
+        {
+          "text": "Recopilación de datos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esa es una gestión de Mantenimiento de avería documental o de predictivo post operación SCADA Data logging generalizado."
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": "¿Qué medida obligada para el control del gasto debe dictaminarse para la planta por parte del Ingeniero que supervisa un listado (o GMAO log ticket) y detecta una asiduidad en la tendencia y repetitiva rotura en el fallo por desgaste precoz general de los empaques de estanqueidad de las electroválvulas asociadas?",
+      "type": "single",
+      "generalExplanation": "Si el historial delatan una recurrencia crónica en cambiar partes mecánicas por rotura correctiva en una línea es porque el error es de base en diseño original o selección de máquina para el estrés puntual del ácido/calor y nunca debe obviarse para aplicar una Mejora Radical (Retrofit).",
+      "options": [
+        {
+          "text": "Cambiar todos los componentes del sistema",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Reemplazar y tirar repuestos al azar indiscriminadamente sería carísimo e ineficaz e iría contra normativas de Opex financiero si el tubo principal sirve."
+        },
+        {
+          "text": "Planificar y ejecutar acciones de resolución o modificación",
+          "isCorrect": true,
+          "explanation": "Correcto. Conlleva al Proactivo. Realizar una reingeniería, rediseño total de la válvula al teflón y evitar el problema original de raíz crónico que desangra los gastos."
+        },
+        {
+          "text": "Nada, registrar y esperar a ver si sigue ocurriendo",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Ignorar un hecho empírico tabulado es contrapuesto al rol que cumple la dirección técnica y anula el cometido preventivo del registro mismo inútilmente archivado."
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": "¿Cuál es la forma más óptima, eficiente a bajo costo y estandarizada en normativa en el montaje inicial previendo los armarios industriales para prevenir la entrada del caos o interferencia de ondas perjudiciales al microcontrolador proveniente de los variadores de frecuencia?",
+      "type": "single",
+      "generalExplanation": "La inducción capacitiva entre los hilos de 400V que modulan los contactores y motores es radiante y severa para los hilos paralelos de los 24V; la intercepción Faraday blinda esa inducción derivándola al conductor verde/amarillo del chasis del tablero sin alcanzar la CPU.",
+      "options": [
+        {
+          "text": "Aumentando el calibre de los cables",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Poner cables más gruesos reducirá la temperatura y resistencias pero el campo eléctrico inducido en un hilo paralelo lo permeará de todos modos sin un escudo férrico real."
+        },
+        {
+          "text": "Redundando sistemas eléctricos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Si un control se duplica, las redes EMI golpearán a ambos sistemas de lazo paralelo de todos modos generando doble ruina en control al perder los dos CPU al tiempo si están sin protección metálica paralela."
+        },
+        {
+          "text": "Usando blindaje adecuado y buen diseño de puestas a tierra",
+          "isCorrect": true,
+          "explanation": "Correcto. El escudo de aluminio de pares trenzados (Twisted Shielded pairs) derivando en borneras a tierra limpias es y será el muro primario anti EMI estandarizado universalmente."
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "text": "¿Cuál de las siguientes características describe mejor y define el alma técnica que subyace al Mantenimiento predictivo (Predictive maintenance/ CBM) al compararlo a otras de sus alternativas (Breakdown o preventivos estándar)?",
+      "type": "single",
+      "generalExplanation": "La filosofía CBM descarta intervenir una máquina que corre estupendamente para reventarla cambiando su aceite, y monitorea en cambio las curvas de degradación térmica o del amperaje y traza (Analiza) su tendencia y anticipa una rotura la semana siguiente inminente parando para intervenir.",
+      "options": [
+        {
+          "text": "Requiere intervención solo después de fallos",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Esto se denomina y atañe exclusivamente como mantenimiento cien por ciento Correctivo u operacional a rotura letal final o Run-to-Failure (RTF) obsoleto en industria 4.0 pura."
+        },
+        {
+          "text": "Utiliza análisis de tendencias para prever fallos",
+          "isCorrect": true,
+          "explanation": "Correcto. Estudian de forma inteligente los umbrales anómalos de las gráficas (Vibración, ultrasonidos, temperatura infrarroja termográfica) al salir del marco 'normal' estandarizado."
+        },
+        {
+          "text": "Basado en una planificación temporal estricta",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La planificación rutinaria por meses del engrasado para su bomba o por millas para automóvil es el clásico Mantenimiento Preventivo (PM) que interviene piezas sanas derrochando insumos pero sin prever los fallos que nazcan dos días tras la inspección ocular estipulada de catálogo y calendario."
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": "Si una empresa decide adquirir Equipos de Protección Individual (EPI) frente al riesgo en mediciones eléctricas bajo tensión (ej. guantes ignífugos o cascos). ¿Cuál es un criterio determinante desde la Prevención y Ergonomía del LPRL para que su uso en jornada logre su efectividad?",
+      "type": "single",
+      "generalExplanation": "Si se omite la anatomía humana, el trabajador bajo estrés de verano abandonará los elementos en el suelo del banco. La efectividad no la marca solo el diseño CE, sino el acople con su postura funcional de trabajo y reducción de las alergias al EPI sin estorbar el cometido laboral.",
+      "options": [
+        {
+          "text": "El EPI debe ser de color llamativo para su fácil identificación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Los fluorescentes son vitales para maquinaria móvil o carretillas pero no aplican obligatoriamente a botas dieléctricas negras normativas que operan encerrados frente al cubículo en tableros donde nadie atropellaría a otro."
+        },
+        {
+          "text": "El EPI debe ser cómodo de llevar para fomentar su uso continuo.",
+          "isCorrect": true,
+          "explanation": "Correcto. El factor ergonómico se estipula bajo ley en prevención, debiendo amoldarse a los tallajes, complexiones de piel, evitar asfixias sudorosas y garantizar que el profesional sienta y opere libremente motivándolo al uso constante rutinario."
+        },
+        {
+          "text": "El EPI debe ser visualmente atractivo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto. La belleza no salvaguardaría amputaciones o quemaduras de un arco a 400V, un elemento bello pero ineficiente dieléctricamente en voltajes o que asfixie al ser puesto en calores es contra normativas."
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": "¿Qué tipo de control requiere que el controlador secundario sea más rápido que el controlador primario?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Control en cascada.",
+      "options": [
+        {
+          "text": "Control en cascada",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Control predictivo",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Control en adelanto",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": "¿Cuál es una de las principales ventajas del control en lazo cerrado?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Permite realizar ajustes constantes para mantener la estabilidad.",
+      "options": [
+        {
+          "text": "Permite realizar ajustes constantes para mantener la estabilidad.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "No requiere sensores en el sistema.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Solo funciona en sistemas digitales.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "text": "¿Qué elemento mide directamente la variable de salida?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El sensor.",
+      "options": [
+        {
+          "text": "El sensor.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El actuador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "El comparador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": "¿Qué determina el tiempo de estabilización en un sistema con retroalimentación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: La capacidad del sistema para rechazar perturbaciones.",
+      "options": [
+        {
+          "text": "La capacidad del sistema para rechazar perturbaciones.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "La relación entre el error y el setpoint.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La velocidad del controlador.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": "¿Qué parámetro del controlador evita la acumulación de error en el término integral?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Anti-windup.",
+      "options": [
+        {
+          "text": "Anti-windup",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Tiempo integral",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Ganancia proporcional",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": "¿Qué ventaja tiene usar un sistema con retroalimentación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Detecta y corrige errores automáticamente.",
+      "options": [
+        {
+          "text": "Detecta y corrige errores automáticamente.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Reduce el número de perturbaciones externas.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Elimina la necesidad de sensores.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": "¿Qué es el setpoint en un sistema de regulación?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: El valor de referencia deseado.",
+      "options": [
+        {
+          "text": "El valor de referencia deseado.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "El valor de la perturbación.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "La variable manipulada.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "text": "¿Qué tecnología permite medir la posición de un objeto en distancias cortas y con alta precisión?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Encoder óptico.",
+      "options": [
+        {
+          "text": "Encoder óptico.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Transductor piezoeléctrico.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Sensor capacitivo.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "text": "Según el RITE, ¿qué deben promover las instalaciones térmicas en términos de energía?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Eficiencia energética.",
+      "options": [
+        {
+          "text": "Eficiencia energética",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Exclusivamente energía solar",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Uso de energías no renovables",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "text": "En sistemas complejos, ¿cómo se recomienda realizar las pruebas de conjunto?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es: Por zonas o bloques de funcionamiento, y luego el sistema completo.",
+      "options": [
+        {
+          "text": "Por zonas o bloques de funcionamiento, y luego el sistema completo.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Solo los actuadores por separado.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        },
+        {
+          "text": "Todo el sistema de una sola vez.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="header-actions">
+    <h1 class="main-title">Mis Exámenes</h1>
+
+    <div class="button-group">
+      <button class="btn-action btn-folder" (click)="selectFolder()">
+        📂 Cargar Carpeta Exámenes
+      </button>
+
+      @if (isExternal()) {}
+
+      <button class="btn-legend" (click)="goToLegend()">
+        🛠️ Cómo crear exámenes
+      </button>
+    </div>
+  </div>
+
+  @if (isExternal()) {
+    <div class="status-info">
+      <p>Modo externo: Leyendo archivos JSON desde el sistema local.</p>
+    </div>
+  }
+
+  @if (exams(); as examList) {
+    @if (examList.length > 0) {
+      <div class="exam-grid">
+        @for (exam of examList; track exam?.fileName) {
+          <div class="exam-card" (click)="goToExam(exam)"
+          [style.border-color]="getBadgeColor(exam?.examProperties)">
+            <div class="card-content">
+              <span
+                class="subject-badge"
+                [style.background-color]="getBadgeColor(exam?.examProperties)"
+                [style.color]="
+                  exam?.examProperties?.subjectColor ? '#ffffff' : ''
+                "
+              >
+                {{ exam?.examProperties?.subjectName }}
+              </span>
+              <h2 class="exam-title">{{ exam?.examProperties?.examTitle }}</h2>
+              <p class="exam-summary">
+                {{ exam?.examProperties?.examSummary }}
+              </p>
+
+              <div class="exam-meta">
+                <span
+                  >⏱
+                  {{
+                    exam?.examProperties?.examConfig?.examDurationMinutes === 0
+                      ? "∞"
+                      : exam?.examProperties?.examConfig?.examDurationMinutes +
+                        " min"
+                  }}</span
+                >
+                <span
+                  >🏆 Min:
+                  {{
+                    exam?.examProperties?.examConfig?.passingPercentage
+                  }}%</span
+                >
+                <span>📝 Preguntas: {{ exam?.questions?.length }}</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="empty-state">
+        <p>
+          No se encontraron archivos JSON válidos en la carpeta seleccionada.
+        </p>
+      </div>
+    }
+  } @else {
+    <div class="loading-container">
+      <p class="loading">Cargando datos de los exámenes...</p>
+    </div>
+  }
+</div>

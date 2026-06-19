@@ -1,0 +1,523 @@
+{
+  "examProperties": {
+    "id": "informatica-industrial/informatica-industrial-simulacro-tema-5.json",
+    "subjectName": "Informática Industrial",
+    "examTitle": "Simulacro Examen Informática Industrial - UD 5: Programación de equipos y sistemas industriales",
+    "examSummary": "Evaluación técnica sobre Programación de equipos y sistemas industriales",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 45,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 2,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#57b0ff"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "Según el Teorema del programa estructurado de Böhm y Jacopini, ¿cuáles son las tres únicas estructuras lógicas necesarias para implementar cualquier función computable?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es Secuencia, Selección e Iteración. El teorema demuestra que combinando estas tres estructuras se puede prescindir de instrucciones de salto como GOTO.",
+      "options": [
+        { "text": "Secuencia, Selección e Iteración.", "isCorrect": true },
+        { "text": "Asignación, Condicionales y Saltos incondicionales.", "isCorrect": false },
+        { "text": "Variables, Funciones y Procedimientos.", "isCorrect": false },
+        { "text": "Objetos, Clases y Métodos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué problema principal busca resolver la programación estructurada en comparación con los primeros códigos desarrollados?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es el uso excesivo de la sentencia GOTO, que generaba el llamado 'código espagueti', haciéndolo difícil de entender y mantener.",
+      "options": [
+        { "text": "La falta de lenguajes orientados a objetos.", "isCorrect": false },
+        { "text": "La dependencia de lenguajes compilados en lugar de interpretados.", "isCorrect": false },
+        { "text": "El uso abusivo de la instrucción de salto (GOTO), que generaba el llamado 'código espagueti'.", "isCorrect": true },
+        { "text": "La dificultad de implementar recursividad en los programas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿En qué consiste la técnica de programación modular?",
+      "type": "single",
+      "generalExplanation": "La programación modular (análisis Top-Down) consiste en dividir el programa total en tareas más simples y módulos independientes y reutilizables.",
+      "options": [
+        { "text": "En que una función se llame a sí misma hasta cumplir una condición de salida.", "isCorrect": false },
+        { "text": "En la creación de objetos a partir de clases con atributos y métodos.", "isCorrect": false },
+        { "text": "En ejecutar el código línea a línea utilizando un intérprete en tiempo real.", "isCorrect": false },
+        { "text": "En dividir el programa en módulos independientes y reutilizables, enfocados en resolver problemas específicos.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cuál es un riesgo o inconveniente importante asociado al uso de la programación recursiva?",
+      "type": "single",
+      "generalExplanation": "La respuesta correcta es el desbordamiento de pila (stack overflow). Si la recursión no tiene una condición de salida adecuada o es muy profunda, consume toda la memoria disponible para la pila de llamadas.",
+      "options": [
+        { "text": "Impide utilizar estructuras de control condicionales.", "isCorrect": false },
+        { "text": "Puede ser propenso a errores de desbordamiento de pila (stack overflow) si carece de una condición de salida adecuada.", "isCorrect": true },
+        { "text": "Obliga a compilar el programa varias veces.", "isCorrect": false },
+        { "text": "Impide la reutilización del código en otros módulos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "En el contexto de la Programación Orientada a Objetos (POO), ¿qué es el 'Polimorfismo'?",
+      "type": "single",
+      "generalExplanation": "El polimorfismo es la capacidad de un objeto de tomar diferentes formas y comportarse de manera distinta en función del contexto en el que se use.",
+      "options": [
+        { "text": "La capacidad de ocultar la complejidad de los objetos y exponer solo su interfaz pública.", "isCorrect": false },
+        { "text": "La creación de nuevas clases a partir de otras existentes, heredando propiedades.", "isCorrect": false },
+        { "text": "La capacidad de un objeto de tomar diferentes formas y comportarse de manera distinta según el contexto.", "isCorrect": true },
+        { "text": "La representación de entidades del mundo real mediante variables globales.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Dentro de la programación orientada a objetos, ¿qué relación existe entre 'clase' y 'objeto'?",
+      "type": "single",
+      "generalExplanation": "La clase actúa como el 'molde' que define atributos y métodos, mientras que el objeto es una instancia concreta creada a partir de esa clase.",
+      "options": [
+        { "text": "La clase es una variable local y el objeto es una variable global.", "isCorrect": false },
+        { "text": "El objeto es el 'molde' y la clase es la instancia que se crea a partir de él.", "isCorrect": false },
+        { "text": "La clase es un módulo de código procedural y el objeto es la función principal.", "isCorrect": false },
+        { "text": "La clase es el 'molde' con el que se hacen los objetos, y el objeto es una instancia de la clase.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "En un diagrama de flujo, ¿qué elemento geométrico se utiliza para denotar una decisión o pregunta?",
+      "type": "single",
+      "generalExplanation": "En los diagramas de flujo estandarizados, el rombo se utiliza para representar decisiones o preguntas condicionales.",
+      "options": [
+        { "text": "El rectángulo.", "isCorrect": false },
+        { "text": "El óvalo.", "isCorrect": false },
+        { "text": "El rombo.", "isCorrect": true },
+        { "text": "El paralelogramo.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Qué figura representa una acción o instrucción genérica dentro de un diagrama de flujo?",
+      "type": "single",
+      "generalExplanation": "El rectángulo representa una acción, instrucción o proceso interno en un diagrama de flujo.",
+      "options": [
+        { "text": "El rombo.", "isCorrect": false },
+        { "text": "El óvalo.", "isCorrect": false },
+        { "text": "El paralelogramo.", "isCorrect": false },
+        { "text": "El rectángulo.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Cuál es la principal finalidad del pseudocódigo?",
+      "type": "single",
+      "generalExplanation": "El pseudocódigo permite describir la lógica de un algoritmo en un lenguaje natural estructurado, comprensible para personas sin necesidad de conocer la sintaxis estricta de un lenguaje ejecutable.",
+      "options": [
+        { "text": "Ser compilado directamente por el microprocesador sin necesidad de un entorno de desarrollo.", "isCorrect": false },
+        { "text": "Permitir que las personas entiendan fácilmente la lógica del programa sin preocuparse por la sintaxis estricta de un lenguaje de programación.", "isCorrect": true },
+        { "text": "Controlar las entradas y salidas de hardware de forma directa a bajo nivel.", "isCorrect": false },
+        { "text": "Reemplazar los diagramas de flujo en proyectos orientados a objetos exclusivamente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "La práctica de formateo que consiste en añadir espacios o tabulaciones al comienzo de las líneas para organizar y representar visualmente la jerarquía del código se denomina:",
+      "type": "single",
+      "generalExplanation": "Se denomina indentación (o sangría), y ayuda a visualizar qué instrucciones están dentro de estructuras de control como bucles o condicionales.",
+      "options": [
+        { "text": "Encapsulación.", "isCorrect": false },
+        { "text": "Indentación.", "isCorrect": true },
+        { "text": "Polimorfismo.", "isCorrect": false },
+        { "text": "Compilación.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Cómo se define a los lenguajes interpretados frente a los compilados?",
+      "type": "single",
+      "generalExplanation": "En un lenguaje interpretado, el código fuente es traducido y ejecutado línea por línea en tiempo real por un intérprete, en lugar de generar previamente un archivo de código máquina (compilación).",
+      "options": [
+        { "text": "Su código fuente se traduce completamente a un archivo ejecutable antes de ejecutarse.", "isCorrect": false },
+        { "text": "Se comunican exclusivamente a nivel de hardware mediante ceros y unos.", "isCorrect": false },
+        { "text": "Un programa (intérprete) traduce y ejecuta directamente las instrucciones del código fuente línea por línea en tiempo de ejecución.", "isCorrect": true },
+        { "text": "Solo pueden ser utilizados en la programación de autómatas mediante diagramas de contactos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Dentro de la programación de autómatas y PLC, ¿cuál de los siguientes lenguajes se caracteriza por ser gráfico y utilizar símbolos similares a los de la ingeniería eléctrica (contactos, bobinas, temporizadores)?",
+      "type": "single",
+      "generalExplanation": "El Lenguaje de diagrama de contactos (Ladder) utiliza una representación visual similar a los esquemas eléctricos de relés, lo que facilita su uso a técnicos del sector eléctrico.",
+      "options": [
+        { "text": "Lenguaje de texto estructurado (ST).", "isCorrect": false },
+        { "text": "Lenguaje de lista de instrucciones (IL).", "isCorrect": false },
+        { "text": "Lenguaje GRAFCET.", "isCorrect": false },
+        { "text": "Lenguaje de diagrama de contactos (Ladder).", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "¿Qué lenguaje orientado a PLC es gráfico y utiliza un diagrama de estados (rectángulos) conectados por transiciones para representar el comportamiento de un sistema?",
+      "type": "single",
+      "generalExplanation": "El GRAFCET es un diagrama de control de transición de estados específico para la programación secuencial de sistemas automatizados.",
+      "options": [
+        { "text": "GRAFCET.", "isCorrect": true },
+        { "text": "Ensamblador.", "isCorrect": false },
+        { "text": "Ladder.", "isCorrect": false },
+        { "text": "Lista de instrucciones.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Cuando hablamos de 'tipado dinámico' en un lenguaje de programación (como Python o JavaScript), nos referimos a:",
+      "type": "single",
+      "generalExplanation": "El tipado dinámico permite que el intérprete deduzca el tipo de dato durante la ejecución, sin necesidad de que el programador declare el tipo al crear la variable.",
+      "options": [
+        { "text": "Que las variables pueden cambiar de ámbito (local a global) automáticamente.", "isCorrect": false },
+        { "text": "Que no es necesario declarar explícitamente el tipo de dato de una variable al crearla.", "isCorrect": true },
+        { "text": "Que las variables se guardan en un registro de CPU especial que acelera el cálculo.", "isCorrect": false },
+        { "text": "Que el lenguaje exige declarar el tipo (Integer, String, etc.) estrictamente antes de compilar.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "¿Cuál de los siguientes lenguajes se considera de 'nivel medio', ya que combina características de alto nivel con un acceso eficiente a la memoria a bajo nivel?",
+      "type": "single",
+      "generalExplanation": "El lenguaje C es conocido como de nivel medio por permitir manipulación de memoria a bajo nivel (punteros) ofreciendo al mismo tiempo estructuras de control de alto nivel.",
+      "options": [
+        { "text": "JavaScript.", "isCorrect": false },
+        { "text": "Python.", "isCorrect": false },
+        { "text": "PHP.", "isCorrect": false },
+        { "text": "Lenguaje C.", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "En el contexto de la persistencia y visibilidad de las variables en VB.NET, ¿qué define el 'ámbito local'?",
+      "type": "single",
+      "generalExplanation": "Las variables locales se declaran dentro de un bloque, método o función, y solo son visibles y utilizables dentro del mismo, destruyéndose al terminar su ejecución.",
+      "options": [
+        { "text": "Variables declaradas en el módulo principal que son accesibles desde cualquier función del programa.", "isCorrect": false },
+        { "text": "Variables declaradas dentro de una función o bloque, que solo son accesibles dentro de este y se destruyen al finalizar.", "isCorrect": true },
+        { "text": "Variables que conservan su valor de forma permanente en el disco duro.", "isCorrect": false },
+        { "text": "Variables que se utilizan exclusivamente para conectar el software con la base de datos local.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "En VB.NET, la palabra reservada 'Static' al declarar una variable indica que:",
+      "type": "single",
+      "generalExplanation": "La palabra reservada Static especifica que una variable local conserva su valor más reciente incluso después de que termine la ejecución del procedimiento donde fue declarada, para cuando vuelva a ser llamado.",
+      "options": [
+        { "text": "La variable no puede cambiar su valor inicial bajo ninguna circunstancia.", "isCorrect": false },
+        { "text": "La variable es accesible desde cualquier proyecto de la misma solución.", "isCorrect": false },
+        { "text": "La variable local debe seguir existiendo y conservar su valor tras terminar el procedimiento en el que se declara.", "isCorrect": true },
+        { "text": "La variable solo aceptará valores numéricos de tipo entero.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "¿Qué palabra reservada se utiliza en VB.NET para definir una variable que almacena un valor inmutable durante toda la ejecución del programa?",
+      "type": "single",
+      "generalExplanation": "La palabra reservada Const se utiliza para definir constantes, valores que no cambiarán durante la ejecución.",
+      "options": [
+        { "text": "Dim", "isCorrect": false },
+        { "text": "Const", "isCorrect": true },
+        { "text": "Static", "isCorrect": false },
+        { "text": "Private", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Cuál es el resultado en VB.NET de la operación '13 Mod 5'?",
+      "type": "single",
+      "generalExplanation": "El operador Mod devuelve el resto de una división entera. Al dividir 13 entre 5, el cociente entero es 2 (10) y el resto es 3.",
+      "options": [
+        { "text": "2", "isCorrect": false },
+        { "text": "3", "isCorrect": true },
+        { "text": "2.6", "isCorrect": false },
+        { "text": "1", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Según las tablas de verdad de las operaciones lógicas, ¿cuál es el resultado de (A Xor B) si A es verdadero (1) y B es verdadero (1)?",
+      "type": "single",
+      "generalExplanation": "El operador O Exclusivo (Xor) devuelve falso (0) cuando ambas entradas son iguales, y verdadero (1) cuando son diferentes. Si ambas son 1, el resultado es 0.",
+      "options": [
+        { "text": "0 (Falso)", "isCorrect": true },
+        { "text": "1 (Verdadero)", "isCorrect": false },
+        { "text": "Depende del tipado de la variable", "isCorrect": false },
+        { "text": "Lanza una excepción", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "En VB.NET, ¿qué operador se puede utilizar habitualmente para la concatenación de cadenas de texto?",
+      "type": "single",
+      "generalExplanation": "El operador & (ampersand) se utiliza para concatenar cadenas de caracteres en VB.NET (también se puede usar el signo +).",
+      "options": [
+        { "text": "Mod", "isCorrect": false },
+        { "text": "And", "isCorrect": false },
+        { "text": "^", "isCorrect": false },
+        { "text": "& (ampersand)", "isCorrect": true }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "¿Qué particularidad presentan las Matrices (Arrays) respecto al tamaño en la mayoría de los lenguajes, incluido VB.NET?",
+      "type": "single",
+      "generalExplanation": "Las matrices (Arrays) se inician con un tamaño fijo en el momento de su creación, a diferencia de colecciones dinámicas como las Listas que pueden crecer en ejecución.",
+      "options": [
+        { "text": "Que crecen y se reducen dinámicamente en tiempo de ejecución sin necesidad de re-declaración.", "isCorrect": false },
+        { "text": "Que tienen un tamaño fijo determinado en su creación y modificarlo normalmente implica perder el contenido inicial.", "isCorrect": true },
+        { "text": "Que solo pueden contener datos de tipo String.", "isCorrect": false },
+        { "text": "Que no utilizan índices numéricos, sino pares de clave-valor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Qué tipo de dato compuesto se define como colecciones de pares 'clave-valor'?",
+      "type": "single",
+      "generalExplanation": "Los diccionarios son estructuras compuestas que almacenan elementos asociados a una clave única para permitir una búsqueda eficiente.",
+      "options": [
+        { "text": "Matrices (Arrays)", "isCorrect": false },
+        { "text": "Listas (Lists)", "isCorrect": false },
+        { "text": "Diccionarios (Dictionaries)", "isCorrect": true },
+        { "text": "Conjuntos (Sets)", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "En una estructura condicional múltiple (ej. If... ElseIf... Else), ¿qué ocurre cuando se verifica la primera de las condiciones como verdadera?",
+      "type": "single",
+      "generalExplanation": "En estas estructuras, el flujo del código ejecuta el bloque de la condición verdadera y abandona la estructura inmediatamente; no se siguen comprobando las demás opciones.",
+      "options": [
+        { "text": "Se ejecutan las instrucciones de ese bloque y el flujo abandona la estructura condicional.", "isCorrect": true },
+        { "text": "Se ejecuta ese bloque y luego se evalúan obligatoriamente todas las condiciones ElseIf restantes.", "isCorrect": false },
+        { "text": "El programa genera una excepción de selección múltiple.", "isCorrect": false },
+        { "text": "El flujo vuelve al principio del If en forma de bucle infinito.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Cuál es la principal diferencia entre el bucle 'Do... While' y el bucle estándar 'While' en VB.NET?",
+      "type": "single",
+      "generalExplanation": "El bucle Do... While evalúa la condición al final del bloque, garantizando que las instrucciones se ejecuten al menos una vez, mientras que el bucle While normal la evalúa al inicio.",
+      "options": [
+        { "text": "El bucle Do... While utiliza un contador automático, el bucle While no.", "isCorrect": false },
+        { "text": "El bucle Do... While evalúa la condición después de ejecutar las instrucciones, asegurando que se ejecuten al menos una vez.", "isCorrect": true },
+        { "text": "El bucle While solo acepta condiciones con variables de tipo cadena.", "isCorrect": false },
+        { "text": "No existe ninguna diferencia operativa, son exactamente idénticos.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "Si se conoce de antemano el número exacto de veces que se debe ejecutar un bloque de código, ¿qué instrucción iterativa es la más idónea?",
+      "type": "single",
+      "generalExplanation": "El bucle For... Next utiliza un contador con un límite conocido y un paso, lo que lo hace ideal para iteraciones predefinidas.",
+      "options": [
+        { "text": "For... Next", "isCorrect": true },
+        { "text": "Do... Until", "isCorrect": false },
+        { "text": "While", "isCorrect": false },
+        { "text": "Select Case", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Para qué se utiliza la instrucción 'Continue' (p. ej. Continue For) dentro de un bucle?",
+      "type": "single",
+      "generalExplanation": "Continue se usa para omitir el resto del código en la iteración actual y saltar directamente al inicio de la siguiente iteración del mismo bucle.",
+      "options": [
+        { "text": "Para finalizar completamente el bucle y seguir con la instrucción que está debajo de él.", "isCorrect": false },
+        { "text": "Para saltar el resto de las instrucciones en la iteración actual y continuar con la siguiente iteración.", "isCorrect": true },
+        { "text": "Para hacer una pausa en el programa hasta que el usuario pulse una tecla.", "isCorrect": false },
+        { "text": "Para salir de una función recursiva sin devolver un valor.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "En programación con VB.NET, ¿cuál es la diferencia fundamental entre una 'Function' y un 'Sub' (Procedimiento)?",
+      "type": "single",
+      "generalExplanation": "La función (Function) devuelve un valor como resultado mediante la instrucción Return, mientras que el subprocedimiento (Sub) ejecuta tareas pero no retorna ningún dato.",
+      "options": [
+        { "text": "Un Sub puede recibir parámetros, pero una Function no.", "isCorrect": false },
+        { "text": "Una Function devuelve un valor al código que la llamó, mientras que un Sub no devuelve ningún valor.", "isCorrect": true },
+        { "text": "Una Function solo se utiliza en clases globales, y los Sub en locales.", "isCorrect": false },
+        { "text": "Un Sub requiere obligatoriamente una condición 'If' interna, y una Function no.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Cuando pasamos un parámetro a una función 'por valor' (ByVal) en lugar de 'por referencia' (ByRef), ¿qué sucede con los cambios realizados sobre ese parámetro dentro de la función?",
+      "type": "single",
+      "generalExplanation": "Al pasarse por valor, la función trabaja con una copia de la variable original. Los cambios no afectan a la variable externa.",
+      "options": [
+        { "text": "Los cambios afectan directamente a la variable original del programa principal.", "isCorrect": false },
+        { "text": "Los cambios provocan un error de compilación.", "isCorrect": false },
+        { "text": "La función trabaja con una copia, por lo que cualquier modificación no afecta al valor original en el código que la llamó.", "isCorrect": true },
+        { "text": "La variable se convierte automáticamente a tipo String.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "¿Cuál es la función del bloque 'Try... Catch... Finally' en VB.NET?",
+      "type": "single",
+      "generalExplanation": "Es la estructura dedicada a la gestión de excepciones, permitiendo capturar y controlar errores de ejecución sin que el programa colapse abruptamente.",
+      "options": [
+        { "text": "Ejecutar un bucle infinito hasta que el usuario introduzca 'Try'.", "isCorrect": false },
+        { "text": "Definir constantes globales en un espacio de nombres protegido.", "isCorrect": false },
+        { "text": "Manejar errores o eventos inesperados (excepciones) evitando que el programa se detenga abruptamente.", "isCorrect": true },
+        { "text": "Seleccionar entre múltiples opciones evaluando el valor de una variable (similar a Select Case).", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "En una estructura Try... Catch... Finally, ¿qué característica tiene el bloque 'Finally'?",
+      "type": "single",
+      "generalExplanation": "El bloque Finally es opcional, pero si se incluye, se ejecutará siempre (haya o no haya habido excepción), siendo ideal para liberar recursos.",
+      "options": [
+        { "text": "Solo se ejecuta si se ha capturado un error en el bloque Try.", "isCorrect": false },
+        { "text": "Solo se ejecuta si NO se ha capturado ningún error.", "isCorrect": false },
+        { "text": "Se ejecuta siempre de forma obligatoria, independientemente de si ocurrió una excepción o no.", "isCorrect": true },
+        { "text": "Es el lugar donde se declaran las variables locales de la función.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "En el contexto de Microsoft Visual Studio, ¿qué es un 'espacio de nombres' (Namespace)?",
+      "type": "single",
+      "generalExplanation": "Un espacio de nombres (como System.Math) es un recurso organizativo que agrupa un conjunto de elementos de código relacionados por su funcionalidad.",
+      "options": [
+        { "text": "Una variable especial para almacenar cadenas de texto largas.", "isCorrect": false },
+        { "text": "Un conjunto de elementos de código (objetos, funciones, etc.) agrupados por su funcionalidad o relación.", "isCorrect": true },
+        { "text": "La zona del editor donde se configuran los puntos de interrupción.", "isCorrect": false },
+        { "text": "El archivo ejecutable (.exe) que se genera tras compilar.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "¿Qué función cumple la palabra clave 'Imports' en la cabecera de un archivo VB.NET (p. ej. Imports System.Math)?",
+      "type": "single",
+      "generalExplanation": "La instrucción Imports permite acceder directamente a los métodos y clases del espacio de nombres sin tener que escribir su ruta jerárquica completa cada vez.",
+      "options": [
+        { "text": "Permite acceder a los elementos del espacio de nombres indicándolo de forma directa, sin tener que escribir la ruta jerárquica completa.", "isCorrect": true },
+        { "text": "Detiene la compilación del programa si el espacio de nombres especificado no contiene funciones.", "isCorrect": false },
+        { "text": "Exporta el código de nuestro programa hacia un archivo .dll de librerías.", "isCorrect": false },
+        { "text": "Fuerza la declaración explícita de tipos de todas las variables.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "Dentro del editor de código de Visual Studio, la característica 'IntelliSense' se utiliza principalmente para:",
+      "type": "single",
+      "generalExplanation": "IntelliSense es el sistema de asistencia que sugiere autocompletado de código y da información contextual sobre clases, métodos y propiedades mientras se escribe.",
+      "options": [
+        { "text": "Reorganizar visualmente las carpetas del sistema operativo.", "isCorrect": false },
+        { "text": "Compilar el código en diferentes lenguajes de máquina simultáneamente.", "isCorrect": false },
+        { "text": "Proporcionar sugerencias de código, autocompletado y ayuda contextual mientras se escribe.", "isCorrect": true },
+        { "text": "Proteger el programa de virus insertados en el código fuente.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "La herramienta del entorno de desarrollo que te permite detener la ejecución del programa en líneas específicas e inspeccionar el estado de las variables se llama:",
+      "type": "single",
+      "generalExplanation": "El depurador (debugger) es la herramienta diseñada para pausar la ejecución en puntos de interrupción (breakpoints) y rastrear variables paso a paso.",
+      "options": [
+        { "text": "Compilador", "isCorrect": false },
+        { "text": "Depurador", "isCorrect": true },
+        { "text": "Refactorizador", "isCorrect": false },
+        { "text": "Editor IntelliSense", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "¿Qué permite la función 'Refactorización' incluida en entornos de desarrollo modernos como Visual Studio?",
+      "type": "single",
+      "generalExplanation": "La refactorización incluye herramientas automáticas que cambian la estructura interna del código (por ejemplo, renombrar una variable en todo el proyecto) sin alterar el comportamiento de la aplicación.",
+      "options": [
+        { "text": "Modificar el lenguaje de programación original del proyecto por uno nuevo de forma automática.", "isCorrect": false },
+        { "text": "Realizar cambios estructurales en el código (como renombrar variables globalmente) sin cambiar su comportamiento.", "isCorrect": true },
+        { "text": "Conectar el proyecto con bases de datos en la nube sin requerir programación.", "isCorrect": false },
+        { "text": "Traducir los comentarios del código a distintos idiomas.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "En el contexto del depurador, ¿para qué se utilizan los 'Puntos de interrupción' (Breakpoints)?",
+      "type": "single",
+      "generalExplanation": "Los puntos de interrupción marcan líneas concretas de código donde el depurador pausará la ejecución, permitiendo al desarrollador inspeccionar variables y seguir el proceso paso a paso.",
+      "options": [
+        { "text": "Para detener la ejecución de un programa en una línea específica y poder inspeccionarlo.", "isCorrect": true },
+        { "text": "Para reiniciar el sistema operativo en caso de bucle infinito.", "isCorrect": false },
+        { "text": "Para insertar comentarios de forma masiva en el código fuente.", "isCorrect": false },
+        { "text": "Para forzar un error de sintaxis y obligar a recompilar.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "Al utilizar el bucle For... Next en VB.NET (ej. For i As Integer = 1 To 10 Step 2), ¿qué función tiene el parámetro opcional 'Step'?",
+      "type": "single",
+      "generalExplanation": "Step indica el incremento (o decremento, si es negativo) que sufrirá el contador en cada vuelta del bucle.",
+      "options": [
+        { "text": "Indica el número total de iteraciones máximas del bucle.", "isCorrect": false },
+        { "text": "Señala la cantidad de memoria que se reserva para la variable contador.", "isCorrect": false },
+        { "text": "Indica el valor de incremento o decremento que se aplica al contador en cada iteración.", "isCorrect": true },
+        { "text": "Detiene el bucle cuando llega al paso especificado.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "En el entorno .NET, ¿qué librería proporciona principalmente las clases para trabajar con gráficos 2D, dibujar formas e imágenes?",
+      "type": "single",
+      "generalExplanation": "El espacio de nombres System.Drawing contiene las clases relacionadas con la representación de interfaces gráficas, imágenes y formas.",
+      "options": [
+        { "text": "System.Threading", "isCorrect": false },
+        { "text": "System.Data", "isCorrect": false },
+        { "text": "System.Drawing", "isCorrect": true },
+        { "text": "System.IO", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Según el código de ejemplo del tema: numero = CInt(Console.ReadLine()). ¿Qué hace la función CInt()?",
+      "type": "single",
+      "generalExplanation": "CInt() es una función de conversión de VB.NET que transforma la entrada (normalmente una cadena de texto, String) en un tipo entero (Integer).",
+      "options": [
+        { "text": "Convierte la expresión contenida en el argumento a un número entero.", "isCorrect": true },
+        { "text": "Convierte la expresión a una constante de tipo texto inmutable.", "isCorrect": false },
+        { "text": "Llama al sistema operativo para limpiar la pantalla de la consola.", "isCorrect": false },
+        { "text": "Detiene el programa hasta que el usuario pulse 'C' e 'Intro'.", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "¿Qué palabra clave se usa en un bloque 'Try... Catch' en VB.NET para definir la variable donde se almacenará la información del error capturado?",
+      "type": "single",
+      "generalExplanation": "Se utiliza la palabra Catch seguida del nombre de la variable y su tipo (p. ej. Catch ex As Exception), lo que guarda los detalles de la excepción en dicha variable.",
+      "options": [
+        { "text": "Err", "isCorrect": false },
+        { "text": "ExceptionVar", "isCorrect": false },
+        { "text": "Catch", "isCorrect": true },
+        { "text": "Throws", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "Para salir prematuramente de un procedimiento (Sub) en VB.NET antes de llegar a su final lógico (End Sub), ¿qué instrucción utilizarías?",
+      "type": "single",
+      "generalExplanation": "La instrucción Exit Sub transfiere inmediatamente el control de flujo fuera del procedimiento hacia la instrucción siguiente a su invocación.",
+      "options": [
+        { "text": "Return Sub", "isCorrect": false },
+        { "text": "Exit Sub", "isCorrect": true },
+        { "text": "End Sub", "isCorrect": false },
+        { "text": "Break", "isCorrect": false }
+      ]
+    }
+  ]
+}

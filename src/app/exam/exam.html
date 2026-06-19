@@ -1,0 +1,371 @@
+@if (examData(); as exam) {
+  <header class="exam-header">
+    <div class="header-info">
+      <span class="subject-label">{{ exam.examProperties.subjectName }}</span>
+      <h1 class="exam-name">{{ exam.examProperties.examTitle }}</h1>
+
+      <!-- NUEVO: Botones de depuración/llenado rápido -->
+      @if (!isFinished() && hasStarted()) {
+        <div class="debug-actions">
+          <button class="btn-default-inverted" (click)="fillRandomly()">
+            🎲 Respuestas Aleatorias
+          </button>
+          <button class="btn-default-inverted" (click)="fillCorrectly()">
+            ✅ Respuestas Correctas
+          </button>
+        </div>
+      }
+    </div>
+
+    <div class="exam-progress-stats">
+      <div class="stat-item">
+        <span class="label">Total</span>
+        <span class="value">{{ totalQuestions() }}</span>
+      </div>
+      <div class="stat-item answered">
+        <span class="label">Respondidas</span>
+        <span class="value">{{ answeredCount() }}</span>
+      </div>
+      <div class="stat-item remaining">
+        <span class="label">Restantes</span>
+        <span class="value">{{ remainingCount() }}</span>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      @if (!hasStarted() && !isFinished()) {
+        <button class="btn-start" (click)="startExam()">EMPEZAR</button>
+      }
+
+      <div class="timer-display" [class.danger]="isLowTime()">
+        @if (exam.examProperties.examConfig.examDurationMinutes === 0) {
+          <span class="infinite">∞</span>
+        } @else {
+          <span>{{ timeLeftFormatted() }}</span>
+        }
+      </div>
+    </div>
+  </header>
+
+  <div class="exam-container">
+    
+    @if (!shouldShowContent()) {
+      <div class="exam-summary">
+        {{ exam.examProperties.examSummary }}
+      </div>
+    }
+
+    <!-- BLOQUE LATERAL DE RESUMEN POR UNIDADES -->
+  @if (shouldShowContent() && exam.examProperties.examConfig.groupByUnit) {
+    <aside class="units-summary-sidebar">
+      @for (group of groupedQuestions(); track group.unit.unitNumber) {
+        <div class="header-unit-info sidebar-item">
+          <span [style.font-weight]="'bolder'" [style.color]="exam.examProperties.subjectColor">
+            Ud. {{ group.unit.unitNumber }}
+          </span>
+          <span class="unit-count">
+            [ {{ group.questions.length }} ]
+          </span>
+        </div>
+      }
+    </aside>
+  }
+
+    @if (shouldShowContent()) {
+      <div class="questions-list">
+        @for (question of exam.questions; track question.id; let i = $index) {
+          <div
+            class="question-card"
+            [class.is-finished]="isFinished()"
+            [class.has-selection]="
+              isAnyOptionSelected(question) && !isFinished()
+            "
+            [class]="isFinished() ? 'state-' + getQuestionState(question) : ''"
+            [class.unanswered-penalty]="
+              isFinished() &&
+              !isAnyOptionSelected(question) &&
+              exam.examProperties.examConfig.emptyAnswersCount
+            "
+          >
+            @if (question.unit) {
+              <div class="header-unit-info">
+                <span
+                  [style.font-weight]="'bolder'"
+                  [style.color]="exam.examProperties.subjectColor"
+                >
+                  Ud. {{ question.unit.unitNumber }}:
+                </span>
+                <span [style.font-weight]="''">
+                  {{ question.unit.unitName }} 
+                </span>
+                @if (exam.examProperties.examConfig.groupByUnit) {
+                  <span [style.font-weight]="'bold'" [style.margin-right]="'4px'">
+                    [ Nº {{ question.unitLocalIndex }} ]
+                  </span>
+                }
+              </div>
+            }
+            <div class="q-header">
+              <div class="header-main-info">
+                @if (isFinished()) {
+                  @let result = isQuestionFullyCorrect(question);
+                  @let hasSelection = isAnyOptionSelected(question);
+                  @let emptyCounts =
+                    exam.examProperties.examConfig.emptyAnswersCount;
+
+                  <span class="status-icon">
+                    @if (result === true) {
+                      ✅
+                    } @else if (
+                      result === false && (hasSelection || emptyCounts)
+                    ) {
+                      ❌
+                    }
+                  </span>
+                }
+                <h3 class="q-title">
+                  <span class="q-num">{{ i + 1 }}.</span> {{ question.text }}
+                </h3>
+              </div>
+
+              @if (isFinished()) {
+                @let pts = getQuestionPoints(question);
+                <div class="q-result-badge" [class.negative]="pts < 0">
+                  <span class="max-weight">{{
+                    questionWeight().toFixed(2)
+                  }}</span>
+                  <span class="separator">/</span>
+                  <span class="points-earned">
+                    {{ pts > 0 ? "+" : "" }}{{ pts.toFixed(2) }} pts
+                  </span>
+                </div>
+              }
+            </div>
+
+            <div class="options-container">
+              @for (option of question.options; track option.text) {
+                <label
+                  class="option-row"
+                  [class.disabled]="isFinished()"
+                  [class.user-selected]="option.selected"
+                  [class.is-system-correct]="isFinished() && option.isCorrect"
+                >
+                  <input
+                    [type]="question.type === 'single' ? 'radio' : 'checkbox'"
+                    [name]="'q-' + question.id"
+                    [checked]="option.selected"
+                    [disabled]="isFinished()"
+                    (change)="
+                      selectOption(
+                        question,
+                        option,
+                        exam.examProperties.examConfig.canChangeResponse
+                      )
+                    "
+                  />
+                  <span class="option-text">{{ option.text }}</span>
+                </label>
+              }
+            </div>
+
+            @if (
+              !isFinished() &&
+              isAnyOptionSelected(question) &&
+              exam.examProperties.examConfig.canChangeResponse
+            ) {
+              <div class="q-footer">
+                <button
+                  class="btn-clear"
+                  (click)="clearQuestion(question)"
+                  title="Limpiar selección"
+                >
+                  🧹 Limpiar respuesta
+                </button>
+              </div>
+            }
+
+            @if (isFinished()) {
+              <div class="review-section">
+                @for (option of question.options; track option.text) {
+                  @if (option.selected && option.explanation) {
+                    <div
+                      class="feedback"
+                      [class.error]="!option.isCorrect"
+                      [class.success]="option.isCorrect"
+                    >
+                      <strong>{{ option.isCorrect ? "💡" : "⚠️" }}</strong>
+                      {{ option.explanation }}
+                    </div>
+                  }
+                }
+                @if (question.generalExplanation) {
+                  <div class="feedback info">
+                    <strong>ℹ️ Nota:</strong> {{ question.generalExplanation }}
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      @if (!isFinished()) {
+        <div class="footer-actions">
+          <button class="btn-finish" (click)="finishExam()">
+            TERMINAR Y CORREGIR
+          </button>
+        </div>
+      } @else {
+        <div
+          class="result-box"
+          [class.pass]="hasPassed()"
+          [class.fail]="!hasPassed()"
+        >
+          <div class="result-header">
+            <h2>Nota Final: {{ finalGrade().toFixed(2) }}</h2>
+            <p class="result-msg">
+              {{ hasPassed() ? "¡HAS APROBADO!" : "NO HAS SUPERADO EL MÍNIMO" }}
+            </p>
+
+            <div class="pass-goal-info">
+              <p>
+                Has acertado un
+                <strong>{{ currentPercentage().toFixed(1) }}%</strong> del
+                examen.
+              </p>
+              <p>
+                Para aprobar ({{
+                  exam.examProperties.examConfig.passingPercentage
+                }}%) necesitabas un equivalente a
+                <strong>{{ requiredHitsToPass() }} preguntas correctas</strong>
+                de {{ totalQuestions() }}.
+              </p>
+            </div>
+          </div>
+
+          <div class="result-summary-dash">
+            <div class="dash-item">
+              <span class="dash-val">{{ answeredCount() }}</span>
+              <span class="dash-lab">Respondidas</span>
+            </div>
+            <div class="dash-item">
+              <span class="dash-val">{{ remainingCount() }}</span>
+              <span class="dash-lab">Sin responder</span>
+            </div>
+            <div class="dash-item">
+              <span class="dash-val">
+                {{
+                  exam.examProperties.examConfig.emptyAnswersCount ? "SÍ" : "NO"
+                }}
+              </span>
+              <span class="dash-lab">Penalizó vacías</span>
+            </div>
+          </div>
+
+          <button class="btn-home" (click)="goHome()">Volver al Inicio</button>
+
+          <!-- NUEVO: Botón Descargar PDF -->
+          <br /><br />
+          <button class="btn-default" (click)="downloadPDF()">
+            📥 Descargar PDF
+          </button>
+        </div>
+      }
+    } @else {
+      <div class="waiting-area">
+        <p class="waiting-title">⏳ El tiempo está pausado.</p>
+        <p>
+          Pulsa el botón <strong>EMPEZAR</strong> situado arriba a la derecha
+          para comenzar el examen.
+        </p>
+
+        <div class="exam-rules-card">
+          <h3>Configuración del examen</h3>
+          <div class="rules-grid">
+            <div class="rule-item">
+              <span class="rule-icon">📝</span>
+              <div class="rule-text">
+                <span class="rule-label">Preguntas</span>
+                <span class="rule-value">{{ totalQuestions() }} preguntas</span>
+              </div>
+            </div>
+
+            <div class="rule-item">
+              <span class="rule-icon">📉</span>
+              <div class="rule-text">
+                <span class="rule-label">Penalización</span>
+                <span class="rule-value">
+                  @let penalty = exam.examProperties.examConfig.penaltyRate;
+                  @if (penalty > 0) {
+                    {{
+                      (1 / penalty).toLocaleString("es-ES", {
+                        maximumFractionDigits: 1,
+                      })
+                    }}
+                    fallos restan 1 bien
+                  } @else {
+                    Sin penalización
+                  }
+                </span>
+              </div>
+            </div>
+
+            <div class="rule-item">
+              <span class="rule-icon">⚪</span>
+              <div class="rule-text">
+                <span class="rule-label">Preguntas vacías</span>
+                <span class="rule-value">
+                  {{
+                    exam.examProperties.examConfig.emptyAnswersCount
+                      ? "Restan puntos"
+                      : "No restan puntos"
+                  }}
+                </span>
+              </div>
+            </div>
+
+            <div class="rule-item">
+              <span class="rule-icon">🔄</span>
+              <div class="rule-text">
+                <span class="rule-label">Cambiar respuesta</span>
+                <span class="rule-value">
+                  {{
+                    exam.examProperties.examConfig.canChangeResponse
+                      ? "Permitido"
+                      : "No permitido (Bloqueo al marcar)"
+                  }}
+                </span>
+              </div>
+            </div>
+
+            <div class="rule-item">
+              <span class="rule-icon">🎯</span>
+              <div class="rule-text">
+                <span class="rule-label">Nota mínima</span>
+                <span class="rule-value"
+                  >{{ exam.examProperties.examConfig.passingPercentage }}% para
+                  aprobar</span
+                >
+              </div>
+            </div>
+
+            <div class="rule-item">
+              <span class="rule-icon">⏱️</span>
+              <div class="rule-text">
+                <span class="rule-label">Duración</span>
+                <span class="rule-value">
+                  {{
+                    exam.examProperties.examConfig.examDurationMinutes > 0
+                      ? exam.examProperties.examConfig.examDurationMinutes +
+                        " minutos"
+                      : "Sin límite de tiempo"
+                  }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+}

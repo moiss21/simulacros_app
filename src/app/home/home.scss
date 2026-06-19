@@ -1,0 +1,206 @@
+.container { 
+  padding: 2rem; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+.main-title { 
+  text-align: center; 
+  margin-bottom: 40px; 
+  color: #333; 
+}
+
+/* --- GRID SYSTEM --- */
+.exam-grid {
+  display: grid;
+  gap: 20px;
+  /* MÓVIL (Por defecto): 1 columna */
+  grid-template-columns: 1fr; 
+}
+
+/* DESKTOP (A partir de 768px): 3 columnas forzadas de igual tamaño */
+@media (min-width: 768px) {
+  .exam-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+/* --- CARD ESTILO --- */
+.exam-card {
+  background: white; 
+  border: 1px solid #ddd; 
+  border-radius: 12px;
+  
+  /* MÓVIL: Altura automática para que no ocupe toda la pantalla verticalmente */
+  min-height: 200px;
+
+  cursor: pointer; 
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex; 
+  flex-direction: column;
+  overflow: hidden; /* Para que nada se salga del borde redondeado */
+}
+
+.exam-card:hover { 
+  transform: translateY(-5px); 
+  border-color: #007bff; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-content { 
+  padding: 20px; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.subject-badge { 
+  background: #e3f2fd; 
+  color: #1565c0; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  font-size: 0.75rem; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  align-self: flex-start; 
+  margin-bottom: 15px;
+}
+
+.exam-title { 
+  font-size: 1.3rem; 
+  margin: 0 0 10px 0; 
+  color: #222; 
+  line-height: 1.3; 
+  font-weight: 700;
+}
+
+/* Resumen limitado a 3 líneas */
+.exam-summary { 
+  font-size: 0.9rem; 
+  color: #666; 
+  flex-grow: 1; /* Empuja el footer hacia abajo */
+  overflow: hidden; 
+  display: -webkit-box; 
+  -webkit-line-clamp: 4; /* Número de líneas antes de cortar */
+  -webkit-box-orient: vertical; 
+  margin-bottom: 10px;
+}
+
+.exam-meta { 
+  margin-top: auto; /* Se pega al fondo */
+  padding-top: 15px; 
+  border-top: 1px solid #eee; 
+  display: flex; 
+  justify-content: space-between; 
+  font-size: 0.85rem; 
+  color: #888; 
+  font-weight: 600;
+}
+
+.loading { text-align: center; font-size: 1.2rem; margin-top: 50px; color: #666; }
+
+/* Nuevo contenedor para el título y el botón */
+.header-actions {
+  display: flex;
+  justify-content: space-between; /* Título a izq, Botón a dcha */
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.main-title {
+  margin: 0; /* Quitamos el margin-bottom antiguo */
+  text-align: left;
+}
+
+.btn-legend {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-legend:hover {
+  background-color: #e2e6ea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para móvil: centrar todo */
+@media (max-width: 600px) {
+  .header-actions {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Contenedor de los botones de la cabecera */
+.button-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Base común para botones de acción */
+.btn-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px; // Forma redondeada tipo pastilla
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Estilo específico para el botón de Carpeta */
+.btn-folder {
+  background-color: #2563eb; // Azul corporativo
+  color: white;
+  
+  &:hover {
+    background-color: #1d4ed8;
+    border-color: #1e40af;
+  }
+}
+
+/* Botón de reset/volver (si decides usarlo) */
+.btn-reset {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+
+  &:hover {
+    background-color: #e5e7eb;
+  }
+}
+
+/* Ajuste para el modo oscuro si lo usas */
+@media (prefers-color-scheme: dark) {
+  .btn-reset {
+    background-color: #374151;
+    color: #f9fafb;
+    border-color: #4b5563;
+  }
+}
