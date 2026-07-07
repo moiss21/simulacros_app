@@ -4,23 +4,25 @@
       <span class="subject-label">{{ exam.examProperties.subjectName }}</span>
       <h1 class="exam-name">{{ exam.examProperties.examTitle }}</h1>
 
-      <!-- NUEVO: Botones de depuración/llenado rápido -->
+      <!-- Botones de depuración/llenado rápido -->
       @if (!isFinished() && hasStarted()) {
         <div class="debug-actions">
-          <button class="btn-default-inverted" (click)="fillRandomly()">
-            🎲 Respuestas Aleatorias
-          </button>
           <button class="btn-default-inverted" (click)="fillCorrectly()">
-            ✅ Respuestas Correctas
+            ✅ View All Responses
           </button>
         </div>
       }
     </div>
 
+    <!-- Panel de estadísticas con el renombrado exacto de las funciones -->
     <div class="exam-progress-stats">
-      <div class="stat-item">
-        <span class="label">Total</span>
+      <div class="stat-item banco-total">
+        <span class="label">Banco Completo</span>
         <span class="value">{{ totalQuestions() }}</span>
+      </div>
+      <div class="stat-item tanda-actual">
+        <span class="label">Tanda Actual</span>
+        <span class="value">{{ totalQuestionsToDisplay() }}</span>
       </div>
       <div class="stat-item answered">
         <span class="label">Respondidas</span>
@@ -56,20 +58,20 @@
     }
 
     <!-- BLOQUE LATERAL DE RESUMEN POR UNIDADES -->
-  @if (shouldShowContent() && exam.examProperties.examConfig.groupByUnit) {
-    <aside class="units-summary-sidebar">
-      @for (group of groupedQuestions(); track group.unit.unitNumber) {
-        <div class="header-unit-info sidebar-item">
-          <span [style.font-weight]="'bolder'" [style.color]="exam.examProperties.subjectColor">
-            Ud. {{ group.unit.unitNumber }}
-          </span>
-          <span class="unit-count">
-            [ {{ group.questions.length }} ]
-          </span>
-        </div>
-      }
-    </aside>
-  }
+    @if (shouldShowContent() && exam.examProperties.examConfig.groupByUnit) {
+      <aside class="units-summary-sidebar">
+        @for (group of groupedQuestions(); track group.unit.unitNumber) {
+          <div class="header-unit-info sidebar-item">
+            <span [style.font-weight]="'bolder'" [style.color]="exam.examProperties.subjectColor">
+              Ud. {{ group.unit.unitNumber }}
+            </span>
+            <span class="unit-count">
+              [ {{ group.questions.length }} ]
+            </span>
+          </div>
+        }
+      </aside>
+    }
 
     @if (shouldShowContent()) {
       <div class="questions-list">
@@ -238,7 +240,7 @@
                   exam.examProperties.examConfig.passingPercentage
                 }}%) necesitabas un equivalente a
                 <strong>{{ requiredHitsToPass() }} preguntas correctas</strong>
-                de {{ totalQuestions() }}.
+                de {{ totalQuestionsToDisplay() }}.
               </p>
             </div>
           </div>
@@ -264,7 +266,7 @@
 
           <button class="btn-home" (click)="goHome()">Volver al Inicio</button>
 
-          <!-- NUEVO: Botón Descargar PDF -->
+          <!-- Botón Descargar PDF -->
           <br /><br />
           <button class="btn-default" (click)="downloadPDF()">
             📥 Descargar PDF
@@ -272,6 +274,7 @@
         </div>
       }
     } @else {
+      <!-- ZONA DE ESPERA CON REFERENCIAS ACTUALIZADAS -->
       <div class="waiting-area">
         <p class="waiting-title">⏳ El tiempo está pausado.</p>
         <p>
@@ -279,14 +282,21 @@
           para comenzar el examen.
         </p>
 
+        <!-- Bloque informativo de la tanda aleatoria -->
+        @if (exam.examProperties.examConfig.totalQuestionsToDisplay) {
+          <div class="tanda-alert-info">
+            <p>🎲 <strong>Aviso de modalidad aleatoria:</strong> Este test generará una tanda de <strong>{{ totalQuestionsToDisplay() }} preguntas extraídas al azar</strong> del repertorio general de {{ totalQuestions() }} preguntas cada vez que lo intentes.</p>
+          </div>
+        }
+
         <div class="exam-rules-card">
           <h3>Configuración del examen</h3>
           <div class="rules-grid">
             <div class="rule-item">
               <span class="rule-icon">📝</span>
               <div class="rule-text">
-                <span class="rule-label">Preguntas</span>
-                <span class="rule-value">{{ totalQuestions() }} preguntas</span>
+                <span class="rule-label">Preguntas de la Tanda</span>
+                <span class="rule-value">{{ totalQuestionsToDisplay() }} preguntas</span>
               </div>
             </div>
 

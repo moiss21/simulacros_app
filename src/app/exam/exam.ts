@@ -48,23 +48,23 @@ export class ExamComponent implements OnInit, OnDestroy {
     return this.currentPercentage() >= data.examProperties.examConfig.passingPercentage;
   });
 
-  /** Calcula el número de preguntas necesarias para aprobar */
+  /** Calcula el número de preguntas necesarias para aprobar en base a la tanda actual */
   requiredHitsToPass = computed(() => {
-    const total = this.totalQuestions();
+    const total = this.totalQuestionsToDisplay();
     const percentage = this.examData()?.examProperties.examConfig.passingPercentage ?? 0;
     return Math.ceil((total * percentage) / 100);
   });
 
-  /** Calcula el porcentaje de éxito actual (0-100) */
+  /** Calcula el porcentaje de éxito actual (0-100) sobre la tanda */
   currentPercentage = computed(() => {
-    const total = this.totalQuestions();
+    const total = this.totalQuestionsToDisplay();
     if (total === 0) return 0;
     return (this.score() / total) * 100;
   });
 
-  /** Nota final escalada a base 10 */
+  /** Nota final escalada a base 10 calculada sobre la tanda */
   finalGrade = computed(() => {
-    const total = this.totalQuestions();
+    const total = this.totalQuestionsToDisplay();
     if (total === 0) return 0;
     return (this.score() / total) * 10;
   });
@@ -75,16 +75,21 @@ export class ExamComponent implements OnInit, OnDestroy {
   /** Peso unitario de cada pregunta (base 1) */
   questionWeight = computed(() => 1);
 
-  /** Total de preguntas cargadas en el examen */
-  totalQuestions = computed(() => this.examData()?.questions.length ?? 0);
+  /** Cantidad de preguntas del banco total (sin recortar) obtenidos del JSON original */
+  totalQuestions = computed(() => {
+    return (this.examData() as any)?._absoluteTotal ?? 0;
+  });
+
+  /** Total de preguntas activas cargadas en la tanda elegida */
+  totalQuestionsToDisplay = computed(() => this.examData()?.questions.length ?? 0);
 
   /** Cantidad de preguntas respondidas por el usuario */
   answeredCount = computed(() => {
     return this.examData()?.questions.filter(q => this.isAnyOptionSelected(q)).length ?? 0;
   });
 
-  /** Cantidad de preguntas pendientes de respuesta */
-  remainingCount = computed(() => this.totalQuestions() - this.answeredCount());
+  /** Cantidad de preguntas pendientes de respuesta en relación a la tanda */
+  remainingCount = computed(() => this.totalQuestionsToDisplay() - this.answeredCount());
 
   /** Indica si la configuración del examen aplica penalización por respuestas vacías */
   wasPenaltyApplied = computed(() => {
@@ -119,63 +124,69 @@ export class ExamComponent implements OnInit, OnDestroy {
   // 5. MÉTODOS PRIVADOS DE INICIALIZACIÓN
   // ==========================================
 
- private initExam(data: ExamData) {
-    const groupByUnit = data.examProperties.examConfig.groupByUnit;
-    let processedQuestions = [...data.questions];
+  private initExam(data: ExamData) {
+  const config = data.examProperties.examConfig;
+  const groupByUnit = config.groupByUnit;
+  
+  // 1. Guardamos de forma totalmente segura el total absoluto original
+  // Usamos el operador de coalescencia por si acaso
+  const absoluteTotal = data?.questions?.length ?? 0;
 
-    // 1. Lógica de ordenación o barajado según la configuración
-    // 1. Lógica de ordenación o barajado según la configuración
-    if (groupByUnit) {
-      // 1A. Si groupyByUnit es TRUE: ORDENAMOS numéricamente por la unidad.
-      processedQuestions.sort((a, b) => {
-        const unitA = a.unit?.unitNumber || 0;
-        const unitB = b.unit?.unitNumber || 0;
-        return unitA - unitB;
-      });
+  // 2. Clonamos y barajamos para no mutar el objeto 'data' original por referencia
+  let processedQuestions = this.shuffleArray(data.questions ?? []);
 
-      // Variables para llevar la cuenta local
-      let currentUnitNumber = -1;
-      let localCounter = 0;
+  // 3. Recortar según el tamaño de la tanda si se ha definido
+  if (config.totalQuestionsToDisplay && config.totalQuestionsToDisplay > 0) {
+    processedQuestions = processedQuestions.slice(0, config.totalQuestionsToDisplay);
+  }
 
-      // Asignamos el índice local y barajamos las respuestas
-      processedQuestions = processedQuestions.map(q => {
-        const uNum = q.unit?.unitNumber || 0;
-        
-        if (uNum !== currentUnitNumber) {
-          currentUnitNumber = uNum;
-          localCounter = 1; // Reiniciamos el contador al cambiar de tema
-        } else {
-          localCounter++; // Sumamos 1 si es el mismo tema
-        }
-
-        return {
-          ...q,
-          unitLocalIndex: localCounter, // <-- GUARDAMOS EL NÚMERO AQUÍ
-          options: this.shuffleArray(q.options)
-        };
-      });
-
-    } else {
-      // 1B. Si groupyByUnit es FALSE: BARAJAMOS todo (comportamiento por defecto).
-      // Se mezclan las preguntas globalmente y también las opciones de cada una.
-      processedQuestions = this.shuffleArray(processedQuestions).map(q => ({
-        ...q,
-        options: this.shuffleArray(q.options)
-      }));
-    }
-
-    // 2. Guardar los datos con el nuevo orden procesado
-    this.examData.set({
-      ...data,
-      questions: processedQuestions
+  // 4. Organizar las respuestas y aplicar la estructuración final
+  if (groupByUnit) {
+    processedQuestions.sort((a, b) => {
+      const unitA = a.unit?.unitNumber || 0;
+      const unitB = b.unit?.unitNumber || 0;
+      return unitA - unitB;
     });
 
-    // 3. Configurar el temporizador si la duración es mayor a 0
-    const duration = data.examProperties.examConfig.examDurationMinutes;
-    if (duration > 0) {
-      this.timeLeft.set(duration * 60);
-    }
+    let currentUnitNumber = -1;
+    let localCounter = 0;
+
+    processedQuestions = processedQuestions.map(q => {
+      const uNum = q.unit?.unitNumber || 0;
+      if (uNum !== currentUnitNumber) {
+        currentUnitNumber = uNum;
+        localCounter = 1;
+      } else {
+        localCounter++;
+      }
+
+      return {
+        ...q,
+        unitLocalIndex: localCounter,
+        options: this.shuffleArray(q.options)
+      };
+    });
+  } else {
+    processedQuestions = processedQuestions.map(q => ({
+      ...q,
+      options: this.shuffleArray(q.options)
+    }));
   }
+
+  // 5. Persistir el estado del examen inyectando de forma limpia el metadato
+  this.examData.set({
+    ...data,
+    questions: processedQuestions,
+    // Aseguramos que se guarde el valor que capturamos en la línea 6
+    ...({ _absoluteTotal: absoluteTotal } as any) 
+  });
+
+  // 6. Configurar la cuenta atrás si aplica
+  const duration = config.examDurationMinutes;
+  if (duration > 0) {
+    this.timeLeft.set(duration * 60);
+  }
+}
 
   /** Algoritmo de barajado Fisher-Yates */
   private shuffleArray<T>(array: T[]): T[] {
@@ -192,7 +203,6 @@ export class ExamComponent implements OnInit, OnDestroy {
   // ==========================================
 
   shouldShowContent(): boolean {
-    // Solo muestra las preguntas si el usuario pulsó empezar o si ya terminó (revisión)
     return this.hasStarted() || this.isFinished();
   }
 
@@ -304,7 +314,6 @@ export class ExamComponent implements OnInit, OnDestroy {
     const groupsMap = new Map<number, { unit: any, questions: any[] }>();
     
     data.questions.forEach((q: any, index: number) => {
-      // Guardamos el índice global (1, 2, 3...) para pintar en el HTML
       q.globalIndex = index + 1; 
       const unitNum = q.unit?.unitNumber || 0;
       
@@ -314,7 +323,6 @@ export class ExamComponent implements OnInit, OnDestroy {
       groupsMap.get(unitNum)!.questions.push(q);
     });
 
-    // Ordenar los grupos por número de unidad
     return Array.from(groupsMap.values()).sort((a, b) => {
       const numA = a.unit?.unitNumber || 0;
       const numB = b.unit?.unitNumber || 0;
@@ -322,31 +330,12 @@ export class ExamComponent implements OnInit, OnDestroy {
     });
   });
 
-  /** 
-   * Rellena el examen con respuestas aleatorias 
-   */
-  fillRandomly() {
-    const data = this.examData();
-    if (!data || this.isFinished()) return;
-
-    data.questions.forEach(q => {
-      // Solo respondemos si no tiene respuesta (opcional, para no sobreescribir)
-      const randomIdx = Math.floor(Math.random() * q.options.length);
-      const config = data.examProperties.examConfig.canChangeResponse;
-      this.selectOption(q, q.options[randomIdx], config);
-    });
-  }
-
-  /** 
-   * Rellena el examen con todas las respuestas correctas 
-   */
   fillCorrectly() {
     const data = this.examData();
     if (!data || this.isFinished()) return;
 
     data.questions.forEach(q => {
       const config = data.examProperties.examConfig.canChangeResponse;
-      // En tipo 'single' buscamos la correcta, en 'multiple' todas las que sean correctas
       q.options.forEach(opt => {
         if (opt.isCorrect) {
           this.selectOption(q, opt, config);
@@ -357,12 +346,7 @@ export class ExamComponent implements OnInit, OnDestroy {
     });
   }
 
-  /**
-   * Dispara el diálogo de impresión del sistema para guardar como PDF
-   */
   downloadPDF() {
-    // Cambiamos temporalmente el título del documento para que el PDF 
-    // se guarde por defecto con el nombre del examen
     const originalTitle = document.title;
     const examTitle = this.examData()?.examProperties.examTitle || 'Examen';
 
