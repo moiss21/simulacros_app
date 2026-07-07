@@ -2,6 +2,9 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
+const { tittle } = require("./scripts-assets/tittle");
+const { exportToExeTittle } = require("./scripts-assets/export-tittle");
+
 const isDebug = process.argv.includes("--debug");
 
 // Colores ANSI para la terminal
@@ -18,6 +21,9 @@ const ELECTRON_APP = path.join(__dirname, "..", "electron-app");
 const APP_FOLDER = path.join(ELECTRON_APP, "simulacros-app");
 const MAIN_FILE = path.join(ELECTRON_APP, "main.js");
 const DIST_PATH = path.join(ELECTRON_APP, "dist");
+
+console.log(tittle)
+console.log(exportToExeTittle)
 
 console.log(`\n${CYAN}🚀 INICIANDO COMPILACIÓN DE ELECTRON${RESET}`);
 console.log(`${CYAN}----------------------------------------${RESET}`);
