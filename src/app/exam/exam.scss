@@ -1,3 +1,53 @@
+/* --- TEMA OSCURO GLOBAL --- */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-main: #f9fafb;
+  --card-bg: #2b2b2b;
+  --card-border: #444444;
+  --card-hover-border: #3b82f6;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --badge-bg: #1e3a8a;
+  --badge-color: #93c5fd;
+  --meta-border: #3a3a3a;
+  --btn-legend-bg: #303030;
+  --btn-legend-border: #444444;
+  --btn-legend-color: #f9fafb;
+  --btn-legend-hover: #3d3d3d;
+  --btn-reset-bg: #3a3a3a;
+  --btn-reset-color: #f9fafb;
+  --btn-reset-border: #555555;
+  --btn-reset-hover: #4a4a4a;
+  --text-light: #b0b0b0;
+  --text-muted: #b0b0b0;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-main: #333333;
+  --card-bg: white;
+  --card-border: #ddd;
+  --card-hover-border: #007bff;
+  --card-shadow: rgba(0,0,0,0.1);
+  --badge-bg: #e3f2fd;
+  --badge-color: #1565c0;
+  --meta-border: #eee;
+  --btn-legend-bg: #f8f9fa;
+  --btn-legend-border: #ddd;
+  --btn-legend-hover: #e2e6ea;
+  --btn-reset-bg: #f3f4f6;
+  --btn-reset-color: #374151;
+  --btn-reset-border: #d1d5db;
+  --btn-reset-hover: #e5e7eb;
+  --text-light: #6c757d;
+  --text-muted: #495057;
+}
+
+body {
+  background-color: var(--bg-color, #ffffff);
+  color: var(--text-main, #333333);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* ==========================================================================
    1. HEADER Y NAVEGACIÓN (STICKY)
    ========================================================================== */
@@ -6,18 +56,19 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
-  border-bottom: 3px solid #0056b3;
+  background-color: var(--card-bg, #ffffff);
+  border-bottom: 3px solid var(--card-hover-border, #0056b3);
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px var(--card-shadow, rgba(0, 0, 0, 0.08));
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 
   .header-info {
     .subject-label {
       font-size: 0.75rem;
-      color: #6c757d;
+      color: var(--text-light, #6c757d);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 700;
@@ -27,7 +78,7 @@
     .exam-name {
       margin: 0;
       font-size: 1.25rem;
-      color: #212529;
+      color: var(--text-main, #212529);
       line-height: 1.2;
     }
   }
@@ -51,24 +102,29 @@
       &:hover {
         background-color: #218838;
       }
+      
+      &:focus-visible {
+        outline: 3px solid var(--card-hover-border, #007bff);
+        outline-offset: 2px;
+      }
     }
 
     .timer-display {
       font-family: "Consolas", "Monaco", monospace;
       font-size: 1.5rem;
       font-weight: 700;
-      background-color: #f8f9fa;
-      border: 1px solid #dee2e6;
+      background-color: var(--btn-legend-bg, #f8f9fa);
+      border: 1px solid var(--card-border, #dee2e6);
       padding: 0.25rem 0.75rem;
       border-radius: 6px;
       min-width: 90px;
       text-align: center;
-      color: #343a40;
+      color: var(--text-main, #343a40);
 
       &.danger {
-        color: #dc3545;
-        background-color: #fff5f5;
-        border-color: #dc3545;
+        color: #f87171;
+        background-color: #451a03;
+        border-color: #f87171;
       }
       .infinite {
         font-size: 1.8rem;
@@ -81,13 +137,21 @@
 /* ==========================================================================
    2. ESTADÍSTICAS DE PROGRESO (HEADER)
    ========================================================================== */
+
+.examn-controls-header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
 .exam-progress-stats {
   display: flex;
   gap: 1.5rem;
   padding: 0.5rem 1rem;
-  background: #f8f9fa;
+  background: var(--btn-legend-bg, #f8f9fa);
   border-radius: 8px;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--card-border, #e9ecef);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 
   .stat-item {
     display: flex;
@@ -97,20 +161,20 @@
     .label {
       font-size: 0.7rem;
       text-transform: uppercase;
-      color: #6c757d;
+      color: var(--text-light, #6c757d);
       font-weight: bold;
     }
     .value {
       font-size: 1.1rem;
       font-weight: 800;
-      color: #212529;
+      color: var(--text-main, #212529);
     }
 
     &.answered .value {
-      color: #28a745;
+      color: #4ade80;
     }
     &.remaining .value {
-      color: #fd7e14;
+      color: #fb923c;
     }
   }
 }
@@ -130,28 +194,25 @@
     gap: 28px;
     margin-bottom: 46px;
     background-color: transparent;
-   
   }
 
   .units-summary-sidebar .header-unit-info {
     width: max-content !important;
     padding: 8px 12px;
     border-radius: 4px;
-    /* margin: 8px; <-- Mejor quitar el margin si usas top/left absolutos para evitar confusiones */
-    width: max-content;
     font-size: 0.8rem;
-    /* Puedes añadir un background si choca con texto debajo */
-    background-color: #f4f4f4;
+    background-color: var(--btn-legend-bg, #f4f4f4);
+    color: var(--text-main, #333);
   }
 
   .exam-summary {
-    background-color: #e9ecef;
+    background-color: var(--btn-legend-bg, #e9ecef);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
-    color: #495057;
+    color: var(--text-muted, #495057);
     font-style: italic;
-    border-left: 4px solid #adb5bd;
+    border-left: 4px solid var(--text-light, #adb5bd);
   }
 
   .waiting-area {
@@ -165,26 +226,31 @@
     .waiting-title {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #333;
+      color: var(--text-main, #333);
+    }
+
+    .tanda-alert-info {
+      text-align: left;
     }
   }
 
   /* Ficha de Reglas Dinámica */
   .exam-rules-card {
-    background: white;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg, white);
+    border: 1px solid var(--card-border, #e0e0e0);
     border-radius: 12px;
     padding: 25px;
     max-width: 600px;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.05));
     text-align: left;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 
     h3 {
       margin: 0 0 20px 0;
       font-size: 1.1rem;
-      color: #1565c0;
-      border-bottom: 2px solid #e3f2fd;
+      color: var(--badge-color, #1565c0);
+      border-bottom: 2px solid var(--badge-bg, #e3f2fd);
       padding-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -204,7 +270,7 @@
 
     .rule-icon {
       font-size: 1.4rem;
-      background: #f8f9fa;
+      background: var(--btn-legend-bg, #f8f9fa);
       width: 45px;
       height: 45px;
       display: flex;
@@ -219,14 +285,14 @@
 
       .rule-label {
         font-size: 0.8rem;
-        color: #777;
+        color: var(--text-light, #777);
         font-weight: 600;
         text-transform: uppercase;
       }
 
       .rule-value {
         font-size: 0.95rem;
-        color: #333;
+        color: var(--text-main, #333);
         font-weight: 700;
       }
     }
@@ -238,80 +304,85 @@
    ========================================================================== */
 .question-card {
   position: relative;
-  background: white;
-  border: 1px solid #dee2e6;
+  background: var(--card-bg, white);
+  border: 1px solid var(--card-border, #dee2e6);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 4px var(--card-shadow, rgba(0, 0, 0, 0.02));
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  /* Accesibilidad: foco visible por teclado */
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
+  }
 
   /* Estados Dinámicos */
   &.has-selection {
-    border-color: #2563eb;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
-    background-color: #f8faff;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    background-color: var(--btn-legend-bg, #1a2234);
   }
 
   &.state-correct {
-    border-color: #28a745;
-    background-color: #f8fff9;
+    border-color: #22c55e;
+    background-color: var(--btn-legend-bg, #13221a);
   }
 
   &.state-partial-high {
-    border-color: #ffc107;
-    background-color: #fffdf5;
+    border-color: #eab308;
+    background-color: var(--btn-legend-bg, #262111);
   }
 
   &.state-partial-low {
-    border-color: #fd7e14;
-    background-color: #fff9f5;
+    border-color: #f97316;
+    background-color: var(--btn-legend-bg, #2a1b12);
   }
 
   &.state-incorrect {
-    border-color: #dc3545;
-    background-color: #fff8f8;
+    border-color: #ef4444;
+    background-color: var(--btn-legend-bg, #2a1616);
   }
 
   &.state-unanswered {
     opacity: 0.6;
-    background-color: #f4f4f4;
+    background-color: var(--btn-legend-bg, #1f242d);
     border-style: dashed;
 
     &.unanswered-penalty {
-      border-color: #dc3545 !important;
+      border-color: #ef4444 !important;
     }
   }
 
   &.unanswered {
     opacity: 0.7;
-    background-color: #eeeeee;
+    background-color: var(--btn-legend-bg, #27272a);
 
     .option-row {
-      background-color: #e0e0e0;
-      border-color: #d0d0d0;
+      background-color: var(--card-bg, #27272a);
+      border-color: var(--card-border, #3f3f46);
       cursor: default;
 
       &.is-system-correct {
         opacity: 1 !important;
-        background-color: #ffffff !important;
-        border-color: #6c757d !important;
-        color: #198754;
+        background-color: var(--card-bg, #1e1e1e) !important;
+        border-color: #22c55e !important;
+        color: #4ade80;
       }
     }
   }
 
   .header-unit-info {
-    position: relative; /* <--- Clave: lo saca del flujo normal del documento */
-    top: -36px; /* Ajusta la altura a tu gusto */
-    left: -4px; /* Ajusta el lateral a tu gusto */
+    position: relative;
+    top: -36px;
+    left: -4px;
     padding: 4px 12px;
     border-radius: 4px;
-    /* margin: 8px; <-- Mejor quitar el margin si usas top/left absolutos para evitar confusiones */
     width: max-content;
     font-size: 0.8rem;
-
-    /* Puedes añadir un background si choca con texto debajo */
-    background-color: #f4f4f4;
+    background-color: var(--btn-legend-bg, #1f2937);
+    color: var(--text-main, #f9fafb);
   }
 
   /* Cabecera de Pregunta */
@@ -333,14 +404,14 @@
       font-weight: bold;
       font-size: 0.9rem;
       padding: 4px 8px;
-      background: #f1f3f5;
+      background: var(--btn-legend-bg, #1f2937);
       border-radius: 4px;
-      color: #2b8a3e;
+      color: #4ade80;
       white-space: nowrap;
 
       &.negative {
-        color: #c92a2a;
-        background: #fff5f5;
+        color: #f87171;
+        background: var(--badge-bg, #451a03);
       }
     }
 
@@ -353,13 +424,13 @@
     .q-title {
       margin: 0;
       font-size: 1.1rem;
-      color: #212529;
+      color: var(--text-main, #212529);
       line-height: 1.4;
 
       .badge-multi {
         font-size: 0.75rem;
-        background-color: #e2e6ea;
-        color: #495057;
+        background-color: var(--btn-legend-bg, #27272a);
+        color: var(--text-muted, #a1a1aa);
         padding: 2px 6px;
         border-radius: 4px;
         vertical-align: middle;
@@ -384,63 +455,72 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem;
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--card-border, #e9ecef);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
-  background-color: white;
+  background-color: var(--card-bg, white);
   position: relative;
+  color: var(--text-main, inherit);
 
   &:hover:not(.disabled) {
-    background-color: #f8f9fa;
-    border-color: #ced4da;
+    background-color: var(--btn-legend-bg, #27272a);
+    border-color: var(--text-light, #52525b);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
   }
 
   /* Estado durante el examen */
   &.user-selected:not(.disabled) {
-    background-color: #e7f1ff;
-    border-color: #0d6efd;
+    background-color: #172554;
+    border-color: #3b82f6;
   }
 
   /* Estados al finalizar (Corrección) */
   &.disabled {
     cursor: default;
-    opacity: 0.5;
-    background-color: #eeeeee;
+    opacity: 0.6;
+    background-color: var(--btn-legend-bg, #27272a);
 
     &.is-system-correct:not(.user-selected) {
-      background-color: #ffffff;
+      background-color: var(--card-bg, #1e1e1e);
       opacity: 1 !important;
+      border-color: #22c55e !important;
       &::after {
         content: "✓";
         font-weight: 900;
-        color: #198754;
+        color: #4ade80;
         margin-left: auto;
         font-size: 1.2rem;
       }
     }
 
     &.user-selected.is-system-correct {
-      background-color: #d1e7dd !important;
-      border-color: #198754 !important;
+      background-color: #13221a !important;
+      border-color: #22c55e !important;
       opacity: 1 !important;
+      color: #4ade80;
       &::after {
         content: "✓";
         font-weight: 900;
-        color: #198754;
+        color: #4ade80;
         margin-left: auto;
         font-size: 1.2rem;
       }
     }
 
     &.user-selected:not(.is-system-correct) {
-      background-color: #fff5f5 !important;
-      border-color: #dc3545 !important;
+      background-color: #2a1616 !important;
+      border-color: #ef4444 !important;
       opacity: 1 !important;
+      color: #fca5a5;
       &::after {
         content: "✖";
         font-weight: bold;
-        color: #dc3545;
+        color: #f87171;
         margin-left: auto;
         font-size: 1.1rem;
       }
@@ -456,13 +536,13 @@
   justify-content: flex-end;
   margin-top: 1rem;
   padding-top: 0.5rem;
-  border-top: 1px dashed #eee;
+  border-top: 1px dashed var(--card-border, #eee);
 }
 
 .btn-clear {
   background: none;
-  border: 1px solid #ff4444;
-  color: #ff4444;
+  border: 1px solid #f87171;
+  color: #f87171;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -473,12 +553,17 @@
   gap: 5px;
 
   &:hover {
-    background-color: #fff5f5;
+    background-color: #2a1616;
     transform: translateY(-1px);
   }
 
   &:active {
     transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
   }
 }
 
@@ -489,21 +574,21 @@
   font-size: 0.9rem;
 
   &.error {
-    background-color: #fff3cd;
-    color: #856404;
-    border-left: 4px solid #ffc107;
+    background-color: #2a2211;
+    color: #fde047;
+    border-left: 4px solid #eab308;
   }
 
   &.success {
-    background-color: #d1e7dd;
-    color: #0f5132;
-    border-left: 4px solid #198754;
+    background-color: #13221a;
+    color: #86efac;
+    border-left: 4px solid #22c55e;
   }
 
   &.info {
-    background-color: #cff4fc;
-    color: #055160;
-    border-left: 4px solid #0dcaf0;
+    background-color: #082f49;
+    color: #7dd3fc;
+    border-left: 4px solid #38bdf8;
   }
 }
 
@@ -515,7 +600,7 @@
   margin-top: 3rem;
 
   .btn-finish {
-    background-color: #007bff;
+    background-color: #2563eb;
     color: white;
     border: none;
     padding: 1rem 2.5rem;
@@ -523,12 +608,17 @@
     border-radius: 50px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
     transition: transform 0.2s;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: #1d4ed8;
       transform: scale(1.05);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 2px;
     }
   }
 }
@@ -539,13 +629,13 @@
   border-radius: 12px;
   text-align: center;
   color: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
   &.pass {
-    background: linear-gradient(135deg, #28a745, #1e7e34);
+    background: linear-gradient(135deg, #166534, #14532d);
   }
   &.fail {
-    background: linear-gradient(135deg, #dc3545, #bd2130);
+    background: linear-gradient(135deg, #991b1b, #7f1d1d);
   }
 
   h2 {
@@ -563,15 +653,15 @@
   }
 
   .btn-home {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.25);
     }
   }
 }
@@ -582,7 +672,7 @@
   gap: 2rem;
   margin: 1.5rem 0;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 12px;
 
   .dash-item {
@@ -600,7 +690,7 @@
   }
 
   .penalty-info {
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 1.5rem;
     justify-content: center;
     .dash-icon {
@@ -630,15 +720,15 @@
    ========================================================================== */
 
 .btn-default {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.25);
   }
 }
 
@@ -649,21 +739,132 @@
 }
 
 .btn-default-inverted {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgb(224, 224, 224);
-  color: rgb(46, 46, 46);
+  background: var(--btn-legend-bg, #1f2937);
+  border: 1px solid var(--card-border, #374151);
+  color: var(--text-main, #f9fafb);
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: var(--btn-legend-hover, #374151);
+  }
+}
+
+/* ==========================================================================
+   10. CORRECCIONES DE FONDOS EN TEMA OSCURO
+   Evita fondos blancos y texto blanco sobre fondos claros.
+   ========================================================================== */
+
+[data-theme="dark"] {
+  .exam-header,
+  .exam-rules-card,
+  .question-card,
+  .option-row {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main);
+  }
+
+  .timer-display,
+  .exam-progress-stats,
+  .units-summary-sidebar .header-unit-info,
+  .exam-summary,
+  .rule-icon,
+  .header-unit-info,
+  .q-points,
+  .badge-multi,
+  .btn-default-inverted {
+    background-color: var(--btn-legend-bg) !important;
+    color: var(--text-main) !important;
+  }
+
+  .timer-display {
+    border-color: var(--card-border) !important;
+    color: #f9fafb !important;
+  }
+
+  .timer-display.danger {
+    background-color: #451a03 !important;
+    color: #f87171 !important;
+    border-color: #f87171 !important;
+  }
+
+  .exam-name,
+  .q-title,
+  .rule-value,
+  .waiting-title {
+    color: var(--text-main) !important;
+  }
+
+  .exam-summary {
+    color: var(--text-muted) !important;
+  }
+
+  .rule-label,
+  .stat-item .label {
+    color: var(--text-light) !important;
+  }
+
+  .option-row:hover:not(.disabled) {
+    background-color: var(--btn-legend-hover) !important;
+  }
+
+  .option-row.disabled {
+    background-color: var(--btn-legend-bg) !important;
+  }
+
+  .question-card.has-selection {
+    background-color: #1a2234 !important;
+  }
+
+  .question-card.state-correct {
+    background-color: #13221a !important;
+  }
+
+  .question-card.state-partial-high {
+    background-color: #262111 !important;
+  }
+
+  .question-card.state-partial-low {
+    background-color: #2a1b12 !important;
+  }
+
+  .question-card.state-incorrect {
+    background-color: #2a1616 !important;
+  }
+
+  .question-card.state-unanswered {
+    background-color: #1f242d !important;
+  }
+
+  .question-card.unanswered {
+    background-color: #27272a !important;
+  }
+
+  .question-card.unanswered .option-row {
+    background-color: #27272a !important;
+  }
+
+  .question-card.unanswered .option-row.is-system-correct,
+  .option-row.disabled.is-system-correct {
+    background-color: #2b2b2b !important;
+  }
+
+  .feedback.error {
+    background-color: #2a2211 !important;
+  }
+
+  .feedback.success {
+    background-color: #13221a !important;
+  }
+
+  .feedback.info {
+    background-color: #082f49 !important;
   }
 }
 
 @media print {
   /* 1. OCULTAR ELEMENTOS NO DESEADOS */
-  /* Ocultamos los controles, botones, estadísticas de progreso y el cuadro de resultados finales */
   .header-controls,
   .footer-actions,
   .btn-clear,
@@ -678,7 +879,7 @@
 
   /* 2. RE-ESTRUCTURACIÓN DEL HEADER (Solo para la primera página) */
   .exam-header {
-    position: relative !important; /* Quita el sticky */
+    position: relative !important;
     display: block !important;
     border-bottom: 2px solid #0056b3 !important;
     box-shadow: none !important;
@@ -697,7 +898,7 @@
     }
   }
 
-  /* 3. COMPACTACIÓN DE PREGUNTAS (Para que quepan 4 por página aprox) */
+  /* 3. COMPACTACIÓN DE PREGUNTAS */
   .exam-container {
     max-width: 100% !important;
     padding: 0 !important;
@@ -705,13 +906,13 @@
   }
 
   .question-card {
-    page-break-inside: avoid; /* Crucial: no corta preguntas entre páginas */
+    page-break-inside: avoid;
     border: 1px solid #999999 !important;
-    margin-bottom: 25px !important; /* Espacio reducido entre tarjetas */
-    padding: 10px !important; /* Padding interno reducido */
+    margin-bottom: 25px !important;
+    padding: 10px !important;
     background-color: transparent !important;
     box-shadow: none !important;
-    -webkit-print-color-adjust: exact; /* Mantiene colores de fondo y bordes */
+    -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 
     .q-header {
@@ -728,18 +929,17 @@
     }
 
     .options-container {
-      gap: 4px !important; /* Opciones mucho más juntas */
+      gap: 4px !important;
     }
 
     .option-row {
-      padding: 4px 8px !important; /* Filas de opciones muy compactas */
+      padding: 4px 8px !important;
       font-size: 0.85rem !important;
       border-width: 1px !important;
-
       color: black !important;
 
       &.is-system-correct {
-        background-color: #f0fff4 !important; /* Verde muy tenue para ahorrar tinta */
+        background-color: #f0fff4 !important;
       }
     }
 
@@ -762,19 +962,15 @@
   body {
     background: white !important;
     color: black !important;
-    font-size: 10pt; /* Tamaño de fuente base para impresión */
+    font-size: 10pt;
   }
 
   .header-unit-info {
-    top: -8px !important; /* Ajusta la altura a tu gusto */
-    left: -8px !important; /* Ajusta el lateral a tu gusto */
+    top: -8px !important;
+    left: -8px !important;
     padding: 0px;
     border-radius: 4px;
-    /* margin: 8px; <-- Mejor quitar el margin si usas top/left absolutos para evitar confusiones */
     width: max-content;
-    font-size: 0.8rem;
-
-    /* Puedes añadir un background si choca con texto debajo */
     background-color: #f4f4f4;
     font-size: 0.7rem !important;
   }
@@ -784,9 +980,8 @@
   }
 
   @page {
-    /* Puedes ajustar el margen general. Si pones 0, quitas el espacio extra */
     margin-top: 1cm;
-    margin-bottom: 1cm; /* Elimina el espacio de abajo */
+    margin-bottom: 1cm;
     margin-left: 1cm;
     margin-right: 0.5cm;
   }

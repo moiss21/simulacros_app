@@ -17,7 +17,7 @@
 
     <section class="info-section">
       <h2>1. Diccionario de variables (Configuración)</h2>
-      <p>Aquí tienes una explicación sencilla de qué hace cada ajuste en el examen:</p>
+      <p>Ajustes disponibles dentro del objeto <code>examConfig</code> para personalizar el comportamiento del test:</p>
       
       <table class="config-table">
         <thead>
@@ -28,32 +28,32 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>subjectColor</strong></td>
-            <td>(Opcional) Define el color de la asignatura en el menú y cabeceras. Usa códigos Hexadecimales (ej: <code>#4169e1</code>). Si no se pone, se usará el azul por defecto.</td>
-          </tr>
-          <tr>
             <td><strong>penaltyRate</strong></td>
-            <td>Es el "castigo" por fallar. Si pones 0.33, cada 3 fallos te quitan 1 acierto. Si pones 0, fallar no resta puntos.</td>
+            <td>Es el "castigo" por fallar. Si pones 0.33, cada 3 fallos restan 1 acierto. Si pones 0, los fallos no restan.</td>
           </tr>
           <tr>
             <td><strong>examDurationMinutes</strong></td>
-            <td>El tiempo máximo del examen. Si pones 0, el reloj será infinito.</td>
+            <td>Tiempo máximo en minutos. Si pones 0, el tiempo será ilimitado.</td>
           </tr>
           <tr>
             <td><strong>canChangeResponse</strong></td>
-            <td>Si es "true", puedes cambiar de opinión tras marcar. Si es "false", la primera que toques se queda bloqueada.</td>
+            <td>Si es <code>true</code>, permite cambiar de opción. Si es <code>false</code>, la primera respuesta marcada queda bloqueada.</td>
           </tr>
           <tr>
             <td><strong>passingPercentage</strong></td>
-            <td>La nota para aprobar. Poner 50 significa que necesitas la mitad de los puntos para el "APTO".</td>
+            <td>Porcentaje de aciertos netos para aprobar. Poner 50 significa que necesitas un 5.0 sobre 10 para el "APTO".</td>
           </tr>
           <tr>
             <td><strong>totalQuestionsToDisplay</strong></td>
-            <td>Cuántas preguntas quieres que salgan de golpe. Útil si tienes 100 en el archivo pero solo quieres hacer 20 cada vez.</td>
+            <td>Número de preguntas que se mostrarán en el test. Si el JSON tiene 100 preguntas y pones 40, el sistema elegirá 40 al azar cada vez.</td>
           </tr>
           <tr>
             <td><strong>emptyAnswersCount</strong></td>
-            <td>Si es "true", dejar una pregunta en blanco también te restará puntos como si hubieras fallado.</td>
+            <td>Si es <code>true</code>, dejar una pregunta en blanco restará puntos igual que un fallo. Por defecto debe ser <code>false</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>groupByUnit</strong></td>
+            <td><strong>[CRÍTICO]</strong> Si es <code>true</code>, el examen ordenará y agrupará las preguntas por bloques didácticos (Unidades). Si es <code>false</code>, se tratará como un bloque único o mezcla aleatoria global.</td>
           </tr>
         </tbody>
       </table>
@@ -62,42 +62,100 @@
     <section class="info-section highlight">
       <div class="prompt-box">
         <h3>🤖 Prompt Maestro para generar exámenes con IA</h3>
-        <p>Copia y pega este texto íntegro en tu IA (ChatGPT, Claude...) para obtener el archivo listo:</p>
+        <p>Copia el bloque de texto inferior según la estructura que necesites y pégalo en tu IA de confianza:</p>
         
-        <div class="code-block prompt-text">
-          <code>
-            Genera un archivo JSON para un examen basado en el siguiente temario: [PEGA AQUÍ TU TEMARIO o PREGUNTAS].<br><br>
-            
-            REGLAS CRÍTICAS:<br>
-            1. 'generalExplanation' debe razonar la respuesta correcta usando las palabras clave de la misma de forma técnica.<br>
-            2. 'subjectColor' es un campo opcional dentro de 'examProperties' para definir el color visual (ej: #8e24aa).<br>
-            3. Es VITAL que el JSON final siga exactamente esta estructura de metadatos y nombrado:<br><br>
+        <div class="tabs-casuistica" style="margin-top: 15px; font-weight: bold; color: #4169e1;">
+          📌 Elige el prompt adecuado según tu caso:
+        </div>
 
+        <!-- CASO A: EXAMEN ORGANIZADO POR UNIDADES -->
+        <div class="code-block prompt-text" style="margin-top: 15px;">
+          <h4 style="color: #2e7d32; margin-top: 0;">📋 Opción A: Examen estructurado POR UNIDADES (Recomendado para temarios largos)</h4>
+          <p style="font-size: 0.9em; color: #555;">Usa este prompt si quieres que las preguntas estén clasificadas por temas/unidades y el sistema las agrupe de forma ordenada.</p>
+          <code>
+            Genera un archivo JSON para un examen basado en este temario/preguntas: [PEGA AQUÍ TU TEXTO].<br><br>
+            
+            REGLAS DE CONFIGURACIÓN Y FORMATO:<br>
+            1. 'groupByUnit' DEBE SER true.<br>
+            2. Cada pregunta DEBE incluir obligatoriamente el campo 'unit' (ej: "UD 1: Introducción", "UD 2: Planos") para que el sistema las agrupe correctamente.<br>
+            3. 'generalExplanation' debe razonar técnicamente por qué la opción correcta es la verdadera.<br>
+            4. Las explicaciones individuales de las opciones ('explanation') deben ser coherentes: si 'isCorrect' es true, su explicación justifica el acierto. Si es false, justifica el motivo del error.<br><br>
+
+            ESTRUCTURA DEL JSON:<br>
             &#123;<br>
             &nbsp;&nbsp;"examProperties": &#123;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"id": "nombre-asignatura-simulacro-1.json",<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"subjectName": "Nombre Asignatura",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"id": "nombre-archivo-en-disco.json",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"subjectName": "Nombre de la Asignatura",<br>
             &nbsp;&nbsp;&nbsp;&nbsp;"subjectColor": "#4169e1",<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"examTitle": "Simulacro Examen de [Asignatura] - UD 1, 2 y 3",<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"examSummary": "Cubre sistemas de control, lógica y componentes...",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examTitle": "Título del Examen (ej: Simulacro Global)",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examSummary": "Descripción breve del contenido del examen...",<br>
             &nbsp;&nbsp;&nbsp;&nbsp;"examConfig": &#123;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"penaltyRate": 0.33,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"examDurationMinutes": 40,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"examDurationMinutes": 90,<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"canChangeResponse": true,<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"passingPercentage": 50,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"totalQuestionsToDisplay": 40,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"emptyAnswersCount": false<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"totalQuestionsToDisplay": 60,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"emptyAnswersCount": false,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"groupByUnit": true<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
             &nbsp;&nbsp;&#125;,<br>
             &nbsp;&nbsp;"questions": [<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&#123;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"text": "¿Enunciado de la pregunta?",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unit": "UD 1: Nombre de la Unidad",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"text": "¿Pregunta perteneciente a la Unidad 1?",<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "single",<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"generalExplanation": "Explicación detallada...",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"generalExplanation": "Explicación técnica global del concepto...",<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"options": [<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Opción Correcta", "isCorrect": true, "explanation": "Incorrecto. ..." &#125;,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Opción Incorrecta", "isCorrect": false, "explanation": "Correcto. ..." &#125;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Respuesta Correcta", "isCorrect": true, "explanation": "Correcto. Se cumple la normativa..." &#125;,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Respuesta Incorrecta", "isCorrect": false, "explanation": "Incorrecto. Este parámetro no aplica porque..." &#125;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
+            &nbsp;&nbsp;]<br>
+            &#125;
+          </code>
+        </div>
+
+        <!-- CASO B: EXAMEN GENERAL SIN UNIDADES -->
+        <div class="code-block prompt-text" style="margin-top: 25px;">
+          <h4 style="color: #c62828; margin-top: 0;">📋 Opción B: Examen general SIN UNIDADES (Bloque único o Test Final)</h4>
+          <p style="font-size: 0.9em; color: #555;">Usa este prompt para exámenes rápidos, certificaciones o cuando los contenidos no requieran estar categorizados por temas separados.</p>
+          <code>
+            Genera un archivo JSON para un examen basado en este temario/preguntas: [PEGA AQUÍ TU TEXTO].<br><br>
+            
+            REGLAS DE CONFIGURACIÓN Y FORMATO:<br>
+            1. 'groupByUnit' DEBE SER false.<br>
+            2. NO incluyas el campo 'unit' dentro de las preguntas.<br>
+            3. 'generalExplanation' debe razonar técnicamente por qué la opción correcta es la verdadera.<br>
+            4. Las explicaciones individuales de las opciones ('explanation') deben ser coherentes: si 'isCorrect' es true, su explicación justifica el acierto. Si es false, justifica el motivo del error.<br><br>
+
+            ESTRUCTURA DEL JSON:<br>
+            &#123;<br>
+            &nbsp;&nbsp;"examProperties": &#123;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"id": "nombre-archivo-en-disco.json",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"subjectName": "Nombre de la Asignatura",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"subjectColor": "#8e24aa",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examTitle": "Título del Examen (ej: Test de Certificación)",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examSummary": "Evaluación directa sin distinción de bloques temáticos...",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"examConfig": &#123;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"penaltyRate": 0.25,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"examDurationMinutes": 30,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"canChangeResponse": true,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"passingPercentage": 70,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"totalQuestionsToDisplay": 20,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"emptyAnswersCount": false,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"groupByUnit": false<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
+            &nbsp;&nbsp;&#125;,<br>
+            &nbsp;&nbsp;"questions": [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#123;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"text": "¿Pregunta de conocimiento general o bloque único?",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "single",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"generalExplanation": "Explicación técnica de la solución...",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"options": [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Respuesta Correcta", "isCorrect": true, "explanation": "Correcto. Esto es así debido a..." &#125;,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123; "text": "Respuesta Falsa", "isCorrect": false, "explanation": "Incorrecto. No confundir con..." &#125;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
             &nbsp;&nbsp;]<br>
@@ -108,11 +166,19 @@
     </section>
 
     <section class="info-section">
-      <h2>2. Notas importantes</h2>
+      <h2>2. Notas importantes de consistencia</h2>
       <ul>
-        <li><strong>ID y Archivo:</strong> El nombre que pongas en el campo <code>"id"</code> debe ser igual al nombre con el que guardes el archivo en Windows/Mac.</li>
-        <li><strong>Colores:</strong> Si quieres usar los colores estándar del sistema, usa estos códigos: Sistemas de Potencia (#fbc02d), Documentación Técnica (#4169e1), Informática Industrial (#4db6ac), Sistemas de Medida (#8e24aa).</li>
-        <li><strong>UTF-8:</strong> Al guardar el archivo, asegúrate de que la codificación sea UTF-8 para evitar errores con las tildes.</li>
+        <li><strong>Coincidencia del ID:</strong> El valor de la propiedad <code>"id"</code> dentro de <code>examProperties</code> debe llamarse <strong>exactamente igual</strong> que el archivo físico guardado en el almacenamiento (ej: si el id es <code>"test-potencia-1.json"</code>, el archivo debe llamarse <code>test-potencia-1.json</code>).</li>
+        <li><strong>Lógica de Feedback:</strong> Asegúrate de que las IAs no inviertan el texto de las explicaciones. Las opciones válidas (<code>isCorrect: true</code>) deben llevar comentarios de felicitación o reafirmación, y las inválidas explicaciones del fallo.</li>
+        <li><strong>Gama de Colores:</strong> Para mantener la armonía visual de la interfaz, puedes asignar colores personalizados a cada examen. Te recomendamos utilizar preferiblemente códigos Hex claros y visibles como estos:
+  <ul>
+    <li>Amarillo corporativo: <span style="color:#fbc02d; font-size: 1.2em; vertical-align: middle;">■</span> <code>#fbc02d</code></li>
+    <li>Azul estándar: <span style="color:#4169e1; font-size: 1.2em; vertical-align: middle;">■</span> <code>#4169e1</code></li>
+    <li>Verde azulado: <span style="color:#4db6ac; font-size: 1.2em; vertical-align: middle;">■</span> <code>#4db6ac</code></li>
+    <li>Morado intenso: <span style="color:#8e24aa; font-size: 1.2em; vertical-align: middle;">■</span> <code>#8e24aa</code></li>
+  </ul>
+</li>
+        <li><strong>Codificación de Archivo:</strong> Guarda siempre los archivos con codificación <strong>UTF-8</strong> desde tu editor de texto (Notepad++, VS Code, etc.) para que los caracteres especiales, acentos y eñes se rendericen de forma nativa en la aplicación.</li>
       </ul>
     </section>
   </div>

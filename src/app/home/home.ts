@@ -20,9 +20,11 @@ export class HomeComponent {
   exams = signal<ExamData[]>([]);
   isExternal = signal(false);
 
+
   ngOnInit() {
     this.loadExams();
   }
+
 
   loadExams() {
     this.examService.getAllExams().subscribe(data => {

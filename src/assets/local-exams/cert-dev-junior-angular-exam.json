@@ -1,0 +1,1967 @@
+{
+  "examProperties": {
+    "id": "cert-dev-junior-angular-exam.json",
+    "subjectName": "CERT DEV JUNIOR ANGULAR EXAM",
+    "examTitle": "Examen de Certificación Angular Junior",
+    "examSummary": "Evaluación completa que cubre CLI, componentes, directivas, servicios, routing, signals y gestión de estado.",
+    "examConfig": {
+      "penaltyRate": 0.50,
+      "examDurationMinutes": 0,
+      "canChangeResponse": true,
+      "passingPercentage": 75,
+      "totalQuestionsToDisplay": 71,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#DD0031"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which CLI command should we run to compile and serve our project locally in development mode?",
+      "type": "single",
+      "generalExplanation": "El comando 'serve' compila la aplicación en memoria y levanta un servidor de desarrollo local.",
+      "options": [
+        {
+          "text": "ng development",
+          "isCorrect": false,
+          "explanation": "No es un comando válido."
+        },
+        {
+          "text": "ng deploy",
+          "isCorrect": false,
+          "explanation": "Se usa para publicar la aplicación."
+        },
+        {
+          "text": "ng serve",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el comando estándar para desarrollo."
+        },
+        {
+          "text": "ng build",
+          "isCorrect": false,
+          "explanation": "Compila el proyecto pero no levanta un servidor."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "What does Angular refer to?",
+      "type": "single",
+      "generalExplanation": "Angular se refiere a las versiones modernas basadas en TypeScript (v2+).",
+      "options": [
+        {
+          "text": "Version 16 of the framework",
+          "isCorrect": false,
+          "explanation": "Es solo una versión específica."
+        },
+        {
+          "text": "The latest version of the framework (Angular 2+)",
+          "isCorrect": true,
+          "explanation": "Correcto. Se diferencia de AngularJS (v1)."
+        },
+        {
+          "text": "Version 3 of the framework",
+          "isCorrect": false,
+          "explanation": "Angular no tuvo versión 3 pública."
+        },
+        {
+          "text": "Version 1 of the framework",
+          "isCorrect": false,
+          "explanation": "Eso es AngularJS."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Which of the following rules is part of the Angular style-guide conventions?",
+      "type": "single",
+      "generalExplanation": "La guía de estilo recomienda delegar la lógica compleja al TypeScript.",
+      "options": [
+        {
+          "text": "All the application code goes in a directory named application",
+          "isCorrect": false,
+          "explanation": "La carpeta estándar es 'src/app'."
+        },
+        {
+          "text": "Have type definitions in the same file as your component",
+          "isCorrect": false,
+          "explanation": "Se recomienda separar tipos complejos."
+        },
+        {
+          "text": "Avoid overly complex logic in templates",
+          "isCorrect": true,
+          "explanation": "Correcto. Mejora el mantenimiento y legibilidad."
+        },
+        {
+          "text": "Organize your project by type folders: components, pipes, directives",
+          "isCorrect": false,
+          "explanation": "Se recomienda organizar por funcionalidad (feature)."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Which one of the following is not a valid Angular CLI command?",
+      "type": "single",
+      "generalExplanation": "Angular CLI no tiene un comando nativo llamado 'fix'.",
+      "options": [
+        {
+          "text": "ng test",
+          "isCorrect": false,
+          "explanation": "Válido para pruebas."
+        },
+        {
+          "text": "ng fix",
+          "isCorrect": true,
+          "explanation": "Correcto. Este comando no existe en la CLI."
+        },
+        {
+          "text": "ng build",
+          "isCorrect": false,
+          "explanation": "Válido para compilar."
+        },
+        {
+          "text": "ng add",
+          "isCorrect": false,
+          "explanation": "Válido para añadir librerías."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Which one of these concepts does not exist in the Angular framework?",
+      "type": "single",
+      "generalExplanation": "Redux es una arquitectura externa; Angular usa servicios o librerías como NgRx.",
+      "options": [
+        {
+          "text": "Standalone components",
+          "isCorrect": false,
+          "explanation": "Existen desde la v14."
+        },
+        {
+          "text": "NgModules",
+          "isCorrect": false,
+          "explanation": "Es el sistema de módulos clásico."
+        },
+        {
+          "text": "Structural directives",
+          "isCorrect": false,
+          "explanation": "Como *ngIf o *ngFor."
+        },
+        {
+          "text": "Redux reducers",
+          "isCorrect": true,
+          "explanation": "Correcto. No es un concepto nativo del framework básico."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Which of the following statements is true?",
+      "type": "single",
+      "generalExplanation": "Las Pipes están diseñadas para la transformación visual de datos en el template.",
+      "options": [
+        {
+          "text": "Services link components to server-side HTML templates",
+          "isCorrect": false,
+          "explanation": "Angular es un framework de cliente (SPA)."
+        },
+        {
+          "text": "Component libraries cannot be customized to our needs",
+          "isCorrect": false,
+          "explanation": "Son altamente personalizables."
+        },
+        {
+          "text": "Pipes are used to format data such as dates and numbers",
+          "isCorrect": true,
+          "explanation": "Correcto. Ejemplo: DatePipe o CurrencyPipe."
+        },
+        {
+          "text": "Directives are a way to interact with server-side APIs",
+          "isCorrect": false,
+          "explanation": "Para eso se usan los servicios."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "What's the main language of the Angular framework?",
+      "type": "single",
+      "generalExplanation": "Angular está escrito y diseñado para ser usado con TypeScript.",
+      "options": [
+        {
+          "text": "JSP",
+          "isCorrect": false,
+          "explanation": "Tecnología de Java."
+        },
+        {
+          "text": "TypeScript",
+          "isCorrect": true,
+          "explanation": "Correcto. Ofrece tipado fuerte sobre JS."
+        },
+        {
+          "text": "JavaScript",
+          "isCorrect": false,
+          "explanation": "Aunque se compila a JS, el lenguaje principal es TS."
+        },
+        {
+          "text": "AppScript",
+          "isCorrect": false,
+          "explanation": "Lenguaje de Google Workspace."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "When do we need to create or use Angular services?",
+      "type": "single",
+      "generalExplanation": "Los servicios centralizan la lógica de negocio y el acceso a datos.",
+      "options": [
+        {
+          "text": "To interact with the browser",
+          "isCorrect": false,
+          "explanation": "Normalmente lo hacen componentes o directivas."
+        },
+        {
+          "text": "To filter data displayed in a component",
+          "isCorrect": false,
+          "explanation": "Se suelen usar Pipes."
+        },
+        {
+          "text": "To generate, serve, compile, test, and build Angular code",
+          "isCorrect": false,
+          "explanation": "Eso es tarea de la CLI."
+        },
+        {
+          "text": "To implement business logic",
+          "isCorrect": true,
+          "explanation": "Correcto. Es su función principal."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Which @for block option is required?",
+      "type": "single",
+      "generalExplanation": "En el nuevo flujo de control (@for), la expresión 'track' es obligatoria para el rendimiento.",
+      "options": [
+        {
+          "text": "track",
+          "isCorrect": true,
+          "explanation": "Correcto. Es obligatorio para identificar elementos."
+        },
+        {
+          "text": "trackBy",
+          "isCorrect": false,
+          "explanation": "Se usaba en el antiguo *ngFor."
+        },
+        {
+          "text": "$index",
+          "isCorrect": false,
+          "explanation": "Es opcional."
+        },
+        {
+          "text": "count",
+          "isCorrect": false,
+          "explanation": "Es opcional."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Which of the following options is not a valid Angular selector?",
+      "type": "single",
+      "generalExplanation": "El prefijo 'ng-' está reservado para directivas internas de Angular.",
+      "options": [
+        {
+          "text": "[header]:not(div)",
+          "isCorrect": false,
+          "explanation": "Válido (selector de atributo)."
+        },
+        {
+          "text": "app-header",
+          "isCorrect": false,
+          "explanation": "Válido (selector de etiqueta)."
+        },
+        {
+          "text": "ng-header",
+          "isCorrect": true,
+          "explanation": "Correcto. 'ng-' está reservado para el framework."
+        },
+        {
+          "text": ".header",
+          "isCorrect": false,
+          "explanation": "Válido (selector de clase)."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "What is the decorator used to pass data to a component?",
+      "type": "single",
+      "generalExplanation": "@Input() permite que un componente reciba datos de su padre.",
+      "options": [
+        {
+          "text": "@Prop()",
+          "isCorrect": false,
+          "explanation": "Se usa en otros frameworks como Vue."
+        },
+        {
+          "text": "@Model()",
+          "isCorrect": false,
+          "explanation": "No es para paso de datos unidireccional."
+        },
+        {
+          "text": "@Data()",
+          "isCorrect": false,
+          "explanation": "No existe en Angular."
+        },
+        {
+          "text": "@Input()",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Which of these HTML template examples would automatically render the latest value of data when data changes?",
+      "type": "single",
+      "generalExplanation": "La interpolación {{ }} es el método básico para mostrar datos dinámicos.",
+      "options": [
+        {
+          "text": "([ngModel])=”data”",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta."
+        },
+        {
+          "text": "{{data}}",
+          "isCorrect": false,
+          "explanation": "Correcto. Renderiza el valor actualizado."
+        },
+        {
+          "text": "[value]=\"data\"",
+          "isCorrect": true,
+          "explanation": "Vincula la propiedad pero no renderiza texto libre."
+        },
+        {
+          "text": "(click)=\"data\"",
+          "isCorrect": false,
+          "explanation": "Es un binding de evento."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Which of the following correctly sets a new value for a Signal called mySig?",
+      "type": "single",
+      "generalExplanation": "Las Signals usan el método .set() para actualizar su valor de forma directa.",
+      "options": [
+        {
+          "text": "mySig = 21",
+          "isCorrect": false,
+          "explanation": "Sobrescribe la Signal entera."
+        },
+        {
+          "text": "mySig() = 21",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta (ejecución es solo lectura)."
+        },
+        {
+          "text": "mySig.set(21)",
+          "isCorrect": true,
+          "explanation": "Correcto. Método oficial de Signals."
+        },
+        {
+          "text": "mySig.setValue(21)",
+          "isCorrect": false,
+          "explanation": "No existe en Signals."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Which component decorator option turns a component into a standalone feature?",
+      "type": "single",
+      "generalExplanation": "La propiedad standalone permite que un componente funcione sin NgModules.",
+      "options": [
+        {
+          "text": "module: false",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        },
+        {
+          "text": "standalone: true",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "ngModule: false",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        },
+        {
+          "text": "changeDetectionStrategy: Standalone",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Is there anything wrong with the following template?",
+      "code": "<button (click)=\"extendDateFor(selection)\" disabled=\"selection.isEmpty()\">\n  Extend date for selection\n</button>",
+      "type": "single",
+      "generalExplanation": "Para evaluar lógica en atributos HTML como 'disabled', se debe usar Property Binding [].",
+      "options": [
+        {
+          "text": "Yes, curly braces {{ }} are missing for the expression bindings.",
+          "isCorrect": false,
+          "explanation": "No se usan llaves dentro de un binding."
+        },
+        {
+          "text": "Yes, the click listener syntax should be (onClick).",
+          "isCorrect": false,
+          "explanation": "Angular usa (click)."
+        },
+        {
+          "text": "Yes, square brackets are missing around disabled. It should be [disabled] instead.",
+          "isCorrect": true,
+          "explanation": "Correcto. Sin corchetes se interpreta como un string literal."
+        },
+        {
+          "text": "No, the code looks correct.",
+          "isCorrect": false,
+          "explanation": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "What is the difference between an interface and a class in TypeScript?",
+      "type": "single",
+      "generalExplanation": "La clase es un plano real para crear objetos; la interfaz es solo una definición de contrato que desaparece al compilar.",
+      "options": [
+        {
+          "text": "A class is a contract that defines the properties and methods that an object must have. An interface is a blueprint for creating objects",
+          "isCorrect": false,
+          "explanation": "Definiciones invertidas."
+        },
+        {
+          "text": "An interface is a contract that defines the properties and methods that an object must have. A class is a blueprint for creating objects.",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "There is no difference between an interface and a class in TypeScript.",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "None of these answers are correct.",
+          "isCorrect": false,
+          "explanation": "La opción B es correcta."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "According to the following declaration, what is the type of users?",
+      "code": "let users = [\"a\", \"b\", \"c\"];",
+      "type": "single",
+      "generalExplanation": "TS infiere el tipo basándose en los elementos del array.",
+      "options": [
+        {
+          "text": "None of the above",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "char[]",
+          "isCorrect": false,
+          "explanation": "Tipo inexistente en TS."
+        },
+        {
+          "text": "Array",
+          "isCorrect": false,
+          "explanation": "Genérico, incompleto."
+        },
+        {
+          "text": "string[]",
+          "isCorrect": true,
+          "explanation": "Correcto. Array de cadenas de texto."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "What is the type of the variable myVar if it is declared as follows?",
+      "code": "let myVar: string | number;",
+      "type": "single",
+      "generalExplanation": "El símbolo '|' representa una unión de tipos (Union Type).",
+      "options": [
+        {
+          "text": "string",
+          "isCorrect": false,
+          "explanation": "Parcial."
+        },
+        {
+          "text": "string or number",
+          "isCorrect": true,
+          "explanation": "Correcto. Acepta ambos."
+        },
+        {
+          "text": "This syntax doesn't work",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "number",
+          "isCorrect": false,
+          "explanation": "Parcial."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Which of the following code examples does not compile?",
+      "type": "single",
+      "generalExplanation": "No puedes asignar un string a una constante declarada explícitamente como number.",
+      "options": [
+        {
+          "text": "let a: number = 42;",
+          "isCorrect": false,
+          "explanation": "Válido."
+        },
+        {
+          "text": "let c = 'number';",
+          "isCorrect": false,
+          "explanation": "Válido."
+        },
+        {
+          "text": "var a = 42;",
+          "isCorrect": false,
+          "explanation": "Válido."
+        },
+        {
+          "text": "const c: number = \"21\";",
+          "isCorrect": true,
+          "explanation": "Correcto. Error: el tipo string no es asignable al tipo number."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Which of the following is not an Angular directive?",
+      "type": "single",
+      "generalExplanation": "Angular tiene directivas como ngIf, ngModel y ngClass. 'ngBound' no existe.",
+      "options": [
+        {
+          "text": "ngIf",
+          "isCorrect": false,
+          "explanation": "Válida."
+        },
+        {
+          "text": "ngModel",
+          "isCorrect": false,
+          "explanation": "Válida."
+        },
+        {
+          "text": "ngBound",
+          "isCorrect": true,
+          "explanation": "Correcto. No existe en Angular."
+        },
+        {
+          "text": "ngClass",
+          "isCorrect": false,
+          "explanation": "Válida."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "Which of these options is the correct syntax for pipe parameters?",
+      "type": "single",
+      "generalExplanation": "Los parámetros de las Pipes se pasan mediante dos puntos (:).",
+      "options": [
+        {
+          "text": "None of the above",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "{{ amount | currency :: ‘$’ }}",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta."
+        },
+        {
+          "text": "{{ amount | currency | ‘USD’ }}",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta."
+        },
+        {
+          "text": "{{ amount | currency : ‘USD’ }}",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "What is a directive?",
+      "type": "single",
+      "generalExplanation": "Técnicamente, un componente es una directiva con template; una directiva estándar no tiene template propio.",
+      "options": [
+        {
+          "text": "A pipe with an HTML template",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "A way to inject services",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "A component with no HTML template",
+          "isCorrect": true,
+          "explanation": "Correcto. Modifica el comportamiento de elementos existentes."
+        },
+        {
+          "text": "A component with no selector",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Which one of these pipes does not exist in the Angular framework?",
+      "type": "single",
+      "generalExplanation": "Angular provee pipes para json, currency, date, etc. 'format' no es una pipe integrada.",
+      "options": [
+        {
+          "text": "json",
+          "isCorrect": false,
+          "explanation": "Existe."
+        },
+        {
+          "text": "currency",
+          "isCorrect": false,
+          "explanation": "Existe."
+        },
+        {
+          "text": "titlecase",
+          "isCorrect": false,
+          "explanation": "Existe."
+        },
+        {
+          "text": "format",
+          "isCorrect": true,
+          "explanation": "Correcto. No existe por defecto."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "In Angular, which of the following decorators is used to register a class as a service?",
+      "type": "single",
+      "generalExplanation": "@Injectable permite que el sistema de Inyección de Dependencias use la clase.",
+      "options": [
+        {
+          "text": "@NgService",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        },
+        {
+          "text": "@Service",
+          "isCorrect": false,
+          "explanation": "Usado en NestJS, no Angular."
+        },
+        {
+          "text": "@Injectable",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "@Inject",
+          "isCorrect": false,
+          "explanation": "Se usa para inyectar tokens, no para registrar la clase."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "Can the following class be injected into a component as-is?",
+      "code": "@Injectable()\nexport class CartService {\n  constructor(private http: HttpClient) {}\n}",
+      "type": "single",
+      "generalExplanation": "Sin la propiedad 'providedIn: root', un servicio debe añadirse manualmente a un array de 'providers'.",
+      "options": [
+        {
+          "text": "No, it has to be added to an array of providers first",
+          "isCorrect": true,
+          "explanation": "Correcto. Falta definir su proveedor."
+        },
+        {
+          "text": "Yes",
+          "isCorrect": false,
+          "explanation": "Falla porque Angular no sabe cómo instanciarlo."
+        },
+        {
+          "text": "No, that code does not compile",
+          "isCorrect": false,
+          "explanation": "El código compila pero falla la ejecución en Angular."
+        },
+        {
+          "text": "No, it does not have the @Service decorator",
+          "isCorrect": false,
+          "explanation": "Ese decorador no existe."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "According to the following code, how many instances of TokenService can we have?",
+      "code": "@Injectable({\n  providedIn: 'root'\n})\nexport class TokenService {}",
+      "type": "single",
+      "generalExplanation": "'providedIn: root' crea un Singleton (instancia única) para toda la app.",
+      "options": [
+        {
+          "text": "It could be any number of instances",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "One",
+          "isCorrect": false,
+          "explanation": "Correcto. Instancia única compartida."
+        },
+        {
+          "text": "One per module",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "Zero or one",
+          "isCorrect": true,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "What is the name of the service used to make HTTP requests with Angular?",
+      "type": "single",
+      "generalExplanation": "HttpClient es el cliente moderno para peticiones HTTP en Angular.",
+      "options": [
+        {
+          "text": "HttpService",
+          "isCorrect": false,
+          "explanation": "Nombre genérico incorrecto."
+        },
+        {
+          "text": "HttpClient",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "$resource",
+          "isCorrect": false,
+          "explanation": "Era de AngularJS."
+        },
+        {
+          "text": "Fetch",
+          "isCorrect": false,
+          "explanation": "API nativa del navegador."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "In Angular, what is the purpose of the router-outlet tag?",
+      "type": "single",
+      "generalExplanation": "router-outlet es el marcador donde se cargan los componentes definidos en las rutas.",
+      "options": [
+        {
+          "text": "It's a way to embed an iframe...",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "It specifies navigation links...",
+          "isCorrect": false,
+          "explanation": "Eso es routerLink."
+        },
+        {
+          "text": "It defines the root component...",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "It indicates where routed components will be rendered",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Considering the following router config, which component renders for /products/21?",
+      "code": "RouterModule.forRoot([\n  { path: \"\", component: ProductListComponent },\n  { path: \"products/:productId\", component: ProductDetailsComponent }\n]);",
+      "type": "single",
+      "generalExplanation": "El parámetro dinámico :productId captura el valor '21'.",
+      "options": [
+        {
+          "text": "None; there is no mapping...",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "ProductListComponent",
+          "isCorrect": false,
+          "explanation": "Corresponde a la ruta vacía."
+        },
+        {
+          "text": "A 404 page would show up",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "ProductDetailsComponent",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "Which of the following is an existing guard function that can be used with the Angular router?",
+      "type": "single",
+      "generalExplanation": "CanActivate es el guard estándar para proteger rutas.",
+      "options": [
+        {
+          "text": "CannotActivate",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        },
+        {
+          "text": "CanNavigate",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        },
+        {
+          "text": "CanActivate",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "CanInit",
+          "isCorrect": false,
+          "explanation": "Inexistente."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "What is the name of the Angular service used to manage routing?",
+      "type": "single",
+      "generalExplanation": "El servicio Router permite navegar programáticamente mediante código.",
+      "options": [
+        {
+          "text": "ActivatedRoute",
+          "isCorrect": false,
+          "explanation": "Es para obtener datos de la ruta actual."
+        },
+        {
+          "text": "RouterOutlet",
+          "isCorrect": false,
+          "explanation": "Es una etiqueta HTML."
+        },
+        {
+          "text": "RouterService",
+          "isCorrect": false,
+          "explanation": "Nombre incorrecto."
+        },
+        {
+          "text": "Router",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "If items = ['A', 'B', 'C'], how many times will the text 'First element!' be displayed?",
+      "type": "single",
+      "generalExplanation": "La variable 'isFirst' solo es true en la primera iteración del bucle.",
+      "options": [
+        {
+          "text": "0 times",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "1 time",
+          "isCorrect": true,
+          "explanation": "Correcto. Solo ocurre para el primer elemento del array."
+        },
+        {
+          "text": "2 times",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "3 times",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "Which of the following is the correct way to use *ngFor in Angular?",
+      "code": "<li *ngFor=\"let item of items\">",
+      "type": "single",
+      "generalExplanation": "Las directivas estructurales como *ngFor no llevan corchetes.",
+      "options": [
+        {
+          "text": "<li [*ngFor]=...>",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta."
+        },
+        {
+          "text": "<li *ngFor=\"let item of items\">",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "<li [ngFor]=...>",
+          "isCorrect": false,
+          "explanation": "Faltan los asteriscos."
+        },
+        {
+          "text": "<li *ngFor=\"[let item of items]\">",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "Which of the following variable declarations will update in real-time? (Interpolación)",
+      "type": "single",
+      "generalExplanation": "La interpolación {{ }} actualiza el texto automáticamente ante cambios en el componente.",
+      "options": [
+        {
+          "text": "[value]=\"value\"",
+          "isCorrect": false,
+          "explanation": "Es binding de propiedad, no muestra texto libre."
+        },
+        {
+          "text": "{{ value }}",
+          "isCorrect": true,
+          "explanation": "Correcto. Actualiza la vista en tiempo real."
+        },
+        {
+          "text": "{data}",
+          "isCorrect": false,
+          "explanation": "Sintaxis inválida."
+        },
+        {
+          "text": "value=\"{{ value }}\"",
+          "isCorrect": false,
+          "explanation": "Interpolación de atributo, no texto directo."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "Which of the following statements about Angular Services is correct?",
+      "type": "single",
+      "generalExplanation": "Los servicios están diseñados para lógica de negocio y compartir datos.",
+      "options": [
+        {
+          "text": "Only to manipulate DOM",
+          "isCorrect": false,
+          "explanation": "Tarea de directivas."
+        },
+        {
+          "text": "Implement business logic and share data",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Only inside AppComponent",
+          "isCorrect": false,
+          "explanation": "Se inyectan en cualquier sitio."
+        },
+        {
+          "text": "Declared inside index.html",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "Select the only incorrect statement about Angular Services:",
+      "type": "single",
+      "generalExplanation": "Los servicios nunca se declaran en el archivo index.html.",
+      "options": [
+        {
+          "text": "Can implement business logic",
+          "isCorrect": false,
+          "explanation": "Es una afirmación correcta."
+        },
+        {
+          "text": "Can share data",
+          "isCorrect": false,
+          "explanation": "Es una afirmación correcta."
+        },
+        {
+          "text": "Can be injected into other services",
+          "isCorrect": false,
+          "explanation": "Es una afirmación correcta."
+        },
+        {
+          "text": "Must be declared inside index.html",
+          "isCorrect": true,
+          "explanation": "Correcto (esta afirmación es la falsa)."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Which of the following is NOT an Angular Forms directive?",
+      "type": "single",
+      "generalExplanation": "autofocus es un atributo nativo de HTML, no una directiva de Angular Forms.",
+      "options": [
+        {
+          "text": "ngModel",
+          "isCorrect": false,
+          "explanation": "Es de Angular."
+        },
+        {
+          "text": "formControlName",
+          "isCorrect": false,
+          "explanation": "Es de Angular."
+        },
+        {
+          "text": "ngSubmit",
+          "isCorrect": false,
+          "explanation": "Es de Angular."
+        },
+        {
+          "text": "autofocus",
+          "isCorrect": true,
+          "explanation": "Correcto. Es HTML puro."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "Which library is commonly used in Angular for reactive state management?",
+      "type": "single",
+      "generalExplanation": "NgRx es la librería estándar para gestionar estado siguiendo el patrón Redux.",
+      "options": [
+        {
+          "text": "NgRx",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "RxJS",
+          "isCorrect": false,
+          "explanation": "Es una base de Angular, pero no una librería de estado per se."
+        },
+        {
+          "text": "GxJs",
+          "isCorrect": false,
+          "explanation": "No existe."
+        },
+        {
+          "text": "NgForms",
+          "isCorrect": false,
+          "explanation": "Es para formularios."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "Which of the following will correctly update the HTML in real-time? (Two-way binding)",
+      "type": "single",
+      "generalExplanation": "[(ngModel)] sincroniza datos en ambas direcciones (vista y componente).",
+      "options": [
+        {
+          "text": "{{ value }}",
+          "isCorrect": false,
+          "explanation": "Es solo de una dirección."
+        },
+        {
+          "text": "[value]=\"value\"",
+          "isCorrect": false,
+          "explanation": "Es solo de una dirección."
+        },
+        {
+          "text": "[(ngModel)]=\"value\"",
+          "isCorrect": true,
+          "explanation": "Correcto. Binding bidireccional."
+        },
+        {
+          "text": "value=\"{{ value }}\"",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "In a default project generated with CLI, what is the default prefix for selectors?",
+      "type": "single",
+      "generalExplanation": "La CLI usa 'app' por defecto para evitar conflictos con etiquetas estándar.",
+      "options": [
+        {
+          "text": "root",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "app",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "ng",
+          "isCorrect": false,
+          "explanation": "Reservado por Angular."
+        },
+        {
+          "text": "main",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "Which Angular directive is used to display routed components?",
+      "type": "single",
+      "generalExplanation": "router-outlet es la directiva correcta (escrita exactamente así).",
+      "options": [
+        {
+          "text": "ruter-outlet",
+          "isCorrect": false,
+          "explanation": "Mal escrito."
+        },
+        {
+          "text": "router-outlet",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "router-outlite",
+          "isCorrect": false,
+          "explanation": "Mal escrito."
+        },
+        {
+          "text": "route-outlet",
+          "isCorrect": false,
+          "explanation": "Mal escrito."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "Given the following Angular template, if isVisible is false, which element still exists in the DOM but stays hidden?",
+      "code": "<!-- Example 1 -->\n<p *ngIf=\"isVisible\">This is shown with *ngIf</p>\n\n<!-- Example 2 -->\n<p [hidden]=\"!isVisible\">This is shown with [hidden]</p>",
+      "type": "single",
+      "generalExplanation": "[hidden] usa CSS (display: none), por lo que el elemento sigue en el DOM.",
+      "options": [
+        {
+          "text": "The element with *ngIf",
+          "isCorrect": false,
+          "explanation": "Se elimina del DOM."
+        },
+        {
+          "text": "The element with [hidden]",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Both elements",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "Neither element",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "Which CLI command correctly generates a new component?",
+      "type": "single",
+      "generalExplanation": "ng generate component es el comando oficial (alias: ng g c).",
+      "options": [
+        {
+          "text": "ng generate service...",
+          "isCorrect": false,
+          "explanation": "Genera un servicio."
+        },
+        {
+          "text": "ng generate component my-component",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "ng create component...",
+          "isCorrect": false,
+          "explanation": "Comando inexistente."
+        },
+        {
+          "text": "ng g module...",
+          "isCorrect": false,
+          "explanation": "Genera un módulo."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "Which of the following best describes an Angular component?",
+      "type": "single",
+      "generalExplanation": "Los componentes son bloques de UI que unen lógica, estilos y vista.",
+      "options": [
+        {
+          "text": "Only for HTTP requests",
+          "isCorrect": false,
+          "explanation": "Tarea de servicios."
+        },
+        {
+          "text": "Building block of UI (HTML, CSS, TS)",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Service that stores state",
+          "isCorrect": false,
+          "explanation": "Eso es un servicio."
+        },
+        {
+          "text": "Directive that iterates items",
+          "isCorrect": false,
+          "explanation": "Eso es *ngFor."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "Which of the following is the difference between a directive and a component?",
+      "type": "single",
+      "generalExplanation": "Un componente siempre tiene su propio template (HTML), una directiva no.",
+      "options": [
+        {
+          "text": "Directive has template, component does not",
+          "isCorrect": false,
+          "explanation": "Falso, es al revés."
+        },
+        {
+          "text": "Component has template, directive does not",
+          "isCorrect": true,
+          "explanation": "Correcto."
+        },
+        {
+          "text": "Directive only for routing",
+          "isCorrect": false,
+          "explanation": "Falso."
+        },
+        {
+          "text": "Component cannot have styles",
+          "isCorrect": false,
+          "explanation": "Falso."
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": "Select the only incorrect statement about Angular components:",
+      "type": "single",
+      "generalExplanation": "Los componentes pueden tener sus propios estilos CSS mediante styles o styleUrls dentro del decorador @Component.",
+      "options": [
+        {
+          "text": "A component can use one-way data binding with {{ }}.",
+          "isCorrect": false,
+          "explanation": "Es una afirmación correcta."
+        },
+        {
+          "text": "A component can use two-way data binding with [(ngModel)].",
+          "isCorrect": false,
+          "explanation": "Es una afirmación correcta."
+        },
+        {
+          "text": "A component cannot have its own CSS styles.",
+          "isCorrect": true,
+          "explanation": "Correcto. Esta afirmación es falsa, porque los componentes sí pueden tener estilos propios."
+        },
+        {
+          "text": "A component must have a template.",
+          "isCorrect": false,
+          "explanation": "Es una afirmación correcta."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "In Angular, which class is commonly used to emit custom events from a child component to a parent component?",
+      "type": "single",
+      "generalExplanation": "EventEmitter se usa junto con @Output() para emitir eventos personalizados desde un componente hijo hacia su componente padre.",
+      "options": [
+        {
+          "text": "EventEmitter",
+          "isCorrect": true,
+          "explanation": "Correcto. Es la clase estándar de Angular para emitir eventos personalizados."
+        },
+        {
+          "text": "OutputEvent",
+          "isCorrect": false,
+          "explanation": "No existe en Angular."
+        },
+        {
+          "text": "EventDispatcher",
+          "isCorrect": false,
+          "explanation": "No forma parte de Angular."
+        },
+        {
+          "text": "NgEvent",
+          "isCorrect": false,
+          "explanation": "No es una API real de Angular."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": "Which of the following statements about AngularJS and Angular is correct?",
+      "type": "single",
+      "generalExplanation": "Angular (2+) fue una reescritura completa de AngularJS (1.x), con una arquitectura moderna basada en componentes y TypeScript.",
+      "options": [
+        {
+          "text": "AngularJS is written in TypeScript, while Angular is written in JavaScript.",
+          "isCorrect": false,
+          "explanation": "Está invertido. AngularJS usaba JavaScript y Angular usa TypeScript principalmente."
+        },
+        {
+          "text": "Angular is a full rewrite of AngularJS.",
+          "isCorrect": true,
+          "explanation": "Correcto. Angular moderno fue reescrito desde cero."
+        },
+        {
+          "text": "AngularJS is the latest version of Angular.",
+          "isCorrect": false,
+          "explanation": "AngularJS es la versión antigua."
+        },
+        {
+          "text": "Angular and AngularJS share the same architecture and syntax.",
+          "isCorrect": false,
+          "explanation": "Tienen diferencias importantes de arquitectura y sintaxis."
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": "Given the following Angular component, will this component work correctly?",
+      "code": "import { Component } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\n\n@Component({\n  selector: 'app-data',\n  template: `<p>Data loaded</p>`\n})\nexport class DataComponent {\n  constructor(private http: HttpClient) {\n    this.http.get('https://api.example.com/data')\n      .subscribe(data => console.log(data));\n  }\n}",
+      "type": "single",
+      "generalExplanation": "HttpClient puede inyectarse en un componente y utilizarse, siempre que HttpClientModule esté importado en el módulo correspondiente.",
+      "options": [
+        {
+          "text": "Yes, as long as HttpClientModule is imported in the application module.",
+          "isCorrect": true,
+          "explanation": "Correcto. Esa es la condición necesaria para que Angular pueda inyectar HttpClient."
+        },
+        {
+          "text": "No, because HttpClient cannot be used in a constructor.",
+          "isCorrect": false,
+          "explanation": "Sí puede usarse en el constructor, aunque a veces se prefiera ngOnInit por claridad."
+        },
+        {
+          "text": "No, because HTTP requests must be made in ngOnInit.",
+          "isCorrect": false,
+          "explanation": "No es obligatorio usar ngOnInit."
+        },
+        {
+          "text": "Yes, without any additional configuration.",
+          "isCorrect": false,
+          "explanation": "Hace falta importar HttpClientModule."
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": "Which of the following file names does not follow the Angular style-guide conventions?",
+      "type": "single",
+      "generalExplanation": "Angular recomienda usar nombres en kebab-case y separar el tipo de archivo con un punto, como 'component', 'service', 'directive' o 'pipe'.",
+      "options": [
+        {
+          "text": "highlight-all.directive.ts",
+          "isCorrect": false,
+          "explanation": "Correcto según la convención (kebab-case + tipo)."
+        },
+        {
+          "text": "app.component.ts",
+          "isCorrect": false,
+          "explanation": "Correcto. Es el formato estándar."
+        },
+        {
+          "text": "uppercase-pipe.ts",
+          "isCorrect": true,
+          "explanation": "Incorrecto. Debería ser 'uppercase.pipe.ts' usando punto antes del tipo."
+        },
+        {
+          "text": "name.service.ts",
+          "isCorrect": false,
+          "explanation": "Correcto según la convención."
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": "Which @NgModule decorator option defines the main component of an Angular application?",
+      "type": "single",
+      "generalExplanation": "La propiedad 'bootstrap' en @NgModule define el componente raíz que Angular carga al iniciar la aplicación.",
+      "options": [
+        {
+          "text": "main: [AppComponent]",
+          "isCorrect": false,
+          "explanation": "No existe la propiedad 'main' en @NgModule."
+        },
+        {
+          "text": "bootstrap: [AppComponent]",
+          "isCorrect": true,
+          "explanation": "Correcto. Define el componente raíz de la aplicación."
+        },
+        {
+          "text": "start: AppComponent",
+          "isCorrect": false,
+          "explanation": "No existe la propiedad 'start'."
+        },
+        {
+          "text": "bootstrap: AppComponent",
+          "isCorrect": false,
+          "explanation": "Debe ser un array, no un valor directo."
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "text": "The following syntax does not compile. Which alternative syntax would generate the exact same DOM structure as intended above?",
+      "code": "<div *ngIf=\"showItems\" *ngFor=\"let item of items\">{{item}}</div>",
+      "type": "single",
+      "generalExplanation": "No se pueden usar dos directivas estructurales en el mismo elemento. La solución correcta es usar un contenedor adicional como <ng-container> para separar las directivas sin alterar el DOM final.",
+      "options": [
+        {
+          "text": "<ng-container *ngIf=\"showItems\">\n  <div *ngFor=\"let item of items\">{{item}}</div>\n</ng-container>",
+          "isCorrect": true,
+          "explanation": "Correcto. ng-container no genera nodos en el DOM y permite combinar directivas estructurales."
+        },
+        {
+          "text": "<div *ngIf=\"showItems\">\n  <span *ngFor=\"let item of items\">{{item}}</span>\n</div>",
+          "isCorrect": false,
+          "explanation": "Incorrecto. Cambia la estructura del DOM (usa span en lugar de div)."
+        },
+        {
+          "text": "<div [hidden]=\"!showItems\" *ngFor=\"let item of items\">{{item}}</div>",
+          "isCorrect": false,
+          "explanation": "Incorrecto. [hidden] no elimina elementos del DOM como *ngIf."
+        },
+        {
+          "text": "<ng-template *ngIf=\"showItems\">\n  <div *ngFor=\"let item of items\">{{item}}</div>\n</ng-template>",
+          "isCorrect": false,
+          "explanation": "Incorrecto. ng-template sí altera la estructura del DOM y no es equivalente directo en este caso."
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "text": "What is the purpose of the ViewChild decorator in this component example?",
+      "code": "@Component({\n  template: '<p #test></p>'\n})\nexport class UserDetailsComponent {\n  @ViewChild('test') test;\n}",
+      "type": "single",
+      "generalExplanation": "@ViewChild permite acceder desde el componente a un elemento del template mediante su referencia (#test), normalmente como un ElementRef.",
+      "options": [
+        {
+          "text": "It makes the <p> tag in the template support content projection.",
+          "isCorrect": false,
+          "explanation": "Eso está relacionado con ng-content, no con ViewChild."
+        },
+        {
+          "text": "It makes the <p> tag visible in the final render.",
+          "isCorrect": false,
+          "explanation": "ViewChild no controla visibilidad."
+        },
+        {
+          "text": "It provides access from within the component class to the ElementRef object for the tag that has the test template reference variable.",
+          "isCorrect": true,
+          "explanation": "Correcto. Permite acceder al elemento del DOM referenciado con #test."
+        },
+        {
+          "text": "It indicates that the <p> tag will be rendered as a child of the parent view.",
+          "isCorrect": false,
+          "explanation": "No tiene relación con jerarquía de renderizado."
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "text": "Which of the following functions is not a part of the Signals API?",
+      "type": "single",
+      "generalExplanation": "La API de Signals en Angular incluye funciones como signal(), computed() y effect(). observable() pertenece a RxJS, no a Signals.",
+      "options": [
+        {
+          "text": "observable()",
+          "isCorrect": true,
+          "explanation": "Correcto. observable() pertenece a RxJS, no a la API de Signals."
+        },
+        {
+          "text": "effect()",
+          "isCorrect": false,
+          "explanation": "Forma parte de la API de Signals."
+        },
+        {
+          "text": "signal()",
+          "isCorrect": false,
+          "explanation": "Es la función principal para crear signals."
+        },
+        {
+          "text": "computed()",
+          "isCorrect": false,
+          "explanation": "Se usa para valores derivados en Signals."
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": "What's the value of `a` in this example?",
+      "code": "let a = otherValue ?? 21;",
+      "type": "single",
+      "generalExplanation": "El operador nullish coalescing (??) devuelve el valor de la izquierda si no es null ni undefined; en caso contrario, devuelve el valor de la derecha.",
+      "options": [
+        {
+          "text": "12 if otherValue === 12, 21 if otherValue is null or undefined",
+          "isCorrect": true,
+          "explanation": "Correcto. ?? solo usa el valor por defecto cuando el valor es null o undefined."
+        },
+        {
+          "text": "12 if otherValue == 12, 21 if otherValue is null",
+          "isCorrect": false,
+          "explanation": "No es exacto y no contempla undefined."
+        },
+        {
+          "text": "\"otherValue\"",
+          "isCorrect": false,
+          "explanation": "No devuelve el nombre de la variable."
+        },
+        {
+          "text": "12 if otherValue === 12, 21 if otherValue is {} or undefined",
+          "isCorrect": false,
+          "explanation": "Un objeto vacío ({}) NO activa el operador ??."
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": "What does the following code output to the console?",
+      "code": "enum UserResponse {\n  No = 0,\n  Yes = 1,\n}\n\nconsole.log(UserResponse.Yes);",
+      "type": "single",
+      "generalExplanation": "En TypeScript, los enums numéricos asignan valores numéricos a sus miembros. En este caso, 'Yes' tiene el valor 1, por lo que eso es lo que se imprime en consola.",
+      "options": [
+        {
+          "text": "[object Object]",
+          "isCorrect": false,
+          "explanation": "No se está imprimiendo un objeto completo."
+        },
+        {
+          "text": "Yes",
+          "isCorrect": false,
+          "explanation": "Eso sería si se accediera de forma inversa al enum."
+        },
+        {
+          "text": "1",
+          "isCorrect": true,
+          "explanation": "Correcto. El valor de 'Yes' en el enum es 1."
+        },
+        {
+          "text": "UserResponse.Yes",
+          "isCorrect": false,
+          "explanation": "No se imprime la referencia, sino su valor."
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": "How many parameters does the following function expect?",
+      "code": "function test(a, b, ...c) {\n  // ...\n}",
+      "type": "single",
+      "generalExplanation": "Los parámetros 'a' y 'b' son obligatorios, mientras que '...c' es un parámetro rest que puede recibir cero o más argumentos adicionales. Por lo tanto, la función espera al menos 2 parámetros.",
+      "options": [
+        {
+          "text": "2 to 5",
+          "isCorrect": false,
+          "explanation": "No hay límite superior en los parámetros adicionales."
+        },
+        {
+          "text": "None, this function signature is incorrect",
+          "isCorrect": false,
+          "explanation": "La sintaxis es válida en JavaScript/TypeScript."
+        },
+        {
+          "text": "at least 2",
+          "isCorrect": true,
+          "explanation": "Correcto. 'a' y 'b' son obligatorios, '...c' es opcional y puede contener múltiples valores."
+        },
+        {
+          "text": "exactly 3",
+          "isCorrect": false,
+          "explanation": "El parámetro rest no cuenta como uno fijo, puede contener múltiples valores o ninguno."
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "text": "Which of the following is not an Angular directive from '@angular/common'?",
+      "type": "single",
+      "generalExplanation": "ngSwitch, ngFor y ngClass son directivas reales de Angular incluidas en @angular/common. 'ngBind' no existe como directiva en Angular moderno (era de AngularJS).",
+      "options": [
+        {
+          "text": "ngSwitch",
+          "isCorrect": false,
+          "explanation": "Es una directiva estructural válida de Angular."
+        },
+        {
+          "text": "ngBind",
+          "isCorrect": true,
+          "explanation": "Correcto. No existe en Angular moderno, era de AngularJS."
+        },
+        {
+          "text": "ngFor",
+          "isCorrect": false,
+          "explanation": "Es una directiva estructural válida."
+        },
+        {
+          "text": "ngClass",
+          "isCorrect": false,
+          "explanation": "Es una directiva de atributo válida."
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": "What is the 'HostBinding' decorator doing in this directive?",
+      "code": "@Directive({\n  selector: '[appHighlight]'\n})\nexport class HighlightDirective {\n  @HostBinding('class.highlighted') highlight = true;\n}",
+      "type": "single",
+      "generalExplanation": "El decorador @HostBinding permite vincular propiedades del host (elemento donde se aplica la directiva) con propiedades del componente/directiva. En este caso, añade la clase CSS 'highlighted' al elemento que tenga el atributo 'appHighlight'.",
+      "options": [
+        {
+          "text": "It is adding the CSS class named highlighted to any DOM element for which the tag name is appHighlight.",
+          "isCorrect": false,
+          "explanation": "El selector es un atributo, no una etiqueta HTML."
+        },
+        {
+          "text": "It is adding the CSS class named highlighted to any DOM element that has the appHighlight attribute on it.",
+          "isCorrect": true,
+          "explanation": "Correcto. La clase se añade al elemento host mediante @HostBinding."
+        },
+        {
+          "text": "It is creating an inline style on the host element with a CSS property named highlighted set to true.",
+          "isCorrect": false,
+          "explanation": "No es un estilo inline, es una clase CSS."
+        },
+        {
+          "text": "HostBinding does not do anything on directives, it only works with components.",
+          "isCorrect": false,
+          "explanation": "HostBinding funciona tanto en componentes como en directivas."
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": "What is the proper syntax to display a list of names in `div` elements when `display` is true?",
+      "type": "single",
+      "generalExplanation": "No se pueden usar múltiples directivas estructurales (*ngIf y *ngFor) en el mismo elemento. Por eso se usa un <ng-container> con *ngIf que envuelve el *ngFor.",
+      "options": [
+        {
+          "text": "<ng-switch *ngSwitchCase=\"display\">\n  <div *ngFor=\"let name of names\">{{name}}</div>\n</ng-switch>",
+          "isCorrect": false,
+          "explanation": "ngSwitch no es apropiado para este caso."
+        },
+        {
+          "text": "<ng-container *ngIf=\"display\">\n  <div *ngFor=\"let name of names\">{{name}}</div>\n</ng-container>",
+          "isCorrect": true,
+          "explanation": "Correcto. Se usa ng-container para evitar múltiples directivas estructurales en el mismo elemento."
+        },
+        {
+          "text": "<ng-template *ngIf=\"display\">\n  <div *ngFor=\"let name of names\">{{name}}</div>\n</ng-template>",
+          "isCorrect": false,
+          "explanation": "Aunque funciona, no renderiza directamente en el DOM como ng-container."
+        },
+        {
+          "text": "<div *ngIf=\"display\" *ngFor=\"let name of names\">\n  {{name}}\n</div>",
+          "isCorrect": false,
+          "explanation": "No se pueden usar dos directivas estructurales en el mismo elemento."
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "text": "One of the following syntaxes is correct for injecting a `LoginService` in `LoginComponent`. Which one is it?",
+      "type": "single",
+      "generalExplanation": "Desde Angular moderno (v14+), se puede usar la función inject() para inyectar dependencias fuera del constructor. Es una alternativa válida a la inyección clásica por constructor.",
+      "options": [
+        {
+          "text": "loginService = constructor(loginService: LoginService);",
+          "isCorrect": false,
+          "explanation": "Sintaxis incorrecta. La inyección por constructor no se escribe así."
+        },
+        {
+          "text": "@Injectable()\nloginService: LoginService;",
+          "isCorrect": false,
+          "explanation": "@Injectable se usa en servicios, no para inyectar dependencias en componentes."
+        },
+        {
+          "text": "loginService = create(LoginService)",
+          "isCorrect": false,
+          "explanation": "No existe una función 'create' para inyección de dependencias en Angular."
+        },
+        {
+          "text": "myService = inject(LoginService);",
+          "isCorrect": true,
+          "explanation": "Correcto. inject() es una forma válida de inyectar dependencias en Angular moderno."
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": "Which of the following is not an existing guard function that can be used with the Angular router?",
+      "type": "single",
+      "generalExplanation": "Angular Router incluye guards como CanActivate, CanActivateChild, CanDeactivate y CanLoad. 'CanNavigate' no es un guard real.",
+      "options": [
+        {
+          "text": "CanLoad",
+          "isCorrect": false,
+          "explanation": "Es un guard válido que controla la carga de módulos."
+        },
+        {
+          "text": "CanActivateChild",
+          "isCorrect": false,
+          "explanation": "Es un guard válido para rutas hijas."
+        },
+        {
+          "text": "CanNavigate",
+          "isCorrect": true,
+          "explanation": "Correcto. No existe como guard en Angular."
+        },
+        {
+          "text": "CanDeactivate",
+          "isCorrect": false,
+          "explanation": "Es un guard válido para prevenir salir de una ruta."
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": "What is one requirement for this syntax to work?",
+      "code": "loadComponent: () => import('./admin/admin.component').then(comp => comp.AdminComponent)",
+      "type": "single",
+      "generalExplanation": "This syntax works with lazy loading of components, but it requires the component to be a standalone component, meaning it must have the 'standalone: true' property in its @Component decorator.",
+      "options": [
+        {
+          "text": "AdminComponent must be the default export in its source file",
+          "isCorrect": false,
+          "explanation": "The component does not need to be the default export; it can be a named export."
+        },
+        {
+          "text": "AdminComponent must be in a lazy-loaded module",
+          "isCorrect": false,
+          "explanation": "The component does not need to be in a lazy-loaded module."
+        },
+        {
+          "text": "This syntax does not work",
+          "isCorrect": false,
+          "explanation": "This syntax works in Angular with proper configuration."
+        },
+        {
+          "text": "AdminComponent must be a standalone component",
+          "isCorrect": true,
+          "explanation": "Correct. The component must be standalone with 'standalone: true' in the @Component decorator."
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "text": "Which of the following is an incorrect statement regarding RxJS observables?",
+      "type": "single",
+      "generalExplanation": "RxJS observables are asynchronous, which means they don't make the code synchronous. Instead, they allow us to handle asynchronous operations in a more declarative way.",
+      "options": [
+        {
+          "text": "They are used by the HttpClient of Angular",
+          "isCorrect": false,
+          "explanation": "Correct. The HttpClient of Angular returns Observables for handling HTTP requests."
+        },
+        {
+          "text": "They make our code synchronous",
+          "isCorrect": true,
+          "explanation": "Incorrect. RxJS observables are asynchronous and do not make code synchronous."
+        },
+        {
+          "text": "They are a way to work with asynchronous data",
+          "isCorrect": false,
+          "explanation": "Correct. RxJS observables are indeed used to handle asynchronous data."
+        },
+        {
+          "text": "They are objects we subscribe to",
+          "isCorrect": false,
+          "explanation": "Correct. Observables are objects that we subscribe to in order to consume the asynchronous data they emit."
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "text": "What does the RxJs `map()` operator do?",
+      "type": "single",
+      "generalExplanation": "The `map()` operator in RxJS applies a given function to each value emitted by the source Observable, and transforms those values before emitting them as a new Observable.",
+      "options": [
+        {
+          "text": "Applies a given function to each value emitted by the source Observable, and returns the resulting values as an array",
+          "isCorrect": false,
+          "explanation": "Incorrect. The `map()` operator does not return an array. It transforms each value emitted by the observable and emits those values one by one."
+        },
+        {
+          "text": "Applies a given function to each value emitted by the source Observable, and emits the resulting values as an Observable",
+          "isCorrect": true,
+          "explanation": "Correct. The `map()` operator transforms each value emitted by the source Observable and emits them as a new Observable."
+        },
+        {
+          "text": "Applies a given function to each array emitted by the source Observable, and returns the resulting values as an Observable of arrays",
+          "isCorrect": false,
+          "explanation": "Incorrect. The `map()` operator applies a function to each emitted value, but not to arrays. It emits transformed values individually."
+        },
+        {
+          "text": "Applies a given function to the source Observable, subscribes to it, and emits the resulting values as an Observable",
+          "isCorrect": false,
+          "explanation": "Incorrect. This describes subscribing to the observable, but not the specific behavior of the `map()` operator."
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": "When using Rxjs Observables, what does the `.pipe()` method do?",
+      "type": "single",
+      "generalExplanation": "The `.pipe()` method allows chaining multiple RxJS operators to transform and manage the data emitted by an Observable.",
+      "options": [
+        {
+          "text": "It automatically subscribes and unsubscribes from an Observable",
+          "isCorrect": false,
+          "explanation": "Incorrect. The `.pipe()` method is for chaining operators, but it doesn't handle subscriptions or unsubscriptions."
+        },
+        {
+          "text": "It enables chaining multiple RxJs operators",
+          "isCorrect": true,
+          "explanation": "Correct. The `.pipe()` method allows multiple RxJS operators to be chained together, enabling transformations and handling of emitted data."
+        },
+        {
+          "text": "It turns an Observable into an Angular pipe",
+          "isCorrect": false,
+          "explanation": "Incorrect. The `.pipe()` method does not convert an Observable into an Angular pipe."
+        },
+        {
+          "text": "It enables the use of Angular pipes with RxJs",
+          "isCorrect": false,
+          "explanation": "Incorrect. Angular pipes are different from RxJS operators, and the `.pipe()` method is used for chaining RxJS operators."
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "text": "Which of the following is a common use case for `switchMap` in Angular?",
+      "type": "single",
+      "generalExplanation": "`switchMap` is often used to handle HTTP requests based on user input, like searching or fetching data, where we want to cancel previous requests and switch to a new one.",
+      "options": [
+        {
+          "text": "Managing application state",
+          "isCorrect": false,
+          "explanation": "Incorrect. `switchMap` is typically used for handling HTTP requests, not application state."
+        },
+        {
+          "text": "Creating animations",
+          "isCorrect": false,
+          "explanation": "Incorrect. `switchMap` is not used for animations, but rather for managing asynchronous operations."
+        },
+        {
+          "text": "Making HTTP requests based on user input, like searching or fetching data",
+          "isCorrect": true,
+          "explanation": "Correct. `switchMap` is commonly used to cancel ongoing HTTP requests and switch to a new request based on updated user input."
+        },
+        {
+          "text": "Turning an Observable into a Signal",
+          "isCorrect": false,
+          "explanation": "Incorrect. `switchMap` does not handle converting Observables into Signals, it's used for handling asynchronous operations."
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "text": "Which event is emitted when the value of a form control changes in Angular reactive forms?",
+      "type": "single",
+      "generalExplanation": "In Angular reactive forms, the `valueChanges` event is emitted whenever the value of a form control changes.",
+      "options": [
+        {
+          "text": "controlChange",
+          "isCorrect": false,
+          "explanation": "Incorrect. The correct event name is `valueChanges`."
+        },
+        {
+          "text": "update",
+          "isCorrect": false,
+          "explanation": "Incorrect. `valueChanges` is the correct event name."
+        },
+        {
+          "text": "input",
+          "isCorrect": false,
+          "explanation": "Incorrect. The `input` event is not emitted for form controls, but rather for standard HTML input elements."
+        },
+        {
+          "text": "valueChanges",
+          "isCorrect": true,
+          "explanation": "Correct. The `valueChanges` event is emitted when the value of a form control changes."
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": "Which syntax is used to access the underlying `NgForm` instance in a template-driven form?",
+      "type": "single",
+      "generalExplanation": "In Angular template-driven forms, you can access the underlying `NgForm` instance by using the template reference variable with `#form` and assigning it the value of `ngForm`.",
+      "options": [
+        {
+          "text": "#form=\"ngForm\"",
+          "isCorrect": true,
+          "explanation": "Correct. The `#form=\"ngForm\"` syntax allows you to access the underlying `NgForm` instance."
+        },
+        {
+          "text": "#model=\"ngModel\"",
+          "isCorrect": false,
+          "explanation": "Incorrect. `#model` is used to refer to an individual `NgModel` directive, not the `NgForm` instance."
+        },
+        {
+          "text": "[ngForm]=\"value\"",
+          "isCorrect": false,
+          "explanation": "Incorrect. This is not the correct syntax to access the `NgForm` instance."
+        },
+        {
+          "text": "Turning an Observable into a Signal",
+          "isCorrect": false,
+          "explanation": "Incorrect. This is not related to template-driven forms or accessing `NgForm`."
+        }
+      ]
+    }
+  ]
+}

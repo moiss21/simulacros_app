@@ -1,12 +1,60 @@
+/* --- TEMA OSCURO GLOBAL --- */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-main: #f9fafb;
+  --card-bg: #1e1e1e;
+  --card-border: #333333;
+  --card-hover-border: #3b82f6;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --badge-bg: #1e3a8a;
+  --badge-color: #93c5fd;
+  --meta-border: #2a2a2a;
+  --btn-legend-bg: #1f2937;
+  --btn-legend-border: #374151;
+  --btn-legend-color: #007bf7;
+  --btn-legend-hover: #374151;
+  --btn-reset-bg: #374151;
+  --btn-reset-color: #f9fafb;
+  --btn-reset-border: #4b5563;
+  --btn-reset-hover: #4b5563;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-main: #333333;
+  --card-bg: white;
+  --card-border: #ddd;
+  --card-hover-border: #007bff;
+  --card-shadow: rgba(0,0,0,0.1);
+  --badge-bg: #e3f2fd;
+  --badge-color: #1565c0;
+  --meta-border: #eee;
+  --btn-legend-bg: #f8f9fa;
+  --btn-legend-border: #ddd;
+  --btn-legend-color: #333;
+  --btn-legend-hover: #e2e6ea;
+  --btn-reset-bg: #f3f4f6;
+  --btn-reset-color: #374151;
+  --btn-reset-border: #d1d5db;
+  --btn-reset-hover: #e5e7eb;
+}
+
+body {
+  background-color: var(--bg-color, #ffffff);
+  color: var(--text-main, #333333);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .container { 
   padding: 2rem; 
   max-width: 1200px; 
   margin: 0 auto; 
 }
+
 .main-title { 
   text-align: center; 
   margin-bottom: 40px; 
-  color: #333; 
+  color: var(--text-main, #333); 
 }
 
 /* --- GRID SYSTEM --- */
@@ -26,8 +74,8 @@
 
 /* --- CARD ESTILO --- */
 .exam-card {
-  background: white; 
-  border: 1px solid #ddd; 
+  background: var(--card-bg, white); 
+  border: 1px solid var(--card-border, #ddd); 
   border-radius: 12px;
   
   /* MÓVIL: Altura automática para que no ocupe toda la pantalla verticalmente */
@@ -38,12 +86,18 @@
   display: flex; 
   flex-direction: column;
   overflow: hidden; /* Para que nada se salga del borde redondeado */
+
+  /* Accesibilidad añadida sin romper nada */
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
+  }
 }
 
 .exam-card:hover { 
   transform: translateY(-5px); 
-  border-color: #007bff; 
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: var(--card-hover-border, #007bff); 
+  box-shadow: 0 10px 20px var(--card-shadow, rgba(0,0,0,0.1));
 }
 
 .card-content { 
@@ -54,8 +108,8 @@
 }
 
 .subject-badge { 
-  background: #e3f2fd; 
-  color: #1565c0; 
+  background: var(--badge-bg, #e3f2fd); 
+  color: var(--badge-color, #1565c0); 
   padding: 5px 10px; 
   border-radius: 5px; 
   font-size: 0.75rem; 
@@ -68,7 +122,7 @@
 .exam-title { 
   font-size: 1.3rem; 
   margin: 0 0 10px 0; 
-  color: #222; 
+  color: var(--text-main, #222); 
   line-height: 1.3; 
   font-weight: 700;
 }
@@ -76,7 +130,7 @@
 /* Resumen limitado a 3 líneas */
 .exam-summary { 
   font-size: 0.9rem; 
-  color: #666; 
+  color: var(--text-main, #666); 
   flex-grow: 1; /* Empuja el footer hacia abajo */
   overflow: hidden; 
   display: -webkit-box; 
@@ -88,15 +142,20 @@
 .exam-meta { 
   margin-top: auto; /* Se pega al fondo */
   padding-top: 15px; 
-  border-top: 1px solid #eee; 
+  border-top: 1px solid var(--meta-border, #eee); 
   display: flex; 
   justify-content: space-between; 
   font-size: 0.85rem; 
-  color: #888; 
+  color: var(--text-main, #888); 
   font-weight: 600;
 }
 
-.loading { text-align: center; font-size: 1.2rem; margin-top: 50px; color: #666; }
+.loading { 
+  text-align: center; 
+  font-size: 1.2rem; 
+  margin-top: 50px; 
+  color: var(--text-main, #666); 
+}
 
 /* Nuevo contenedor para el título y el botón */
 .header-actions {
@@ -114,9 +173,9 @@
 }
 
 .btn-legend {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  color: #333;
+  background-color: var(--btn-legend-bg, #f8f9fa);
+  border: 1px solid var(--btn-legend-border, #ddd);
+  color: var(--btn-legend-color, #333);
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
@@ -127,10 +186,15 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
+  }
 }
 
 .btn-legend:hover {
-  background-color: #e2e6ea;
+  background-color: var(--btn-legend-hover, #e2e6ea);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -172,6 +236,11 @@
   &:active {
     transform: translateY(0);
   }
+
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
+  }
 }
 
 /* Estilo específico para el botón de Carpeta */
@@ -187,20 +256,58 @@
 
 /* Botón de reset/volver (si decides usarlo) */
 .btn-reset {
-  background-color: #f3f4f6;
-  color: #374151;
-  border: 1px solid #d1d5db;
+  background-color: var(--btn-reset-bg, #f3f4f6);
+  color: var(--btn-reset-color, #374151);
+  border: 1px solid var(--btn-reset-border, #d1d5db);
 
   &:hover {
-    background-color: #e5e7eb;
+    background-color: var(--btn-reset-hover, #e5e7eb);
   }
 }
 
 /* Ajuste para el modo oscuro si lo usas */
 @media (prefers-color-scheme: dark) {
   .btn-reset {
-    background-color: #374151;
-    color: #f9fafb;
-    border-color: #4b5563;
+    background-color: var(--btn-reset-bg, #374151);
+    color: var(--btn-reset-color, #f9fafb);
+    border-color: var(--btn-reset-border, #4b5563);
   }
 }
+
+/* ==========================================================================
+   BOTÓN FLOTANTE (FAB) PARA CAMBIO DE TEMA
+   ========================================================================== */
+.theme-toggle-fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--card-bg, #ffffff);
+  border: 2px solid var(--card-border, #dee2e6);
+  box-shadow: 0 4px 12px var(--card-shadow, rgba(0, 0, 0, 0.15));
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: var(--btn-legend-bg, #f8f9fa);
+    border-color: var(--card-hover-border, #007bff);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--card-hover-border, #007bff);
+    outline-offset: 2px;
+  }
+}
+

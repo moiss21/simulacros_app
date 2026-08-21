@@ -1,1 +1,6 @@
 <router-outlet />
+
+  <!-- Botón flotante de cambio de tema (Abajo a la derecha) -->
+  <button class="theme-toggle-fab" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'">
+    {{ isDarkMode ? '☀️' : '🌙' }}
+  </button>

@@ -15,13 +15,15 @@
     </div>
 
     <!-- Panel de estadísticas con el renombrado exacto de las funciones -->
-    <div class="exam-progress-stats">
+    <div class="examn-controls-header">
+      <div class="exam-progress-stats">
       <div class="stat-item banco-total">
-        <span class="label">Banco Completo</span>
+        <span class="label">Total</span>
         <span class="value">{{ totalQuestions() }}</span>
       </div>
+      <hr>
       <div class="stat-item tanda-actual">
-        <span class="label">Tanda Actual</span>
+        <span class="label">Tanda</span>
         <span class="value">{{ totalQuestionsToDisplay() }}</span>
       </div>
       <div class="stat-item answered">
@@ -33,10 +35,10 @@
         <span class="value">{{ remainingCount() }}</span>
       </div>
     </div>
-
+    
     <div class="header-controls">
       @if (!hasStarted() && !isFinished()) {
-        <button class="btn-start" (click)="startExam()">EMPEZAR</button>
+        <button class="btn-start" (click)="startExam()"><i class="fa-solid fa-play"></i></button>
       }
 
       <div class="timer-display" [class.danger]="isLowTime()">
@@ -46,6 +48,7 @@
           <span>{{ timeLeftFormatted() }}</span>
         }
       </div>
+    </div>
     </div>
   </header>
 
@@ -278,14 +281,14 @@
       <div class="waiting-area">
         <p class="waiting-title">⏳ El tiempo está pausado.</p>
         <p>
-          Pulsa el botón <strong>EMPEZAR</strong> situado arriba a la derecha
+          Pulsa el botón <strong>  <i class="fa-solid fa-play"></i>  </strong> situado arriba a la derecha
           para comenzar el examen.
         </p>
 
         <!-- Bloque informativo de la tanda aleatoria -->
         @if (exam.examProperties.examConfig.totalQuestionsToDisplay) {
           <div class="tanda-alert-info">
-            <p>🎲 <strong>Aviso de modalidad aleatoria:</strong> Este test generará una tanda de <strong>{{ totalQuestionsToDisplay() }} preguntas extraídas al azar</strong> del repertorio general de {{ totalQuestions() }} preguntas cada vez que lo intentes.</p>
+            <p>🎲 <strong>Aviso de modalidad aleatoria:</strong><br>Este test generará una tanda de <strong>{{ totalQuestionsToDisplay() }} preguntas extraídas al azar</strong> del repertorio total de {{ totalQuestions() }} preguntas por cada intento de examen.</p>
           </div>
         }
 
