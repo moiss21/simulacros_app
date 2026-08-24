@@ -1,157 +1,107 @@
-/* --- TEMA OSCURO GLOBAL --- */
-[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-main: #f9fafb;
-  --card-bg: #2b2b2b;
-  --card-border: #444444;
-  --card-hover-border: #3b82f6;
-  --card-shadow: rgba(0, 0, 0, 0.4);
-  --badge-bg: #1e3a8a;
-  --badge-color: #93c5fd;
-  --meta-border: #3a3a3a;
-  --btn-legend-bg: #303030;
-  --btn-legend-border: #444444;
-  --btn-legend-color: #f9fafb;
-  --btn-legend-hover: #3d3d3d;
-  --btn-reset-bg: #3a3a3a;
-  --btn-reset-color: #f9fafb;
-  --btn-reset-border: #555555;
-  --btn-reset-hover: #4a4a4a;
-  --text-light: #b0b0b0;
-  --text-muted: #b0b0b0;
-}
-
-[data-theme="light"] {
-  --bg-color: #ffffff;
-  --text-main: #333333;
-  --card-bg: white;
-  --card-border: #ddd;
-  --card-hover-border: #007bff;
-  --card-shadow: rgba(0,0,0,0.1);
-  --badge-bg: #e3f2fd;
-  --badge-color: #1565c0;
-  --meta-border: #eee;
-  --btn-legend-bg: #f8f9fa;
-  --btn-legend-border: #ddd;
-  --btn-legend-hover: #e2e6ea;
-  --btn-reset-bg: #f3f4f6;
-  --btn-reset-color: #374151;
-  --btn-reset-border: #d1d5db;
-  --btn-reset-hover: #e5e7eb;
-  --text-light: #6c757d;
-  --text-muted: #495057;
-}
-
-body {
-  background-color: var(--bg-color, #ffffff);
-  color: var(--text-main, #333333);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* ==========================================================================
-   1. HEADER Y NAVEGACIÓN (STICKY)
+   EXAMEN
+   Sólo maquetación y estados propios de esta vista. Todo el color procede de
+   los tokens de src/styles.scss, por lo que claro y oscuro se comportan igual
+   sin bloques duplicados ni !important.
    ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. CABECERA FIJA
+   -------------------------------------------------------------------------- */
 .exam-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--card-bg, #ffffff);
-  border-bottom: 3px solid var(--card-hover-border, #0056b3);
-  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px var(--card-shadow, rgba(0, 0, 0, 0.08));
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--surface-1);
+  border-bottom: 1px solid var(--border);
+  transition: background-color var(--t-base), border-color var(--t-base);
 
-  .header-info {
-    .subject-label {
-      font-size: 0.75rem;
-      color: var(--text-light, #6c757d);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-    .exam-name {
-      margin: 0;
-      font-size: 1.25rem;
-      color: var(--text-main, #212529);
-      line-height: 1.2;
-    }
+  .subject-label {
+    display: block;
+    margin-bottom: var(--space-1);
+    color: var(--text-3);
+    font-size: var(--text-xs);
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
-  .header-controls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    .btn-start {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-      text-transform: uppercase;
-      animation: pulse 2s infinite;
-
-      &:hover {
-        background-color: #218838;
-      }
-      
-      &:focus-visible {
-        outline: 3px solid var(--card-hover-border, #007bff);
-        outline-offset: 2px;
-      }
-    }
-
-    .timer-display {
-      font-family: "Consolas", "Monaco", monospace;
-      font-size: 1.5rem;
-      font-weight: 700;
-      background-color: var(--btn-legend-bg, #f8f9fa);
-      border: 1px solid var(--card-border, #dee2e6);
-      padding: 0.25rem 0.75rem;
-      border-radius: 6px;
-      min-width: 90px;
-      text-align: center;
-      color: var(--text-main, #343a40);
-
-      &.danger {
-        color: #f87171;
-        background-color: #451a03;
-        border-color: #f87171;
-      }
-      .infinite {
-        font-size: 1.8rem;
-        line-height: 1;
-      }
-    }
+  .exam-name {
+    margin: 0;
+    font-size: var(--text-lg);
   }
 }
 
-/* ==========================================================================
-   2. ESTADÍSTICAS DE PROGRESO (HEADER)
-   ========================================================================== */
+.debug-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
 
 .examn-controls-header {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.timer-display {
+  min-width: 88px;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--text-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  transition: background-color var(--t-fast), border-color var(--t-fast),
+    color var(--t-fast);
+
+  &.danger {
+    background-color: var(--danger-soft);
+    border-color: var(--danger);
+    color: var(--danger-fg);
+  }
+
+  .infinite {
+    font-size: var(--text-xl);
+    line-height: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. ESTADÍSTICAS DE PROGRESO
+   -------------------------------------------------------------------------- */
 .exam-progress-stats {
   display: flex;
-  gap: 1.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--btn-legend-bg, #f8f9fa);
-  border-radius: 8px;
-  border: 1px solid var(--card-border, #e9ecef);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  align-items: stretch;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--t-base), border-color var(--t-base);
+
+  hr {
+    align-self: stretch;
+    border-top: 0;
+    border-left: 1px solid var(--border);
+  }
 
   .stat-item {
     display: flex;
@@ -159,830 +109,707 @@ body {
     align-items: center;
 
     .label {
-      font-size: 0.7rem;
+      color: var(--text-3);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: var(--text-light, #6c757d);
-      font-weight: bold;
     }
+
     .value {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--text-main, #212529);
+      color: var(--text-1);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
     }
 
     &.answered .value {
-      color: #4ade80;
+      color: var(--success-fg);
     }
+
     &.remaining .value {
-      color: #fb923c;
+      color: var(--warning-fg);
     }
   }
 }
 
-/* ==========================================================================
-   3. CONTENEDOR PRINCIPAL Y ÁREA DE ESPERA
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   3. CONTENEDOR PRINCIPAL
+   -------------------------------------------------------------------------- */
 .exam-container {
-  max-width: 850px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-bottom: 6rem;
+  padding: var(--space-6) var(--space-4) var(--space-7);
+}
 
-  .units-summary-sidebar {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    gap: 28px;
-    margin-bottom: 46px;
-    background-color: transparent;
+/* Resumen del examen (antes de empezar) */
+.exam-summary {
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--text-sm);
+}
+
+/* Resumen por unidades */
+.units-summary-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+/* Etiqueta de unidad: misma pieza en el resumen y dentro de cada pregunta. */
+.header-unit-info {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  width: max-content;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--text-xs);
+}
+
+/* --------------------------------------------------------------------------
+   4. ZONA DE ESPERA Y FICHA DE REGLAS
+   -------------------------------------------------------------------------- */
+.waiting-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6) 0;
+  text-align: center;
+  color: var(--text-2);
+
+  .waiting-title {
+    margin: 0;
+    color: var(--text-1);
+    font-size: var(--text-xl);
+    font-weight: 650;
+  }
+}
+
+.tanda-alert-info {
+  max-width: 600px;
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--info);
+  border-radius: var(--radius-sm);
+  background-color: var(--info-soft);
+  color: var(--info-fg);
+  font-size: var(--text-sm);
+  text-align: left;
+
+  p {
+    margin: 0;
+  }
+}
+
+.exam-rules-card {
+  max-width: 600px;
+  width: 100%;
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-1);
+  text-align: left;
+  transition: background-color var(--t-base), border-color var(--t-base);
+
+  h3 {
+    margin: 0 0 var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-3);
+    font-size: var(--text-xs);
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+
+  .rule-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background-color: var(--surface-2);
+    font-size: var(--text-lg);
   }
 
-  .units-summary-sidebar .header-unit-info {
-    width: max-content !important;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    background-color: var(--btn-legend-bg, #f4f4f4);
-    color: var(--text-main, #333);
-  }
-
-  .exam-summary {
-    background-color: var(--btn-legend-bg, #e9ecef);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    color: var(--text-muted, #495057);
-    font-style: italic;
-    border-left: 4px solid var(--text-light, #adb5bd);
-  }
-
-  .waiting-area {
+  .rule-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
-    text-align: center;
-
-    .waiting-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-main, #333);
-    }
-
-    .tanda-alert-info {
-      text-align: left;
-    }
+    min-width: 0;
   }
 
-  /* Ficha de Reglas Dinámica */
-  .exam-rules-card {
-    background: var(--card-bg, white);
-    border: 1px solid var(--card-border, #e0e0e0);
-    border-radius: 12px;
-    padding: 25px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 4px 15px var(--card-shadow, rgba(0, 0, 0, 0.05));
-    text-align: left;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+  .rule-label {
+    color: var(--text-3);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-    h3 {
-      margin: 0 0 20px 0;
-      font-size: 1.1rem;
-      color: var(--badge-color, #1565c0);
-      border-bottom: 2px solid var(--badge-bg, #e3f2fd);
-      padding-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+  .rule-value {
+    color: var(--text-1);
+    font-size: var(--text-sm);
+    font-weight: 650;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. TARJETAS DE PREGUNTA
+   El estado se comunica con el borde y un fondo teñido suave; ambos salen de
+   la misma familia de tokens, así que funcionan en los dos temas.
+   -------------------------------------------------------------------------- */
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.question-card {
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-1);
+  transition: background-color var(--t-base), border-color var(--t-base);
+
+  > .header-unit-info {
+    margin-bottom: var(--space-3);
+  }
+
+  &.has-selection {
+    border-color: var(--border);
+    border-left-color: var(--accent);
+  }
+
+  &.state-correct {
+    border-left-color: var(--success);
+    background-color: var(--success-soft);
+  }
+
+  &.state-incorrect {
+    border-left-color: var(--danger);
+    background-color: var(--danger-soft);
+  }
+
+  &.state-unanswered {
+    border-left-color: var(--border-strong);
+    border-left-style: dashed;
+    background-color: var(--surface-2);
+    color: var(--text-2);
+
+    &.unanswered-penalty {
+      border-left-color: var(--danger);
     }
   }
+}
 
-  .rules-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
+/* Cabecera de la pregunta */
+.q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
 
-  .rule-item {
+  .header-main-info {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
 
-    .rule-icon {
-      font-size: 1.4rem;
-      background: var(--btn-legend-bg, #f8f9fa);
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
+  .status-icon {
+    flex-shrink: 0;
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+  }
+
+  .q-title {
+    margin: 0;
+    font-size: var(--text-md);
+    font-weight: 600;
+    line-height: var(--leading-normal);
+  }
+
+  .q-num {
+    color: var(--text-3);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Puntuación obtenida (visible al corregir) */
+.q-result-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--success-fg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 650;
+  white-space: nowrap;
+
+  .max-weight,
+  .separator {
+    color: var(--text-3);
+  }
+
+  &.negative {
+    color: var(--danger-fg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. OPCIONES DE RESPUESTA
+   -------------------------------------------------------------------------- */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-1);
+  color: var(--text-1);
+  font-size: var(--text-md);
+  cursor: pointer;
+  transition: background-color var(--t-fast), border-color var(--t-fast),
+    color var(--t-fast);
+
+  .option-text {
+    min-width: 0;
+  }
+
+  &:hover:not(.disabled) {
+    background-color: var(--surface-3);
+    border-color: var(--border-strong);
+  }
+
+  /* Marcada durante el examen */
+  &.user-selected:not(.disabled) {
+    border-color: var(--accent);
+    background-color: var(--accent-soft);
+    color: var(--accent-fg);
+  }
+
+  /* --- Estados de corrección ------------------------------------------- */
+  &.disabled {
+    cursor: default;
+    color: var(--text-2);
+
+    /* Descartadas: ni marcadas por el usuario ni correctas. Se atenúan para
+       que la opción marcada y la solución destaquen a primera vista. */
+    &:not(.user-selected):not(.is-system-correct) {
+      opacity: 0.55;
     }
 
-    .rule-text {
-      display: flex;
-      flex-direction: column;
+    /* Correcta que el usuario no marcó: se señala sin premiar */
+    &.is-system-correct {
+      border-color: var(--success);
+      background-color: var(--success-soft);
+      color: var(--success-fg);
 
-      .rule-label {
-        font-size: 0.8rem;
-        color: var(--text-light, #777);
-        font-weight: 600;
-        text-transform: uppercase;
+      &::after {
+        content: "✓";
+        margin-left: auto;
+        font-weight: 700;
       }
+    }
 
-      .rule-value {
-        font-size: 0.95rem;
-        color: var(--text-main, #333);
+    /* Marcada y correcta */
+    &.user-selected.is-system-correct {
+      border-left-width: 3px;
+    }
+
+    /* Marcada e incorrecta */
+    &.user-selected:not(.is-system-correct) {
+      border-color: var(--danger);
+      border-left-width: 3px;
+      background-color: var(--danger-soft);
+      color: var(--danger-fg);
+
+      &::after {
+        content: "✕";
+        margin-left: auto;
         font-weight: 700;
       }
     }
   }
 }
 
-/* ==========================================================================
-   4. TARJETAS DE PREGUNTAS Y ESTADOS
-   ========================================================================== */
-.question-card {
-  position: relative;
-  background: var(--card-bg, white);
-  border: 1px solid var(--card-border, #dee2e6);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 2px 4px var(--card-shadow, rgba(0, 0, 0, 0.02));
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-
-  /* Accesibilidad: foco visible por teclado */
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
-  }
-
-  /* Estados Dinámicos */
-  &.has-selection {
-    border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
-    background-color: var(--btn-legend-bg, #1a2234);
-  }
-
-  &.state-correct {
-    border-color: #22c55e;
-    background-color: var(--btn-legend-bg, #13221a);
-  }
-
-  &.state-partial-high {
-    border-color: #eab308;
-    background-color: var(--btn-legend-bg, #262111);
-  }
-
-  &.state-partial-low {
-    border-color: #f97316;
-    background-color: var(--btn-legend-bg, #2a1b12);
-  }
-
-  &.state-incorrect {
-    border-color: #ef4444;
-    background-color: var(--btn-legend-bg, #2a1616);
-  }
-
-  &.state-unanswered {
-    opacity: 0.6;
-    background-color: var(--btn-legend-bg, #1f242d);
-    border-style: dashed;
-
-    &.unanswered-penalty {
-      border-color: #ef4444 !important;
-    }
-  }
-
-  &.unanswered {
-    opacity: 0.7;
-    background-color: var(--btn-legend-bg, #27272a);
-
-    .option-row {
-      background-color: var(--card-bg, #27272a);
-      border-color: var(--card-border, #3f3f46);
-      cursor: default;
-
-      &.is-system-correct {
-        opacity: 1 !important;
-        background-color: var(--card-bg, #1e1e1e) !important;
-        border-color: #22c55e !important;
-        color: #4ade80;
-      }
-    }
-  }
-
-  .header-unit-info {
-    position: relative;
-    top: -36px;
-    left: -4px;
-    padding: 4px 12px;
-    border-radius: 4px;
-    width: max-content;
-    font-size: 0.8rem;
-    background-color: var(--btn-legend-bg, #1f2937);
-    color: var(--text-main, #f9fafb);
-  }
-
-  /* Cabecera de Pregunta */
-  .q-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 1.5rem;
-
-    .header-main-info {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .q-points {
-      font-family: "Consolas", monospace;
-      font-weight: bold;
-      font-size: 0.9rem;
-      padding: 4px 8px;
-      background: var(--btn-legend-bg, #1f2937);
-      border-radius: 4px;
-      color: #4ade80;
-      white-space: nowrap;
-
-      &.negative {
-        color: #f87171;
-        background: var(--badge-bg, #451a03);
-      }
-    }
-
-    .status-icon {
-      font-size: 1.5rem;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-
-    .q-title {
-      margin: 0;
-      font-size: 1.1rem;
-      color: var(--text-main, #212529);
-      line-height: 1.4;
-
-      .badge-multi {
-        font-size: 0.75rem;
-        background-color: var(--btn-legend-bg, #27272a);
-        color: var(--text-muted, #a1a1aa);
-        padding: 2px 6px;
-        border-radius: 4px;
-        vertical-align: middle;
-        margin-left: 8px;
-        font-weight: normal;
-      }
-    }
-  }
-
-  .options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
-
-/* ==========================================================================
-   5. FILAS DE OPCIONES (INPUTS)
-   ========================================================================== */
-.option-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem;
-  border: 2px solid var(--card-border, #e9ecef);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background-color: var(--card-bg, white);
-  position: relative;
-  color: var(--text-main, inherit);
-
-  &:hover:not(.disabled) {
-    background-color: var(--btn-legend-bg, #27272a);
-    border-color: var(--text-light, #52525b);
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
-  }
-
-  /* Estado durante el examen */
-  &.user-selected:not(.disabled) {
-    background-color: #172554;
-    border-color: #3b82f6;
-  }
-
-  /* Estados al finalizar (Corrección) */
-  &.disabled {
-    cursor: default;
-    opacity: 0.6;
-    background-color: var(--btn-legend-bg, #27272a);
-
-    &.is-system-correct:not(.user-selected) {
-      background-color: var(--card-bg, #1e1e1e);
-      opacity: 1 !important;
-      border-color: #22c55e !important;
-      &::after {
-        content: "✓";
-        font-weight: 900;
-        color: #4ade80;
-        margin-left: auto;
-        font-size: 1.2rem;
-      }
-    }
-
-    &.user-selected.is-system-correct {
-      background-color: #13221a !important;
-      border-color: #22c55e !important;
-      opacity: 1 !important;
-      color: #4ade80;
-      &::after {
-        content: "✓";
-        font-weight: 900;
-        color: #4ade80;
-        margin-left: auto;
-        font-size: 1.2rem;
-      }
-    }
-
-    &.user-selected:not(.is-system-correct) {
-      background-color: #2a1616 !important;
-      border-color: #ef4444 !important;
-      opacity: 1 !important;
-      color: #fca5a5;
-      &::after {
-        content: "✖";
-        font-weight: bold;
-        color: #f87171;
-        margin-left: auto;
-        font-size: 1.1rem;
-      }
-    }
-  }
-}
-
-/* ==========================================================================
-   6. FEEDBACK, LIMPIEZA Y REVISIÓN
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   7. PIE DE PREGUNTA Y RETROALIMENTACIÓN
+   -------------------------------------------------------------------------- */
 .q-footer {
   display: flex;
   justify-content: flex-end;
-  margin-top: 1rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed var(--card-border, #eee);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
 }
 
-.btn-clear {
-  background: none;
-  border: 1px solid #f87171;
-  color: #f87171;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.review-section {
   display: flex;
-  align-items: center;
-  gap: 5px;
-
-  &:hover {
-    background-color: #2a1616;
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
-  }
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .feedback {
-  margin-top: 0.8rem;
-  padding: 0.75rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  padding: var(--space-3);
+  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--text-sm);
 
   &.error {
-    background-color: #2a2211;
-    color: #fde047;
-    border-left: 4px solid #eab308;
+    border-left-color: var(--warning);
+    background-color: var(--warning-soft);
+    color: var(--warning-fg);
   }
 
   &.success {
-    background-color: #13221a;
-    color: #86efac;
-    border-left: 4px solid #22c55e;
+    border-left-color: var(--success);
+    background-color: var(--success-soft);
+    color: var(--success-fg);
   }
 
   &.info {
-    background-color: #082f49;
-    color: #7dd3fc;
-    border-left: 4px solid #38bdf8;
+    border-left-color: var(--info);
+    background-color: var(--info-soft);
+    color: var(--info-fg);
   }
 }
 
-/* ==========================================================================
-   7. RESULTADOS FINALES Y DASHBOARD
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   8. RESULTADO FINAL
+   -------------------------------------------------------------------------- */
 .footer-actions {
+  margin-top: var(--space-6);
   text-align: center;
-  margin-top: 3rem;
-
-  .btn-finish {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-    transition: transform 0.2s;
-
-    &:hover {
-      background-color: #1d4ed8;
-      transform: scale(1.05);
-    }
-
-    &:focus-visible {
-      outline: 3px solid #ffffff;
-      outline-offset: 2px;
-    }
-  }
 }
 
 .result-box {
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 12px;
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-1);
   text-align: center;
-  color: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
   &.pass {
-    background: linear-gradient(135deg, #166534, #14532d);
+    border-top-color: var(--success);
   }
+
   &.fail {
-    background: linear-gradient(135deg, #991b1b, #7f1d1d);
+    border-top-color: var(--danger);
   }
 
   h2 {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-2xl);
+    font-variant-numeric: tabular-nums;
   }
+
   .result-msg {
-    font-size: 1.25rem;
-    font-weight: bold;
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-md);
+    font-weight: 650;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-  .result-details {
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
+
+  &.pass .result-msg {
+    color: var(--success-fg);
   }
 
-  .btn-home {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
+  &.fail .result-msg {
+    color: var(--danger-fg);
+  }
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.25);
+  .pass-goal-info {
+    color: var(--text-2);
+    font-size: var(--text-sm);
+
+    p {
+      margin: 0 0 var(--space-1);
     }
   }
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
 }
 
 .result-summary-dash {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
 
   .dash-item {
     display: flex;
     flex-direction: column;
-
-    .dash-val {
-      font-size: 1.8rem;
-      font-weight: 800;
-    }
-    .dash-lab {
-      font-size: 0.8rem;
-      opacity: 0.9;
-    }
   }
 
-  .penalty-info {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    padding-left: 1.5rem;
-    justify-content: center;
-    .dash-icon {
-      font-size: 1.2rem;
-      margin-bottom: 2px;
-    }
+  .dash-val {
+    color: var(--text-1);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dash-lab {
+    color: var(--text-3);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
   }
 }
 
-/* ==========================================================================
-   8. ANIMACIONES
-   ========================================================================== */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* ==========================================================================
-   9. SISTEMA DE RESPUESTA ALEATORIA Y DESCARGADO DE PDF
-   ========================================================================== */
-
-.btn-default {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.25);
-  }
-}
-
-.debug-actions {
-  margin-top: 10px;
+/* --------------------------------------------------------------------------
+   9. MODAL DE EXPORTACIÓN A PDF
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background-color: rgb(0 0 0 / 50%);
 }
 
-.btn-default-inverted {
-  background: var(--btn-legend-bg, #1f2937);
-  border: 1px solid var(--card-border, #374151);
-  color: var(--text-main, #f9fafb);
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
+.modal-card {
+  width: 100%;
+  max-width: 460px;
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-1);
+  box-shadow: var(--shadow-md);
+  text-align: left;
 
-  &:hover {
-    background: var(--btn-legend-hover, #374151);
-  }
-}
-
-/* ==========================================================================
-   10. CORRECCIONES DE FONDOS EN TEMA OSCURO
-   Evita fondos blancos y texto blanco sobre fondos claros.
-   ========================================================================== */
-
-[data-theme="dark"] {
-  .exam-header,
-  .exam-rules-card,
-  .question-card,
-  .option-row {
-    background-color: var(--card-bg) !important;
-    color: var(--text-main);
-  }
-
-  .timer-display,
-  .exam-progress-stats,
-  .units-summary-sidebar .header-unit-info,
-  .exam-summary,
-  .rule-icon,
-  .header-unit-info,
-  .q-points,
-  .badge-multi,
-  .btn-default-inverted {
-    background-color: var(--btn-legend-bg) !important;
-    color: var(--text-main) !important;
-  }
-
-  .timer-display {
-    border-color: var(--card-border) !important;
-    color: #f9fafb !important;
-  }
-
-  .timer-display.danger {
-    background-color: #451a03 !important;
-    color: #f87171 !important;
-    border-color: #f87171 !important;
-  }
-
-  .exam-name,
-  .q-title,
-  .rule-value,
-  .waiting-title {
-    color: var(--text-main) !important;
-  }
-
-  .exam-summary {
-    color: var(--text-muted) !important;
-  }
-
-  .rule-label,
-  .stat-item .label {
-    color: var(--text-light) !important;
-  }
-
-  .option-row:hover:not(.disabled) {
-    background-color: var(--btn-legend-hover) !important;
-  }
-
-  .option-row.disabled {
-    background-color: var(--btn-legend-bg) !important;
-  }
-
-  .question-card.has-selection {
-    background-color: #1a2234 !important;
-  }
-
-  .question-card.state-correct {
-    background-color: #13221a !important;
-  }
-
-  .question-card.state-partial-high {
-    background-color: #262111 !important;
-  }
-
-  .question-card.state-partial-low {
-    background-color: #2a1b12 !important;
-  }
-
-  .question-card.state-incorrect {
-    background-color: #2a1616 !important;
-  }
-
-  .question-card.state-unanswered {
-    background-color: #1f242d !important;
-  }
-
-  .question-card.unanswered {
-    background-color: #27272a !important;
-  }
-
-  .question-card.unanswered .option-row {
-    background-color: #27272a !important;
-  }
-
-  .question-card.unanswered .option-row.is-system-correct,
-  .option-row.disabled.is-system-correct {
-    background-color: #2b2b2b !important;
-  }
-
-  .feedback.error {
-    background-color: #2a2211 !important;
-  }
-
-  .feedback.success {
-    background-color: #13221a !important;
-  }
-
-  .feedback.info {
-    background-color: #082f49 !important;
+  h3 {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-lg);
   }
 }
 
+.modal-text {
+  margin: 0;
+  color: var(--text-2);
+  font-size: var(--text-md);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   10. IMPRESIÓN
+   Los tokens ya se fuerzan a claro en styles.scss; aquí sólo se ajusta la
+   maquetación y se oculta lo que no debe imprimirse.
+
+   Las notas de corrección (.review-section) SÍ se imprimen por defecto. Sólo
+   desaparecen cuando el usuario elige «Sólo respuestas» en el modal, lo que
+   añade .print-without-notes al contenedor.
+   -------------------------------------------------------------------------- */
 @media print {
-  /* 1. OCULTAR ELEMENTOS NO DESEADOS */
   .header-controls,
   .footer-actions,
   .btn-clear,
-  .btn-home,
-  .btn-pdf,
   .debug-actions,
   .waiting-area,
   .exam-progress-stats,
-  .result-box {
-    display: none !important;
+  .result-box,
+  .q-result-badge,
+  .status-icon,
+  .modal-overlay {
+    display: none;
   }
 
-  /* 2. RE-ESTRUCTURACIÓN DEL HEADER (Solo para la primera página) */
-  .exam-header {
-    position: relative !important;
-    display: block !important;
-    border-bottom: 2px solid #0056b3 !important;
-    box-shadow: none !important;
-    padding: 0 0 10px 0 !important;
-    margin-bottom: 30px !important;
+  .print-without-notes .review-section {
+    display: none;
+  }
 
-    .header-info {
-      .subject-label {
-        display: block !important;
-        color: #6c757d !important;
-      }
-      .exam-name {
-        font-size: 1.6rem !important;
-        color: #000 !important;
-      }
+  /* Ahorro de tinta: en papel ningún bloque lleva fondo teñido. El estado se
+     sigue leyendo por el color del borde izquierdo, que sí se conserva. */
+  .exam-summary,
+  .header-unit-info,
+  .question-card,
+  .question-card.state-correct,
+  .question-card.state-incorrect,
+  .question-card.state-unanswered,
+  .option-row,
+  .option-row.disabled,
+  .option-row.user-selected,
+  .option-row.disabled.is-system-correct,
+  .option-row.disabled.user-selected:not(.is-system-correct),
+  .feedback,
+  .feedback.error,
+  .feedback.success,
+  .feedback.info {
+    background-color: transparent;
+  }
+
+  /* Las opciones pasan de borde de color completo a borde neutro con sólo la
+     franja izquierda coloreada, igual que las tarjetas de pregunta. */
+  .option-row {
+    border-color: var(--border-strong);
+    border-left-width: 3px;
+  }
+
+  .option-row.user-selected:not(.disabled) {
+    border-color: var(--border-strong);
+    border-left-color: var(--accent);
+  }
+
+  /* En papel todo el texto va en negro: el color sólo vive en el borde y en la
+     marca ✓/✕, que es lo que hay que localizar de un vistazo. Un texto en
+     color claro sobre blanco se lee mal impreso. */
+  .option-row,
+  .option-row.disabled,
+  .option-row.user-selected,
+  .option-row.disabled.is-system-correct,
+  .option-row.disabled.user-selected:not(.is-system-correct),
+  .feedback,
+  .feedback.error,
+  .feedback.success,
+  .feedback.info {
+    color: var(--text-1);
+  }
+
+  /* --- Los tres casos de la corrección impresa -------------------------------
+     Se usan dos ejes independientes, de modo que cada caso es inequívoco:
+       · Marco exterior negro puro = «esto es lo que marcaste».
+       · Franja izquierda y marca de color = veredicto (verde bien / rojo mal).
+
+       1. Marcada y correcta ...... marco negro + franja verde + ✓ verde
+       2. Correcta no marcada ..... marco gris  + franja verde + ✓ verde
+       3. Marcada e incorrecta .... marco negro + franja roja  + ✕ roja
+       4. Descartada .............. marco gris, peso normal y atenuada
+     ------------------------------------------------------------------------ */
+
+  /* 1. Acertada: la marcaste y era la buena. */
+  .option-row.disabled.user-selected.is-system-correct {
+    border-color: var(--text-1);
+    border-left-color: var(--success);
+    font-weight: 600;
+  }
+
+  /* 2. Solución revelada: es la correcta, pero no la marcaste. Sin marco negro
+        precisamente porque no fue tu respuesta. */
+  .option-row.disabled.is-system-correct:not(.user-selected) {
+    border-color: var(--border-strong);
+    border-left-color: var(--success);
+    font-weight: 600;
+  }
+
+  /* 3. Tu respuesta errónea: se resalta como respuesta (marco negro) y se
+        califica como fallo (franja roja). */
+  .option-row.disabled.user-selected:not(.is-system-correct) {
+    border-color: var(--text-1);
+    border-left-color: var(--danger);
+    font-weight: 600;
+  }
+
+  .option-row.disabled.is-system-correct::after {
+    color: var(--success);
+  }
+
+  .option-row.disabled.user-selected:not(.is-system-correct)::after {
+    color: var(--danger);
+  }
+
+  .exam-header {
+    position: relative;
+    display: block;
+    padding: 0 0 var(--space-2);
+    margin-bottom: var(--space-5);
+    border-bottom: 2px solid var(--border-strong);
+
+    .exam-name {
+      font-size: var(--text-xl);
     }
   }
 
-  /* 3. COMPACTACIÓN DE PREGUNTAS */
   .exam-container {
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .questions-list {
+    gap: var(--space-4);
   }
 
   .question-card {
-    page-break-inside: avoid;
-    border: 1px solid #999999 !important;
-    margin-bottom: 25px !important;
-    padding: 10px !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-
-    .q-header {
-      margin-bottom: 8px !important;
-      .q-title {
-        font-size: 1rem !important;
-      }
-      .q-result-badge {
-        display: none !important;
-      }
-      .status-icon {
-        display: none !important;
-      }
-    }
-
-    .options-container {
-      gap: 4px !important;
-    }
-
-    .option-row {
-      padding: 4px 8px !important;
-      font-size: 0.85rem !important;
-      border-width: 1px !important;
-      color: black !important;
-
-      &.is-system-correct {
-        background-color: #f0fff4 !important;
-      }
-    }
-
-    .disabled {
-      color: black !important;
-      opacity: 1 !important;
-      border: 1px solid rgb(150, 150, 150) !important;
-      background-color: white !important;
-    }
-
-    .feedback {
-      margin-top: 5px !important;
-      padding: 4px 8px !important;
-      font-size: 0.8rem !important;
-      border-width: 2px !important;
-    }
+    break-inside: avoid;
+    padding: var(--space-3);
   }
 
-  /* 4. AJUSTES GLOBALES DE PÁGINA */
-  body {
-    background: white !important;
-    color: black !important;
-    font-size: 10pt;
+  .q-header {
+    margin-bottom: var(--space-2);
   }
 
-  .header-unit-info {
-    top: -8px !important;
-    left: -8px !important;
-    padding: 0px;
-    border-radius: 4px;
-    width: max-content;
-    background-color: #f4f4f4;
-    font-size: 0.7rem !important;
+  .options-container {
+    gap: var(--space-1);
   }
 
-  .feedback.info {
-    display: none !important;
+  .option-row {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--text-sm);
   }
 
-  @page {
-    margin-top: 1cm;
-    margin-bottom: 1cm;
-    margin-left: 1cm;
-    margin-right: 0.5cm;
+  .feedback {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--text-xs);
   }
 }

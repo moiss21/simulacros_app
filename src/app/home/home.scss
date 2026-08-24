@@ -1,313 +1,166 @@
-/* --- TEMA OSCURO GLOBAL --- */
-[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-main: #f9fafb;
-  --card-bg: #1e1e1e;
-  --card-border: #333333;
-  --card-hover-border: #3b82f6;
-  --card-shadow: rgba(0, 0, 0, 0.4);
-  --badge-bg: #1e3a8a;
-  --badge-color: #93c5fd;
-  --meta-border: #2a2a2a;
-  --btn-legend-bg: #1f2937;
-  --btn-legend-border: #374151;
-  --btn-legend-color: #007bf7;
-  --btn-legend-hover: #374151;
-  --btn-reset-bg: #374151;
-  --btn-reset-color: #f9fafb;
-  --btn-reset-border: #4b5563;
-  --btn-reset-hover: #4b5563;
+/* ==========================================================================
+   HOME — LISTADO DE EXÁMENES
+   Sólo maquetación. El color, la tipografía y los botones vienen de los
+   tokens y primitivas de src/styles.scss.
+   ========================================================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
 }
 
-[data-theme="light"] {
-  --bg-color: #ffffff;
-  --text-main: #333333;
-  --card-bg: white;
-  --card-border: #ddd;
-  --card-hover-border: #007bff;
-  --card-shadow: rgba(0,0,0,0.1);
-  --badge-bg: #e3f2fd;
-  --badge-color: #1565c0;
-  --meta-border: #eee;
-  --btn-legend-bg: #f8f9fa;
-  --btn-legend-border: #ddd;
-  --btn-legend-color: #333;
-  --btn-legend-hover: #e2e6ea;
-  --btn-reset-bg: #f3f4f6;
-  --btn-reset-color: #374151;
-  --btn-reset-border: #d1d5db;
-  --btn-reset-hover: #e5e7eb;
-}
-
-body {
-  background-color: var(--bg-color, #ffffff);
-  color: var(--text-main, #333333);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.container { 
-  padding: 2rem; 
-  max-width: 1200px; 
-  margin: 0 auto; 
-}
-
-.main-title { 
-  text-align: center; 
-  margin-bottom: 40px; 
-  color: var(--text-main, #333); 
-}
-
-/* --- GRID SYSTEM --- */
-.exam-grid {
-  display: grid;
-  gap: 20px;
-  /* MÓVIL (Por defecto): 1 columna */
-  grid-template-columns: 1fr; 
-}
-
-/* DESKTOP (A partir de 768px): 3 columnas forzadas de igual tamaño */
-@media (min-width: 768px) {
-  .exam-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-}
-
-/* --- CARD ESTILO --- */
-.exam-card {
-  background: var(--card-bg, white); 
-  border: 1px solid var(--card-border, #ddd); 
-  border-radius: 12px;
-  
-  /* MÓVIL: Altura automática para que no ocupe toda la pantalla verticalmente */
-  min-height: 200px;
-
-  cursor: pointer; 
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex; 
-  flex-direction: column;
-  overflow: hidden; /* Para que nada se salga del borde redondeado */
-
-  /* Accesibilidad añadida sin romper nada */
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
-  }
-}
-
-.exam-card:hover { 
-  transform: translateY(-5px); 
-  border-color: var(--card-hover-border, #007bff); 
-  box-shadow: 0 10px 20px var(--card-shadow, rgba(0,0,0,0.1));
-}
-
-.card-content { 
-  padding: 20px; 
-  height: 100%; 
-  display: flex; 
-  flex-direction: column; 
-}
-
-.subject-badge { 
-  background: var(--badge-bg, #e3f2fd); 
-  color: var(--badge-color, #1565c0); 
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  font-size: 0.75rem; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  align-self: flex-start; 
-  margin-bottom: 15px;
-}
-
-.exam-title { 
-  font-size: 1.3rem; 
-  margin: 0 0 10px 0; 
-  color: var(--text-main, #222); 
-  line-height: 1.3; 
-  font-weight: 700;
-}
-
-/* Resumen limitado a 3 líneas */
-.exam-summary { 
-  font-size: 0.9rem; 
-  color: var(--text-main, #666); 
-  flex-grow: 1; /* Empuja el footer hacia abajo */
-  overflow: hidden; 
-  display: -webkit-box; 
-  -webkit-line-clamp: 4; /* Número de líneas antes de cortar */
-  -webkit-box-orient: vertical; 
-  margin-bottom: 10px;
-}
-
-.exam-meta { 
-  margin-top: auto; /* Se pega al fondo */
-  padding-top: 15px; 
-  border-top: 1px solid var(--meta-border, #eee); 
-  display: flex; 
-  justify-content: space-between; 
-  font-size: 0.85rem; 
-  color: var(--text-main, #888); 
-  font-weight: 600;
-}
-
-.loading { 
-  text-align: center; 
-  font-size: 1.2rem; 
-  margin-top: 50px; 
-  color: var(--text-main, #666); 
-}
-
-/* Nuevo contenedor para el título y el botón */
+/* --------------------------------------------------------------------------
+   Cabecera
+   -------------------------------------------------------------------------- */
 .header-actions {
   display: flex;
-  justify-content: space-between; /* Título a izq, Botón a dcha */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
 }
 
 .main-title {
-  margin: 0; /* Quitamos el margin-bottom antiguo */
-  text-align: left;
+  margin: 0;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
 }
 
-.btn-legend {
-  background-color: var(--btn-legend-bg, #f8f9fa);
-  border: 1px solid var(--btn-legend-border, #ddd);
-  color: var(--btn-legend-color, #333);
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.button-group {
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
-  }
+  gap: var(--space-2);
 }
 
-.btn-legend:hover {
-  background-color: var(--btn-legend-hover, #e2e6ea);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Ajuste para móvil: centrar todo */
 @media (max-width: 600px) {
   .header-actions {
     flex-direction: column;
+    align-items: stretch;
     text-align: center;
+  }
+
+  .button-group {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
-/* Contenedor de los botones de la cabecera */
-.button-group {
-  display: flex;
-  gap: 12px;
-  align-items: center;
+/* --------------------------------------------------------------------------
+   Avisos y estados vacíos
+   -------------------------------------------------------------------------- */
+.status-info {
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--info);
+  border-radius: var(--radius-sm);
+  background-color: var(--info-soft);
+  color: var(--info-fg);
+  font-size: var(--text-sm);
+
+  p {
+    margin: 0;
+  }
 }
 
-/* Base común para botones de acción */
-.btn-action {
+.empty-state,
+.loading-container {
+  padding: var(--space-7) var(--space-4);
+  text-align: center;
+  color: var(--text-3);
+}
+
+.loading {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+/* --------------------------------------------------------------------------
+   Rejilla de tarjetas
+   -------------------------------------------------------------------------- */
+.exam-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .exam-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.exam-card {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 30px; // Forma redondeada tipo pastilla
-  font-size: 0.9rem;
-  font-weight: 600;
+  flex-direction: column;
+  min-height: 200px;
+  overflow: hidden;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  transition: all 0.2s ease;
-  border: 1px solid transparent;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast),
+    transform var(--t-fast);
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
+    box-shadow: var(--shadow-md);
   }
 }
 
-/* Estilo específico para el botón de Carpeta */
-.btn-folder {
-  background-color: #2563eb; // Azul corporativo
-  color: white;
-  
-  &:hover {
-    background-color: #1d4ed8;
-    border-color: #1e40af;
-  }
-}
-
-/* Botón de reset/volver (si decides usarlo) */
-.btn-reset {
-  background-color: var(--btn-reset-bg, #f3f4f6);
-  color: var(--btn-reset-color, #374151);
-  border: 1px solid var(--btn-reset-border, #d1d5db);
-
-  &:hover {
-    background-color: var(--btn-reset-hover, #e5e7eb);
-  }
-}
-
-/* Ajuste para el modo oscuro si lo usas */
-@media (prefers-color-scheme: dark) {
-  .btn-reset {
-    background-color: var(--btn-reset-bg, #374151);
-    color: var(--btn-reset-color, #f9fafb);
-    border-color: var(--btn-reset-border, #4b5563);
-  }
-}
-
-/* ==========================================================================
-   BOTÓN FLOTANTE (FAB) PARA CAMBIO DE TEMA
-   ========================================================================== */
-.theme-toggle-fab {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--card-bg, #ffffff);
-  border: 2px solid var(--card-border, #dee2e6);
-  box-shadow: 0 4px 12px var(--card-shadow, rgba(0, 0, 0, 0.15));
-  font-size: 1.4rem;
+.card-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1100;
-  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    transform: scale(1.1);
-    background-color: var(--btn-legend-bg, #f8f9fa);
-    border-color: var(--card-hover-border, #007bff);
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--card-hover-border, #007bff);
-    outline-offset: 2px;
-  }
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-5);
 }
 
+/* El color de fondo real lo inyecta la plantilla con [style.background-color]
+   a partir de subjectColor; aquí sólo se define la forma y el color neutro
+   de reserva cuando el examen no declara color. */
+.subject-badge {
+  align-self: flex-start;
+  margin-bottom: var(--space-3);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--text-xs);
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.exam-title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.exam-summary {
+  flex-grow: 1;
+  margin-bottom: var(--space-3);
+  color: var(--text-2);
+  font-size: var(--text-sm);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.exam-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  color: var(--text-3);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}

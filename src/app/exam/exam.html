@@ -52,8 +52,8 @@
     </div>
   </header>
 
-  <div class="exam-container">
-    
+  <div class="exam-container" [class.print-without-notes]="!printWithNotes()">
+
     @if (!shouldShowContent()) {
       <div class="exam-summary">
         {{ exam.examProperties.examSummary }}
@@ -267,13 +267,12 @@
             </div>
           </div>
 
-          <button class="btn-home" (click)="goHome()">Volver al Inicio</button>
-
-          <!-- Botón Descargar PDF -->
-          <br /><br />
-          <button class="btn-default" (click)="downloadPDF()">
-            📥 Descargar PDF
-          </button>
+          <div class="result-actions">
+            <button class="btn-home" (click)="goHome()">Volver al Inicio</button>
+            <button class="btn-default" (click)="downloadPDF()">
+              📥 Descargar PDF
+            </button>
+          </div>
         </div>
       }
     } @else {
@@ -381,4 +380,33 @@
       </div>
     }
   </div>
+
+  <!-- MODAL: ¿qué contenido lleva el PDF? -->
+  @if (isPdfModalOpen()) {
+    <div class="modal-overlay" (click)="closePdfModal()">
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pdf-modal-title"
+        (click)="$event.stopPropagation()"
+      >
+        <h3 id="pdf-modal-title">📥 Generar PDF del examen</h3>
+        <p class="modal-text">
+          ¿Quieres incluir las notas de la corrección, es decir, la explicación
+          de cada opción marcada y la nota general de cada pregunta?
+        </p>
+
+        <div class="modal-actions">
+          <button class="btn-legend" (click)="closePdfModal()">Cancelar</button>
+          <button class="btn-legend" (click)="generatePDF(false)">
+            Sólo respuestas
+          </button>
+          <button class="btn-action" (click)="generatePDF(true)">
+            Con notas
+          </button>
+        </div>
+      </div>
+    </div>
+  }
 }

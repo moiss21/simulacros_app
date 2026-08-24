@@ -1,43 +1,478 @@
-/* You can add global styles to this file, and also import other style files */
-*
-{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 /* ==========================================================================
-   VARIABLES GLOBALES DE TEMA (CLARO / OSCURO)
+   SISTEMA DE DISEÑO GLOBAL
+   --------------------------------------------------------------------------
+   Única fuente de verdad para color, tipografía, espaciado y componentes
+   compartidos (botones, tarjetas, foco, bloques de código).
+
+   REGLAS PARA LOS SCSS DE COMPONENTE:
+   1. Nunca declarar tokens (`--algo: valor`) fuera de este archivo. Angular
+      encapsula los estilos de componente, por lo que un token declarado en
+      `home.scss` o `exam.scss` NO llega nunca a <html> y queda inerte.
+   2. Nunca usar colores literales (#hex / rgba). Consumir siempre var(--token).
+   3. Nunca usar valores de reserva del tipo var(--token, #hex): si el token
+      existe el fallback es ruido, y si no existe oculta el error.
+   4. El tema se conmuta con la clase `.dark-theme` en <html> (ver app.ts).
    ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. TOKENS — TEMA CLARO (por defecto)
+   -------------------------------------------------------------------------- */
 :root {
-  /* MODO CLARO (Por defecto) */
-  --card-bg: #ffffff;
-  --card-border: #dee2e6;
-  --card-shadow: rgba(0, 0, 0, 0.08);
-  --card-hover-border: #007bff;
-  --btn-legend-bg: #f8f9fa;
-  --text-main: #212529;
-  --text-muted: #495057;
-  --text-light: #6c757d;
-  --badge-bg: #e7f1ff;
-  --badge-color: #0d6efd;
+  color-scheme: light;
+
+  /* Tipografía */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Code", "Fira Code", Consolas, "SF Mono", ui-monospace, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.825rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.55;
+
+  /* Espaciado (escala de 4) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Radios */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Transiciones */
+  --t-fast: 120ms ease;
+  --t-base: 200ms ease;
+
+  /* Superficies y texto */
+  --surface-0: #fafafa; /* fondo de página */
+  --surface-1: #ffffff; /* tarjetas */
+  --surface-2: #f4f4f5; /* zonas hundidas, badges neutros */
+  --surface-3: #e9e9ec; /* hover sobre superficie */
+  --border: #e4e4e7;
+  --border-strong: #d1d1d6;
+
+  --text-1: #18181b; /* titulares y cuerpo principal */
+  --text-2: #52525b; /* texto secundario */
+  --text-3: #82828c; /* etiquetas, metadatos */
+
+  /* Sombras (mínimas: la jerarquía la marca el borde, no la sombra) */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 6%);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 8%);
+
+  /* --- Colores semánticos ---------------------------------------------------
+     Cada familia expone 4 variantes para que el uso sea idéntico en ambos
+     temas:
+       --x        relleno sólido
+       --x-on     texto sobre el relleno sólido
+       --x-fg     texto/icono del color X sobre una superficie neutra
+       --x-soft   fondo teñido suave
+     ------------------------------------------------------------------------ */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-on: #ffffff;
+  --accent-fg: #1d4ed8;
+  --accent-soft: #eff6ff;
+
+  --success: #16a34a;
+  --success-on: #ffffff;
+  --success-fg: #15803d;
+  --success-soft: #f0fdf4;
+
+  --warning: #ca8a04;
+  --warning-on: #ffffff;
+  --warning-fg: #a16207;
+  --warning-soft: #fefce8;
+
+  --danger: #dc2626;
+  --danger-on: #ffffff;
+  --danger-fg: #b91c1c;
+  --danger-soft: #fef2f2;
+
+  --info: #0284c7;
+  --info-on: #ffffff;
+  --info-fg: #0369a1;
+  --info-soft: #f0f9ff;
+
+  /* Foco (accesibilidad) */
+  --focus: var(--accent);
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* Bloques de código */
+  --code-bg: #f6f6f7;
+  --code-fg: #27272a;
+  --syntax-key: #0550ae;
+  --syntax-string: #a31515;
+  --syntax-number: #0a7d55;
+  --syntax-bool: #1d4ed8;
+  --syntax-comment: #6a737d;
 }
 
-/* Cuando la clase .dark-theme está activa en la raíz del documento */
+/* --------------------------------------------------------------------------
+   2. TOKENS — TEMA OSCURO
+   Sólo se redefine lo que cambia; el resto (escalas, radios, tiempos) se
+   hereda del bloque anterior.
+   -------------------------------------------------------------------------- */
 html.dark-theme {
-  --card-bg: #1e1e1e;
-  --card-border: #333333;
-  --card-shadow: rgba(0, 0, 0, 0.5);
-  --card-hover-border: #3b82f6;
-  --btn-legend-bg: #1f2937;
-  --btn-legend-color: #f9fafb;
-  --btn-legend-hover: #707070;
-  --text-main: #f8f9fa;
-  --text-muted: #adb5bd;
-  --text-light: #9ca3af;
-  --badge-bg: #1e3a8a;
-  --badge-color: #60a5fa;
-  
-  /* Color de fondo general de la página en oscuro */
-  background-color: #121212;
-  color: var(--text-main);
+  color-scheme: dark;
+
+  --surface-0: #0f0f11;
+  --surface-1: #18181b;
+  --surface-2: #1f1f23;
+  --surface-3: #27272a;
+  --border: #2a2a30;
+  --border-strong: #3f3f46;
+
+  --text-1: #f4f4f5;
+  --text-2: #a1a1aa;
+  --text-3: #74747e;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 40%);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 45%);
+
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-on: #0b1220;
+  --accent-fg: #93c5fd;
+  --accent-soft: #172033;
+
+  --success: #22c55e;
+  --success-on: #052e16;
+  --success-fg: #4ade80;
+  --success-soft: #13251b;
+
+  --warning: #eab308;
+  --warning-on: #1c1600;
+  --warning-fg: #facc15;
+  --warning-soft: #262111;
+
+  --danger: #ef4444;
+  --danger-on: #1f0a0a;
+  --danger-fg: #f87171;
+  --danger-soft: #291617;
+
+  --info: #38bdf8;
+  --info-on: #04202e;
+  --info-fg: #7dd3fc;
+  --info-soft: #102637;
+
+  --code-bg: #121215;
+  --code-fg: #d4d4d8;
+  --syntax-key: #9cdcfe;
+  --syntax-string: #ce9178;
+  --syntax-number: #b5cea8;
+  --syntax-bool: #569cd6;
+  --syntax-comment: #6a9955;
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--surface-0);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--surface-0);
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--t-base), color var(--t-base);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-1);
+  line-height: var(--leading-tight);
+  font-weight: 650;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-xl); }
+h2 { font-size: var(--text-lg); }
+h3 { font-size: var(--text-md); }
+
+p { margin-block: 0 var(--space-3); }
+
+strong { font-weight: 650; }
+
+a {
+  color: var(--accent-fg);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* `code` en línea dentro de texto corrido */
+:not(pre) > code {
+  background-color: var(--surface-2);
+  color: var(--accent-fg);
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* Un único anillo de foco para toda la aplicación: los componentes ya no
+   necesitan repetir su propio bloque :focus-visible. */
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius-sm);
+}
+
+/* Los controles nativos siguen el tema (checkbox / radio). */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--accent);
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTONES (sistema compartido)
+   Se definen aquí, en global, porque son transversales a todas las vistas.
+   Un botón cambia de aspecto sólo por su modificador, nunca por la pantalla
+   en la que vive.
+   -------------------------------------------------------------------------- */
+%btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--t-fast), border-color var(--t-fast),
+    color var(--t-fast);
+}
+
+/* Neutro: acción secundaria. Es el aspecto por defecto de un botón. */
+.btn-legend,
+.btn-reset,
+.btn-back,
+.btn-default-inverted,
+.btn-home {
+  @extend %btn-base;
+  background-color: var(--surface-1);
+  border-color: var(--border);
+  color: var(--text-1);
+
+  &:hover {
+    background-color: var(--surface-3);
+    border-color: var(--border-strong);
+  }
+}
+
+/* Sólido de acento: acción principal de la pantalla. */
+.btn-action,
+.btn-folder,
+.btn-finish,
+.btn-default,
+.btn-pdf {
+  @extend %btn-base;
+  background-color: var(--accent);
+  color: var(--accent-on);
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+}
+
+/* Sólido de éxito: iniciar / confirmar. */
+.btn-start {
+  @extend %btn-base;
+  background-color: var(--success);
+  color: var(--success-on);
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+}
+
+/* Contorneado de peligro: acción destructiva ligera. */
+.btn-clear {
+  @extend %btn-base;
+  background-color: transparent;
+  border-color: var(--danger);
+  color: var(--danger-fg);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-pill);
+
+  &:hover {
+    background-color: var(--danger-soft);
+  }
+}
+
+/* Botón de acción principal, forma pastilla y algo más grande. */
+.btn-finish {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-md);
+  border-radius: var(--radius-pill);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   5. BLOQUE DE CÓDIGO (compartido)
+   -------------------------------------------------------------------------- */
+.code-block {
+  background-color: var(--code-bg);
+  color: var(--code-fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-top: var(--space-4);
+  overflow-x: auto;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  transition: background-color var(--t-base), border-color var(--t-base),
+    color var(--t-base);
+
+  h4 {
+    font-family: var(--font-sans);
+    font-size: var(--text-md);
+    margin: 0 0 var(--space-2);
+  }
+
+  p {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-2);
+    margin-bottom: var(--space-4);
+  }
+
+  code {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: none;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+/* Resaltado de sintaxis */
+.key { color: var(--syntax-key); font-weight: 600; }
+.string { color: var(--syntax-string); }
+.number { color: var(--syntax-number); }
+.bool { color: var(--syntax-bool); }
+.comment {
+  color: var(--syntax-comment);
+  font-style: italic;
+  display: inline-block;
+  margin-left: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   6. IMPRESIÓN
+   Se fuerzan los tokens al tema claro para que imprimir en modo oscuro no
+   genere fondos negros. Así ningún componente necesita colores !important
+   dentro de su propio @media print.
+   -------------------------------------------------------------------------- */
+@media print {
+  :root,
+  html.dark-theme {
+    color-scheme: light;
+
+    --surface-0: #ffffff;
+    --surface-1: #ffffff;
+    --surface-2: #f4f4f5;
+    --surface-3: #ebebed;
+    --border: #b8b8bd;
+    --border-strong: #8c8c93;
+
+    --text-1: #000000;
+    --text-2: #333333;
+    --text-3: #555555;
+
+    --shadow-sm: none;
+    --shadow-md: none;
+
+    --accent: #1d4ed8;
+    --accent-on: #ffffff;
+    --accent-fg: #1d4ed8;
+    --accent-soft: #eff6ff;
+
+    --success-fg: #15803d;
+    --success-soft: #f0fdf4;
+    --warning-fg: #a16207;
+    --warning-soft: #fefce8;
+    --danger-fg: #b91c1c;
+    --danger-soft: #fef2f2;
+    --info-fg: #0369a1;
+    --info-soft: #f0f9ff;
+
+    --code-bg: #f6f6f7;
+    --code-fg: #000000;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 10pt;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    margin: 1cm 0.5cm 1cm 1cm;
+  }
 }

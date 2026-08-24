@@ -1,4 +1,4 @@
-import { Component, computed, inject, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, computed, HostListener, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ExamData, ExamOption, ExamQuestion } from '../models/exam.model';
@@ -29,6 +29,16 @@ export class ExamComponent implements OnInit, OnDestroy {
   timeLeft = signal(0);
   score = signal(0);
   private timerRef: any;
+
+  /** Controla el modal que pregunta qué contenido llevará el PDF. */
+  isPdfModalOpen = signal(false);
+
+  /**
+   * Si es true, el PDF incluye las notas de corrección (explicación de cada
+   * opción marcada y nota general de la pregunta). Si es false, sólo se
+   * imprimen el enunciado y las opciones con la selección marcada.
+   */
+  printWithNotes = signal(true);
 
   // ==========================================
   // 3. COMPUTED SIGNALS (DERIVED STATE)
@@ -346,12 +356,41 @@ export class ExamComponent implements OnInit, OnDestroy {
     });
   }
 
+  // ==========================================
+  // 9. EXPORTACIÓN A PDF
+  // ==========================================
+
+  /** Abre el modal en lugar de imprimir directamente. */
   downloadPDF() {
+    this.isPdfModalOpen.set(true);
+  }
+
+  closePdfModal() {
+    this.isPdfModalOpen.set(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    if (this.isPdfModalOpen()) this.closePdfModal();
+  }
+
+  /**
+   * Lanza el diálogo de impresión con o sin las notas de corrección.
+   * @param includeNotes true → explicaciones de opciones y nota general.
+   */
+  generatePDF(includeNotes: boolean) {
+    this.printWithNotes.set(includeNotes);
+    this.isPdfModalOpen.set(false);
+
     const originalTitle = document.title;
     const examTitle = this.examData()?.examProperties.examTitle || 'Examen';
-
     document.title = `Resultado - ${examTitle}`;
-    window.print();
-    document.title = originalTitle;
+
+    // Se cede un ciclo para que Angular cierre el modal y aplique la clase que
+    // muestra u oculta las notas antes de que el navegador capture la página.
+    setTimeout(() => {
+      window.print();
+      document.title = originalTitle;
+    });
   }
 }

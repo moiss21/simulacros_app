@@ -64,14 +64,14 @@
         <h3>🤖 Prompt Maestro para generar exámenes con IA</h3>
         <p>Copia el bloque de texto inferior según la estructura que necesites y pégalo en tu IA de confianza:</p>
         
-        <div class="tabs-casuistica" style="margin-top: 15px; font-weight: bold; color: #4169e1;">
+        <div class="tabs-casuistica">
           📌 Elige el prompt adecuado según tu caso:
         </div>
 
         <!-- CASO A: EXAMEN ORGANIZADO POR UNIDADES -->
-        <div class="code-block prompt-text" style="margin-top: 15px;">
-          <h4 style="color: #2e7d32; margin-top: 0;">📋 Opción A: Examen estructurado POR UNIDADES (Recomendado para temarios largos)</h4>
-          <p style="font-size: 0.9em; color: #555;">Usa este prompt si quieres que las preguntas estén clasificadas por temas/unidades y el sistema las agrupe de forma ordenada.</p>
+        <div class="code-block prompt-option-a">
+          <h4 class="prompt-title">📋 Opción A: Examen estructurado POR UNIDADES (Recomendado para temarios largos)</h4>
+          <p>Usa este prompt si quieres que las preguntas estén clasificadas por temas/unidades y el sistema las agrupe de forma ordenada.</p>
           <code>
             Genera un archivo JSON para un examen basado en este temario/preguntas: [PEGA AQUÍ TU TEXTO].<br><br>
             
@@ -117,9 +117,9 @@
         </div>
 
         <!-- CASO B: EXAMEN GENERAL SIN UNIDADES -->
-        <div class="code-block prompt-text" style="margin-top: 25px;">
-          <h4 style="color: #c62828; margin-top: 0;">📋 Opción B: Examen general SIN UNIDADES (Bloque único o Test Final)</h4>
-          <p style="font-size: 0.9em; color: #555;">Usa este prompt para exámenes rápidos, certificaciones o cuando los contenidos no requieran estar categorizados por temas separados.</p>
+        <div class="code-block prompt-option-b">
+          <h4 class="prompt-title">📋 Opción B: Examen general SIN UNIDADES (Bloque único o Test Final)</h4>
+          <p>Usa este prompt para exámenes rápidos, certificaciones o cuando los contenidos no requieran estar categorizados por temas separados.</p>
           <code>
             Genera un archivo JSON para un examen basado en este temario/preguntas: [PEGA AQUÍ TU TEXTO].<br><br>
             
@@ -172,10 +172,10 @@
         <li><strong>Lógica de Feedback:</strong> Asegúrate de que las IAs no inviertan el texto de las explicaciones. Las opciones válidas (<code>isCorrect: true</code>) deben llevar comentarios de felicitación o reafirmación, y las inválidas explicaciones del fallo.</li>
         <li><strong>Gama de Colores:</strong> Para mantener la armonía visual de la interfaz, puedes asignar colores personalizados a cada examen. Te recomendamos utilizar preferiblemente códigos Hex claros y visibles como estos:
   <ul>
-    <li>Amarillo corporativo: <span style="color:#fbc02d; font-size: 1.2em; vertical-align: middle;">■</span> <code>#fbc02d</code></li>
-    <li>Azul estándar: <span style="color:#4169e1; font-size: 1.2em; vertical-align: middle;">■</span> <code>#4169e1</code></li>
-    <li>Verde azulado: <span style="color:#4db6ac; font-size: 1.2em; vertical-align: middle;">■</span> <code>#4db6ac</code></li>
-    <li>Morado intenso: <span style="color:#8e24aa; font-size: 1.2em; vertical-align: middle;">■</span> <code>#8e24aa</code></li>
+    <li>Amarillo corporativo: <span class="color-swatch" style="background-color:#fbc02d"></span> <code>#fbc02d</code></li>
+    <li>Azul estándar: <span class="color-swatch" style="background-color:#4169e1"></span> <code>#4169e1</code></li>
+    <li>Verde azulado: <span class="color-swatch" style="background-color:#4db6ac"></span> <code>#4db6ac</code></li>
+    <li>Morado intenso: <span class="color-swatch" style="background-color:#8e24aa"></span> <code>#8e24aa</code></li>
   </ul>
 </li>
         <li><strong>Codificación de Archivo:</strong> Guarda siempre los archivos con codificación <strong>UTF-8</strong> desde tu editor de texto (Notepad++, VS Code, etc.) para que los caracteres especiales, acentos y eñes se rendericen de forma nativa en la aplicación.</li>
