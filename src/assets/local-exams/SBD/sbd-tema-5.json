@@ -1,0 +1,498 @@
+{
+  "examProperties": {
+    "id": "sbd-tema-5.json",
+    "subjectName": "Sistemas Big Data",
+    "examTitle": "Tema 5 — Inteligencia de Negocio y visualización",
+    "examSummary": "Banco consolidado y deduplicado a partir de las baterías del Tema 5.",
+    "examConfig": {
+      "penaltyRate": 0.25,
+      "examDurationMinutes": 30,
+      "canChangeResponse": true,
+      "passingPercentage": 60,
+      "totalQuestionsToDisplay": 20,
+      "emptyAnswersCount": true
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "Cuando en un cuadro de mando de Power BI hacemos clic sobre una porción de un gráfico circular:",
+      "type": "single",
+      "generalExplanation": "La batería indica que seleccionar una porción de un gráfico circular en Power BI filtra la información relacionada con esa selección.",
+      "options": [
+        {
+          "text": "Se excluye del resto de visualizaciones la información relacionada con la porción seleccionada.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se modifica la configuración de colores del cuadro de mando sin afectar a los datos mostrados.",
+          "isCorrect": false
+        },
+        {
+          "text": "La información relacionada se filtra de acuerdo con la porción seleccionada.",
+          "isCorrect": true
+        },
+        {
+          "text": "La selección no produce ninguna interacción con el resto de información del cuadro de mando.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Cuando una empresa tiene un data warehouse:",
+      "type": "single",
+      "generalExplanation": "Según la batería, la existencia de un data warehouse no obliga a que existan datamarts: pueden existir o no.",
+      "options": [
+        {
+          "text": "No puede disponer de datamarts asociados.",
+          "isCorrect": false
+        },
+        {
+          "text": "Debe disponer siempre de un único datamart.",
+          "isCorrect": false
+        },
+        {
+          "text": "Debe disponer necesariamente de varios datamarts.",
+          "isCorrect": false
+        },
+        {
+          "text": "Puede disponer o no de datamarts.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Gracias a la Inteligencia de Negocio:",
+      "type": "single",
+      "generalExplanation": "El material asocia la Inteligencia de Negocio con la automatización de informes, reduciendo o eliminando su elaboración manual.",
+      "options": [
+        {
+          "text": "Los informes periódicos continúan realizándose manualmente con el mismo proceso.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los informes dejan de elaborarse de modo manual.",
+          "isCorrect": true
+        },
+        {
+          "text": "El análisis pasa a centrarse únicamente en la situación presente de la organización.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los informes son sustituidos completamente por cuadros de mando.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Al crear un cuadro de mando, ¿qué prioridad señala la batería?",
+      "type": "single",
+      "generalExplanation": "La batería señala que lo principal es mostrar información relevante con una buena apariencia.",
+      "options": [
+        {
+          "text": "Priorizar la frecuencia de actualización por encima del contenido y la presentación.",
+          "isCorrect": false
+        },
+        {
+          "text": "Dar exactamente la misma prioridad al contenido y a todos los elementos de estilo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Mostrar la información relevante con una apariencia adecuada.",
+          "isCorrect": true
+        },
+        {
+          "text": "Priorizar el estilo visual por encima de la relevancia de la información.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "En visualización de datos, los indicadores:",
+      "type": "single",
+      "generalExplanation": "El material define los indicadores como elementos destinados a mostrar medidas relevantes, a veces contextualizadas mediante rangos.",
+      "options": [
+        {
+          "text": "Representan cualquier métrica empresarial sin distinguir su relevancia.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se utilizan exclusivamente para definir rangos de valores.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se utilizan para mostrar medidas relevantes, en ocasiones situadas dentro de rangos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Se sustituyen por gráficos cuando se necesita representar una medida relevante.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Los gráficos de cajas:",
+      "type": "single",
+      "generalExplanation": "La batería identifica en los gráficos de cajas la representación de valores atípicos, máximos, mínimos y mediana.",
+      "options": [
+        {
+          "text": "Muestran únicamente los valores máximo y mínimo de la distribución.",
+          "isCorrect": false
+        },
+        {
+          "text": "Muestran exclusivamente datos atípicos y la mediana.",
+          "isCorrect": false
+        },
+        {
+          "text": "Muestran máximos, mínimos y mediana, pero no datos atípicos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Muestran datos atípicos, máximos, mínimos y mediana.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Cuál NO es un factor típico a considerar antes de crear un cuadro de mando según la batería?",
+      "type": "single",
+      "generalExplanation": "En la batería, tipo de datos, experiencia de usuario y modo de acceso aparecen como factores previos; la combinación concreta de colores es la opción marcada como no típica en esa fase.",
+      "options": [
+        {
+          "text": "El tipo de datos con el que se va a trabajar.",
+          "isCorrect": false
+        },
+        {
+          "text": "El nivel de experiencia de los usuarios.",
+          "isCorrect": false
+        },
+        {
+          "text": "La combinación concreta de colores que se utilizará.",
+          "isCorrect": true
+        },
+        {
+          "text": "La forma en que los usuarios accederán al cuadro de mando.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Los mapas de calor:",
+      "type": "single",
+      "generalExplanation": "La batería indica que los mapas de calor son útiles para datos con tres dimensiones, representando una de ellas mediante intensidad visual.",
+      "options": [
+        {
+          "text": "Son equivalentes a histogramas porque representan una única distribución de frecuencias.",
+          "isCorrect": false
+        },
+        {
+          "text": "Solo tienen utilidad cuando se superponen sobre mapas geográficos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son útiles cuando los datos de entrada pueden representarse mediante tres dimensiones.",
+          "isCorrect": true
+        },
+        {
+          "text": "Se emplean exclusivamente para representar temperaturas registradas por sensores.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Un datamart es:",
+      "type": "single",
+      "generalExplanation": "El material define el datamart como un almacén similar al data warehouse, pero centrado en un departamento o línea de negocio.",
+      "options": [
+        {
+          "text": "Un almacén similar a un data warehouse pero orientado a un departamento o línea de negocio.",
+          "isCorrect": true
+        },
+        {
+          "text": "Un data warehouse corporativo completo con el mismo alcance organizativo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Una fuente de datos externa utilizada únicamente para alimentar un data warehouse.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un repositorio transaccional destinado a sustituir al data warehouse.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "El nivel de experiencia de los usuarios de un cuadro de mando:",
+      "type": "single",
+      "generalExplanation": "La batería vincula la experiencia de los usuarios con el grado de complejidad y detalle que debe tener el cuadro de mando.",
+      "options": [
+        {
+          "text": "Determina principalmente los tipos de datos disponibles en las fuentes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Determina exclusivamente el nivel de actualidad que deben tener los datos.",
+          "isCorrect": false
+        },
+        {
+          "text": "No influye de forma relevante en el diseño del cuadro de mando.",
+          "isCorrect": false
+        },
+        {
+          "text": "Determina el nivel de complejidad y detalle apropiado del cuadro de mando.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Cuál es un ejemplo de dimensión en Inteligencia de Negocio según la batería?",
+      "type": "single",
+      "generalExplanation": "La batería marca «por cliente» como ejemplo de dimensión en Inteligencia de Negocio.",
+      "options": [
+        {
+          "text": "Por indicador.",
+          "isCorrect": false
+        },
+        {
+          "text": "Por cliente.",
+          "isCorrect": true
+        },
+        {
+          "text": "Por métrica.",
+          "isCorrect": false
+        },
+        {
+          "text": "Por medida.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Que una métrica sea accionable significa:",
+      "type": "single",
+      "generalExplanation": "Según el material, una métrica es accionable cuando permite saber qué acciones tomar para modificar su tendencia.",
+      "options": [
+        {
+          "text": "Que la métrica proceda directamente de acciones realizadas por la organización.",
+          "isCorrect": false
+        },
+        {
+          "text": "Que sepamos cómo actuar si queremos modificar su tendencia.",
+          "isCorrect": true
+        },
+        {
+          "text": "Que conozcamos exactamente la fuente técnica de la que procede el dato.",
+          "isCorrect": false
+        },
+        {
+          "text": "Que la métrica mida únicamente acciones realizadas por los clientes.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Al crear un cuadro de mando, respecto al espacio ocupado:",
+      "type": "single",
+      "generalExplanation": "La batería recomienda que el cuadro de mando sea compacto y pueda revisarse rápidamente de un vistazo.",
+      "options": [
+        {
+          "text": "El espacio disponible no condiciona la forma de presentar la información.",
+          "isCorrect": false
+        },
+        {
+          "text": "Es preferible distribuir la información en varias páginas para incluir el máximo detalle.",
+          "isCorrect": false
+        },
+        {
+          "text": "La extensión se decide sin tener en cuenta la rapidez de consulta por parte del usuario.",
+          "isCorrect": false
+        },
+        {
+          "text": "Conviene ocupar poco espacio para poder comprobar la información de un vistazo.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Un gráfico de barras apiladas:",
+      "type": "single",
+      "generalExplanation": "El material indica que un gráfico de barras apiladas puede representarse en orientación horizontal o vertical.",
+      "options": [
+        {
+          "text": "Solo puede mostrarse en orientación vertical.",
+          "isCorrect": false
+        },
+        {
+          "text": "Representa cada valor como una barra independiente sin segmentos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Solo puede mostrarse en orientación horizontal.",
+          "isCorrect": false
+        },
+        {
+          "text": "Puede mostrarse tanto en horizontal como en vertical.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Cuando hablamos de gráficos circulares:",
+      "type": "single",
+      "generalExplanation": "La batería advierte que representar distintas series dentro de un mismo gráfico circular no suele dar buenos resultados visuales.",
+      "options": [
+        {
+          "text": "Dibujar varias series dentro del mismo gráfico no suele producir buenos resultados visuales.",
+          "isCorrect": true
+        },
+        {
+          "text": "La mejor práctica es representar todas las series disponibles dentro del mismo círculo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Su uso principal es representar tres dimensiones mediante el tamaño total del círculo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los gráficos circulares y los gráficos de tipo dónut son exactamente el mismo tipo de visualización.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Trabajando con Power BI, para relacionar campos de distintas tablas:",
+      "type": "single",
+      "generalExplanation": "El material indica que Power BI puede detectar relaciones de forma automática y también permite crearlas manualmente desde la vista Modelo.",
+      "options": [
+        {
+          "text": "Las relaciones solo pueden definirse mediante claves externas existentes en el origen.",
+          "isCorrect": false
+        },
+        {
+          "text": "Las tablas importadas no pueden relacionarse después de cargarse en Power BI.",
+          "isCorrect": false
+        },
+        {
+          "text": "Las relaciones solo pueden crearse si los campos tienen exactamente el mismo nombre.",
+          "isCorrect": false
+        },
+        {
+          "text": "Power BI puede detectar relaciones automáticamente o pueden definirse manualmente en la vista Modelo.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "¿Cuál NO es una característica típica a considerar en herramientas de Inteligencia de Negocio?",
+      "type": "single",
+      "generalExplanation": "La batería incluye seguridad, autoservicio de informes y creación de cuadros de mando como características de herramientas BI; la replicación de datos se marca como la opción que no corresponde.",
+      "options": [
+        {
+          "text": "La seguridad.",
+          "isCorrect": false
+        },
+        {
+          "text": "La capacidad de autoservicio de informes.",
+          "isCorrect": false
+        },
+        {
+          "text": "La capacidad de crear cuadros de mando.",
+          "isCorrect": false
+        },
+        {
+          "text": "La capacidad de replicación de datos.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Los informes, en comparación con los cuadros de mando, generalmente:",
+      "type": "single",
+      "generalExplanation": "La batería caracteriza los informes como más orientados a instantáneas de información que al tiempo real.",
+      "options": [
+        {
+          "text": "Están limitados a una única página de información.",
+          "isCorrect": false
+        },
+        {
+          "text": "Están más orientados a instantáneas de información que al tiempo real.",
+          "isCorrect": true
+        },
+        {
+          "text": "Son necesariamente más resumidos que los cuadros de mando.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tienen el mismo nivel de interactividad que los cuadros de mando.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "El soporte móvil en una herramienta de Inteligencia de Negocio significa:",
+      "type": "single",
+      "generalExplanation": "Según el material, soporte móvil significa que el contenido BI puede consultarse desde dispositivos como móviles o tabletas.",
+      "options": [
+        {
+          "text": "Programar el envío periódico de informes a números de teléfono.",
+          "isCorrect": false
+        },
+        {
+          "text": "Crear obligatoriamente los informes desde un dispositivo móvil.",
+          "isCorrect": false
+        },
+        {
+          "text": "Poder acceder al contenido desde un móvil o una tableta.",
+          "isCorrect": true
+        },
+        {
+          "text": "Enviar mediante SMS las credenciales de acceso a los usuarios.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Cuál NO es uno de los problemas que dan lugar a la necesidad de Inteligencia de Negocio según la batería?",
+      "type": "single",
+      "generalExplanation": "La batería identifica como problemas el retraso en informes, la falta de una única versión de la verdad y la dispersión de información. La centralización excesiva se marca como la opción que no corresponde.",
+      "options": [
+        {
+          "text": "El retraso en la elaboración o disponibilidad de informes.",
+          "isCorrect": false
+        },
+        {
+          "text": "La inexistencia de una única versión de la verdad.",
+          "isCorrect": false
+        },
+        {
+          "text": "Que la información haya estado siempre demasiado centralizada.",
+          "isCorrect": true
+        },
+        {
+          "text": "La información diseminada entre múltiples sistemas.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

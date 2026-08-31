@@ -1,0 +1,618 @@
+{
+  "examProperties": {
+    "id": "sbd-tema-4.json",
+    "subjectName": "Sistemas Big Data",
+    "examTitle": "Tema 4 — Analítica de datos, algoritmos, Python y R",
+    "examSummary": "Banco consolidado y deduplicado a partir de las baterías del Tema 4.",
+    "examConfig": {
+      "penaltyRate": 0.25,
+      "examDurationMinutes": 35,
+      "canChangeResponse": true,
+      "passingPercentage": 60,
+      "totalQuestionsToDisplay": 25,
+      "emptyAnswersCount": true
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "Si trabajamos con R:",
+      "type": "single",
+      "generalExplanation": "Las baterías indican que R dispone de numerosos conjuntos de datos incluidos en paquetes, accesibles cuando el paquete correspondiente está instalado.",
+      "options": [
+        {
+          "text": "Contamos con gran cantidad de conjuntos de datos dentro de paquetes a los cuales podemos acceder si están instalados.",
+          "isCorrect": true
+        },
+        {
+          "text": "Realizamos la visualización de datos mediante la librería Matplotlib propia de R.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cargamos siempre los datos desde fichero mediante una función denominada load_data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Podemos acceder a cualquier conjunto de datos sin instalar previamente el paquete que lo contiene.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Los arrays de NumPy:",
+      "type": "single",
+      "generalExplanation": "La batería caracteriza los arrays de NumPy como estructuras multidimensionales y rectangulares.",
+      "options": [
+        {
+          "text": "Son estructuras exclusivamente bidimensionales y mantienen una forma rectangular.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son estructuras multidimensionales y rectangulares.",
+          "isCorrect": true
+        },
+        {
+          "text": "Son estructuras exclusivamente monodimensionales destinadas a series de valores.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son estructuras multidimensionales cuyas dimensiones pueden tener longitudes irregulares.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Los DataFrame de Pandas:",
+      "type": "single",
+      "generalExplanation": "Según la batería, un DataFrame de Pandas es una estructura bidimensional con etiquetas tanto en filas como en columnas.",
+      "options": [
+        {
+          "text": "Son estructuras multidimensionales sin etiquetas asociadas a sus ejes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son estructuras monodimensionales con una única secuencia de valores.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son listas etiquetadas que no distinguen entre filas y columnas.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son estructuras bidimensionales con etiquetas en filas y columnas.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "R es:",
+      "type": "single",
+      "generalExplanation": "La batería define R como un lenguaje interpretado, de código abierto y orientado al análisis de datos.",
+      "options": [
+        {
+          "text": "Un lenguaje interpretado de código abierto orientado al análisis de datos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Un lenguaje interpretado de bajo nivel orientado al acceso directo a memoria.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un lenguaje compilado diseñado específicamente para construir aplicaciones de sistema.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un lenguaje de propósito general definido en la batería como independiente del análisis de datos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Según la batería aportada, los pasos de SEMMA son:",
+      "type": "single",
+      "generalExplanation": "La secuencia marcada como correcta en el material es Sample, Explore, Modify, Model, Access.",
+      "options": [
+        {
+          "text": "Sample, Explore, Model, Modify, Access.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sample, Explote, Modify, Model, Access.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sample, Explore, Modify, Model, Access.",
+          "isCorrect": true
+        },
+        {
+          "text": "Sample, Explore, Measure, Model, Access.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "El lenguaje Python:",
+      "type": "single",
+      "generalExplanation": "La batería caracteriza Python como un lenguaje de alto nivel, interpretado y de propósito general.",
+      "options": [
+        {
+          "text": "Es un lenguaje derivado de R y orientado específicamente al análisis estadístico.",
+          "isCorrect": false
+        },
+        {
+          "text": "Es un lenguaje compilado de bajo nivel destinado a programación de sistemas.",
+          "isCorrect": false
+        },
+        {
+          "text": "Es un lenguaje de alto nivel, interpretado y de propósito general.",
+          "isCorrect": true
+        },
+        {
+          "text": "Es un lenguaje creado únicamente para tareas de análisis y visualización de datos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Matplotlib permite:",
+      "type": "single",
+      "generalExplanation": "Matplotlib se presenta en el material como una librería de visualización que permite crear distintos tipos de gráficos, entre ellos líneas, puntos y barras.",
+      "options": [
+        {
+          "text": "Ejecutar algoritmos de análisis de datos en tiempo real.",
+          "isCorrect": false
+        },
+        {
+          "text": "Crear únicamente gráficos de línea y de puntos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Crear distintos tipos de gráficos, como de línea, de puntos o de barras.",
+          "isCorrect": true
+        },
+        {
+          "text": "Crear exclusivamente gráficos de barras para representar variables categóricas.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Un problema será considerado tratable:",
+      "type": "single",
+      "generalExplanation": "La batería considera tratable un problema cuando existe un algoritmo capaz de resolverlo en tiempo polinomial.",
+      "options": [
+        {
+          "text": "Si no existe ningún algoritmo que lo resuelva en tiempo exponencial.",
+          "isCorrect": false
+        },
+        {
+          "text": "Si puede encontrarse un algoritmo que lo resuelva únicamente en tiempo exponencial.",
+          "isCorrect": false
+        },
+        {
+          "text": "Si puede encontrarse un algoritmo capaz de resolverlo en tiempo polinomial.",
+          "isCorrect": true
+        },
+        {
+          "text": "Si no existe ningún algoritmo que lo resuelva en tiempo polinomial.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "El pseudocódigo:",
+      "type": "single",
+      "generalExplanation": "El material sitúa el pseudocódigo entre el lenguaje natural y los lenguajes de programación.",
+      "options": [
+        {
+          "text": "Es una representación gráfica equivalente a un diagrama de flujo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Es una notación que se obtiene directamente a partir de código ensamblador.",
+          "isCorrect": false
+        },
+        {
+          "text": "Está a medio camino entre el lenguaje natural y un lenguaje de programación.",
+          "isCorrect": true
+        },
+        {
+          "text": "Es un lenguaje ejecutable que incorpora mecanismos propios de depuración.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Cuál de las siguientes NO es una fase de CRISP-DM según las baterías aportadas?",
+      "type": "single",
+      "generalExplanation": "Las propias baterías enumeran comprensión del negocio, comprensión de los datos y modelado como fases de CRISP-DM. La opción «Modificación de los datos» es la que no figura como fase formal. Esta pregunta corrige una contradicción interna detectada en uno de los intentos, cuya explicación también señalaba «Modificación de los datos» como la respuesta coherente.",
+      "options": [
+        {
+          "text": "Comprensión del negocio.",
+          "isCorrect": false
+        },
+        {
+          "text": "Modelado.",
+          "isCorrect": false
+        },
+        {
+          "text": "Modificación de los datos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Comprensión de los datos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "El Análisis Predictivo:",
+      "type": "single",
+      "generalExplanation": "La batería define el análisis predictivo por su objetivo de anticipar qué puede ocurrir en el futuro.",
+      "options": [
+        {
+          "text": "Busca determinar las causas de un fenómeno ya ocurrido.",
+          "isCorrect": false
+        },
+        {
+          "text": "Produce principalmente reportes o cuadros de mando estáticos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Intenta predecir qué ocurrirá en el futuro.",
+          "isCorrect": true
+        },
+        {
+          "text": "Se caracteriza por no emplear técnicas de Machine Learning.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "¿Cuál es la forma de importar Pandas indicada en la batería?",
+      "type": "single",
+      "generalExplanation": "La sintaxis marcada como correcta en el material es «import pandas as pd».",
+      "options": [
+        {
+          "text": "import pandas.pd",
+          "isCorrect": false
+        },
+        {
+          "text": "import pandas as pd",
+          "isCorrect": true
+        },
+        {
+          "text": "export pandas as pd",
+          "isCorrect": false
+        },
+        {
+          "text": "load pandas",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "En un DataFrame de Pandas:",
+      "type": "single",
+      "generalExplanation": "La batería señala que en un DataFrame de Pandas es posible añadir y eliminar columnas.",
+      "options": [
+        {
+          "text": "No podemos añadir nuevas columnas una vez creado.",
+          "isCorrect": false
+        },
+        {
+          "text": "No podemos eliminar columnas existentes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Podemos añadir y eliminar columnas.",
+          "isCorrect": true
+        },
+        {
+          "text": "No podemos modificar la estructura de sus columnas.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "El Análisis Descriptivo:",
+      "type": "single",
+      "generalExplanation": "El material asocia el análisis descriptivo con reportes o cuadros de mando generalmente estáticos.",
+      "options": [
+        {
+          "text": "Produce principalmente cuadros de mando dinámicos orientados a predicción.",
+          "isCorrect": false
+        },
+        {
+          "text": "Produce reportes dinámicos destinados a explicar causas.",
+          "isCorrect": false
+        },
+        {
+          "text": "Produce por lo general reportes o cuadros de mando estáticos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Se caracteriza por ser una modalidad disruptiva de análisis.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "En Python:",
+      "type": "single",
+      "generalExplanation": "La batería indica que en Python no es necesario declarar explícitamente los tipos de las variables.",
+      "options": [
+        {
+          "text": "La asignación de variables se realiza con el operador <-.",
+          "isCorrect": false
+        },
+        {
+          "text": "La salida estándar se realiza mediante una instrucción denominada eco.",
+          "isCorrect": false
+        },
+        {
+          "text": "No es necesario declarar explícitamente los tipos de las variables.",
+          "isCorrect": true
+        },
+        {
+          "text": "Es obligatorio declarar el tipo de cada variable antes de asignarle un valor.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "El Análisis Prescriptivo:",
+      "type": "single",
+      "generalExplanation": "La batería señala que el análisis prescriptivo se apoya en los resultados del análisis predictivo para orientar acciones o decisiones.",
+      "options": [
+        {
+          "text": "Produce principalmente cuadros de mando estáticos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se apoya en los resultados del Análisis Predictivo.",
+          "isCorrect": true
+        },
+        {
+          "text": "Busca exclusivamente determinar las causas de fenómenos pasados.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se apoya únicamente en los resultados del Análisis Descriptivo.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Los arrays en R:",
+      "type": "single",
+      "generalExplanation": "Según la batería, los arrays de R son estructuras multidimensionales.",
+      "options": [
+        {
+          "text": "Son multidimensionales.",
+          "isCorrect": true
+        },
+        {
+          "text": "No existen como estructura de datos en R.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son exclusivamente bidimensionales.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son exclusivamente monodimensionales.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Un diagrama de flujo:",
+      "type": "single",
+      "generalExplanation": "La batería establece que un diagrama de flujo debe tener un único inicio y al menos un final.",
+      "options": [
+        {
+          "text": "Debe tener un único inicio y al menos un final.",
+          "isCorrect": true
+        },
+        {
+          "text": "Debe tener necesariamente un único final y puede omitir el inicio.",
+          "isCorrect": false
+        },
+        {
+          "text": "Puede tener varios puntos de inicio independientes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Debe tener el mismo número de inicios que de finales.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Programando en R, ¿qué operador de asignación identifica como correcto la batería?",
+      "type": "single",
+      "generalExplanation": "El material marca «<-» como operador de asignación en R.",
+      "options": [
+        {
+          "text": ".",
+          "isCorrect": false
+        },
+        {
+          "text": "<-",
+          "isCorrect": true
+        },
+        {
+          "text": "->",
+          "isCorrect": false
+        },
+        {
+          "text": "::",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Cuál de las siguientes NO pertenece a Analítica de Datos según la batería?",
+      "type": "single",
+      "generalExplanation": "La opción marcada como ajena a Analítica de Datos en la batería es «Política de Datos».",
+      "options": [
+        {
+          "text": "Gobierno de Datos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Recolección de datos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Política de Datos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Análisis de Datos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "Si queremos saber de cuántos modos distintos podemos ordenar una lista:",
+      "type": "single",
+      "generalExplanation": "Cuando se estudian las formas distintas de ordenar una lista, la batería lo identifica con el cálculo de permutaciones.",
+      "options": [
+        {
+          "text": "Estaremos calculando el número de nodos de la estructura.",
+          "isCorrect": false
+        },
+        {
+          "text": "Estaremos calculando el número de permutaciones.",
+          "isCorrect": true
+        },
+        {
+          "text": "Estaremos calculando el número de variaciones sin considerar el orden completo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Estaremos calculando el número de combinaciones.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "Decimos que para un determinado problema aparece una explosión combinatoria:",
+      "type": "single",
+      "generalExplanation": "La explosión combinatoria se describe en el material como un crecimiento muy rápido del número de soluciones posibles al aumentar parámetros o valores de configuración del problema.",
+      "options": [
+        {
+          "text": "Cuando el número de soluciones crece principalmente por el aumento de memoria disponible.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cuando el número de soluciones crece muy rápido al disminuir los valores de configuración del problema.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cuando el número de soluciones decrece muy rápido al aumentar los valores de configuración del problema.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cuando el número de soluciones crece muy rápido al aumentar determinados valores de configuración del problema.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Los DataFrame de R:",
+      "type": "single",
+      "generalExplanation": "El material indica que los DataFrame de R pueden almacenar distintos tipos de datos entre sus columnas.",
+      "options": [
+        {
+          "text": "Son estructuras homogéneas necesariamente multidimensionales.",
+          "isCorrect": false
+        },
+        {
+          "text": "Pueden almacenar distintos tipos de datos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Son equivalentes a listas homogéneas con una única clase de dato.",
+          "isCorrect": false
+        },
+        {
+          "text": "Son equivalentes a arrays homogéneos sin diferencias entre columnas.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "El Análisis Diagnóstico:",
+      "type": "single",
+      "generalExplanation": "La batería define el análisis diagnóstico como el orientado a determinar la causa de un fenómeno ocurrido o en curso.",
+      "options": [
+        {
+          "text": "Intenta predecir qué ocurrirá en un futuro.",
+          "isCorrect": false
+        },
+        {
+          "text": "Produce por lo general reportes o cuadros de mando estáticos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se define por no emplear estructuras de datos de tipo OLAP.",
+          "isCorrect": false
+        },
+        {
+          "text": "Intenta determinar la causa de un fenómeno que ha ocurrido o está ocurriendo.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "Un algoritmo es:",
+      "type": "single",
+      "generalExplanation": "El material define un algoritmo como una secuencia ordenada de instrucciones que permite resolver un problema.",
+      "options": [
+        {
+          "text": "Un conjunto de instrucciones que deben ejecutarse siempre en paralelo para resolver un problema.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cualquier serie de comandos introducida en una computadora, independientemente de su finalidad.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un conjunto de instrucciones cuyo objetivo principal es servir como base para un diagrama de flujo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un conjunto ordenado de instrucciones que permite solucionar un problema.",
+          "isCorrect": true
+        }
+      ]
+    }
+  ]
+}

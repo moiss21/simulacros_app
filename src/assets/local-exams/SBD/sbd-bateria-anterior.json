@@ -1,0 +1,674 @@
+{
+  "examProperties": {
+    "id": "sbd-bateria-anterior.json",
+    "subjectName": "Sistemas Big Data",
+    "examTitle": "Batería anterior — Big Data, HDFS, ETL y RGPD",
+    "examSummary": "Banco de preguntas procedente de la batería anterior de Sistemas Big Data.",
+    "examConfig": {
+      "penaltyRate": 0.25,
+      "examDurationMinutes": 40,
+      "canChangeResponse": true,
+      "passingPercentage": 60,
+      "totalQuestionsToDisplay": 30,
+      "emptyAnswersCount": true
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué tipo de procesamiento agrupa datos y los procesa en bloques o conjuntos, normalmente en momentos concretos?",
+      "type": "single",
+      "generalExplanation": "El procesamiento por lotes agrupa datos y los procesa en bloques o conjuntos, normalmente en momentos concretos, cuando no se necesita una respuesta inmediata.",
+      "options": [
+        {
+          "text": "Procesamiento en tiempo real.",
+          "isCorrect": false
+        },
+        {
+          "text": "Procesamiento en streaming.",
+          "isCorrect": false
+        },
+        {
+          "text": "Procesamiento por lotes.",
+          "isCorrect": true
+        },
+        {
+          "text": "Procesamiento interactivo.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "De entre las 5 Vs de Big Data, la V de variedad tiene que ver con:",
+      "type": "single",
+      "generalExplanation": "La variedad hace referencia a los diferentes tipos, formatos y estructuras de datos, como datos estructurados, semiestructurados y no estructurados.",
+      "options": [
+        {
+          "text": "Los diferentes tipos, formatos y representaciones de los datos.",
+          "isCorrect": true
+        },
+        {
+          "text": "La cantidad total de datos almacenados y procesados.",
+          "isCorrect": false
+        },
+        {
+          "text": "La rapidez con la que los datos se generan y procesan.",
+          "isCorrect": false
+        },
+        {
+          "text": "La utilidad que puede obtenerse a partir de los datos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Una de las siguientes afirmaciones es cierta:",
+      "type": "single",
+      "generalExplanation": "El procesamiento paralelo puede ejecutarse en una misma máquina utilizando varios núcleos o procesadores, mientras que el distribuido implica varias máquinas o nodos coordinados.",
+      "options": [
+        {
+          "text": "El procesamiento distribuido se realiza necesariamente en una sola máquina.",
+          "isCorrect": false
+        },
+        {
+          "text": "El procesamiento paralelo puede realizarse en una sola máquina.",
+          "isCorrect": true
+        },
+        {
+          "text": "El procesamiento paralelo y el distribuido requieren siempre varias máquinas.",
+          "isCorrect": false
+        },
+        {
+          "text": "El procesamiento paralelo y el distribuido se ejecutan siempre en una sola máquina.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "De entre las 5 Vs de Big Data, la V de velocidad tiene que ver con:",
+      "type": "single",
+      "generalExplanation": "La velocidad en Big Data se refiere a la rapidez con la que los datos se generan, reciben, procesan y analizan.",
+      "options": [
+        {
+          "text": "El tiempo desde la generación del dato hasta su adquisición o procesamiento.",
+          "isCorrect": true
+        },
+        {
+          "text": "La cantidad total de datos que deben almacenarse.",
+          "isCorrect": false
+        },
+        {
+          "text": "La diversidad de formatos y estructuras presentes en las fuentes.",
+          "isCorrect": false
+        },
+        {
+          "text": "La utilidad obtenida tras analizar y explotar los datos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Un almacén de datos está pensado para funciones transaccionales. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "Un data warehouse está orientado al análisis y consulta de información histórica, no a las operaciones transaccionales propias de sistemas OLTP.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": false
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "De entre las 5 Vs de Big Data, la V de valor tiene que ver con:",
+      "type": "single",
+      "generalExplanation": "La V de valor se refiere a la capacidad de extraer información útil de los datos y convertirlos en conocimiento o beneficio.",
+      "options": [
+        {
+          "text": "El volumen total de datos que puede gestionar el sistema.",
+          "isCorrect": false
+        },
+        {
+          "text": "La velocidad con la que los datos son adquiridos y procesados.",
+          "isCorrect": false
+        },
+        {
+          "text": "La variedad de formatos y estructuras presentes en las fuentes.",
+          "isCorrect": false
+        },
+        {
+          "text": "La utilidad que puede extraerse de los datos.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Las cuatro características del principio ACID son:",
+      "type": "single",
+      "generalExplanation": "ACID significa Atomicidad, Consistencia, Aislamiento y Durabilidad, propiedades fundamentales de las transacciones en bases de datos relacionales.",
+      "options": [
+        {
+          "text": "Atomicidad, concurrencia, integridad y disponibilidad.",
+          "isCorrect": false
+        },
+        {
+          "text": "Atomicidad, consistencia, aislamiento y distribución.",
+          "isCorrect": false
+        },
+        {
+          "text": "Atomicidad, consistencia, aislamiento y durabilidad.",
+          "isCorrect": true
+        },
+        {
+          "text": "Atomicidad, concurrencia, aislamiento y durabilidad.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Big Data se complementa con Minería de Datos para obtener valor. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "Big Data permite almacenar y procesar grandes volúmenes de datos, mientras que la minería de datos ayuda a descubrir patrones, relaciones y conocimiento útil.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": true
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Según el teorema CAP:",
+      "type": "single",
+      "generalExplanation": "El teorema CAP establece que en un sistema distribuido no es posible garantizar al mismo tiempo consistencia, disponibilidad y tolerancia a particiones de red.",
+      "options": [
+        {
+          "text": "Un sistema distribuido puede garantizar siempre consistencia, disponibilidad y tolerancia a particiones simultáneamente.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un sistema distribuido debe priorizar siempre consistencia y tolerancia a particiones sobre cualquier otra propiedad.",
+          "isCorrect": false
+        },
+        {
+          "text": "El teorema CAP se aplica únicamente a sistemas de almacenamiento local sin distribución.",
+          "isCorrect": false
+        },
+        {
+          "text": "No se pueden garantizar simultáneamente consistencia, disponibilidad y tolerancia a particiones.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "La sabiduría se obtiene del conocimiento del mismo modo que los datos se obtienen de la información. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "La jerarquía habitual indicada en el material es datos, información, conocimiento y sabiduría. La información se obtiene a partir de los datos, no al contrario.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": false
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "En bases de datos distribuidas, la replicación consiste en:",
+      "type": "single",
+      "generalExplanation": "La replicación consiste en mantener copias de los datos en distintos nodos para mejorar disponibilidad, tolerancia a fallos y, en algunos casos, rendimiento de lectura.",
+      "options": [
+        {
+          "text": "Mantener una copia completa de toda la base de datos obligatoriamente en cada nodo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Mantener copias de los datos en varios nodos.",
+          "isCorrect": true
+        },
+        {
+          "text": "Mantener copias de los datos exactamente en dos nodos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Mantener cada dato en un único nodo y distribuir solo sus metadatos.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "En una base de datos orientada a grafo:",
+      "type": "single",
+      "generalExplanation": "Las bases de datos orientadas a grafos representan la información mediante nodos y relaciones, que pueden almacenar propiedades.",
+      "options": [
+        {
+          "text": "Existen nodos y relaciones, y ambos pueden tener propiedades.",
+          "isCorrect": true
+        },
+        {
+          "text": "Existen únicamente relaciones y las entidades se representan fuera del grafo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Existen únicamente nodos y las conexiones se calculan fuera de la base de datos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los datos se representan exclusivamente mediante documentos sin relaciones explícitas.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "HDFS está optimizado para muchos ficheros pequeños. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "HDFS está optimizado para almacenar y procesar ficheros grandes. Muchos ficheros pequeños generan sobrecarga en el NameNode por sus metadatos.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": false
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "¿Qué operación no es habitual o no es propia de las bases de datos documentales?",
+      "type": "single",
+      "generalExplanation": "Las bases de datos documentales trabajan con documentos y no se basan en JOIN relacionales tradicionales como las bases de datos SQL.",
+      "options": [
+        {
+          "text": "Actualizar documentos almacenados.",
+          "isCorrect": false
+        },
+        {
+          "text": "Realizar selección de documentos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Realizar JOIN relacional tradicional.",
+          "isCorrect": true
+        },
+        {
+          "text": "Acceder a documentos mediante una clave.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "El almacenamiento distribuido en memoria es adecuado para grandes volúmenes de datos persistentes. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "El almacenamiento en memoria es rápido, pero no suele ser la opción adecuada para grandes volúmenes persistentes debido al coste y a la volatilidad de la memoria.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": false
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "En HDFS, un fichero de 28 MB desperdicia 100 MB con bloques de 128 MB. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "Aunque el tamaño lógico de bloque sea de 128 MB, HDFS no reserva físicamente todo el bloque cuando el fichero ocupa menos; un fichero de 28 MB ocupa aproximadamente esos 28 MB.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": false
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "HDFS es un componente de Apache Hadoop. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "HDFS, Hadoop Distributed File System, es el sistema de ficheros distribuido de Apache Hadoop y uno de sus componentes principales.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": true
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "El NameNode detecta cuando un DataNode no está accesible. ¿Verdadero o falso?",
+      "type": "single",
+      "generalExplanation": "El NameNode controla el estado de los DataNodes mediante señales periódicas llamadas heartbeats; si dejan de recibirse, puede considerar el nodo no disponible.",
+      "options": [
+        {
+          "text": "Verdadero.",
+          "isCorrect": true
+        },
+        {
+          "text": "Falso.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "¿Cuál de los siguientes NO es un sistema de ficheros?",
+      "type": "single",
+      "generalExplanation": "NTFS, FAT32 y EXT4 son sistemas de ficheros. NET7 no lo es.",
+      "options": [
+        {
+          "text": "NTFS.",
+          "isCorrect": false
+        },
+        {
+          "text": "FAT32.",
+          "isCorrect": false
+        },
+        {
+          "text": "EXT4.",
+          "isCorrect": false
+        },
+        {
+          "text": "NET7.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "¿Cómo se puede acceder a HDFS desde lenguajes de programación?",
+      "type": "single",
+      "generalExplanation": "HDFS puede utilizarse desde distintos lenguajes de programación mediante librerías, APIs o conectores específicos, además de la línea de comandos.",
+      "options": [
+        {
+          "text": "Mediante una sintaxis propietaria obligatoria independiente del lenguaje utilizado.",
+          "isCorrect": false
+        },
+        {
+          "text": "Mediante librerías o APIs.",
+          "isCorrect": true
+        },
+        {
+          "text": "Únicamente desde la línea de comandos de Hadoop.",
+          "isCorrect": false
+        },
+        {
+          "text": "Únicamente mediante programas desarrollados en Python.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "¿Cuál de las siguientes NO es una fuente típica en la fase de extracción de un proceso ETL?",
+      "type": "single",
+      "generalExplanation": "En ETL, las fuentes habituales son bases de datos, logs, ficheros, APIs u otros sistemas origen. Los cuadros de mando BI pertenecen normalmente a la capa de explotación o visualización.",
+      "options": [
+        {
+          "text": "Cuadros de mando de Inteligencia de Negocio.",
+          "isCorrect": true
+        },
+        {
+          "text": "Logs de aplicaciones o servidores web.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ficheros procedentes de sistemas origen.",
+          "isCorrect": false
+        },
+        {
+          "text": "Bases de datos relacionales.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "Según el RGPD, los responsables del tratamiento están obligados a:",
+      "type": "single",
+      "generalExplanation": "El material recoge el principio de responsabilidad proactiva: el responsable debe cumplir la normativa y poder demostrar que la cumple.",
+      "options": [
+        {
+          "text": "Cumplir la normativa y poder demostrar dicho cumplimiento.",
+          "isCorrect": true
+        },
+        {
+          "text": "Cumplir la normativa e informar periódicamente a todos los usuarios, aunque no exista cambio alguno.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cumplir la normativa sin necesidad de disponer de evidencias que permitan demostrarlo.",
+          "isCorrect": false
+        },
+        {
+          "text": "Garantizar únicamente el cumplimiento de su plantilla interna, excluyendo a terceros relacionados.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "¿Cuáles son las fases del proceso ETL?",
+      "type": "single",
+      "generalExplanation": "ETL significa Extract, Transform and Load: extraer los datos desde las fuentes, transformarlos y cargarlos en el sistema destino.",
+      "options": [
+        {
+          "text": "Extraer, transformar y cargar.",
+          "isCorrect": true
+        },
+        {
+          "text": "Extraer, cargar y transformar.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transformar, extraer y cargar.",
+          "isCorrect": false
+        },
+        {
+          "text": "Cargar, transformar y extraer.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "Si el destino ETL guarda histórico por dato:",
+      "type": "single",
+      "generalExplanation": "Guardar histórico permite conservar versiones anteriores de los datos y analizar cómo han cambiado a lo largo del tiempo.",
+      "options": [
+        {
+          "text": "Podemos consultar los valores que ha tenido ese dato a lo largo del tiempo.",
+          "isCorrect": true
+        },
+        {
+          "text": "Los metadatos pasan a estar disponibles automáticamente desde cualquier interfaz.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los valores anteriores se sobrescriben siempre al recibir una nueva versión del dato.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los valores anteriores se eliminan obligatoriamente antes de cada nueva carga.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "¿Cuál es una diferencia entre ETL e integración de datos?",
+      "type": "single",
+      "generalExplanation": "ETL suele implicar extraer, transformar y cargar datos en un repositorio destino; la integración de datos es un concepto más amplio orientado a combinar, conectar o unificar datos procedentes de varias fuentes.",
+      "options": [
+        {
+          "text": "La integración de datos debe ejecutarse siempre antes de cualquier proceso ETL.",
+          "isCorrect": false
+        },
+        {
+          "text": "ETL copia datos a un destino, mientras que la integración de datos busca conectar o unificar fuentes.",
+          "isCorrect": true
+        },
+        {
+          "text": "ETL e integración de datos son conceptos equivalentes y no presentan diferencias de alcance.",
+          "isCorrect": false
+        },
+        {
+          "text": "La integración de datos debe ejecutarse siempre después de finalizar un proceso ETL.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "Según el RGPD, los derechos ARCO:",
+      "type": "single",
+      "generalExplanation": "El material indica que el RGPD mantiene los derechos tradicionales de acceso, rectificación, cancelación/supresión y oposición, ampliándolos con otros como limitación del tratamiento y portabilidad.",
+      "options": [
+        {
+          "text": "Desaparecen y dejan de formar parte del marco de protección de datos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se mantienen en una versión más completa, junto con otros derechos adicionales.",
+          "isCorrect": true
+        },
+        {
+          "text": "Se mantienen de forma más resumida y con un alcance inferior al anterior.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se mantienen exactamente igual, sin ampliaciones ni cambios.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "¿Cuál es el orden de integración de datos de menos automatizada a más automatizada?",
+      "type": "single",
+      "generalExplanation": "Según la batería, el orden de menor a mayor automatización es manual, aplicación, middleware y virtual.",
+      "options": [
+        {
+          "text": "Virtual, manual, aplicación, middleware.",
+          "isCorrect": false
+        },
+        {
+          "text": "Manual, virtual, aplicación, middleware.",
+          "isCorrect": false
+        },
+        {
+          "text": "Virtual, middleware, aplicación, manual.",
+          "isCorrect": false
+        },
+        {
+          "text": "Manual, aplicación, middleware, virtual.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "La integración de datos:",
+      "type": "single",
+      "generalExplanation": "La integración de datos combina información procedente de distintas fuentes para proporcionar una visión coherente, unificada y utilizable.",
+      "options": [
+        {
+          "text": "Tiene como objetivo exclusivo minimizar la latencia entre sistemas origen y destino.",
+          "isCorrect": false
+        },
+        {
+          "text": "Busca principalmente maximizar la redundancia de la información almacenada.",
+          "isCorrect": false
+        },
+        {
+          "text": "Se limita a realizar replicaciones eficientes entre bases de datos.",
+          "isCorrect": false
+        },
+        {
+          "text": "Busca ofrecer una visión unificada de los datos para su utilización.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Cuando llegan datos nuevos al destino ETL:",
+      "type": "single",
+      "generalExplanation": "El efecto depende de la estrategia de carga. En cargas incrementales pueden añadirse nuevos datos sin modificar los existentes; en otros casos pueden actualizarse, sobrescribirse o historificarse.",
+      "options": [
+        {
+          "text": "Nunca pueden afectar a los datos que ya existían en el destino.",
+          "isCorrect": false
+        },
+        {
+          "text": "Deben eliminar siempre los datos preexistentes antes de completar la carga.",
+          "isCorrect": false
+        },
+        {
+          "text": "Los datos preexistentes pueden no verse afectados, dependiendo de la estrategia de carga.",
+          "isCorrect": true
+        },
+        {
+          "text": "Los datos preexistentes se modifican siempre con independencia del tipo de carga.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "La LOPD-GDD se escribió:",
+      "type": "single",
+      "generalExplanation": "La LOPD-GDD adapta el ordenamiento jurídico español al RGPD y desarrolla aspectos relacionados con la protección de datos personales y los derechos digitales.",
+      "options": [
+        {
+          "text": "Para sustituir al RGPD dentro del ordenamiento jurídico español.",
+          "isCorrect": false
+        },
+        {
+          "text": "Para adecuar el ordenamiento español al RGPD.",
+          "isCorrect": true
+        },
+        {
+          "text": "Antes del RGPD y sin relación con su aplicación posterior.",
+          "isCorrect": false
+        },
+        {
+          "text": "Como una traducción literal al castellano del texto del RGPD.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

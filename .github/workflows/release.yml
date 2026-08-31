@@ -1,0 +1,133 @@
+name: Release
+
+# Publica un Release en GitHub con el .exe descargable.
+#   - Automatico:  al empujar una etiqueta  v1.2.3   ->  git tag v1.2.3 && git push origin v1.2.3
+#   - Manual:      Actions -> Release -> Run workflow, indicando la version
+#
+# El ejecutable se compila en modo "release": NO incluye los examenes reales,
+# solo el examen de prueba, el ejemplo de plantilla, la guia y los prompts.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version a publicar (ej. 1.2.3)'
+        required: true
+        type: string
+      prerelease:
+        description: 'Marcar como prerelease'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    name: Compilar y publicar (Windows)
+    runs-on: windows-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Determinar version
+        id: version
+        shell: pwsh
+        run: |
+          if ('${{ github.ref_type }}' -eq 'tag') {
+            $version = '${{ github.ref_name }}' -replace '^v', ''
+          } else {
+            $version = '${{ inputs.version }}' -replace '^v', ''
+          }
+          if ([string]::IsNullOrWhiteSpace($version)) {
+            Write-Error 'No se pudo determinar la version a publicar.'
+            exit 1
+          }
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          "tag=v$version"    | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          Write-Host "Version a publicar: $version"
+
+      - name: Fijar la version en los package.json
+        shell: pwsh
+        run: node scripts/set-version.js ${{ steps.version.outputs.version }}
+
+      - name: Cache de electron-builder
+        uses: actions/cache@v4
+        with:
+          path: ~/AppData/Local/electron-builder/Cache
+          key: ${{ runner.os }}-electron-builder-${{ hashFiles('electron-app/package.json') }}
+          restore-keys: ${{ runner.os }}-electron-builder-
+
+      - name: Instalar dependencias de Angular
+        shell: pwsh
+        run: |
+          if (Test-Path package-lock.json) { npm ci } else { npm install }
+
+      - name: Instalar dependencias de Electron
+        shell: pwsh
+        working-directory: electron-app
+        run: |
+          if (Test-Path package-lock.json) { npm ci } else { npm install }
+
+      - name: Compilar el ejecutable (sin examenes reales)
+        shell: pwsh
+        run: npm run electron:build:release
+
+      - name: Verificar que no se han empaquetado examenes reales
+        shell: pwsh
+        run: node scripts/verify-release-assets.js
+
+      - name: Preparar los archivos del release
+        id: assets
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force release-files | Out-Null
+          Copy-Item electron-app/dist/*.exe release-files/ -ErrorAction Stop
+          Copy-Item src/assets/guia/GUIA.md release-files/
+          Copy-Item src/assets/exams/prompt.txt release-files/prompts.txt
+          Compress-Archive -Path src/assets/local-exams/demo/*.json -DestinationPath release-files/examenes-demo.zip -Force
+          Get-ChildItem release-files | Format-Table Name, Length
+
+      - name: Publicar el Release en GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Simulacros ${{ steps.version.outputs.tag }}
+          prerelease: ${{ inputs.prerelease == true }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            release-files/*.exe
+            release-files/GUIA.md
+            release-files/prompts.txt
+            release-files/examenes-demo.zip
+          body: |
+            ## Descargas
+
+            | Archivo | Para que sirve |
+            | --- | --- |
+            | `Simulacros-Setup-${{ steps.version.outputs.version }}.exe` | Instalador con acceso directo en el menu de inicio. |
+            | `Simulacros-${{ steps.version.outputs.version }}-portable.exe` | Ejecutable directo, sin instalacion. |
+            | `GUIA.md` | Guia de uso y formato de los examenes. |
+            | `prompts.txt` | Prompt para generar preguntas con una IA. |
+            | `examenes-demo.zip` | Examen de prueba y ejemplo de plantilla. |
+
+            ## Contenido incluido
+
+            El ejecutable **no incluye ningun banco de preguntas real**. Solo se
+            empaquetan un examen de prueba, un ejemplo comentado del formato, la
+            guia y los prompts. Tus propios examenes se cargan desde una carpeta
+            de tu equipo con el boton de cargar carpeta.
+
+            > Windows puede avisar de que el editor es desconocido porque el
+            > binario no esta firmado: **Mas informacion -> Ejecutar de todas formas**.

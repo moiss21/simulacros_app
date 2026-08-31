@@ -6,6 +6,8 @@ const { tittle } = require("./scripts-assets/tittle");
 const { exportToExeTittle } = require("./scripts-assets/export-tittle");
 
 const isDebug = process.argv.includes("--debug");
+/* Modo release: empaqueta solo los examenes de demostracion, la guia y los prompts */
+const isRelease = process.argv.includes("--release");
 
 // Colores ANSI para la terminal
 const RESET = "\x1b[0m";
@@ -16,7 +18,20 @@ const RED = "\x1b[31m";
 const MAGENTA = "\x1b[35m";
 
 // Configuración de rutas (Normalizadas con __dirname)
-const ANGULAR_DIST = path.join(__dirname, "..", "dist", "simulacros-app");
+const ANGULAR_JSON = path.join(__dirname, "..", "angular.json");
+
+/* Nombre real del proyecto Angular -> carpeta de salida de "ng build" */
+function resolveAngularDist() {
+  const config = JSON.parse(fs.readFileSync(ANGULAR_JSON, "utf8"));
+  const projectName = Object.keys(config.projects)[0];
+  const outputPath =
+    config.projects[projectName].architect?.build?.options?.outputPath ||
+    path.join("dist", projectName);
+
+  return path.join(__dirname, "..", outputPath);
+}
+
+const ANGULAR_DIST = resolveAngularDist();
 const ELECTRON_APP = path.join(__dirname, "..", "electron-app");
 const APP_FOLDER = path.join(ELECTRON_APP, "simulacros-app");
 const MAIN_FILE = path.join(ELECTRON_APP, "main.js");
@@ -33,13 +48,21 @@ if (isDebug) {
   console.log(`🔧 Modo Debug: ${YELLOW}DESACTIVADO${RESET}`);
   console.log(`${YELLOW}⚠️ Las DevTools NO se abrirán al ejecutar el .exe si necesitas debugear fallos.${RESET}`);
 }
+if (isRelease) {
+  console.log(`📚 Contenido: ${GREEN}SOLO demos + guía + prompts${RESET} (modo release)`);
+} else {
+  console.log(`📚 Contenido: ${YELLOW}TODOS los exámenes de src/assets${RESET}`);
+}
 console.log(`${CYAN}----------------------------------------${RESET}`);
 
 /* =================================================================
    1. Compilación de producción de Angular
 ================================================================= */
 console.log(`\n${MAGENTA}📦 [1/2] Compilando el frontend de Angular...${RESET}`);
-execSync("ng build", { stdio: "inherit" });
+const NG_BUILD = isRelease
+  ? "ng build --configuration production,release"
+  : "ng build";
+execSync(NG_BUILD, { stdio: "inherit" });
 
 /* =================================================================
    2. Limpieza de la carpeta de destino de Electron (Silencioso)
@@ -51,6 +74,12 @@ if (fs.existsSync(APP_FOLDER)) {
 /* =================================================================
    3. Copiar dist de Angular a la carpeta de ejecución de Electron (Silencioso)
 ================================================================= */
+if (!fs.existsSync(ANGULAR_DIST)) {
+  console.log(`
+${RED}ERROR: No se encontro la salida de Angular en:${RESET} ${ANGULAR_DIST}`);
+  process.exit(1);
+}
+
 execSync(`cpx "${ANGULAR_DIST}/**/*" "${APP_FOLDER}"`, { stdio: "ignore" });
 
 /* =================================================================
@@ -75,7 +104,13 @@ fs.writeFileSync(MAIN_FILE, main);
    5. Empaquetado de Electron (electron-builder)
 ================================================================= */
 console.log(`\n${MAGENTA}📦 [2/2] Empaquetando la aplicación nativa...${RESET}`);
-execSync(`cd "${ELECTRON_APP}" && npm run dist`, { stdio: "inherit" });
+/* electron-builder necesita las dependencias instaladas dentro de electron-app */
+if (!fs.existsSync(path.join(ELECTRON_APP, "node_modules"))) {
+  console.log(`${YELLOW}Instalando dependencias de electron-app (primera vez)...${RESET}`);
+  execSync("npm install", { cwd: ELECTRON_APP, stdio: "inherit" });
+}
+
+execSync("npm run dist", { cwd: ELECTRON_APP, stdio: "inherit" });
 
 /* =================================================================
    6. Localizar el ejecutable generado
