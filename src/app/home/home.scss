@@ -164,3 +164,59 @@
   font-size: var(--text-xs);
   font-weight: 600;
 }
+
+/* --------------------------------------------------------------------------
+   Aviso de versión nueva
+   -------------------------------------------------------------------------- */
+.update-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-soft);
+}
+
+.update-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+
+  strong {
+    color: var(--text-1);
+  }
+
+  span {
+    color: var(--text-2);
+  }
+}
+
+.update-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Pie: versión instalada y comprobación manual
+   -------------------------------------------------------------------------- */
+.app-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.app-version {
+  color: var(--text-3);
+  font-size: var(--text-xs);
+}

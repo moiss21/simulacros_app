@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ExamService } from '../services/exam.service';
+import { UpdateService } from '../services/update.service';
 import { ExamData, ExamProperties } from '../models/exam.model';
 
 @Component({
@@ -16,6 +17,9 @@ export class HomeComponent {
   private examService = inject(ExamService);
   private router = inject(Router);
 
+  // Público: la plantilla lee sus signals para pintar el aviso de versión nueva
+  update = inject(UpdateService);
+
   // Usamos un signal para que la UI reaccione al cambio de carpeta
   exams = signal<ExamData[]>([]);
   isExternal = signal(false);
@@ -23,6 +27,8 @@ export class HomeComponent {
 
   ngOnInit() {
     this.loadExams();
+    // No se espera: si no hay conexión el aviso simplemente no aparece.
+    this.update.check();
   }
 
 

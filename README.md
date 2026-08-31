@@ -240,6 +240,46 @@ de los archivos generados. No hace falta tocar la versión a mano en ningún sit
 
 Se sigue [versionado semántico](https://semver.org/lang/es/): `MAJOR.MINOR.PATCH`.
 
+## Comprobación de actualizaciones
+
+Al abrir la aplicación se consulta el último Release publicado y se compara con
+la versión instalada. Si hay una más reciente aparece un aviso en la pantalla
+principal con un botón que abre la página de descargas en el navegador. El pie
+de esa pantalla muestra la versión instalada y permite comprobarlo a mano.
+
+La aplicación **no descarga ni instala nada por su cuenta**: solo avisa. Es una
+decisión deliberada, no una limitación pendiente de resolver:
+
+- El target `portable` no admite actualización automática, solo el instalador.
+- Los ejecutables no están firmados, así que una actualización automática
+  instalaría un binario cuya procedencia el sistema no puede verificar.
+
+Si algún día se firman los binarios (ver la conversación sobre firma de código),
+el paso natural sería `electron-updater`, que sí descarga e instala solo, pero
+únicamente para la versión con instalador.
+
+Piezas implicadas:
+
+| Archivo | Papel |
+| --- | --- |
+| [electron-app/main.js](electron-app/main.js) | Consulta la API de GitHub y compara versiones. `GITHUB_REPO` fija el repositorio. |
+| [electron-app/preload.js](electron-app/preload.js) | Expone `checkForUpdates` y `openReleasePage` al renderer. |
+| [src/app/services/update.service.ts](src/app/services/update.service.ts) | Estado del aviso y memoria de la versión descartada. |
+
+Detalles de comportamiento:
+
+- Si no hay conexión, la comprobación falla en silencio y la aplicación funciona
+  igual: es una herramienta offline y no debe depender de la red.
+- El aviso se comprueba una vez por sesión. "Ahora no" lo oculta hasta que se
+  publique una versión distinta.
+- `open-release-page` solo abre URLs del propio repositorio, para que el
+  renderer no pueda pedir la apertura de una dirección arbitraria.
+- El servidor local sirve todo con `Cache-Control: no-store`. Sin eso, Electron
+  conserva su caché HTTP entre versiones y tras actualizar se seguiría viendo la
+  interfaz anterior.
+
+Si cambias de repositorio, actualiza `GITHUB_REPO` en `electron-app/main.js`.
+
 ## Qué se publica y qué no
 
 El ejecutable publicado se compila con la configuración `release` de

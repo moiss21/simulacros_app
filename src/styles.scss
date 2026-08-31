@@ -363,6 +363,22 @@ input[type="radio"] {
   border-radius: var(--radius-pill);
 }
 
+/* Enlace con forma de botón: acción terciaria, sin peso visual. */
+.btn-link {
+  @extend %btn-base;
+  padding: 0;
+  background: none;
+  border-color: transparent;
+  color: var(--accent-fg);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover:not(:disabled) {
+    color: var(--accent-hover);
+  }
+}
+
 button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
