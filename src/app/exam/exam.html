@@ -78,14 +78,16 @@
 
     @if (shouldShowContent()) {
       <div class="questions-list">
-        @for (question of exam.questions; track question.id; let i = $index) {
+        @for (item of visibleQuestions(); track item.question.id) {
+          @let question = item.question;
+          @let i = item.index;
+          @let revealed = isRevealed(i);
+
           <div
             class="question-card"
-            [class.is-finished]="isFinished()"
-            [class.has-selection]="
-              isAnyOptionSelected(question) && !isFinished()
-            "
-            [class]="isFinished() ? 'state-' + getQuestionState(question) : ''"
+            [class.is-finished]="revealed"
+            [class.has-selection]="isAnyOptionSelected(question) && !revealed"
+            [class]="revealed ? 'state-' + getQuestionState(question) : ''"
             [class.unanswered-penalty]="
               isFinished() &&
               !isAnyOptionSelected(question) &&
@@ -112,7 +114,7 @@
             }
             <div class="q-header">
               <div class="header-main-info">
-                @if (isFinished()) {
+                @if (revealed) {
                   @let result = isQuestionFullyCorrect(question);
                   @let hasSelection = isAnyOptionSelected(question);
                   @let emptyCounts =
@@ -133,7 +135,7 @@
                 </h3>
               </div>
 
-              @if (isFinished()) {
+              @if (revealed) {
                 @let pts = getQuestionPoints(question);
                 <div class="q-result-badge" [class.negative]="pts < 0">
                   <span class="max-weight">{{
@@ -151,20 +153,21 @@
               @for (option of question.options; track option.text) {
                 <label
                   class="option-row"
-                  [class.disabled]="isFinished()"
+                  [class.disabled]="revealed"
                   [class.user-selected]="option.selected"
-                  [class.is-system-correct]="isFinished() && option.isCorrect"
+                  [class.is-system-correct]="revealed && option.isCorrect"
                 >
                   <input
                     [type]="question.type === 'single' ? 'radio' : 'checkbox'"
                     [name]="'q-' + question.id"
                     [checked]="option.selected"
-                    [disabled]="isFinished()"
+                    [disabled]="revealed"
                     (change)="
                       selectOption(
                         question,
                         option,
-                        exam.examProperties.examConfig.canChangeResponse
+                        exam.examProperties.examConfig.canChangeResponse,
+                        i
                       )
                     "
                   />
@@ -173,23 +176,37 @@
               }
             </div>
 
-            @if (
-              !isFinished() &&
+            @let canClear =
+              !revealed &&
               isAnyOptionSelected(question) &&
-              exam.examProperties.examConfig.canChangeResponse
-            ) {
+              exam.examProperties.examConfig.canChangeResponse;
+            @let canCheck = canRevealQuestion(question, i);
+
+            @if (canClear || canCheck) {
               <div class="q-footer">
-                <button
-                  class="btn-clear"
-                  (click)="clearQuestion(question)"
-                  title="Limpiar selección"
-                >
-                  🧹 Limpiar respuesta
-                </button>
+                @if (canClear) {
+                  <button
+                    class="btn-clear"
+                    (click)="clearQuestion(question, i)"
+                    title="Limpiar selección"
+                  >
+                    🧹 Limpiar respuesta
+                  </button>
+                }
+
+                @if (canCheck) {
+                  <button
+                    class="btn-check"
+                    (click)="revealQuestion(i)"
+                    title="Corregir sólo esta pregunta"
+                  >
+                    🔍 Comprobar respuesta
+                  </button>
+                }
               </div>
             }
 
-            @if (isFinished()) {
+            @if (revealed) {
               <div class="review-section">
                 @for (option of question.options; track option.text) {
                   @if (option.selected && option.explanation) {
@@ -214,8 +231,40 @@
         }
       </div>
 
+      @if (!showAllQuestions()) {
+        <nav class="question-nav" aria-label="Navegación entre preguntas">
+          <button
+            class="btn-legend"
+            type="button"
+            [disabled]="isFirstQuestion()"
+            (click)="previousQuestion()"
+          >
+            ← Anterior
+          </button>
+
+          <span class="nav-progress">
+            Pregunta {{ currentIndex() + 1 }} de {{ totalQuestionsToDisplay() }}
+          </span>
+
+          <button
+            class="btn-legend"
+            type="button"
+            [disabled]="isLastQuestion()"
+            (click)="nextQuestion()"
+          >
+            Siguiente →
+          </button>
+        </nav>
+      }
+
       @if (!isFinished()) {
         <div class="footer-actions">
+          @if (correctionMode() === 'immediate') {
+            <p class="footer-hint">
+              Corrección inmediata: {{ revealedCount() }} de
+              {{ totalQuestionsToDisplay() }} preguntas comprobadas.
+            </p>
+          }
           <button class="btn-finish" (click)="finishExam()">
             TERMINAR Y CORREGIR
           </button>
@@ -290,6 +339,73 @@
             <p>🎲 <strong>Aviso de modalidad aleatoria:</strong><br>Este test generará una tanda de <strong>{{ totalQuestionsToDisplay() }} preguntas extraídas al azar</strong> del repertorio total de {{ totalQuestions() }} preguntas por cada intento de examen.</p>
           </div>
         }
+
+        <div class="exam-rules-card mode-card">
+          <h3>Cómo quieres hacer este examen</h3>
+
+          <fieldset class="mode-group">
+            <legend>Preguntas</legend>
+
+            <label class="mode-option" [class.selected]="navigationMode() === 'all'">
+              <input
+                type="radio"
+                name="navigation-mode"
+                [checked]="navigationMode() === 'all'"
+                (change)="navigationMode.set('all')"
+              />
+              <span class="mode-text">
+                <strong>Todas a la vez</strong>
+                <span>Se listan todas y las respondes en el orden que quieras.</span>
+              </span>
+            </label>
+
+            <label class="mode-option" [class.selected]="navigationMode() === 'one-by-one'">
+              <input
+                type="radio"
+                name="navigation-mode"
+                [checked]="navigationMode() === 'one-by-one'"
+                (change)="navigationMode.set('one-by-one')"
+              />
+              <span class="mode-text">
+                <strong>Una a una</strong>
+                <span>Solo una pregunta en pantalla, con anterior y siguiente.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mode-group">
+            <legend>Corrección</legend>
+
+            <label class="mode-option" [class.selected]="correctionMode() === 'at-end'">
+              <input
+                type="radio"
+                name="correction-mode"
+                [checked]="correctionMode() === 'at-end'"
+                (change)="correctionMode.set('at-end')"
+              />
+              <span class="mode-text">
+                <strong>Al final</strong>
+                <span>Ves las soluciones al terminar y enviar el examen.</span>
+              </span>
+            </label>
+
+            <label class="mode-option" [class.selected]="correctionMode() === 'immediate'">
+              <input
+                type="radio"
+                name="correction-mode"
+                [checked]="correctionMode() === 'immediate'"
+                (change)="correctionMode.set('immediate')"
+              />
+              <span class="mode-text">
+                <strong>Pregunta a pregunta</strong>
+                <span>
+                  Compruebas cada pregunta cuando quieras. Al comprobarla queda
+                  bloqueada y ya no se puede cambiar.
+                </span>
+              </span>
+            </label>
+          </fieldset>
+        </div>
 
         <div class="exam-rules-card">
           <h3>Configuración del examen</h3>

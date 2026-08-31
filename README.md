@@ -28,6 +28,9 @@ internet. Está construida con Angular 20 y empaquetada con Electron.
 
 - **Exámenes propios en JSON** — se cargan desde cualquier carpeta del equipo con
   el botón *Cargar Carpeta Exámenes*, sin recompilar nada.
+- **Cuatro modos de examen** — antes de empezar se elige si las preguntas salen
+  todas a la vez o una a una, y si la corrección llega al final o pregunta a
+  pregunta. Los dos ejes son independientes.
 - **Tandas aleatorias** — `totalQuestionsToDisplay` extrae N preguntas al azar de
   un banco mayor, y las opciones se barajan en cada intento.
 - **Corrección realista** — penalización por fallo configurable, preguntas de
@@ -239,6 +242,29 @@ El número de versión sale de la etiqueta (`v1.2.3` → `1.2.3`) y
 de los archivos generados. No hace falta tocar la versión a mano en ningún sitio.
 
 Se sigue [versionado semántico](https://semver.org/lang/es/): `MAJOR.MINOR.PATCH`.
+
+## Modos de examen
+
+La pantalla previa a cada examen ofrece dos ejes independientes, que se combinan
+en cuatro formas de hacer el mismo simulacro:
+
+| Eje | Opciones |
+| --- | --- |
+| Preguntas | **Todas a la vez** (se listan todas) · **Una a una** (con anterior/siguiente) |
+| Corrección | **Al final** (al enviar el examen) · **Pregunta a pregunta** (botón *Comprobar* en cada una) |
+
+Reglas que sostienen el diseño:
+
+- Comprobar una pregunta la **bloquea**. Si se pudiera cambiar la respuesta tras
+  ver la solución, la nota final no mediría nada. Las demás siguen editables.
+- Al terminar se listan **siempre todas** las preguntas corregidas, aunque el
+  examen se haya hecho una a una. Así la revisión final y el PDF salen completos.
+- En modo *una a una* se puede ir hacia atrás: lo respondido y lo corregido se
+  conserva al navegar.
+
+Todo esto vive en [src/app/exam/exam.ts](src/app/exam/exam.ts): `navigationMode`
+y `correctionMode` fijan el modo, `revealedQuestions` guarda qué preguntas ya se
+han corregido y `visibleQuestions` decide qué se pinta.
 
 ## Comprobación de actualizaciones
 
