@@ -28,6 +28,9 @@ internet. Está construida con Angular 20 y empaquetada con Electron.
 
 - **Exámenes propios en JSON** — se cargan desde cualquier carpeta del equipo con
   el botón *Cargar Carpeta Exámenes*, sin recompilar nada.
+- **Cuatro modos de examen** — antes de empezar se elige si las preguntas salen
+  todas a la vez o una a una, y si la corrección llega al final o pregunta a
+  pregunta. Los dos ejes son independientes.
 - **Tandas aleatorias** — `totalQuestionsToDisplay` extrae N preguntas al azar de
   un banco mayor, y las opciones se barajan en cada intento.
 - **Corrección realista** — penalización por fallo configurable, preguntas de
@@ -239,6 +242,69 @@ El número de versión sale de la etiqueta (`v1.2.3` → `1.2.3`) y
 de los archivos generados. No hace falta tocar la versión a mano en ningún sitio.
 
 Se sigue [versionado semántico](https://semver.org/lang/es/): `MAJOR.MINOR.PATCH`.
+
+## Modos de examen
+
+La pantalla previa a cada examen ofrece dos ejes independientes, que se combinan
+en cuatro formas de hacer el mismo simulacro:
+
+| Eje | Opciones |
+| --- | --- |
+| Preguntas | **Todas a la vez** (se listan todas) · **Una a una** (con anterior/siguiente) |
+| Corrección | **Al final** (al enviar el examen) · **Pregunta a pregunta** (botón *Comprobar* en cada una) |
+
+Reglas que sostienen el diseño:
+
+- Comprobar una pregunta la **bloquea**. Si se pudiera cambiar la respuesta tras
+  ver la solución, la nota final no mediría nada. Las demás siguen editables.
+- Al terminar se listan **siempre todas** las preguntas corregidas, aunque el
+  examen se haya hecho una a una. Así la revisión final y el PDF salen completos.
+- En modo *una a una* se puede ir hacia atrás: lo respondido y lo corregido se
+  conserva al navegar.
+
+Todo esto vive en [src/app/exam/exam.ts](src/app/exam/exam.ts): `navigationMode`
+y `correctionMode` fijan el modo, `revealedQuestions` guarda qué preguntas ya se
+han corregido y `visibleQuestions` decide qué se pinta.
+
+## Comprobación de actualizaciones
+
+Al abrir la aplicación se consulta el último Release publicado y se compara con
+la versión instalada. Si hay una más reciente aparece un aviso en la pantalla
+principal con un botón que abre la página de descargas en el navegador. El pie
+de esa pantalla muestra la versión instalada y permite comprobarlo a mano.
+
+La aplicación **no descarga ni instala nada por su cuenta**: solo avisa. Es una
+decisión deliberada, no una limitación pendiente de resolver:
+
+- El target `portable` no admite actualización automática, solo el instalador.
+- Los ejecutables no están firmados, así que una actualización automática
+  instalaría un binario cuya procedencia el sistema no puede verificar.
+
+Si algún día se firman los binarios (ver la conversación sobre firma de código),
+el paso natural sería `electron-updater`, que sí descarga e instala solo, pero
+únicamente para la versión con instalador.
+
+Piezas implicadas:
+
+| Archivo | Papel |
+| --- | --- |
+| [electron-app/main.js](electron-app/main.js) | Consulta la API de GitHub y compara versiones. `GITHUB_REPO` fija el repositorio. |
+| [electron-app/preload.js](electron-app/preload.js) | Expone `checkForUpdates` y `openReleasePage` al renderer. |
+| [src/app/services/update.service.ts](src/app/services/update.service.ts) | Estado del aviso y memoria de la versión descartada. |
+
+Detalles de comportamiento:
+
+- Si no hay conexión, la comprobación falla en silencio y la aplicación funciona
+  igual: es una herramienta offline y no debe depender de la red.
+- El aviso se comprueba una vez por sesión. "Ahora no" lo oculta hasta que se
+  publique una versión distinta.
+- `open-release-page` solo abre URLs del propio repositorio, para que el
+  renderer no pueda pedir la apertura de una dirección arbitraria.
+- El servidor local sirve todo con `Cache-Control: no-store`. Sin eso, Electron
+  conserva su caché HTTP entre versiones y tras actualizar se seguiría viendo la
+  interfaz anterior.
+
+Si cambias de repositorio, actualiza `GITHUB_REPO` en `electron-app/main.js`.
 
 ## Qué se publica y qué no
 

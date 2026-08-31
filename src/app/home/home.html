@@ -15,6 +15,25 @@
     </div>
   </div>
 
+  @if (update.showUpdateBanner()) {
+    <div class="update-banner" role="status">
+      <div class="update-text">
+        <strong>Hay una versión nueva disponible</strong>
+        <span>
+          Tienes la {{ update.info()?.currentVersion }} y ya está publicada la
+          {{ update.info()?.latestVersion }}.
+        </span>
+      </div>
+
+      <div class="update-actions">
+        <button class="btn-action" (click)="update.openReleasePage()">
+          Ver descarga
+        </button>
+        <button class="btn-legend" (click)="update.dismiss()">Ahora no</button>
+      </div>
+    </div>
+  }
+
   @if (isExternal()) {
     <div class="status-info">
       <p>Modo externo: Leyendo archivos JSON desde el sistema local.</p>
@@ -77,5 +96,30 @@
     </div>
   }
 
+  @if (update.currentVersion()) {
+    <footer class="app-footer">
+      <span class="app-version">Versión {{ update.currentVersion() }}</span>
 
+      <button
+        class="btn-link"
+        type="button"
+        [disabled]="update.status() === 'checking'"
+        (click)="update.check(true)"
+      >
+        {{ update.status() === 'checking' ? 'Comprobando…' : 'Buscar actualizaciones' }}
+      </button>
+
+      @switch (update.status()) {
+        @case ('up-to-date') {
+          <span class="app-version">Estás en la última versión.</span>
+        }
+        @case ('no-releases') {
+          <span class="app-version">Todavía no hay ninguna versión publicada.</span>
+        }
+        @case ('error') {
+          <span class="app-version">No se pudo comprobar. Revisa tu conexión.</span>
+        }
+      }
+    </footer>
+  }
 </div>

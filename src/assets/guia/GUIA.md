@@ -33,7 +33,35 @@ salen de tu ordenador ni viajan en el instalador.
 3. En la aplicación, usa el botón de **cargar carpeta** y selecciona ese directorio.
 4. La lista de exámenes pasa a mostrar los tuyos en lugar de los de demostración.
 
-## 3. Formato de un examen
+## 3. Modos de examen
+
+Antes de empezar, la pantalla previa deja elegir dos cosas independientes. Se
+combinan libremente, así que hay cuatro formas de hacer el mismo simulacro.
+
+**Preguntas**
+
+- **Todas a la vez** — se listan todas y las respondes en el orden que quieras.
+- **Una a una** — solo una en pantalla, con botones de anterior y siguiente.
+  Puedes ir y volver: lo ya respondido se conserva.
+
+**Corrección**
+
+- **Al final** — ves todas las soluciones al pulsar TERMINAR Y CORREGIR.
+- **Pregunta a pregunta** — cada pregunta gana un botón *Comprobar respuesta*
+  que la corrige en el sitio, con su explicación y su puntuación.
+
+Al comprobar una pregunta queda **bloqueada**: no se puede cambiar la respuesta
+después de haber visto la solución. De lo contrario la nota final no significaría
+nada. Las demás preguntas siguen editables con normalidad.
+
+Elijas lo que elijas, al terminar el examen se listan **todas** las preguntas con
+su corrección, y el PDF sale completo.
+
+Para estudiar conviene *una a una* con corrección *pregunta a pregunta*: fijas
+cada concepto en el momento. Para simular el examen real, *todas a la vez* con
+corrección *al final*.
+
+## 4. Formato de un examen
 
 Cada examen es un único archivo `.json` con dos claves de primer nivel:
 `examProperties` (la ficha del examen) y `questions` (el banco de preguntas).
@@ -93,7 +121,7 @@ Cada examen es un único archivo `.json` con dos claves de primer nivel:
 - Valida el archivo antes de usarlo. Con Node instalado:
   `node -e "JSON.parse(require('fs').readFileSync('mi-examen.json','utf8'))"`
 
-## 4. Generar preguntas con una IA
+## 5. Generar preguntas con una IA
 
 El archivo `assets/exams/prompt.txt` contiene el prompt afinado para generar
 preguntas de calidad a partir de un temario. El flujo recomendado:
@@ -101,13 +129,13 @@ preguntas de calidad a partir de un temario. El flujo recomendado:
 1. Pega el prompt de `prompt.txt` en tu asistente de IA.
 2. Adjunta el temario, apuntes o documento de referencia.
 3. Indica cuántas preguntas quieres y, si procede, las unidades a cubrir.
-4. Pide la salida directamente en el formato JSON de la sección 3.
+4. Pide la salida directamente en el formato JSON de la sección 4.
 5. Guarda el resultado como `.json` en tu carpeta de simulacros y cárgalo.
 
 Conviene revisar siempre las preguntas generadas: la IA puede producir
 distractores ambiguos o respuestas correctas discutibles.
 
-## 5. Compilar tu propia versión
+## 6. Compilar tu propia versión
 
 Si prefieres empaquetar el ejecutable con tus exámenes ya incluidos, clona el
 repositorio y ejecuta:

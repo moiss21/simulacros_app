@@ -4,6 +4,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ExamData, ExamOption, ExamQuestion } from '../models/exam.model';
 import { ExamService } from '../services/exam.service';
 
+/**
+ * Cómo se recorren las preguntas:
+ * - `all`        todas en pantalla, se responden en el orden que se quiera.
+ * - `one-by-one` una cada vez, con navegación anterior/siguiente.
+ */
+export type NavigationMode = 'all' | 'one-by-one';
+
+/**
+ * Cuándo se ve la corrección:
+ * - `at-end`    al terminar y enviar el examen completo.
+ * - `immediate` pregunta a pregunta, en cuanto se comprueba cada una.
+ */
+export type CorrectionMode = 'at-end' | 'immediate';
+
 @Component({
   selector: 'app-exam',
   standalone: true,
@@ -29,6 +43,22 @@ export class ExamComponent implements OnInit, OnDestroy {
   timeLeft = signal(0);
   score = signal(0);
   private timerRef: any;
+
+  /** Modo de recorrido elegido antes de empezar. */
+  navigationMode = signal<NavigationMode>('all');
+
+  /** Momento de la corrección elegido antes de empezar. */
+  correctionMode = signal<CorrectionMode>('at-end');
+
+  /** Pregunta visible en el modo `one-by-one`. */
+  currentIndex = signal(0);
+
+  /**
+   * Índices de las preguntas ya comprobadas en el modo `immediate`. Una vez
+   * comprobada, la pregunta queda bloqueada: si se pudiera cambiar la
+   * respuesta después de ver la solución, la nota final no significaría nada.
+   */
+  revealedQuestions = signal<ReadonlySet<number>>(new Set());
 
   /** Controla el modal que pregunta qué contenido llevará el PDF. */
   isPdfModalOpen = signal(false);
@@ -105,6 +135,39 @@ export class ExamComponent implements OnInit, OnDestroy {
   wasPenaltyApplied = computed(() => {
     return this.examData()?.examProperties.examConfig.emptyAnswersCount ?? false;
   });
+
+  /**
+   * Al terminar siempre se listan todas las preguntas, aunque el examen se
+   * haya hecho una a una: la revisión final y el PDF deben salir completos.
+   */
+  showAllQuestions = computed(
+    () => this.navigationMode() === 'all' || this.isFinished()
+  );
+
+  /**
+   * Preguntas que se pintan ahora mismo, con su índice real dentro de la
+   * tanda para que la numeración y el bloqueo no dependan del orden de pintado.
+   */
+  visibleQuestions = computed<{ question: ExamQuestion; index: number }[]>(() => {
+    const questions = this.examData()?.questions ?? [];
+
+    if (this.showAllQuestions()) {
+      return questions.map((question, index) => ({ question, index }));
+    }
+
+    const index = Math.min(this.currentIndex(), questions.length - 1);
+    const question = questions[index];
+    return question ? [{ question, index }] : [];
+  });
+
+  isFirstQuestion = computed(() => this.currentIndex() <= 0);
+
+  isLastQuestion = computed(
+    () => this.currentIndex() >= this.totalQuestionsToDisplay() - 1
+  );
+
+  /** Cuántas preguntas se han comprobado ya en el modo de corrección inmediata. */
+  revealedCount = computed(() => this.revealedQuestions().size);
 
   // ==========================================
   // 4. CICLO DE VIDA (LIFECYCLE HOOKS)
@@ -234,8 +297,55 @@ export class ExamComponent implements OnInit, OnDestroy {
     }
   }
 
-  selectOption(question: ExamQuestion, option: ExamOption, canChange: boolean) {
+  /** True si la pregunta ya muestra su corrección (y por tanto está bloqueada). */
+  isRevealed(index: number): boolean {
+    return this.isFinished() || this.revealedQuestions().has(index);
+  }
+
+  /** True si toca ofrecer el botón de comprobar esta pregunta. */
+  canRevealQuestion(question: ExamQuestion, index: number): boolean {
+    return (
+      this.correctionMode() === 'immediate' &&
+      !this.isFinished() &&
+      !this.revealedQuestions().has(index) &&
+      this.isAnyOptionSelected(question)
+    );
+  }
+
+  /** Corrige una sola pregunta y la deja bloqueada. */
+  revealQuestion(index: number) {
+    if (this.isFinished() || this.revealedQuestions().has(index)) return;
+
+    this.revealedQuestions.update((revealed) => {
+      const next = new Set(revealed);
+      next.add(index);
+      return next;
+    });
+  }
+
+  goToQuestion(index: number) {
+    const total = this.totalQuestionsToDisplay();
+    if (total === 0) return;
+    this.currentIndex.set(Math.min(Math.max(index, 0), total - 1));
+  }
+
+  previousQuestion() {
+    this.goToQuestion(this.currentIndex() - 1);
+  }
+
+  nextQuestion() {
+    this.goToQuestion(this.currentIndex() + 1);
+  }
+
+  selectOption(
+    question: ExamQuestion,
+    option: ExamOption,
+    canChange: boolean,
+    index: number
+  ) {
     if (this.isFinished()) return;
+    // Una pregunta ya comprobada no admite cambios.
+    if (this.revealedQuestions().has(index)) return;
 
     if (question.type === 'single') {
       const anySelected = question.options.some(o => o.selected);
@@ -257,8 +367,10 @@ export class ExamComponent implements OnInit, OnDestroy {
     this.calculateScore();
   }
 
-  clearQuestion(question: ExamQuestion) {
+  clearQuestion(question: ExamQuestion, index: number) {
     if (this.isFinished()) return;
+    if (this.revealedQuestions().has(index)) return;
+
     question.options.forEach(o => o.selected = false);
     this.examData.update(current => current ? { ...current } : null);
   }
@@ -344,11 +456,11 @@ export class ExamComponent implements OnInit, OnDestroy {
     const data = this.examData();
     if (!data || this.isFinished()) return;
 
-    data.questions.forEach(q => {
+    data.questions.forEach((q, index) => {
       const config = data.examProperties.examConfig.canChangeResponse;
       q.options.forEach(opt => {
         if (opt.isCorrect) {
-          this.selectOption(q, opt, config);
+          this.selectOption(q, opt, config, index);
         } else if (q.type === 'single') {
           opt.selected = false;
         }
