@@ -189,7 +189,7 @@ El ciclo habitual:
 ```bash
 # 1. Trabajar e integrar en feature
 git checkout feature
-git push origin feature          # CI compila y deja el .exe como artefacto
+git push origin feature          # no dispara nada: feature no compila
 
 # 2. Promover a producción cuando feature está estable
 git checkout main
@@ -201,9 +201,11 @@ git tag v1.2.3
 git push origin v1.2.3
 ```
 
-Los pushes a `feature` **no crean Releases**: solo compilan y dejan el `.exe`
-como artefacto de la ejecución, para poder probarlo antes de promover. El
-Release público se genera únicamente al empujar la etiqueta.
+Los pushes a `feature` **no disparan nada**: es la rama de trabajo y no gasta
+minutos de Actions. La primera compilación ocurre al promover a `main`, y el
+Release público solo al empujar la etiqueta. Para probar un `.exe` mientras
+trabajas en `feature`, compílalo en local con `npm run electron:build:release`,
+o lanza el workflow a mano desde Actions eligiendo esa rama.
 
 ## Publicar una versión (CI/CD)
 
@@ -211,7 +213,7 @@ Los workflows viven en [.github/workflows/](.github/workflows/):
 
 | Workflow | Cuándo se ejecuta | Qué produce |
 | --- | --- | --- |
-| [`ci.yml`](.github/workflows/ci.yml) | En cada push (incluida `feature`) y cada pull request | Compila el `.exe` y lo deja como artefacto de la ejecución, disponible 30 días. **No** crea Release. |
+| [`ci.yml`](.github/workflows/ci.yml) | Al subir a `main`, o a mano desde Actions | Compila el `.exe` y lo deja como artefacto de la ejecución, disponible 30 días. **No** crea Release. |
 | [`release.yml`](.github/workflows/release.yml) | Al empujar una etiqueta `v*`, o manualmente | Crea el **Release** de GitHub con los `.exe` descargables, la guía, los prompts y los exámenes de demostración. |
 
 ### Publicar desde `main`
