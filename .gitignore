@@ -44,3 +44,8 @@ Thumbs.db
 # Electron Folder
 /electron-app/node_modules
 /electron-app/dist
+# Salida de la compilacion de Angular copiada a Electron
+/electron-app/simulacros-app
+
+# Carpeta temporal de artefactos del release (CI)
+/release-files

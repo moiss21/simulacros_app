@@ -1,32 +1,68 @@
 {
   "name": "simulacros-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicación de escritorio para practicar simulacros de examen tipo test",
   "main": "main.js",
-  "icon": "icon.ico",    
+  "author": "moiss21",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder --publish never"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^37.2.3",
+    "electron": "37.10.3",
     "electron-builder": "^26.0.12",
     "electron-packager": "^17.1.2"
   },
   "build": {
+    "appId": "com.moiss21.simulacros",
+    "productName": "Simulacros",
     "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json",
+      "icon.ico",
+      "simulacros-app/**/*"
+    ],
     "win": {
-      "signAndEditExecutable": false,
       "forceCodeSigning": false,
       "target": [
-        "nsis"
-      ]
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signExecutable": false,
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Simulacros",
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "installerHeaderIcon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
     }
   },
   "dependencies": {

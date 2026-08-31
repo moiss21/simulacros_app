@@ -23,7 +23,11 @@
             "inlineStyleLanguage": "scss",
             "styles": ["src/styles.scss"],
             "assets": [
-              "src/favicon.ico",
+              {
+                "glob": "favicon.ico",
+                "input": "public",
+                "output": "/"
+              },
               "src/assets",
               {
                 "glob": "**/*",
@@ -52,6 +56,35 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "release": {
+              "assets": [
+                {
+                  "glob": "favicon.ico",
+                  "input": "public",
+                  "output": "/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/exams-release",
+                  "output": "/assets/exams/"
+                },
+                {
+                  "glob": "prompt.txt",
+                  "input": "src/assets/exams",
+                  "output": "/assets/exams/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/local-exams/demo",
+                  "output": "/assets/local-exams/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/guia",
+                  "output": "/assets/guia/"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -88,5 +121,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

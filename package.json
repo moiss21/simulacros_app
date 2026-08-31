@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "electron:build": "node scripts/electron-build.js"
+    "electron:build": "node scripts/electron-build.js",
+    "electron:build:release": "node scripts/electron-build.js --release"
   },
   "prettier": {
     "overrides": [

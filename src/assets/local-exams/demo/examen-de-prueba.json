@@ -1,0 +1,159 @@
+{
+  "examProperties": {
+    "id": "examen-de-prueba.json",
+    "subjectName": "DEMO",
+    "examTitle": "Examen de prueba",
+    "examSummary": "Simulacro breve de 5 preguntas para comprobar que la aplicación funciona: respuesta única, respuesta múltiple, penalización y explicaciones.",
+    "examConfig": {
+      "penaltyRate": 0.5,
+      "examDurationMinutes": 0,
+      "canChangeResponse": true,
+      "passingPercentage": 50,
+      "totalQuestionsToDisplay": 5,
+      "emptyAnswersCount": false
+    },
+    "subjectColor": "#2F6FEB"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué campo del JSON define el número de preguntas que se muestran en una tanda?",
+      "type": "single",
+      "generalExplanation": "El bloque examConfig agrupa las reglas de corrección y presentación del simulacro.",
+      "options": [
+        {
+          "text": "examConfig.totalQuestionsToDisplay",
+          "isCorrect": true,
+          "explanation": "Correcto. Limita cuántas preguntas del banco entran en la tanda activa."
+        },
+        {
+          "text": "examProperties.examTitle",
+          "isCorrect": false,
+          "explanation": "Es solo el título que se muestra en la tarjeta del examen."
+        },
+        {
+          "text": "questions.length",
+          "isCorrect": false,
+          "explanation": "Es el tamaño total del banco, no el de la tanda."
+        },
+        {
+          "text": "examConfig.passingPercentage",
+          "isCorrect": false,
+          "explanation": "Define la nota de corte, no el número de preguntas."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué valor de examDurationMinutes desactiva el temporizador?",
+      "type": "single",
+      "generalExplanation": "Un examen sin límite de tiempo se declara con una duración de cero minutos.",
+      "options": [
+        {
+          "text": "0",
+          "isCorrect": true,
+          "explanation": "Correcto. Con 0 el simulacro no tiene cuenta atrás."
+        },
+        {
+          "text": "-1",
+          "isCorrect": false,
+          "explanation": "No es un valor contemplado por la configuración."
+        },
+        {
+          "text": "null",
+          "isCorrect": false,
+          "explanation": "El campo es numérico y debe estar presente."
+        },
+        {
+          "text": "9999",
+          "isCorrect": false,
+          "explanation": "Sigue siendo un examen cronometrado, solo que muy largo."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Selecciona todos los campos que pertenecen a examProperties.",
+      "type": "multi",
+      "generalExplanation": "examProperties describe la identidad del examen; las preguntas viven en el array questions.",
+      "options": [
+        {
+          "text": "subjectName",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el nombre de la asignatura o bloque."
+        },
+        {
+          "text": "examSummary",
+          "isCorrect": true,
+          "explanation": "Correcto. Es la descripción que se ve antes de empezar."
+        },
+        {
+          "text": "subjectColor",
+          "isCorrect": true,
+          "explanation": "Correcto. Campo opcional que colorea la tarjeta del examen."
+        },
+        {
+          "text": "generalExplanation",
+          "isCorrect": false,
+          "explanation": "Pertenece a cada pregunta, no a las propiedades del examen."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Qué efecto tiene penaltyRate con valor 0.5 en una pregunta de respuesta única?",
+      "type": "single",
+      "generalExplanation": "La penalización se expresa como fracción del valor de una pregunta acertada.",
+      "options": [
+        {
+          "text": "Cada fallo resta media pregunta acertada",
+          "isCorrect": true,
+          "explanation": "Correcto. Es el clásico esquema de penalización a la mitad."
+        },
+        {
+          "text": "Cada fallo resta el 50% de la nota final",
+          "isCorrect": false,
+          "explanation": "La penalización se aplica por pregunta, no sobre la nota total."
+        },
+        {
+          "text": "Se descuenta medio punto por pregunta en blanco",
+          "isCorrect": false,
+          "explanation": "Las preguntas en blanco se controlan con emptyAnswersCount."
+        },
+        {
+          "text": "No tiene efecto salvo que el examen esté cronometrado",
+          "isCorrect": false,
+          "explanation": "La penalización es independiente del temporizador."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cómo se añade un examen propio a esta versión de la aplicación?",
+      "type": "single",
+      "generalExplanation": "El ejecutable se distribuye sin bancos de preguntas: los exámenes se cargan desde una carpeta del equipo.",
+      "options": [
+        {
+          "text": "Con el botón de cargar carpeta, seleccionando un directorio con archivos .json",
+          "isCorrect": true,
+          "explanation": "Correcto. La aplicación lee todos los .json de la carpeta elegida."
+        },
+        {
+          "text": "Recompilando la aplicación desde el código fuente",
+          "isCorrect": false,
+          "explanation": "Funciona, pero no es necesario para usar exámenes propios."
+        },
+        {
+          "text": "Subiendo el examen a un servidor remoto",
+          "isCorrect": false,
+          "explanation": "La aplicación funciona en local, sin servicios externos."
+        },
+        {
+          "text": "Editando el archivo index.html del instalador",
+          "isCorrect": false,
+          "explanation": "El índice interno solo referencia los exámenes de demostración."
+        }
+      ]
+    }
+  ]
+}

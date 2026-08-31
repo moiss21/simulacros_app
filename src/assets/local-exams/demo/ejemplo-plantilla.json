@@ -1,0 +1,152 @@
+{
+  "examProperties": {
+    "id": "ejemplo-plantilla.json",
+    "subjectName": "EJEMPLO",
+    "examTitle": "Ejemplo comentado: todas las opciones del formato",
+    "examSummary": "Plantilla de referencia con temporizador, agrupación por unidades, penalización y preguntas de respuesta múltiple. Cópiala y sustituye su contenido para crear tus propios simulacros.",
+    "examConfig": {
+      "penaltyRate": 0.33,
+      "examDurationMinutes": 10,
+      "canChangeResponse": false,
+      "passingPercentage": 60,
+      "totalQuestionsToDisplay": 4,
+      "emptyAnswersCount": false,
+      "groupByUnit": true
+    },
+    "examUnits": [
+      "Unidad 1 - Estructura del archivo",
+      "Unidad 2 - Configuración del simulacro"
+    ],
+    "subjectColor": "#7A3FF2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Qué dos claves de primer nivel debe tener todo archivo de examen?",
+      "type": "single",
+      "generalExplanation": "El archivo se compone de la ficha del examen y de su banco de preguntas.",
+      "unit": {
+        "unitNumber": 1,
+        "unitName": "Unidad 1 - Estructura del archivo"
+      },
+      "options": [
+        {
+          "text": "examProperties y questions",
+          "isCorrect": true,
+          "explanation": "Correcto. Son las dos claves obligatorias."
+        },
+        {
+          "text": "config y items",
+          "isCorrect": false,
+          "explanation": "No corresponden al formato de la aplicación."
+        },
+        {
+          "text": "exam y answers",
+          "isCorrect": false,
+          "explanation": "Las respuestas van dentro de cada pregunta, en options."
+        },
+        {
+          "text": "metadata y content",
+          "isCorrect": false,
+          "explanation": "No forman parte del esquema."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Qué campo de cada pregunta permite agruparla dentro de un tema?",
+      "type": "single",
+      "generalExplanation": "El objeto unit enlaza la pregunta con una de las entradas de examUnits.",
+      "unit": {
+        "unitNumber": 1,
+        "unitName": "Unidad 1 - Estructura del archivo"
+      },
+      "options": [
+        {
+          "text": "unit, con unitNumber y unitName",
+          "isCorrect": true,
+          "explanation": "Correcto. Se usa junto a groupByUnit y examUnits."
+        },
+        {
+          "text": "topic",
+          "isCorrect": false,
+          "explanation": "No existe en el modelo de datos."
+        },
+        {
+          "text": "category",
+          "isCorrect": false,
+          "explanation": "No existe en el modelo de datos."
+        },
+        {
+          "text": "section",
+          "isCorrect": false,
+          "explanation": "No existe en el modelo de datos."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Marca las afirmaciones correctas sobre las preguntas de tipo multi.",
+      "type": "multi",
+      "generalExplanation": "En las preguntas multi puede haber varias opciones con isCorrect en true.",
+      "unit": {
+        "unitNumber": 2,
+        "unitName": "Unidad 2 - Configuración del simulacro"
+      },
+      "options": [
+        {
+          "text": "Admiten más de una opción marcada como correcta",
+          "isCorrect": true,
+          "explanation": "Correcto. Es justo lo que las diferencia de las single."
+        },
+        {
+          "text": "Se declaran con \"type\": \"multi\"",
+          "isCorrect": true,
+          "explanation": "Correcto. El tipo se indica en cada pregunta."
+        },
+        {
+          "text": "Solo pueden tener dos opciones",
+          "isCorrect": false,
+          "explanation": "Pueden tener tantas opciones como necesites."
+        },
+        {
+          "text": "No admiten explicación por opción",
+          "isCorrect": false,
+          "explanation": "Cada opción puede llevar su propio campo explanation."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Si canChangeResponse es false, ¿qué ocurre durante el simulacro?",
+      "type": "single",
+      "generalExplanation": "Este ajuste bloquea la respuesta una vez confirmada, imitando un examen real.",
+      "unit": {
+        "unitNumber": 2,
+        "unitName": "Unidad 2 - Configuración del simulacro"
+      },
+      "options": [
+        {
+          "text": "La respuesta queda fijada y no se puede modificar",
+          "isCorrect": true,
+          "explanation": "Correcto. Obliga a decidir en el momento."
+        },
+        {
+          "text": "No se puede volver a preguntas anteriores pero sí cambiarlas",
+          "isCorrect": false,
+          "explanation": "Lo que se bloquea es el cambio de respuesta."
+        },
+        {
+          "text": "Se desactivan las explicaciones",
+          "isCorrect": false,
+          "explanation": "Las explicaciones se muestran igualmente al corregir."
+        },
+        {
+          "text": "El examen pasa a ser cronometrado",
+          "isCorrect": false,
+          "explanation": "El tiempo depende de examDurationMinutes."
+        }
+      ]
+    }
+  ]
+}

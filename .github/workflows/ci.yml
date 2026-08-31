@@ -1,0 +1,62 @@
+name: CI
+
+# Compila la aplicación en cada subida para detectar roturas cuanto antes.
+# El .exe queda disponible como artefacto de la ejecución (30 días), sin crear
+# un Release público: los Releases los genera release.yml al empujar una etiqueta.
+
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Compilar (Windows)
+    runs-on: windows-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache de electron-builder
+        uses: actions/cache@v4
+        with:
+          path: ~/AppData/Local/electron-builder/Cache
+          key: ${{ runner.os }}-electron-builder-${{ hashFiles('electron-app/package.json') }}
+          restore-keys: ${{ runner.os }}-electron-builder-
+
+      - name: Instalar dependencias de Angular
+        shell: pwsh
+        run: |
+          if (Test-Path package-lock.json) { npm ci } else { npm install }
+
+      - name: Instalar dependencias de Electron
+        shell: pwsh
+        working-directory: electron-app
+        run: |
+          if (Test-Path package-lock.json) { npm ci } else { npm install }
+
+      - name: Compilar el ejecutable (sin examenes reales)
+        shell: pwsh
+        run: npm run electron:build:release
+
+      - name: Verificar que no se han empaquetado examenes reales
+        shell: pwsh
+        run: node scripts/verify-release-assets.js
+
+      - name: Subir el ejecutable como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulacros-windows-${{ github.sha }}
+          path: electron-app/dist/*.exe
+          if-no-files-found: error
+          retention-days: 30
