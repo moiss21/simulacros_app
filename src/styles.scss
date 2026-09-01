@@ -341,6 +341,19 @@ input[type="radio"] {
   }
 }
 
+/* Sólido de aviso: rehacer los fallos como mini-examen de repaso. */
+.btn-review {
+  @extend %btn-base;
+  background-color: var(--warning);
+  color: var(--warning-on);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+}
+
 /* Contorneado de peligro: acción destructiva ligera. */
 .btn-clear {
   @extend %btn-base;
