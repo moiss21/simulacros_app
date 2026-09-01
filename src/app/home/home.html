@@ -96,9 +96,11 @@
     </div>
   }
 
-  @if (update.currentVersion()) {
+  @if (update.isSupported()) {
     <footer class="app-footer">
-      <span class="app-version">Versión {{ update.currentVersion() }}</span>
+      @if (update.currentVersion()) {
+        <span class="app-version">Versión {{ update.currentVersion() }}</span>
+      }
 
       <button
         class="btn-link"
@@ -115,6 +117,12 @@
         }
         @case ('no-releases') {
           <span class="app-version">Todavía no hay ninguna versión publicada.</span>
+        }
+        @case ('repo-unavailable') {
+          <span class="app-version">
+            El repositorio no es accesible públicamente: no se pueden consultar
+            las versiones.
+          </span>
         }
         @case ('error') {
           <span class="app-version">No se pudo comprobar. Revisa tu conexión.</span>

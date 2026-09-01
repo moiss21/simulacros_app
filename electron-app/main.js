@@ -12,7 +12,15 @@ let mainWindow;
    ------------------------------------------------------------------------ */
 const GITHUB_REPO = 'moiss21/simulacros_app';
 const RELEASES_URL = `https://github.com/${GITHUB_REPO}/releases/latest`;
-const LATEST_RELEASE_API = `https://api.github.com/repos/${GITHUB_REPO}/releases/latest`;
+
+/* Se consulta la LISTA de releases y no /releases/latest a propósito:
+   - /releases/latest responde 404 tanto si no hay ninguna versión publicada
+     como si el repositorio no es visible (privado, renombrado o movido), y esos
+     dos casos necesitan mensajes distintos.
+   - /releases devuelve [] cuando no hay versiones, así que un 404 aquí sólo
+     puede querer decir que el repositorio no es accesible.
+   - /releases/latest además ignora las prereleases; aquí se filtran a mano. */
+const RELEASES_API = `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=20`;
 const UPDATE_CHECK_TIMEOUT_MS = 8000;
 
 /**
@@ -88,38 +96,61 @@ ipcMain.handle('select-folder', async () => {
  */
 ipcMain.handle('check-for-updates', async () => {
   const currentVersion = app.getVersion();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), UPDATE_CHECK_TIMEOUT_MS);
 
   try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), UPDATE_CHECK_TIMEOUT_MS);
-
-    const response = await fetch(LATEST_RELEASE_API, {
+    const response = await fetch(RELEASES_API, {
       headers: {
         Accept: 'application/vnd.github+json',
         'User-Agent': `Simulacros/${currentVersion}`,
       },
       signal: controller.signal,
     });
-    clearTimeout(timer);
 
-    // 404 = el repositorio todavía no tiene ningún Release publicado. No es un
-    // fallo de red, así que se distingue para no dar un mensaje equivocado.
-    if (response.status === 404) return { status: 'no-releases', currentVersion };
-    if (!response.ok) return { status: 'error', currentVersion };
+    // La petición va sin credenciales, así que GitHub responde 404 (no 401) a
+    // todo repositorio que no sea público. Es un caso de configuración, no un
+    // fallo de red ni una falta de versiones, y se informa como tal.
+    if (response.status === 404) {
+      return { status: 'repo-unavailable', currentVersion, httpStatus: 404 };
+    }
+    if (!response.ok) {
+      return { status: 'error', currentVersion, httpStatus: response.status };
+    }
 
-    const release = await response.json();
-    const latestVersion = String(release.tag_name || '').replace(/^v/, '');
-    if (!latestVersion) return { status: 'error', currentVersion };
+    const releases = await response.json();
+
+    // Sólo cuentan las versiones finales: los borradores ni siquiera se ven sin
+    // credenciales y una prerelease no debe ofrecerse como actualización.
+    const published = (Array.isArray(releases) ? releases : []).filter(
+      (release) => release && !release.draft && !release.prerelease && release.tag_name
+    );
+
+    if (published.length === 0) return { status: 'no-releases', currentVersion };
+
+    // La API ordena por fecha de creación, no por número de versión: republicar
+    // una corrección de una versión antigua no debe adelantar a la más nueva.
+    const latest = published.reduce((best, release) =>
+      compareVersions(release.tag_name, best.tag_name) > 0 ? release : best
+    );
+    const latestVersion = String(latest.tag_name).replace(/^v/, '');
 
     return {
       status: compareVersions(latestVersion, currentVersion) > 0 ? 'update-available' : 'up-to-date',
       currentVersion,
       latestVersion,
-      releaseUrl: release.html_url || RELEASES_URL,
-      publishedAt: release.published_at || null,
+      releaseUrl: latest.html_url || RELEASES_URL,
+      publishedAt: latest.published_at || null,
     };
-  } catch {
-    return { status: 'error', currentVersion };
+  } catch (error) {
+    // Sin conexión, DNS caído o se agotó el tiempo de espera.
+    return {
+      status: 'error',
+      currentVersion,
+      reason: error && error.name === 'AbortError' ? 'timeout' : 'network',
+    };
+  } finally {
+    clearTimeout(timer);
   }
 });
 
