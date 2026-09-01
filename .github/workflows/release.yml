@@ -6,6 +6,12 @@ name: Release
 #
 # El ejecutable se compila en modo "release": NO incluye los examenes reales,
 # solo el examen de prueba, el ejemplo de plantilla, la guia y los prompts.
+#
+# Los binarios se publican en un repositorio PUBLICO aparte (RELEASES_REPO): la
+# app se autoactualiza leyendo latest.yml, y la API de GitHub responde 404 a
+# cualquier consulta sin credenciales sobre un repositorio privado. Requiere el
+# secreto RELEASES_TOKEN: un PAT con permiso de escritura de contenido sobre ese
+# repositorio (el GITHUB_TOKEN de este workflow no alcanza a otro repositorio).
 
 on:
   push:
@@ -25,6 +31,9 @@ on:
 
 permissions:
   contents: write
+
+env:
+  RELEASES_REPO: moiss21/simulacros-releases
 
 jobs:
   build-windows:
@@ -93,21 +102,32 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force release-files | Out-Null
           Copy-Item electron-app/dist/*.exe release-files/ -ErrorAction Stop
+          # latest.yml es el feed que lee electron-updater: sin el, la app
+          # instalada no se entera de que hay version nueva. El .blockmap
+          # permite la descarga diferencial (solo los trozos que cambian).
+          Copy-Item electron-app/dist/latest.yml release-files/ -ErrorAction Stop
+          Copy-Item electron-app/dist/*.blockmap release-files/ -ErrorAction Stop
           Copy-Item src/assets/guia/GUIA.md release-files/
           Copy-Item src/assets/exams/prompt.txt release-files/prompts.txt
           Compress-Archive -Path src/assets/local-exams/demo/*.json -DestinationPath release-files/examenes-demo.zip -Force
           Get-ChildItem release-files | Format-Table Name, Length
 
-      - name: Publicar el Release en GitHub
+      - name: Publicar el Release en el repositorio publico
         uses: softprops/action-gh-release@v2
         with:
+          repository: ${{ env.RELEASES_REPO }}
+          token: ${{ secrets.RELEASES_TOKEN }}
           tag_name: ${{ steps.version.outputs.tag }}
           name: Simulacros ${{ steps.version.outputs.tag }}
           prerelease: ${{ inputs.prerelease == true }}
-          generate_release_notes: true
+          # Las notas automaticas saldrian del historial del repositorio de
+          # binarios, que no tiene commits de codigo: no aportarian nada.
+          generate_release_notes: false
           fail_on_unmatched_files: true
           files: |
             release-files/*.exe
+            release-files/*.exe.blockmap
+            release-files/latest.yml
             release-files/GUIA.md
             release-files/prompts.txt
             release-files/examenes-demo.zip
@@ -116,11 +136,17 @@ jobs:
 
             | Archivo | Para que sirve |
             | --- | --- |
-            | `Simulacros-Setup-${{ steps.version.outputs.version }}.exe` | Instalador con acceso directo en el menu de inicio. |
-            | `Simulacros-${{ steps.version.outputs.version }}-portable.exe` | Ejecutable directo, sin instalacion. |
+            | `Simulacros-Setup-${{ steps.version.outputs.version }}.exe` | Instalador con acceso directo en el menu de inicio. **Se autoactualiza.** |
+            | `Simulacros-${{ steps.version.outputs.version }}-portable.exe` | Ejecutable directo, sin instalacion. Avisa de las versiones nuevas, pero hay que descargarlas a mano. |
             | `GUIA.md` | Guia de uso y formato de los examenes. |
             | `prompts.txt` | Prompt para generar preguntas con una IA. |
             | `examenes-demo.zip` | Examen de prueba y ejemplo de plantilla. |
+
+            ## Actualizaciones
+
+            La version instalada con el instalador comprueba si hay version
+            nueva al abrirse, la descarga en segundo plano y la aplica cuando
+            reinicias la aplicacion. No hay que volver a descargar nada a mano.
 
             ## Contenido incluido
 

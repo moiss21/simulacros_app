@@ -180,6 +180,19 @@
   border-left: 3px solid var(--accent);
   border-radius: var(--radius-sm);
   background-color: var(--accent-soft);
+
+  /* Descargada y esperando reinicio: la acción ya está a un clic. */
+  &.is-ready {
+    border-left-color: var(--success);
+    background-color: var(--success-soft);
+  }
+}
+
+.update-percent {
+  color: var(--text-2);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .update-text {

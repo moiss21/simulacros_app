@@ -15,13 +15,50 @@
     </div>
   </div>
 
+  @if (update.showDownloadBanner()) {
+    <div class="update-banner" role="status">
+      <div class="update-text">
+        <strong>Descargando la versión {{ update.info()?.latestVersion }}</strong>
+        <span>
+          Puedes seguir usando la aplicación: se instalará cuando la reinicies.
+        </span>
+      </div>
+
+      <div class="update-actions">
+        <span class="update-percent">{{ update.downloadPercent() }}%</span>
+      </div>
+    </div>
+  }
+
+  @if (update.showInstallBanner()) {
+    <div class="update-banner is-ready" role="status">
+      <div class="update-text">
+        <strong>
+          Versión {{ update.info()?.latestVersion }} lista para instalar
+        </strong>
+        <span>
+          Ya está descargada. Se aplica al reiniciar, o sola la próxima vez que
+          cierres la aplicación.
+        </span>
+      </div>
+
+      <div class="update-actions">
+        <button class="btn-action" (click)="update.installUpdate()">
+          Reiniciar e instalar
+        </button>
+        <button class="btn-legend" (click)="update.dismiss()">Más tarde</button>
+      </div>
+    </div>
+  }
+
   @if (update.showUpdateBanner()) {
     <div class="update-banner" role="status">
       <div class="update-text">
         <strong>Hay una versión nueva disponible</strong>
         <span>
           Tienes la {{ update.info()?.currentVersion }} y ya está publicada la
-          {{ update.info()?.latestVersion }}.
+          {{ update.info()?.latestVersion }}. Esta copia no puede actualizarse
+          sola: descárgala desde la página de versiones.
         </span>
       </div>
 
@@ -105,10 +142,14 @@
       <button
         class="btn-link"
         type="button"
-        [disabled]="update.status() === 'checking'"
+        [disabled]="update.isBusy()"
         (click)="update.check(true)"
       >
-        {{ update.status() === 'checking' ? 'Comprobando…' : 'Buscar actualizaciones' }}
+        @switch (update.status()) {
+          @case ('checking') { Comprobando… }
+          @case ('downloading') { Descargando… }
+          @default { Buscar actualizaciones }
+        }
       </button>
 
       @switch (update.status()) {
