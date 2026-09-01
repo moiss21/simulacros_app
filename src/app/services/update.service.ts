@@ -6,6 +6,8 @@ import { Injectable, computed, signal } from '@angular/core';
  * - `update-available` hay una versión más reciente publicada
  * - `up-to-date`       ya se está en la última versión
  * - `no-releases`      el repositorio aún no ha publicado ningún Release
+ * - `repo-unavailable` GitHub no da acceso público al repositorio (privado,
+ *                      renombrado o movido): la comprobación no puede funcionar
  * - `error`            sin conexión o GitHub no respondió
  * - `unsupported`      se está ejecutando en el navegador, no en el .exe
  */
@@ -15,6 +17,7 @@ export type UpdateStatus =
   | 'update-available'
   | 'up-to-date'
   | 'no-releases'
+  | 'repo-unavailable'
   | 'error'
   | 'unsupported';
 
@@ -24,6 +27,10 @@ export interface UpdateInfo {
   latestVersion?: string;
   releaseUrl?: string;
   publishedAt?: string | null;
+  /** Código HTTP devuelto por GitHub, sólo para diagnosticar un fallo. */
+  httpStatus?: number;
+  /** Causa del fallo de red: 'timeout' o 'network'. */
+  reason?: string;
 }
 
 /** Última versión que el usuario descartó, para no repetirle el aviso. */
@@ -40,7 +47,11 @@ export class UpdateService {
     localStorage.getItem(DISMISSED_KEY)
   );
 
-  /** Solo se comprueba una vez por sesión salvo que se pida explícitamente. */
+  /**
+   * Sólo se comprueba una vez por sesión salvo que se pida explícitamente. Un
+   * intento fallido no marca la sesión: si no, un corte de red momentáneo al
+   * arrancar dejaría la comprobación desactivada hasta reiniciar la aplicación.
+   */
   private hasCheckedThisSession = false;
 
   /** Versión instalada. Vacía en el navegador, donde no hay puente de Electron. */
@@ -72,10 +83,20 @@ export class UpdateService {
     if (this.hasCheckedThisSession && !force) return;
     if (this.status() === 'checking') return;
 
-    this.hasCheckedThisSession = true;
     this.status.set('checking');
 
-    const result: UpdateInfo = await this.api.checkForUpdates();
+    let result: UpdateInfo;
+    try {
+      result = await this.api.checkForUpdates();
+    } catch {
+      // El canal IPC no debería fallar, pero si lo hace no puede dejarse el
+      // estado en 'checking': la pantalla se quedaría con el botón bloqueado.
+      result = { status: 'error', currentVersion: this.info()?.currentVersion ?? '' };
+    }
+
+    // Un fallo no cuenta como comprobación hecha: se reintenta al volver aquí.
+    this.hasCheckedThisSession =
+      result.status !== 'error' && result.status !== 'repo-unavailable';
 
     this.info.set(result);
     this.status.set(result.status);
