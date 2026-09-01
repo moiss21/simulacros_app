@@ -2,7 +2,12 @@
   <header class="exam-header">
     <div class="header-info">
       <span class="subject-label">{{ exam.examProperties.subjectName }}</span>
-      <h1 class="exam-name">{{ exam.examProperties.examTitle }}</h1>
+      <h1 class="exam-name">
+        {{ exam.examProperties.examTitle }}
+        @if (isReviewMode()) {
+          <span class="review-badge">Repaso {{ reviewRound() }}</span>
+        }
+      </h1>
 
       <!-- Botones de depuración/llenado rápido -->
       @if (!isFinished() && hasStarted()) {
@@ -42,7 +47,7 @@
       }
 
       <div class="timer-display" [class.danger]="isLowTime()">
-        @if (exam.examProperties.examConfig.examDurationMinutes === 0) {
+        @if (isReviewMode() || exam.examProperties.examConfig.examDurationMinutes === 0) {
           <span class="infinite">∞</span>
         } @else {
           <span>{{ timeLeftFormatted() }}</span>
@@ -276,7 +281,10 @@
           [class.fail]="!hasPassed()"
         >
           <div class="result-header">
-            <h2>Nota Final: {{ finalGrade().toFixed(2) }}</h2>
+            <h2>
+              {{ isReviewMode() ? "Nota del repaso " + reviewRound() : "Nota Final" }}:
+              {{ finalGrade().toFixed(2) }}
+            </h2>
             <p class="result-msg">
               {{ hasPassed() ? "¡HAS APROBADO!" : "NO HAS SUPERADO EL MÍNIMO" }}
             </p>
@@ -315,6 +323,41 @@
               <span class="dash-lab">Penalizó vacías</span>
             </div>
           </div>
+
+          @if (roundHistory().length > 1) {
+            <div class="round-history">
+              <h4>Evolución por rondas</h4>
+              @for (round of roundHistory(); track round.round) {
+                <div class="round-row">
+                  <span class="round-label">{{ round.label }}</span>
+                  <span class="round-hits">
+                    {{ round.correct }} / {{ round.total }} correctas
+                  </span>
+                  <span class="round-grade">{{ round.grade.toFixed(2) }}</span>
+                </div>
+              }
+            </div>
+          }
+
+          @if (canReview()) {
+            <div class="review-cta">
+              <p class="review-cta-text">
+                Quedan <strong>{{ questionsToReview().length }}</strong>
+                preguntas falladas o en blanco. Puedes hacer un mini-examen sólo
+                con ellas, sin cronómetro, para repasarlas.
+              </p>
+              <button class="btn-review" (click)="startReview()">
+                🔁 Repasar {{ questionsToReview().length }} preguntas falladas
+              </button>
+            </div>
+          } @else {
+            <div class="review-cta all-correct">
+              <p class="review-cta-text">
+                🎉 Todas las preguntas de esta ronda son correctas: no queda nada
+                que repasar.
+              </p>
+            </div>
+          }
 
           <div class="result-actions">
             <button class="btn-home" (click)="goHome()">Volver al Inicio</button>
