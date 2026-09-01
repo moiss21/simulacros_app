@@ -7,11 +7,13 @@ name: Release
 # El ejecutable se compila en modo "release": NO incluye los examenes reales,
 # solo el examen de prueba, el ejemplo de plantilla, la guia y los prompts.
 #
-# Los binarios se publican en un repositorio PUBLICO aparte (RELEASES_REPO): la
-# app se autoactualiza leyendo latest.yml, y la API de GitHub responde 404 a
-# cualquier consulta sin credenciales sobre un repositorio privado. Requiere el
-# secreto RELEASES_TOKEN: un PAT con permiso de escritura de contenido sobre ese
-# repositorio (el GITHUB_TOKEN de este workflow no alcanza a otro repositorio).
+# Junto al .exe se publican latest.yml y el .blockmap: son el feed que lee
+# electron-updater para actualizar la aplicacion instalada sin que el usuario
+# descargue nada a mano. Solo funciona mientras este repositorio sea PUBLICO,
+# porque la app consulta la API de GitHub sin credenciales (un token dentro del
+# .exe quedaria a la vista de cualquiera que abriese el asar). Si algun dia
+# vuelve a privado, hay que mover la publicacion a un repositorio publico aparte
+# y autenticar este paso con un PAT.
 
 on:
   push:
@@ -29,11 +31,10 @@ on:
         default: false
         type: boolean
 
+# Basta con el GITHUB_TOKEN que inyecta Actions: se publica en este mismo
+# repositorio, asi que no hace falta ningun secreto adicional.
 permissions:
   contents: write
-
-env:
-  RELEASES_REPO: moiss21/simulacros-releases
 
 jobs:
   build-windows:
@@ -112,17 +113,13 @@ jobs:
           Compress-Archive -Path src/assets/local-exams/demo/*.json -DestinationPath release-files/examenes-demo.zip -Force
           Get-ChildItem release-files | Format-Table Name, Length
 
-      - name: Publicar el Release en el repositorio publico
+      - name: Publicar el Release en GitHub
         uses: softprops/action-gh-release@v2
         with:
-          repository: ${{ env.RELEASES_REPO }}
-          token: ${{ secrets.RELEASES_TOKEN }}
           tag_name: ${{ steps.version.outputs.tag }}
           name: Simulacros ${{ steps.version.outputs.tag }}
           prerelease: ${{ inputs.prerelease == true }}
-          # Las notas automaticas saldrian del historial del repositorio de
-          # binarios, que no tiene commits de codigo: no aportarian nada.
-          generate_release_notes: false
+          generate_release_notes: true
           fail_on_unmatched_files: true
           files: |
             release-files/*.exe

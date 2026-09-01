@@ -18,12 +18,12 @@ let mainWindow;
       esos casos sólo se avisa de que hay versión nueva y se abre la página de
       descargas en el navegador.
 
-   Los binarios se publican en un repositorio PÚBLICO aparte del código: la API
-   de GitHub responde 404 a cualquier consulta sin credenciales sobre un
-   repositorio privado, y meter un token dentro del .exe lo dejaría a la vista
-   de cualquiera que abra el asar.
+   Ambos caminos leen los Releases de este mismo repositorio sin credenciales,
+   lo que exige que sea PÚBLICO: la API de GitHub responde 404 a cualquier
+   consulta anónima sobre un repositorio privado, y meter un token dentro del
+   .exe lo dejaría a la vista de cualquiera que abra el asar.
    ------------------------------------------------------------------------ */
-const GITHUB_REPO = 'moiss21/simulacros-releases';
+const GITHUB_REPO = 'moiss21/simulacros_app';
 const RELEASES_URL = `https://github.com/${GITHUB_REPO}/releases/latest`;
 
 /* Se consulta la LISTA de releases y no /releases/latest a propósito:
