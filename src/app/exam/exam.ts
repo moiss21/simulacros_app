@@ -18,6 +18,19 @@ export type NavigationMode = 'all' | 'one-by-one';
  */
 export type CorrectionMode = 'at-end' | 'immediate';
 
+/**
+ * Resultado de una ronda ya corregida. Se guarda para poder enseñar la
+ * evolución entre el examen original y los mini-exámenes de repaso.
+ */
+export interface RoundResult {
+  round: number;
+  label: string;
+  total: number;
+  correct: number;
+  grade: number;
+  percentage: number;
+}
+
 @Component({
   selector: 'app-exam',
   standalone: true,
@@ -59,6 +72,15 @@ export class ExamComponent implements OnInit, OnDestroy {
    * respuesta después de ver la solución, la nota final no significaría nada.
    */
   revealedQuestions = signal<ReadonlySet<number>>(new Set());
+
+  /**
+   * Ronda en curso: 0 es el examen original y 1, 2, 3... son los mini-exámenes
+   * de repaso, cada uno con las preguntas no acertadas de la ronda anterior.
+   */
+  reviewRound = signal(0);
+
+  /** Resultado de cada ronda ya corregida, en orden, para ver la evolución. */
+  roundHistory = signal<RoundResult[]>([]);
 
   /** Controla el modal que pregunta qué contenido llevará el PDF. */
   isPdfModalOpen = signal(false);
@@ -110,7 +132,9 @@ export class ExamComponent implements OnInit, OnDestroy {
   });
 
   /** Indica si queda menos de un minuto de examen */
-  isLowTime = computed(() => this.timeLeft() < 60 && this.hasStarted());
+  isLowTime = computed(
+    () => !this.isReviewMode() && this.timeLeft() < 60 && this.hasStarted()
+  );
 
   /** Peso unitario de cada pregunta (base 1) */
   questionWeight = computed(() => 1);
@@ -169,6 +193,30 @@ export class ExamComponent implements OnInit, OnDestroy {
   /** Cuántas preguntas se han comprobado ya en el modo de corrección inmediata. */
   revealedCount = computed(() => this.revealedQuestions().size);
 
+  /** True mientras se está haciendo un mini-examen de repaso. */
+  isReviewMode = computed(() => this.reviewRound() > 0);
+
+  /** Preguntas acertadas por completo en la ronda actual. */
+  correctCount = computed(
+    () =>
+      this.examData()?.questions.filter(q => this.isQuestionFullyCorrect(q))
+        .length ?? 0
+  );
+
+  /**
+   * Preguntas falladas o dejadas en blanco en la ronda ya corregida: son las
+   * que se llevará el siguiente mini-examen de repaso. Está vacío mientras el
+   * examen no esté corregido, porque hasta entonces no hay fallos que valgan.
+   */
+  questionsToReview = computed<ExamQuestion[]>(() => {
+    if (!this.isFinished()) return [];
+    const questions = this.examData()?.questions ?? [];
+    return questions.filter(q => this.getQuestionState(q) !== 'correct');
+  });
+
+  /** True si tras corregir queda alguna pregunta que repasar. */
+  canReview = computed(() => this.questionsToReview().length > 0);
+
   // ==========================================
   // 4. CICLO DE VIDA (LIFECYCLE HOOKS)
   // ==========================================
@@ -214,37 +262,7 @@ export class ExamComponent implements OnInit, OnDestroy {
   }
 
   // 4. Organizar las respuestas y aplicar la estructuración final
-  if (groupByUnit) {
-    processedQuestions.sort((a, b) => {
-      const unitA = a.unit?.unitNumber || 0;
-      const unitB = b.unit?.unitNumber || 0;
-      return unitA - unitB;
-    });
-
-    let currentUnitNumber = -1;
-    let localCounter = 0;
-
-    processedQuestions = processedQuestions.map(q => {
-      const uNum = q.unit?.unitNumber || 0;
-      if (uNum !== currentUnitNumber) {
-        currentUnitNumber = uNum;
-        localCounter = 1;
-      } else {
-        localCounter++;
-      }
-
-      return {
-        ...q,
-        unitLocalIndex: localCounter,
-        options: this.shuffleArray(q.options)
-      };
-    });
-  } else {
-    processedQuestions = processedQuestions.map(q => ({
-      ...q,
-      options: this.shuffleArray(q.options)
-    }));
-  }
+  processedQuestions = this.organizeQuestions(processedQuestions, groupByUnit);
 
   // 5. Persistir el estado del examen inyectando de forma limpia el metadato
   this.examData.set({
@@ -260,6 +278,45 @@ export class ExamComponent implements OnInit, OnDestroy {
     this.timeLeft.set(duration * 60);
   }
 }
+
+  /**
+   * Ordena por unidad (si toca), renumera el índice local dentro de cada unidad
+   * y baraja las opciones. Lo usan tanto el examen original como cada ronda de
+   * repaso, para que un mini-examen se comporte igual que el examen de partida.
+   */
+  private organizeQuestions(
+    questions: ExamQuestion[],
+    groupByUnit?: boolean
+  ): ExamQuestion[] {
+    if (!groupByUnit) {
+      return questions.map(q => ({ ...q, options: this.shuffleArray(q.options) }));
+    }
+
+    const sorted = [...questions].sort((a, b) => {
+      const unitA = a.unit?.unitNumber || 0;
+      const unitB = b.unit?.unitNumber || 0;
+      return unitA - unitB;
+    });
+
+    let currentUnitNumber = -1;
+    let localCounter = 0;
+
+    return sorted.map(q => {
+      const uNum = q.unit?.unitNumber || 0;
+      if (uNum !== currentUnitNumber) {
+        currentUnitNumber = uNum;
+        localCounter = 1;
+      } else {
+        localCounter++;
+      }
+
+      return {
+        ...q,
+        unitLocalIndex: localCounter,
+        options: this.shuffleArray(q.options)
+      };
+    });
+  }
 
   /** Algoritmo de barajado Fisher-Yates */
   private shuffleArray<T>(array: T[]): T[] {
@@ -365,6 +422,65 @@ export class ExamComponent implements OnInit, OnDestroy {
     clearInterval(this.timerRef);
     this.isFinished.set(true);
     this.calculateScore();
+    this.recordRoundResult();
+  }
+
+  /**
+   * Genera un mini-examen con las preguntas no acertadas de la ronda recién
+   * corregida. Se limpian las respuestas y se vuelven a barajar las opciones
+   * para que el repaso no se resuelva de memoria posicional, y se hace sin
+   * cronómetro porque es un ejercicio de estudio, no una prueba con tiempo.
+   */
+  startReview() {
+    const data = this.examData();
+    const pending = this.questionsToReview();
+    if (!data || pending.length === 0) return;
+
+    clearInterval(this.timerRef);
+
+    const questions = this.organizeQuestions(
+      this.shuffleArray(pending).map(q => this.resetQuestion(q)),
+      data.examProperties.examConfig.groupByUnit
+    );
+
+    // Se conserva el resto de `data` (propiedades y el total absoluto original)
+    // para que la cabecera y la configuración sigan siendo las del examen.
+    this.examData.set({ ...data, questions });
+
+    this.reviewRound.update(round => round + 1);
+    this.score.set(0);
+    this.currentIndex.set(0);
+    this.revealedQuestions.set(new Set());
+    this.timeLeft.set(0);
+    this.isFinished.set(false);
+    this.hasStarted.set(true);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /** Copia una pregunta dejándola sin responder, sin tocar la original. */
+  private resetQuestion(question: ExamQuestion): ExamQuestion {
+    return {
+      ...question,
+      options: question.options.map(option => ({ ...option, selected: false }))
+    };
+  }
+
+  /** Apunta en el historial el resultado de la ronda que se acaba de corregir. */
+  private recordRoundResult() {
+    const round = this.reviewRound();
+
+    this.roundHistory.update(history => [
+      ...history,
+      {
+        round,
+        label: round === 0 ? 'Examen' : `Repaso ${round}`,
+        total: this.totalQuestionsToDisplay(),
+        correct: this.correctCount(),
+        grade: this.finalGrade(),
+        percentage: this.currentPercentage()
+      }
+    ]);
   }
 
   clearQuestion(question: ExamQuestion, index: number) {

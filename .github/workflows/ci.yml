@@ -1,16 +1,17 @@
 name: CI
 
-# Compila la aplicación en cada subida para detectar roturas cuanto antes.
-# El .exe queda disponible como artefacto de la ejecución (30 días), sin crear
-# un Release público: los Releases los genera release.yml al empujar una etiqueta.
+# Compila SOLO al subir a main, la rama de producción. Los pushes a feature no
+# compilan nada: es la rama de trabajo y no merece gastar minutos de Actions.
+# El .exe queda como artefacto de la ejecución (30 días), sin crear un Release
+# público: los Releases los genera release.yml al empujar una etiqueta.
+#
+# Un push de etiqueta no dispara este workflow (el filtro `branches` excluye las
+# etiquetas), así que publicar una versión compila una sola vez, en release.yml.
 
 on:
   push:
     branches:
-      - '**'
-    tags-ignore:
-      - '**'
-  pull_request:
+      - main
   workflow_dispatch:
 
 jobs:
