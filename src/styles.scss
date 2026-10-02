@@ -14,12 +14,11 @@
    4. El tema se conmuta con la clase `.dark-theme` en <html> (ver app.ts).
    ========================================================================== */
 
-/* -----------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
    1. TOKENS — TEMA CLARO (por defecto)
    -------------------------------------------------------------------------- */
 :root {
   color-scheme: light;
-
 
   /* Tipografía */
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
